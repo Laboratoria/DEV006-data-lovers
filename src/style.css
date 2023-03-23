@@ -1,0 +1,43 @@
+*{
+ margin: 0;
+ padding: 0;
+
+}
+
+header {
+    position: absolute;
+    width: auto;
+    height: 250px;
+    left: 0px;
+    top: 0px;
+    background-size: auto;
+    background: url(/src/images/header.png) ;
+    
+}
+
+
+.main-menu ul{
+    background-color: #db776d;
+    color: white;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    display: flex;
+    list-style: none;
+   
+   
+
+}
+
+.main-menu li a{
+    display: block;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.main-menu {
+    list-style: none;
+   
+}
+
