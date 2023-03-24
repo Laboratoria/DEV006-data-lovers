@@ -6,7 +6,7 @@
 
 header {
     position: absolute;
-    width: 1380px;
+    width: 100%;
     height: 200px;
     left: 0;
     top: 0;
@@ -16,30 +16,75 @@ header {
     
     
 }
+body {
 
-
-.main-menu ul{
-    background-color: #db776d;
-    color: white;
-    padding: 15px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    position: absolute;
+    background-image: url(/src/images/main-background.png);
+    background-repeat: cover;
+    width: 100%;
     display: flex;
-    list-style: none;
-   
-   
-
+    flex-direction: column;
+    min-height: 100vh;
 }
-
+main {
+    flex: 1;
+    
+}
+.main-menu{
+    margin-top: 5rem;
+    display: flex;
+    justify-content: flex-end;
+    font-family:  'ITC Avant Garde Gothic Std Book';
+}
+.main-menu ul{
+    padding: 15px 25px;
+    list-style: none;
+}
+.main-menu li{
+    display: inline-block;
+}
 .main-menu li a{
     display: block;
-    text-decoration: none;
     padding: 0.5rem 1rem;
+    background-color: #DB776D;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 1rem;
 }
-
-.main-menu {
-    list-style: none;
-   
+.main-menu li a:hover{
+    background-color: #a7b07a;
+    color: white;
 }
-
+.title {
+    color: white;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    height: 200px;
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    right: 10%;
+    transform: translateX(10%);
+    font-size: 4rem;
+    font-family: 'ITC Avant Garde Gothic Std Book';
+}
+.welcomeMsg {
+    text-align: center;
+    margin: 0 auto;
+    max-width: 800px;
+    height: 200px;
+    position: absolute;
+    bottom: 10%;
+    left: 40%;
+    right: 10%;
+    transform: translateX(10%);
+    font-size: 1.2rem;
+    font-family: 'ITC Avant Garde Gothic Std Book';
+    color: white;
+  }
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 0.8em;
+}
