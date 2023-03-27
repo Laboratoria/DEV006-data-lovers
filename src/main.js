@@ -1,7 +1,7 @@
 import {countCharacters} from './data.js'
 
 import data from './data/ghibli/ghibli.js';
-
+import { totalMovie, countCharacters, countCharactersforPeople } from './data.js';
 
 
 const films = data.films;
@@ -14,6 +14,11 @@ const walpaper = document.getElementById("body");
 
 filmsBtn.addEventListener("click",showMovies);
 
+const totalMovies = totalMovie(films);
+/* let totalPeoples = totalPeople(films);
+console.log(totalPeoples); */
+const totalPeople = countCharacters(films);
+
 
 const totalPeople = countCharacters(films);
 
@@ -24,6 +29,10 @@ function showMovies(event){
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
+  const totalValue = document.createElement("p");
+  totalValue.classList.add("counter");
+  totalValue.innerHTML = `<p> Se muestran ${totalMovies} resultados</p>`;
+  mainElement.appendChild(totalValue);
   for (let i = 0; i < films.length; i++) {
     const divFilm = document.createElement("div");
     divFilm.classList.add("poster");
@@ -43,6 +52,8 @@ function movieDetails(event){
   const clickedElement = event.currentTarget;
   const elementId = clickedElement.getAttribute("id");
   const selectedMovie = films.find(movie => movie.id === elementId);
+
+  const peopleTotal = countCharactersforPeople(selectedMovie);
   
   const movieDetailsDiv = document.createElement("div");
   movieDetailsDiv.classList.add("movie-details");
@@ -71,7 +82,7 @@ function movieDetails(event){
         <div class="content">${selectedMovie.rt_score}</div>
       </div>
       <div class="container">
-      <div class="label">Personajes</div>
+      <div class="label">Personajes (${peopleTotal})</div>
       <div class="content">${selectedMovie.people.map(person => person.name).join(", ")}</div>
       </div>
       </div>
@@ -82,6 +93,9 @@ function movieDetails(event){
   mainElement.innerHTML = "";
   mainElement.appendChild(movieDetailsDiv);
 
+  
+
+
   const accordion = document.getElementsByClassName("container");
 
   for (let i=0; i<accordion.length; i++) {
@@ -91,15 +105,19 @@ function movieDetails(event){
   }
 }
   
-
 charactersBtn.addEventListener("click",showCharacters);
 
 function showCharacters(event){
   walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
   event.preventDefault();
 
-  mainElement.innerHTML = films.map((movie) => movie.people.map(character => `
+  const totalCharacters = document.createElement("p");
+  totalCharacters.classList.add("counter");
+  totalCharacters.innerHTML = `<p> Se muestran ${totalPeople} resultados</p>`;
+  mainElement.appendChild(totalCharacters);
 
+  mainElement.innerHTML = `<p class="counter"> Se muestran ${totalPeople} resultados</p>` 
+  + films.map((movie) => movie.people.map(character => `
     <div class="people">
     
     <img src="`+ character.img + `" />
@@ -149,3 +167,45 @@ function showCharacters(event){
 
 
 
+/* filmsBtn.addEventListener("click",showMovies);
+
+function showMovies(event){
+  event.preventDefault();
+  walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
+
+  mainElement.innerHTML = films.map((pelicula) => `
+
+  <div class="poster">
+  
+    <img src="`+ pelicula.poster + `" />
+      
+  </div>
+
+`);
+}
+
+charactersBtn.addEventListener("click",showCharacters);
+
+function showCharacters(event){
+  walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
+  event.preventDefault();
+
+  mainElement.innerHTML = films.map((movie) => movie.people.map(character => `
+
+    <div class="people">
+    
+    <img src="`+ character.img + `" />
+    
+    <div class="overlay">
+    <h3>Name: `+ character.name +`</h3>
+    <h3>Gender: `+ character.gender +`</h3>
+    <h3>Age: `+ character.age +`</h3>
+    <h3>Eye color: `+ character.eye_color +`</h3>
+    <h3>Hair color: `+ character.hair_color +`</h3>
+    <h3>Specie: `+ character.specie +`</h3>
+    </div>
+        
+    </div>
+
+`));
+}  */
