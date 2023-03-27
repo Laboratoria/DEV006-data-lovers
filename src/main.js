@@ -1,4 +1,4 @@
-//import { example } from './data/ghibli/ghibli.js';
+import {countCharacters} from './data.js'
 
 import data from './data/ghibli/ghibli.js';
 
@@ -15,6 +15,10 @@ const walpaper = document.getElementById("body");
 filmsBtn.addEventListener("click",showMovies);
 
 
+const totalPeople = countCharacters(films);
+
+console.log(totalPeople);
+
 function showMovies(event){
   event.preventDefault();
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
@@ -28,6 +32,8 @@ function showMovies(event){
     mainElement.appendChild(divFilm);
     divFilm.addEventListener("click", movieDetails);
   }
+
+ 
 }
   
 
@@ -136,13 +142,6 @@ function showCharacters(event){
 
 
 
-/* function newPage(event){
-  const clickedElement = event.currentTarget;
-  const elementId = clickedElement.getAttribute("id");
-  const selectedMovie = films.find(movie => movie.id === elementId);
-  // Proceed to create a new section or article element to display detailed information about the selected movie
-  // ...
-} */
 
 
 
