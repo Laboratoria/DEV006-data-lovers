@@ -1,33 +1,31 @@
 *{
- margin: 0;
- padding: 0;
-
+    margin: 0;
+    padding: 0;
 }
-
 header {
     position: absolute;
     width: 100%;
     height: 200px;
     left: 0;
     top: 0;
-    background-image: url(/src/images/header.png);
+    background-image: url(images/header.png);
     background-size: cover;
-    background-position: center;
-    
-    
+    background-position: fixed;
 }
 body {
-
-    background-image: url(/src/images/main-background.png);
-    background-repeat: cover;
+    background-image: url(images/main-background.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     width: 100%;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 main {
-    flex: 1;
-    
+margin-top: 20rem;
+margin-bottom: 10rem;
+margin-left: 2rem;
+margin-right: 1rem;
 }
 .main-menu{
     margin-top: 5rem;
@@ -52,7 +50,7 @@ main {
     margin: 1rem;
 }
 .main-menu li a:hover{
-    background-color: #a7b07a;
+    background-color: #A7B07A;
     color: white;
 }
 .title {
@@ -62,7 +60,7 @@ main {
     max-width: 800px;
     height: 200px;
     position: absolute;
-    bottom: 20%;
+    bottom: 25%;
     left: 10%;
     right: 10%;
     transform: translateX(10%);
@@ -70,21 +68,160 @@ main {
     font-family: 'ITC Avant Garde Gothic Std Book';
 }
 .welcomeMsg {
+    color: white;
     text-align: center;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 500px;
+    margin-left: 40rem;
     height: 200px;
-    position: absolute;
-    bottom: 10%;
-    left: 40%;
-    right: 10%;
     transform: translateX(10%);
+    background-color: #DB776D ;
+    opacity: 0.9;
+    border-radius: 20px;
+    padding-top: 50px;
     font-size: 1.2rem;
     font-family: 'ITC Avant Garde Gothic Std Book';
-    color: white;
-  }
+    }
+.poster {
+    transform: translateX(10%);
+    display: inline-block;
+}
+.poster img{
+    width:  200px;
+    height: px;
+    margin: 1rem;
+    display: block;
+}
 footer {
-    margin-top: auto;
+    background-color:beige;
+/*     margin-top: 10rem; */
+    padding: 3rem;
     text-align: center;
     font-size: 0.8em;
 }
+@media only screend and (max-width: 1100px) {
+    main {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    header {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screend and (max-width: 760px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screend and (max-width: 500px) {
+    main {
+        grid-template-columns: 1fr;
+    }
+    header {
+        grid-template-columns: 1fr;
+    }
+}
+.movie-details{
+
+    
+    
+}
+.accordion {
+ 
+  width: 800px;
+  margin: 90px auto;
+  color: black;
+  background-color: white;
+  padding: 45px 45px;
+}
+.accordion .container {
+    position: relative;
+    margin: 10px 10px;
+  }
+.accordion .label {
+    position: relative;
+    padding: 10px 0;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+.accordion .label::before {
+    content: '+';
+    color: black;
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    font-size: 30px;
+    transform: translateY(-50%);
+  }
+.accordion .content {
+    position: relative;
+    background: white;
+    height: 0;
+    font-size: 20px;
+    text-align: justify;
+    width: 780px;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+
+.accordion .container.active .content {
+    height: 150px;
+  }
+    
+.accordion .container.active .label::before {
+    content: '-';
+    font-size: 30px;
+  }
+
+  .people {
+    transform: translateX(10%);
+    display: inline-block;
+    position: relative;
+/*     width: 100%; */
+/*     max-width: 300px; */
+    
+}
+.people img{
+/*     width:  200px; */
+/*     margin: 1rem; */ 
+    display: block;
+    height: auto;
+    
+    
+}
+.overlay {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5); /* Black see-through */
+    color: #f1f1f1;
+    width: 60%;
+    transition: .5s ease;
+    opacity:0;
+    color: white;
+    font-size: 10px;
+    padding: 20px;
+    text-align: left;
+}
+.people:hover .overlay {
+    opacity: 1;
+}  
+/* estilos para la barra */
+::-webkit-scrollbar {
+    width: 1vw; /* THIS WILL RESET THE DEFAULT SCORLLBAR STYLING */
+  }
+  
+  /* TO STYLE THE SCROLLBAR TRACK */
+  ::-webkit-scrollbar-track {
+    background-color: #ffffff; 
+  }
+  
+  /* TO STYLE THE SCROLLBAR THUMB */
+  ::-webkit-scrollbar-thumb {
+    background-color: #DB776D;
+    border: 0.3vw solid #ffffff;
+    border-radius: 5vw;
+  }
