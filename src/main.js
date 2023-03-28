@@ -1,6 +1,15 @@
-import { example } from './data.js';
+//import {"title"} from './ghibli.js';
 // import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+//import data from './data/ghibli/ghibli.js';
 
-console.log(example, data);
+import {result} from './data.js';
+
+console.log(result);
+
+
+
+const MovieTitlesButton = document.getElementById("movieTitlesBtn")
+MovieTitlesButton.addEventListener("click", ()=>{
+  document.getElementById("result").innerHTML = result;
+});
+

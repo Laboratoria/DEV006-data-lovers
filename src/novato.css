@@ -1,0 +1,133 @@
+.frame {
+    border: 5px solid #F8D209;
+    border-radius: 10px;
+    width: 70%;
+    height: 15%;
+    margin-top: 10%;
+    margin-left: 10%;
+    }
+    
+    .secondBtn {
+        width: 50%;
+        cursor: pointer;
+        background-color: #3CD1EF;
+        border-radius: 10px;
+        font-family: "Jockey One", sans-serif;
+        font-size: 20px;
+        margin: center;
+        margin-left: 25%;
+        margin-right: 10%;
+        margin-top: 7%;
+    }
+
+
+    .imgNewbie01{
+        position: absolute;
+        display: flex;
+        width:150px;
+        height:195px;
+        top:205px;
+        left: 500px;
+    
+    @media all and (min-width: 400px) and (max-width: 1000px)
+    {  
+    .imgNewbie01{
+        width:50%;
+        height:200px;
+            }
+    }
+    }
+    .imgNewbie02{
+        position: absolute;
+        display: flex;
+        width:150px;
+        height:195px;
+        top:405px;
+        left: 100px;
+    
+    @media all and (min-width: 500px) and (max-width: 1000px)
+    {  
+    .imgNewbie02{
+        margin:20px auto;
+        padding:1px;
+        width:50%;
+        height:200px;
+            }
+    }
+    }
+    .imgNewbie03{
+        position: absolute;
+        display: flex;
+        width:166px;
+        height:74px;
+        top: 660px;
+        left: 500px;
+    
+    @media all and (min-width: 400px) and (max-width: 1000px)
+    {  
+    .imgNewbie03{
+        width:50%;
+        height:200px;
+            }
+    }
+    }
+    .imgNewbie04{
+        position: absolute;
+        display: flex;
+        width:200px;
+        height:152px;
+        top:245px;
+        left: 1240px;
+    
+    @media only screen and (max-width: 768px) 
+    {  
+    .imgNewbie04{
+        position: inherit;
+        display: flex;
+        width: 100%;
+        margin-top: 2%;
+            }
+    }
+    }
+    .imgNewbie05{
+        position: absolute;
+        display: flex;
+        width:166px;
+        height:173px;
+        top:405px;
+        left: 820px;
+    
+    @media all and (min-width: 500px) and (max-width: 1000px)
+    {  
+    .imgNewbie05{
+        margin:20px auto;
+        padding:1px;
+        width:50%;
+        height:200px;
+            }
+    }
+    }
+    .imgNewbie06{
+        position: absolute;
+        display: flex;
+        width:128px;
+        height:175px;
+        top: 570px;
+        left: 1300px;
+    
+    @media all and (min-width: 400px) and (max-width: 1000px)
+    {  
+    .imgNewbie06{
+        width:50%;
+        height:200px;
+            }
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    
