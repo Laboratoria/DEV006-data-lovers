@@ -1,104 +1,100 @@
-@import url('https://fonts.googleapis.com/css?family=Jockey+One|Inconsolata');
-
-body {
-position: fixed;
-width: 100%;
-height: 100%;
-
-background: #093F68;
-}
-
-header {
-    
-width: 100%;
-position: fixed;
-margin-top: 5%;
-}
-
-nav {
-    float: left;
-  }
-
-  nav ul {
-    list-style: none;
-    overflow: hidden; 
-  }
-
-  nav ul li {
-    float: left;
-    font-family: "Jockey One", sans-serif;
-    font-size: 20px;
-  }
-
-  nav ul li a {
-    display: block; 
-    padding: 20px;
-    color: #fff;
-    text-decoration: none;
-  }
-
-  nav ul li:hover {
-    background: #eca023;
-  }
-
-
-.banner 
-{
-  position: fixed;
+@import url("https://fonts.googleapis.com/css?family=Jockey+One%7CInconsolata");
+.navbar {
+  top: 0px;
   width: 1500px;
   height: 100px;
   border: 3px blueviolet;
   margin-right: 1%;
-  
-
-  background-image: url("Imágenes/top-image.jfif");
+  background-image: url("Imágenes/paisaje.png");
 }
-
-.newbie {
-  display: inline-block;
-  position: absolute;
-  width: 530px;
-  height: 318px;
-  left: 131px;
-  top: 253px;
+html{ /*qué es esto*/
+  height: 100%;
+}
+main {/*y esto*/
+  height: 100%;
+}
+body {
+  width: 100%;
+  height: 100%;
+  background: #093F68;
+}
+header {
+  width: 100%;
+  margin-top: 1%;
+}
+ul {
+  background-color: beige;
+  opacity: 75%;
+  list-style: none;
+  overflow: hidden;
+}
+ul li {
+  float: left;
+  font-family: "Jockey One", sans-serif;
+  font-size: 20px;
+}
+ul li a {
+  display: block;
+  padding: 20px;
+  color: rgb(255, 98, 0);
+  text-decoration: none;
+}
+ul li:hover {
+  background: #F1CD73;
+}
+.container {
+  display: flex;
+  margin-top: 5%;
+  height: 90%;
+}
+.block {
+  width: 50%;
+}
+.block .newbie {
+  margin: 0 auto;
+  width: 90%;
+  height: 50%;
   border-radius: 8%;
-  
-    background-image: url("Imágenes/newbie.png");
+  background-image: url("Imágenes/newbie.png");
 }
-
-.fandom {
-  display: inline-block;
-  position: absolute;
-  width: 530px;
-  height: 318px;
-  left: 765px;
-  top: 253px;
+.block .fandom {
+  margin: 0 auto;
+  width: 90%;
+  height: 50%;
   border-radius: 8%;
-  
-    background-image: url("Imágenes/fandom.png");
-
+  background-image: url("Imágenes/fandom.png");
 }
-
 button {
-    width: 20%;
-    padding: 14px;
-    margin-top: 25%;
-    margin-left: 40%;
-    /*margin-right: 48%;
-    margin-bottom: 25%;*/
-  
-    background-color: #3cd1ef;
-    border: none;
-    cursor: pointer;
-    border-radius: 10px;
-    font-family: "Jockey One", sans-serif;
-    font-size: 20px;
+  width: 20%;
+  padding: 14px;
+  margin-top: 48%;
+  margin-left: 40%;
+  /*margin-right: 48%;
+        margin-bottom: 25%;*/
+  background-color: #3CD1EF;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Jockey One", sans-serif;
+  font-size: 20px;
+}
+button:hover {
+  background: #EE9547;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {/*y esto*/
+  /* For mobile phones: */
+  .block {
+    display: flex;
+    width: 100%;
+    margin-top: 2%;
+   }
+  .container {
+    display: flex;
+    margin-top: 5%;
+    flex-flow: column wrap;
   }
-  
-  button:hover {
-    background: #ee9547;
-    color: #fff;
-  }
+}
 
 
 
