@@ -11,7 +11,6 @@ const mainElement =  document.getElementById("main");
 const walpaper = document.getElementById("body");
 
 
-
 filmsBtn.addEventListener("click",showMovies);
 
 const totalMovies = totalMovie(films);
@@ -22,6 +21,7 @@ const totalPeople = countCharacters(films);
 
 function showMovies(event){
   event.preventDefault();
+
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
@@ -42,7 +42,7 @@ function showMovies(event){
 
 /* <h2>${selectedMovie.title}</h2> */
 function movieDetails(event){
-  
+
   const clickedElement = event.currentTarget;
   const elementId = clickedElement.getAttribute("id");
   const selectedMovie = films.find(movie => movie.id === elementId);
@@ -77,7 +77,7 @@ function movieDetails(event){
       </div>
       <div class="container">
       <div class="label">Personajes (${peopleTotal})</div>
-      <div class="content">${selectedMovie.people.map(person => person.name).join(", ")}</div>
+      <div class="content">${selectedMovie.people.map(person => person.name).join(", ")} <img src="${selectedMovie.people.map(personajes => personajes.name)}"></div>
       </div>
       </div>
       
