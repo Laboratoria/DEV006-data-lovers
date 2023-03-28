@@ -11,7 +11,6 @@ const mainElement =  document.getElementById("main");
 const walpaper = document.getElementById("body");
 
 
-
 filmsBtn.addEventListener("click",showMovies);
 
 const totalMovies = totalMovie(films);
@@ -25,6 +24,7 @@ console.log(totalVehicles); */
 function showMovies(event){
   event.preventDefault();
   //Modify the homepage background with the plain background image.
+
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
@@ -53,7 +53,7 @@ function showMovies(event){
 
 
 function movieDetails(event){
-  
+
   const clickedElement = event.currentTarget;
   const elementId = clickedElement.getAttribute("id");
   const selectedMovie = films.find(movie => movie.id === elementId);

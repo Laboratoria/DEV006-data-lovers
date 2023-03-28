@@ -14,7 +14,7 @@ export default {
         {
           "id": "fe93adf2-2f3a-4ec4-9f68-5422f1b87c01",
           "name": "Pazu",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8b/Pazu.jpg",/*  */
           "gender": "Male",
           "age": "13",
           "eye_color": "Black",
@@ -24,7 +24,7 @@ export default {
         {
           "id": "598f7048-74ff-41e0-92ef-87dc1ad980a9",
           "name": "Lusheeta Toel Ul Laputa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c3/Sheeta.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/bb/Sheeta_3.png",/*  */
           "gender": "Female",
           "age": "13",
           "eye_color": "Black",
@@ -34,7 +34,7 @@ export default {
         {
           "id": "3bc0b41e-3569-4d20-ae73-2da329bf0786",
           "name": "Dola",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b3/Dola.png",
+          "img": "https://i.pinimg.com/236x/d1/1c/35/d11c355fe30c6b108cc52c0ff84a5e20.jpg",/*  */
           "gender": "Female",
           "age": "60",
           "eye_color": "Black",
@@ -44,7 +44,7 @@ export default {
         {
           "id": "abe886e7-30c8-4c19-aaa5-d666e60d14de",
           "name": "Romska Palo Ul Laputa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d5/Muska.jpg",/*  */
           "gender": "Male",
           "age": "33",
           "eye_color": "Black",
@@ -54,7 +54,7 @@ export default {
         {
           "id": "e08880d0-6938-44f3-b179-81947e7873fc",
           "name": "Uncle Pom",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/de/Uncle_Pom.png",
+          "img": "http://3.bp.blogspot.com/-2Ihx4QXnv4w/U_kvh4Z5eEI/AAAAAAAADjw/1uFyLD0ctL4/s1600/Tenk%C3%BB%2Bno%2Bshiro%2BRapyuta%2B(23).jpg",/*  */
           "gender": "Male",
           "age": "Unspecified/Elderly",
           "eye_color": "Black",
@@ -64,7 +64,7 @@ export default {
         {
           "id": "5c83c12a-62d5-4e92-8672-33ac76ae1fa0",
           "name": "General Muoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/12/Muoro.jpg",/*  */
           "gender": "Male",
           "age": "Unspecified/Adult",
           "eye_color": "Black",
@@ -74,7 +74,7 @@ export default {
         {
           "id": "3f4c408b-0bcc-45a0-bc8b-20ffc67a2ede",
           "name": "Duffi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0a/Duffi.png",/*  */
           "gender": "Male",
           "age": "Unspecified/Adult",
           "eye_color": "Dark brown",
@@ -84,7 +84,7 @@ export default {
         {
           "id": "fcb4a2ac-5e41-4d54-9bba-33068db083ca",
           "name": "Louis",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Charlies.jpg",/*  */
           "gender": "Male",
           "age": "30",
           "eye_color": "Dark brown",
@@ -94,7 +94,7 @@ export default {
         {
           "id": "2cb76c15-772a-4cb3-9919-3652f56611d0",
           "name": "Charles",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f0/Charlie.jpg",/*  */
           "gender": "Male",
           "age": "Unspecified/Adult",
           "eye_color": "Dark brown",
@@ -104,7 +104,7 @@ export default {
         {
           "id": "f6f2c477-98aa-4796-b9aa-8209fdeed6b9",
           "name": "Henri",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/15/Henri.jpg",
+          "img": "http://images5.fanpop.com/image/polls/987000/987002_1333044994085_full.jpg",/*  */
           "gender": "Male",
           "age": "Unspecified/Adult",
           "eye_color": "Dark brown",
@@ -114,7 +114,7 @@ export default {
         {
           "id": "05d8d01b-0c2f-450e-9c55-aa0daa34838e",
           "name": "Motro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/17/Eggman_laputa.jpg",
+          "img": "https://pm1.narvii.com/6428/758802ee7bc7b6d251a9e98798dd64ac67c47e2e_hq.jpg",
           "gender": "Male",
           "age": "Unspecified/Adult",
           "eye_color": "Dark brown",
@@ -124,7 +124,7 @@ export default {
         {
           "id": "b22a684f-1819-40c8-94a6-d40c3b5e18eb",
           "name": "Okami",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Okami.jpg",
+          "img": "https://m.media-amazon.com/images/M/MV5BOTAyYjI0ODItN2RmOC00MGQ3LWIxNDItNTgxYzU1ZTc0Nzg3XkEyXkFqcGdeQXVyOTc5MDI5NjE@._V1_FMjpg_UX1000_.jpg",
           "gender": "Female",
           "age": "50",
           "eye_color": "Dark brown",
@@ -226,7 +226,7 @@ export default {
         {
           "id": "d5df3c04-f355-4038-833c-83bd3502b6b9",
           "name": "Mei Kusakabe",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/b/b5/God_Jul_Mei_%C3%B6nskar_fr%C3%A5n_Tomten.jpg",
+          "img": "https://i.pinimg.com/736x/bd/4b/46/bd4b4685512fdc98f541bfb8319c4990.jpg",
           "gender": "Female",
           "age": "4",
           "eye_color": "Brown",
@@ -256,7 +256,7 @@ export default {
         {
           "id": "08ffbce4-7f94-476a-95bc-76d3c3969c19",
           "name": "Granny",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Granny.png",
+          "img": "https://areajugones.sport.es/wp-content/uploads/2021/05/nani-studio-ghibli.jpeg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -286,7 +286,7 @@ export default {
         {
           "id": "591524bc-04fe-4e60-8d61-2425e42ffb2a",
           "name": "Chu Totoro",
-          "img": "https://www.ghibli.jp/gallery/thumb-totoro019.png",
+          "img": "https://depor.com/resizer/o_FNVFgdTd1hteUB6xVKDe4xv9g=/1200x800/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/KF7XXRKWYJCX7DMODQ2JD3IAIE.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://i.pinimg.com/564x/66/b9/f0/66b9f051b3eb8ebec1ebe066051c8070--chibi-totoro-anime-mangas.jpg",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -306,7 +306,7 @@ export default {
         {
           "id": "f467e18e-3694-409f-bdb3-be891ade1106",
           "name": "Catbus",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/30/Catbus.jpg",
+          "img": "https://i.pinimg.com/originals/cd/09/4b/cd094becc6f78f12287f663ab8e87475.jpg",
           "gender": "Male",
           "age": "NA",
           "eye_color": "Yellow",
@@ -510,7 +510,7 @@ export default {
         {
           "id": "227c01a6-4e29-4582-bc4b-35106a704ab0",
           "name": "Mrs. Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/39/SeitaMother.png",
+          "img": "https://cdn.myanimelist.net/images/characters/6/423031.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Black",
@@ -520,7 +520,7 @@ export default {
         {
           "id": "023306e3-9fc6-4d1d-b681-d4649dcbfff9",
           "name": "Kiyoshi Yokokawa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f6/SeitaFather3.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/65/Seita_Father_2.jpg",
           "gender": "Male",
           "age": "40",
           "eye_color": "Black",
@@ -530,7 +530,7 @@ export default {
         {
           "id": "0e18b23d-1f21-4a83-a6de-f01147624875",
           "name": "Seita's Aunt",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/09/SeitaAunt.jpg",
+          "img": "https://thicc.mywaifulist.moe/waifus/39847/bc436226f2fcb591ac0de4cdf3033bc8ccac1b17bbd4ec9077bc2404d1794274_thumb.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -574,7 +574,7 @@ export default {
         {
           "id": "52ed5cad-2464-481f-9786-8533b8de95ff",
           "name": "Mr. Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/58/Mr._Okajima.png",
+          "img": "https://static1.personality-database.com/profile_images/295cd52dfb084df3adc1eddac2280f2b.png",
           "gender": "Male",
           "age": "Middle age",
           "eye_color": "Black",
@@ -594,7 +594,7 @@ export default {
         {
           "id": "0174e644-eddd-4cb7-8503-e0c21291d782",
           "name": "Grandmother Okajima",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0f/Grandmother_Okajima_%282%29.jpg",
+          "img": "https://media.notify.moe/images/characters/large/YckWqNBig.webp?1542100706",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Black",
@@ -654,7 +654,7 @@ export default {
         {
           "id": "f4a85428-18b7-4199-ba5a-b6bcfb478e14",
           "name": "Rie",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/00/Rie_01.png",
+          "img": "https://ami.animecharactersdatabase.com/uploads/chars/5457-1529984636.jpg",
           "gender": "Female",
           "age": "10",
           "eye_color": "Black",
@@ -710,7 +710,7 @@ export default {
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/16/Fio_%282%29.jpg",
+          "img": "https://i.pinimg.com/736x/05/1c/a3/051ca3bd0bc836a5f22490fe11451602.jpg",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -740,7 +740,7 @@ export default {
         {
           "id": "a63c25f4-41a4-4f78-933f-3c14e2903a8f",
           "name": "Capo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/98/Aiuto_Gang_boss.jpg",
+          "img": "https://cdn.shopify.com/s/files/1/0579/1776/7737/products/donttouch.jpg?v=1645231796",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -831,7 +831,7 @@ export default {
         {
           "id": "220c7498-c390-4456-b853-bac107d16ff7",
           "name": "Seizaemon",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Seizaemon.jpg",
+          "img": "https://areajugones.sport.es/wp-content/uploads/2021/05/seizaemon-studio-ghibli.jpg",
           "gender": "Male",
           "age": "Elder",
           "eye_color": "Black",
@@ -851,7 +851,7 @@ export default {
         {
           "id": "7367f154-4d9b-4e3e-89cf-2bd55c4d817f",
           "name": "Gonta",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0b/Gonta.jpg",
+          "img": "https://i.redd.it/4agy8aovuyc81.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -1021,7 +1021,7 @@ export default {
         {
           "id": "34277bec-7401-43fa-a00a-5aee64b45b08",
           "name": "Eboshi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9f/Eboshi.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/53/Eboshi.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Hazel",
@@ -1031,7 +1031,7 @@ export default {
         {
           "id": "91939012-90b9-46e5-a649-96b898073c82",
           "name": "Jigo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/79/Jigo_%282%29.jpg",
+          "img": "https://i.pinimg.com/474x/fb/8a/a2/fb8aa2d09196dfdb82b775beb974a1a1.jpg",
           "gender": "Male",
           "age": "Middle age",
           "eye_color": "Black",
@@ -1041,7 +1041,7 @@ export default {
         {
           "id": "20e3bd33-b35d-41e6-83a4-57ca7f028d38",
           "name": "Kohroku",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d1/Kohroku_gives.jpg",
+          "img": "https://static.wikia.nocookie.net/characters/images/5/53/Kuroku.PNG",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -1229,7 +1229,7 @@ export default {
         {
           "id": "177722d8-6fb0-4811-ad83-4d9c272eaebe",
           "name": "Yubaba",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/f8/Yubaba-0.jpg",
+          "img": "https://helios-i.mashable.com/imagery/articles/05hFyheGoYx6NYb2cuF1wp0/hero-image.fill.size_1200x1200.v1665690168.png",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Dark brown",
@@ -1259,7 +1259,7 @@ export default {
         {
           "id": "cf0a2a1b-8b65-4794-98ae-bd89de49fa62",
           "name": "Lin",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/35/Lin-HBO_Max.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/2e/Thats_cold_Lin.png",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Brown",
@@ -1279,7 +1279,7 @@ export default {
         {
           "id": "d9aceca5-beb9-4b2a-85ba-fc17d33750f8",
           "name": "Zeniba",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d8/Zeniba.png",
+          "img": "https://alrededorde500palabras.files.wordpress.com/2020/01/35507cd978c448a291b26d38cab44589.png",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Dark brown",
@@ -1299,7 +1299,7 @@ export default {
         {
           "id": "2e7bb7bf-4149-4df5-b6e4-76064021651c",
           "name": "Yūko Ogino",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c6/Ichiyuko_Ogino.png",
+          "img": "https://assets.mycast.io/characters/chihiro-s-mother-1276426-normal.jpg",
           "gender": "Female",
           "age": "35",
           "eye_color": "Dark brown",
@@ -1477,7 +1477,7 @@ export default {
         {
           "id": "fa9b410f-cad4-457d-ac71-86b0afa6cf0a",
           "name": "Howl Jenkins Pendragon",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/f/fe/Howl_Jenkins_Pendragon.jpg",
+          "img": "https://i.pinimg.com/736x/d0/95/a0/d095a0ff581dbfef5843b48d21365ce3.jpg",
           "gender": "Male",
           "age": "27",
           "eye_color": "Bright blue",
@@ -1497,7 +1497,7 @@ export default {
         {
           "id": "1287b275-6c32-4113-947f-519316d4a6be",
           "name": "Witch of the Waste",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e1/Howls-moving-castle-disneyscreencaps.com-10507.jpg",
+          "img": "https://i.pinimg.com/originals/8f/87/6f/8f876fb402fc01dde74a9fb9c6d52c4c.png",
           "gender": "Female",
           "age": "59",
           "eye_color": "Brown",
@@ -1527,7 +1527,7 @@ export default {
         {
           "id": "45237428-93bf-4dd6-97ce-f10647300429",
           "name": "Prince Justin or Turnip Head",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Prince_Justin.png",
+          "img": "https://static.wikia.nocookie.net/howlscastle/images/2/25/3613-447544121.jpg",
           "gender": "Male",
           "age": "20-30",
           "eye_color": "Grey",
@@ -1646,7 +1646,7 @@ export default {
         {
           "id": "60469915-e18e-4cf3-b43d-95ea56cc300c",
           "name": "Tenar",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/4f/Tenar.jpg",
+          "img": "https://cdn.myanimelist.net/images/characters/8/114275.jpg",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Grey",
@@ -1666,7 +1666,7 @@ export default {
         {
           "id": "59d22f97-f45d-4a6c-b473-13ee9e69082a",
           "name": "Cob",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/ce/Cob.jpg",
+          "img": "https://i.ytimg.com/vi/mpgPtdT98Bs/maxresdefault.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Violet",
@@ -1742,7 +1742,7 @@ export default {
         {
           "id": "0cb26464-3416-4490-8f42-cd9d7276884e",
           "name": "Kōichi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/49/Sosuke%27s_Father.png",
+          "img": "https://i.pinimg.com/474x/5d/b9/ee/5db9ee170149ed9c2dfd33f0ee966317.jpg",
           "gender": "Male",
           "age": "30",
           "eye_color": "Dark brown",
@@ -1892,7 +1892,7 @@ export default {
         {
           "id": "ef5ee7c5-ae68-418d-a319-f3e79262cd87",
           "name": "Homily Clock",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/28/Homily_Clock.jpg",
+          "img": "https://thicc.mywaifulist.moe/waifus/30182/ffaf9fc2900456c6bf5d7b33b0df1fabf403a10b8831399cea95fa7e942732b4_thumb.jpeg",
           "gender": "Female",
           "age": "52",
           "eye_color": "Brown",
@@ -2224,7 +2224,7 @@ export default {
         {
           "id": "a21fbdd5-16bc-4931-80d0-3ce89ffce778",
           "name": "Sutemaru",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/3/37/Sutemaru.PNG",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d0/Sutemaru.png",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -2234,7 +2234,7 @@ export default {
         {
           "id": "4c697b7d-4f64-4ac9-ae29-e155eb1693f3",
           "name": "Ishitsukuri",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/5/5c/Ghibli-kaguya-ishitsukuri.jpg",
+          "img": "https://areajugones.sport.es/wp-content/uploads/2021/05/principe-ishitsukuri-studio-ghibli-1220x686.jpeg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
@@ -2274,7 +2274,7 @@ export default {
         {
           "id": "942fb1029-b51f-4100-8bee-86547c09b0ff",
           "name": "Inbe no Akita",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/1c/Ghibli-kaguya-akita.jpg",
+          "img": "https://www.anisearch.com/images/character/cover/full/51/51151.webp",
           "gender": "Male",
           "age": "Elder",
           "eye_color": "Black",
@@ -2330,7 +2330,7 @@ export default {
         {
           "id": "28d07ace-c309-48c6-b48e-ae2ece3a238c",
           "name": "Anna Sasaki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/ae/Anna.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/29/Anna_Sasaki.jpg",
           "gender": "Female",
           "age": "12",
           "eye_color": "Blue",
@@ -2360,7 +2360,7 @@ export default {
         {
           "id": "66bca178-9920-4ec3-91e9-0d5b8a76dba1",
           "name": "Setsu Oiwa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6e/Setsu.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/7/78/Setsu_Ooiwa.jpg",
           "gender": "Female",
           "age": "50-60",
           "eye_color": "Dark brown",
@@ -2370,7 +2370,7 @@ export default {
         {
           "id": "5b8e4413-f943-40ba-8f9f-0ba059a401f0",
           "name": "Hisako",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/93/Hisako.png",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/61/Hisako.jpg",
           "gender": "Female",
           "age": "Elder",
           "eye_color": "Dark brown",
@@ -2400,7 +2400,7 @@ export default {
         {
           "id": "31b49ef6-ee60-4603-b983-e67fa0718aa9",
           "name": "Kiyomasa Ōiwa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d7/Kiyomasa.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0f/Kiyomasa_Ooiwa.jpg",
           "gender": "Male",
           "age": "50-60",
           "eye_color": "Dark brown",
@@ -2410,7 +2410,7 @@ export default {
         {
           "id": "5d52d16f-ce72-41bd-8d88-436e206d9449",
           "name": "Doctor Yamashita",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8a/Yamashita.jpg",
+          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/08/Doctor_Yamashita.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",
