@@ -1,7 +1,7 @@
 
 
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersforPeople } from './data.js';
+import { totalMovie, countCharacters, countCharactersforPeople} from './data.js';
 
 
 const films = data.films;
@@ -18,7 +18,8 @@ const totalMovies = totalMovie(films);
 /* let totalPeoples = totalPeople(films);
 console.log(totalPeoples); */
 const totalPeople = countCharacters(films);
-
+/* const totalVehicles = countItems(films,vehicles);
+console.log(totalVehicles); */
 
 
 function showMovies(event){
@@ -96,6 +97,24 @@ function movieDetails(event){
     `<div class="character">
            <img src="${person.img}" alt="${person.name}" class="mini-img">
            <div>${person.name}</div>
+         </div>`
+  ).join("")}</div>
+      </div>
+      <div class="container">
+      <div class="label">Vehicles</div>
+      <div class="content">${selectedMovie.vehicles.map(vehicle =>
+    `<div class="vehicle">
+           <img src="${vehicle.img}" alt="${vehicle.name}" class="medium-img">
+           <div>${vehicle.name}</div>
+         </div>`
+  ).join("")}</div>
+      </div>
+      <div class="container">
+      <div class="label">Locations</div>
+      <div class="content">${selectedMovie.locations.map(place =>
+    `<div class="place">
+           <img src="${place.img}" alt="${place.name}" class="medium-img">
+           <div>${place.name}</div>
          </div>`
   ).join("")}</div>
       </div>

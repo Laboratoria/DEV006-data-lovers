@@ -153,9 +153,10 @@ footer {
   margin-top: 1rem;
   width: 800px;
   margin: 90px auto;
-  color: black;
-  background-color: white;
+  color:  #6d5041;
+  background-color: #cdbcac;
   padding: 45px 45px;
+  font-family: 'ITC Avant Garde Gothic Std Book';
 }
 .accordion .container {
     position: relative;
@@ -165,12 +166,12 @@ footer {
     position: relative;
     padding: 10px 0;
     font-size: 30px;
-    color: black;
+    color: #6d5041;
     cursor: pointer;
 }
 .accordion .label::before {
     content: '+';
-    color: black;
+    color: white;
     position: absolute;
     top: 50%;
     right: -5px;
@@ -179,7 +180,7 @@ footer {
   }
 .accordion .content {
     position: relative;
-    background: white;
+    background: #cdbcac;
     height: 0;
     font-size: 20px;
     text-align: justify;
@@ -273,7 +274,7 @@ footer {
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: #a7b07aa9;
     color: white;
     font-size: 0.8rem;
     padding: 0.25rem;
@@ -282,5 +283,63 @@ footer {
     transition: opacity 0.2s ease-in-out;
   }
   .character:hover div {
+    opacity: 1;
+  }
+  .vehicle {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem;
+    position: relative;
+  }
+  .vehicle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+  .vehicle div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#db766d93;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.25rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .vehicle:hover div {
+    opacity: 1;
+  }
+  .place {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+    margin: 0.5rem;
+    position: relative;
+  }
+  .place img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+  .place div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color:#329da196;
+    color: white;
+    font-size: 0.8rem;
+    padding: 0.25rem;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  .place:hover div {
     opacity: 1;
   }

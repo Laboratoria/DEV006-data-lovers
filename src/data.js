@@ -26,6 +26,7 @@ export const countCharactersforPeople = (films) => {
   
 };
 
+
 /* export const totalPeople = (movie) => {
 
   const element = movie.map((movie) => movie.people);
