@@ -1,4 +1,4 @@
-import {countCharacters} from './data.js'
+
 
 import data from './data/ghibli/ghibli.js';
 import { totalMovie, countCharacters, countCharactersforPeople } from './data.js';
@@ -20,25 +20,29 @@ console.log(totalPeoples); */
 const totalPeople = countCharacters(films);
 
 
-const totalPeople = countCharacters(films);
-
-console.log(totalPeople);
 
 function showMovies(event){
   event.preventDefault();
+  //Modify the homepage background with the plain background image.
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
+  //Create a container for the posters
+  const postersContainer = document.createElement("div");
+  postersContainer.classList.add("posters-container");
+  mainElement.appendChild(postersContainer);
+  //Add movie counter
   const totalValue = document.createElement("p");
   totalValue.classList.add("counter");
   totalValue.innerHTML = `<p> Se muestran ${totalMovies} resultados</p>`;
   mainElement.appendChild(totalValue);
+  //Show posters loop
   for (let i = 0; i < films.length; i++) {
     const divFilm = document.createElement("div");
     divFilm.classList.add("poster");
     divFilm.innerHTML = `<img src="${films[i].poster}" alt="">`;
     divFilm.setAttribute("id", films[i].id);
-    mainElement.appendChild(divFilm);
+    postersContainer.appendChild(divFilm);
     divFilm.addEventListener("click", movieDetails);
   }
 
@@ -46,7 +50,7 @@ function showMovies(event){
 }
   
 
-/* <h2>${selectedMovie.title}</h2> */
+
 function movieDetails(event){
   
   const clickedElement = event.currentTarget;
@@ -58,15 +62,20 @@ function movieDetails(event){
   const movieDetailsDiv = document.createElement("div");
   movieDetailsDiv.classList.add("movie-details");
   movieDetailsDiv.innerHTML = `
-      
-      <img src="${selectedMovie.poster}" >
+     <div class="movie-details">
+     <div class="movie-header">
+      <h2>${selectedMovie.title}</h2>   
+     <div class="movie-poster">
+      <img src="${selectedMovie.poster}" alt="${selectedMovie.title} poster">
+     </div>
+     </div>
       <div class="accordion">
       <div class="container">
-        <div class="label">Descripcion</div>
+        <div class="label">Description</div>
         <div class="content">${selectedMovie.description}</div>
       </div>
       <div class="container">
-        <div class="label">Productor</div>
+        <div class="label">Producer</div>
         <div class="content">${selectedMovie.producer}</div>
       </div>
        <div class="container">
@@ -74,19 +83,24 @@ function movieDetails(event){
         <div class="content">${selectedMovie.director}</div>
       </div>
        <div class="container">
-        <div class="label">Fecha de lanzamiento</div>
+        <div class="label">Release Date</div>
         <div class="content">${selectedMovie.release_date}</div>
       </div>
        <div class="container">
-        <div class="label">Calificación</div>
+        <div class="label">Rotten Tomatoes Score</div>
         <div class="content">${selectedMovie.rt_score}</div>
       </div>
       <div class="container">
-      <div class="label">Personajes (${peopleTotal})</div>
-      <div class="content">${selectedMovie.people.map(person => person.name).join(", ")}</div>
+      <div class="label">Characters (${peopleTotal})</div>
+      <div class="content">${selectedMovie.people.map(person =>
+    `<div class="character">
+           <img src="${person.img}" alt="${person.name}" class="mini-img">
+           <div>${person.name}</div>
+         </div>`
+  ).join("")}</div>
       </div>
       </div>
-      
+      </div>
     `;
   
   const mainElement = document.getElementById("main");
