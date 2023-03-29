@@ -6,125 +6,95 @@
     margin-top: 10%;
     margin-left: 10%;
     }
-    
-    .secondBtn {
-        width: 50%;
-        cursor: pointer;
-        background-color: #3CD1EF;
-        border-radius: 10px;
-        font-family: "Jockey One", sans-serif;
-        font-size: 20px;
-        margin: center;
-        margin-left: 25%;
-        margin-right: 10%;
-        margin-top: 7%;
+@media only screen and (max-width: 768px) {/*y esto*/
+        /* For mobile phones: */
+        .frame {
+        display: flex;
+        margin-top: 5%;
+        flex-flow: column wrap;
+        }
     }
+.History {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie01.png");
+    background-size: contain;
+    background-position: right;
+    overflow: hidden;
+    }  
+.Movies {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie02.png");
+    background-size: contain;
+    background-position: right;
+    overflow: hidden;
+}
+.Park {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie03.png");
+    background-size: contain;
+    overflow: hidden;
+}
+.Founders {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie04.png");
+    background-size: contain;
+    overflow: hidden;
+}
+.Mangas {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie05.png");
+    background-size: contain;
+    overflow: hidden;
+}
+.Museum {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie06.png");
+    background-size: contain;
+    overflow: hidden;
+}
+.secondBtn {
+    width: 50%;
+    cursor: pointer;
+    background-color: #3CD1EF;
+    border-radius: 10px;
+    font-family: "Jockey One", sans-serif;
+    font-size: 20px;
+    margin: center;
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 7%;
+    color: rgb(67, 21, 91);
+}
 
-
-    .imgNewbie01{
-        position: absolute;
-        display: flex;
-        width:150px;
-        height:195px;
-        top:205px;
-        left: 500px;
-    
-    @media all and (min-width: 400px) and (max-width: 1000px)
-    {  
-    .imgNewbie01{
-        width:50%;
-        height:200px;
-            }
-    }
-    }
-    .imgNewbie02{
-        position: absolute;
-        display: flex;
-        width:150px;
-        height:195px;
-        top:405px;
-        left: 100px;
-    
-    @media all and (min-width: 500px) and (max-width: 1000px)
-    {  
-    .imgNewbie02{
-        margin:20px auto;
-        padding:1px;
-        width:50%;
-        height:200px;
-            }
-    }
-    }
-    .imgNewbie03{
-        position: absolute;
-        display: flex;
-        width:166px;
-        height:74px;
-        top: 660px;
-        left: 500px;
-    
-    @media all and (min-width: 400px) and (max-width: 1000px)
-    {  
-    .imgNewbie03{
-        width:50%;
-        height:200px;
-            }
-    }
-    }
-    .imgNewbie04{
-        position: absolute;
-        display: flex;
-        width:200px;
-        height:152px;
-        top:245px;
-        left: 1240px;
-    
-    @media only screen and (max-width: 768px) 
-    {  
-    .imgNewbie04{
-        position: inherit;
-        display: flex;
-        width: 100%;
-        margin-top: 2%;
-            }
-    }
-    }
-    .imgNewbie05{
-        position: absolute;
-        display: flex;
-        width:166px;
-        height:173px;
-        top:405px;
-        left: 820px;
-    
-    @media all and (min-width: 500px) and (max-width: 1000px)
-    {  
-    .imgNewbie05{
-        margin:20px auto;
-        padding:1px;
-        width:50%;
-        height:200px;
-            }
-    }
-    }
-    .imgNewbie06{
-        position: absolute;
-        display: flex;
-        width:128px;
-        height:175px;
-        top: 570px;
-        left: 1300px;
-    
-    @media all and (min-width: 400px) and (max-width: 1000px)
-    {  
-    .imgNewbie06{
-        width:50%;
-        height:200px;
-            }
-    }
-    }
-    
-    
+.modal {
+    /* modals are hidden by default */
+    display: none;
+    /* modal container fixed across whole screen */
+    position: fixed;
+    inset: 0;
+    /* z-index must be higher than everything else on the page */
+    z-index: 10000;
+    padding: 40px;
+    /* enables scrolling for tall modals */
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+}
+.open {
+    display: block;
+}
+.modal-body {
+    padding: 20px;
+    background: #b7e1f4;
+    font-family: "Inconsolata", sans-serif;
+}
+.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+.close-modal {
+    margin-top: -25%;
+}    
     
     
     
