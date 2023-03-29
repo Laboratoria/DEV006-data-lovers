@@ -23,4 +23,23 @@ header{
     margin-left: 20px;
     margin-bottom: 20px;
     width: 200px ;
+    background-color: white;
+    border-style: solid;
+    color: black;
+    border-radius: 5px;
+}
+#filmsZone{
+    display: flex;
+    align-content:center;
+    color:white;
+    flex-wrap: wrap;
+}
+.imagenes{
+    height: 200px;
+    width: 150px;
+    padding: 20px;
+}
+.imagenes:hover{
+    opacity: 30%;
+
 }
