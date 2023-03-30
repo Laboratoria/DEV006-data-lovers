@@ -1,7 +1,7 @@
 
 
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersforPeople,filterFilms} from './data.js';
+import { totalMovie, countCharacters, countCharactersforPeople, filterFilms} from './data.js';
 
 
 const films = data.films;
@@ -10,21 +10,35 @@ const charactersBtn = document.getElementById("charactersBtn");
 const mainElement =  document.getElementById("main");
 const walpaper = document.getElementById("body");
 
-
-filmsBtn.addEventListener("click",showMovies);
-
-const totalMovies = totalMovie(films);
-
 const totalPeople = countCharacters(films);
 
+
+filmsBtn.addEventListener("click",showMovies);
 
 
 function showMovies(event) {
   event.preventDefault();
    
+  // Create the <a> element
+  const link = document.createElement("a");
+  link.setAttribute("id", "returnHome");
+  // Set the href and text of the link
+  link.setAttribute("href", "index.html");
+  link.textContent = "Go back";
+  //Modify the homepage background with the plain background image.
+  document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
+
+
   const producers = ["all", "Hayao Miyazaki", "Toshio Suzuki", "Isao Takahata", "Yoshiaki Nishimura", "Toru Hara"];
   //create a dropdown menu for filtering by producer
   const dropdown = document.createElement("select");
+
+  dropdown.classList.add("filter");
+  const label = document.createElement("label");
+  label.classList.add("filter-label");
+  label.textContent = "Filter by producer: ";
+  label.appendChild(dropdown);
+  
   //appends the dropdown options with the producer names
   producers.forEach(function (producer) {
     const option = document.createElement("option");
@@ -35,13 +49,14 @@ function showMovies(event) {
 
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
+  mainElement.appendChild(link);
 
   //Add movie counter to main section
   const totalValue = document.createElement("p");
   totalValue.classList.add("counter");
   mainElement.appendChild(totalValue);
   //add dropdown to main section
-  mainElement.appendChild(dropdown);
+  mainElement.appendChild(label);
   //create the posters container
   const postersContainer = document.createElement("div");
   postersContainer.classList.add("posters-container");
@@ -80,21 +95,32 @@ function showPosters(filteredFilms) {
   totalValue.innerHTML = `<p> Se muestran ${totalMovies} resultados</p>`;
 
 }
+
+
+
+
   
 
 
 function movieDetails(event){
 
+  // create a button element for returning to HOME
+  const returnButton = document.createElement("button");
+  returnButton.textContent = "Return to Animations";
+  // add event listener to the button that goes back to HOME
+  returnButton.addEventListener("click", showMovies);
+
+  //retrieve movie that user clicked on
   const clickedElement = event.currentTarget;
   const elementId = clickedElement.getAttribute("id");
+  //compare poster id to id's in data to retrieve movie
   const selectedMovie = films.find(movie => movie.id === elementId);
-
   const peopleTotal = countCharactersforPeople(selectedMovie);
-  
+  //Div for all the movie information
   const movieDetailsDiv = document.createElement("div");
   movieDetailsDiv.classList.add("movie-details");
   movieDetailsDiv.innerHTML = `
-     <div class="movie-details">
+     
      <div class="movie-header">
       <h2>${selectedMovie.title}</h2>   
      <div class="movie-poster">
@@ -150,16 +176,20 @@ function movieDetails(event){
   ).join("")}</div>
       </div>
       </div>
-      </div>
+      
     `;
   
+  
+  //add movieDetails div to the main section
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
+  // add the return button to the page
+  mainElement.appendChild(returnButton);
   mainElement.appendChild(movieDetailsDiv);
 
   
 
-
+  //change accordion's containers class to active when clicked (this class displays the hidden info)
   const accordion = document.getElementsByClassName("container");
 
   for (let i=0; i<accordion.length; i++) {
@@ -169,6 +199,7 @@ function movieDetails(event){
   }
 }
   
+//event listener for the ChARACTERS button
 charactersBtn.addEventListener("click",showCharacters);
 
 
@@ -177,6 +208,7 @@ function showCharacters(event){
 
 
   walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
+  //characters button is an <a>, prevent default event (going to new page)
   event.preventDefault();
 
 

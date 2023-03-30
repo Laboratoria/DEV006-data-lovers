@@ -1,5 +1,3 @@
-// estas funciones son de ejemplo
-
 
 
 export const totalMovie = (movie) => {
@@ -33,5 +31,3 @@ export const filterFilms = (films, selectedProducer) => {
     return films.filter(film => film.producer.toLowerCase().replace(" ", "-") === selectedProducer);
   }
 }
-
-
