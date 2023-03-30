@@ -26,20 +26,12 @@ export const countCharactersforPeople = (films) => {
   
 };
 
+export const filterFilms = (films, selectedProducer) => {
+  if (selectedProducer === "all") {
+    return films;
+  } else {
+    return films.filter(film => film.producer.toLowerCase().replace(" ", "-") === selectedProducer);
+  }
+}
 
-/* export const totalPeople = (movie) => {
 
-  const element = movie.map((movie) => movie.people);
-  console.log(element); */
-/*   let counter2 = movie.filter(counterTitle => counterTitle === element); */
-/*     return element.length; */
-/*   }; */
-
-/* array = array.filter(value => value == element);
-var array = [1, 2, 3, 5, 2, 5, 9, 8, 3, 5, 2, 5].reduce((count, value) =>
- (value == 5 ? count + 1 : count), 0) */
-/*   const result = films.filter(title => title == "title");
-console.log(result);
-  const element = films.map((movie) => movie.title.map(character => character.title));
-  let counter1 = films.filter(counterTitle => counterTitle === element);
-  console.log(counter1); */

@@ -1,7 +1,7 @@
 
 
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersforPeople} from './data.js';
+import { totalMovie, countCharacters, countCharactersforPeople,filterFilms} from './data.js';
 
 
 const films = data.films;
@@ -14,40 +14,71 @@ const walpaper = document.getElementById("body");
 filmsBtn.addEventListener("click",showMovies);
 
 const totalMovies = totalMovie(films);
-/* let totalPeoples = totalPeople(films);
-console.log(totalPeoples); */
+
 const totalPeople = countCharacters(films);
-/* const totalVehicles = countItems(films,vehicles);
-console.log(totalVehicles); */
 
 
-function showMovies(event){
+
+function showMovies(event) {
   event.preventDefault();
-  //Modify the homepage background with the plain background image.
+   
+  const producers = ["all", "Hayao Miyazaki", "Toshio Suzuki", "Isao Takahata", "Yoshiaki Nishimura", "Toru Hara"];
+  //create a dropdown menu for filtering by producer
+  const dropdown = document.createElement("select");
+  //appends the dropdown options with the producer names
+  producers.forEach(function (producer) {
+    const option = document.createElement("option");
+    option.value = producer.toLowerCase().replace(" ", "-");
+    option.textContent = producer;
+    dropdown.appendChild(option);
+  });
 
-  document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
   const mainElement = document.getElementById("main");
   mainElement.innerHTML = "";
-  //Create a container for the posters
+
+  //Add movie counter to main section
+  const totalValue = document.createElement("p");
+  totalValue.classList.add("counter");
+  mainElement.appendChild(totalValue);
+  //add dropdown to main section
+  mainElement.appendChild(dropdown);
+  //create the posters container
   const postersContainer = document.createElement("div");
   postersContainer.classList.add("posters-container");
   mainElement.appendChild(postersContainer);
-  //Add movie counter
-  const totalValue = document.createElement("p");
-  totalValue.classList.add("counter");
-  totalValue.innerHTML = `<p> Se muestran ${totalMovies} resultados</p>`;
-  mainElement.appendChild(totalValue);
-  //Show posters loop
-  for (let i = 0; i < films.length; i++) {
+  
+  //default value for filteredFilms will be films, before dropdown is selected
+  const filteredFilms = films;
+  //event listener for dropdown, chosen option is asigned to selectedProducer, filterFilms is used to filter all the films by this producer
+  dropdown.addEventListener("change", function() {
+    const selectedProducer = dropdown.value;
+    const filtered = filterFilms(films, selectedProducer);
+    //showPosters is passed only the filtered films as an argument
+    showPosters(filtered);
+  });
+  //default if dropdown is not used
+  showPosters(filteredFilms);
+  
+}
+
+function showPosters(filteredFilms) {
+  const postersContainer = document.querySelector(".posters-container");
+  postersContainer.innerHTML = "";
+
+  for (let i = 0; i < filteredFilms.length; i++) {
     const divFilm = document.createElement("div");
     divFilm.classList.add("poster");
-    divFilm.innerHTML = `<img src="${films[i].poster}" alt="">`;
-    divFilm.setAttribute("id", films[i].id);
+    divFilm.innerHTML = `<img src="${filteredFilms[i].poster}" alt="">`;
+    divFilm.setAttribute("id", filteredFilms[i].id);
     postersContainer.appendChild(divFilm);
     divFilm.addEventListener("click", movieDetails);
   }
 
- 
+  //value for movie counter
+  const totalMovies = totalMovie(filteredFilms);
+  const totalValue = document.querySelector(".counter");
+  totalValue.innerHTML = `<p> Se muestran ${totalMovies} resultados</p>`;
+
 }
   
 
@@ -140,19 +171,55 @@ function movieDetails(event){
   
 charactersBtn.addEventListener("click",showCharacters);
 
+
 function showCharacters(event){
+
+
+
   walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
   event.preventDefault();
 
-  const totalCharacters = document.createElement("p");
-  totalCharacters.classList.add("counter");
-  totalCharacters.innerHTML = `<p> Se muestran ${totalPeople} resultados</p>`;
-  mainElement.appendChild(totalCharacters);
 
-  mainElement.innerHTML = `<p class="counter"> Se muestran ${totalPeople} resultados</p>` 
-  + films.map((movie) => movie.people.map(character => `
-    <div class="people">
+  
+mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>`
+
+  const dropdown = document.createElement("select");
+  const species = [
+    "All",
+    "Human",
+    "Spirit",
+    "Totoro",
+    "Cat",
+    "Witch",
+    "Raccoon Dog",
+    "Red elk",
+    "Wolf",
+    "Deity, Dragon",
+    "Spirit of The White Fox",
+    "unknown",
+    "Bird",
+    "Wizard",
+    "Witch/Human",
+    "Demon",
+    "Human/Scarecrow",
+    "Dog",
+    "Fish/Human",
+    "Deity",
+    "Borrower"
+  ] ;
+
+  species.forEach((s) => {
+    const link = document.createElement("option");
+    link.href = "#"+s;
+    link.textContent = s; link.addEventListener("click",filterSpecies);
+    dropdown.appendChild(link);
     
+
+  });
+  mainElement.appendChild(dropdown);
+  mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig">` + films.map((movie) => movie.people.map(character => `
+  
+    <div class="characterBig" >
     <img src="`+ character.img + `" />
     
     <div class="overlay">
@@ -166,79 +233,29 @@ function showCharacters(event){
         
     </div>
 
-`));
+
+`).join("") ).join("")+`</div>`
+
+  )
 }
 
-/* function showMovies(event){
-  event.preventDefault();
-  document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)"
-  document.getElementById("main").innerHTML = films.map((movie) => `
-    <div class="poster" id="${movie.id}">
-     <img src="${movie.poster}" />
-    </div>
-  `);
-  const posterBtn = document.querySelectorAll('.poster');
-  posterBtn.forEach(button => {
-    button.addEventListener('click', function handleClick(event) {
-      console.log('box clicked', event);
-  
-     
-    });
+
+function filterSpecies(event) {
+  const selectedSpecies = event.target.value;
+  const characters = document.querySelectorAll(".characterBig");
+
+  let count = 0;
+  characters.forEach((character) => {
+    const specie = character.querySelector("h3:nth-child(6)").textContent.split(": ")[1];
+    if (selectedSpecies === "All" || specie === selectedSpecies) {
+      character.style.display = "inline-block";
+      count++;
+    } else {
+      character.style.display = "none";
+    }
   });
 
+  const counter = document.querySelector(".counter");
+  counter.textContent = `${count} characters found`;
 }
 
-
- */
-
-
-
-
-
-
-
-
-
-
-/* filmsBtn.addEventListener("click",showMovies);
-
-function showMovies(event){
-  event.preventDefault();
-  walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
-
-  mainElement.innerHTML = films.map((pelicula) => `
-
-  <div class="poster">
-  
-    <img src="`+ pelicula.poster + `" />
-      
-  </div>
-
-`);
-}
-
-charactersBtn.addEventListener("click",showCharacters);
-
-function showCharacters(event){
-  walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
-  event.preventDefault();
-
-  mainElement.innerHTML = films.map((movie) => movie.people.map(character => `
-
-    <div class="people">
-    
-    <img src="`+ character.img + `" />
-    
-    <div class="overlay">
-    <h3>Name: `+ character.name +`</h3>
-    <h3>Gender: `+ character.gender +`</h3>
-    <h3>Age: `+ character.age +`</h3>
-    <h3>Eye color: `+ character.eye_color +`</h3>
-    <h3>Hair color: `+ character.hair_color +`</h3>
-    <h3>Specie: `+ character.specie +`</h3>
-    </div>
-        
-    </div>
-
-`));
-}  */

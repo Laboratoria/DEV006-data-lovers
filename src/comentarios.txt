@@ -1,0 +1,317 @@
+  /* function buttonFilter(){
+
+  mainElement.innerHTML = "";
+  const dropdown = document.createElement("div");
+dropdown.classList.add("dropdown", "filter-species");
+
+const button = document.createElement("button");
+button.classList.add("dropbtn");
+button.textContent = "Filter for Species";
+
+const dropdownContent = document.createElement("div");
+dropdownContent.id = "myDropdown";
+dropdownContent.classList.add("dropdown-content");
+
+const input = document.createElement("input");
+input.type = "text";
+input.placeholder = "Search species..";
+input.id = "myInput";
+
+const species = [
+  "All",
+  "Human",
+  "Spirit",
+  "Totoro",
+  "Cat",
+  "Witch",
+  "Raccoon Dog",
+  "Red elk",
+  "Wolf",
+  "Deity, Dragon",
+  "Spirit of The White Fox",
+  "Unknown",
+  "Bird",
+  "Wizard",
+  "Witch/Human",
+  "Demon",
+  "Human/Scarecrow",
+  "Dog",
+  "Fish/Human",
+  "Deity",
+  "Borrower"
+];
+
+species.forEach((s) => {
+  const link = document.createElement("a");
+  link.href = "#";
+  link.textContent = s;
+  dropdownContent.appendChild(link);
+});
+
+dropdown.appendChild(button);
+dropdown.appendChild(dropdownContent);
+dropdownContent.insertBefore(input, dropdownContent.firstChild);
+
+ } */
+ 
+ 
+
+
+ 
+/*  function showCharacters(characters) {
+   wallpaper.style.backgroundImage = "url(images/forest-background.jpg)";
+   mainElement.innerHTML = `
+     <p class="counter">${characters.length} characters found</p>
+     ${characters.map((character) => `
+       <div class="charactersBig">
+         <div class="characterBig">
+           <img src="${character.img}" />
+           <div class="overlay">
+             <h3>Name: ${character.name}</h3>
+             <h3>Gender: ${character.gender}</h3>
+             <h3>Age: ${character.age}</h3>
+             <h3>Eye color: ${character.eye_color}</h3>
+             <h3>Hair color: ${character.hair_color}</h3>
+             <h3>Specie: ${character.specie}</h3>
+           </div>
+         </div>
+       </div>
+     `).join("")}`;
+ } */
+  /* <div class="dropdown filter-species">
+  <button class="dropbtn">Filter for Species</button>
+  <div id="myDropdown" class="dropdown-content">
+    <input type="text" placeholder="Search species.." id="myInput">
+    <a href="#">All</a>
+    <a href="#">Human</a>
+    <a href="#">Spirit</a>
+    <a href="#">Totoro</a>
+    <a href="#">Cat</a>
+    <a href="#">Witch</a>
+    <a href="#">Raccoon Dog</a>
+    <a href="#">Red elk</a>
+    <a href="#">Wolf</a>
+    <a href="#">Deity, Dragon</a>
+    <a href="#">Spirit of The White Fox</a>
+    <a href="#">Unknown</a>
+    <a href="#">Bird</a>
+    <a href="#">Wizard</a>
+    <a href="#">Witch/Human</a>
+    <a href="#">Demon</a>
+    <a href="#">Human/Scarecrow</a>
+    <a href="#">Dog</a>
+    <a href="#">Fish/Human</a>
+    <a href="#">Deity</a>
+    <a href="#">Borrower</a>
+  </div>
+</div>
+ */
+ /* 
+// Obtén el valor del input de búsqueda
+const speciesInput = document.querySelector('.dropdown.filter-species #myInput');
+const speciesValue = speciesInput.value.trim().toLowerCase();
+
+// Filtra los personajes en función de la especie seleccionada
+const filteredCharacters = films.filter((character) => {
+  return character.species.toLowerCase().includes(speciesValue);
+});
+
+// Actualiza la lista de personajes con los personajes filtrados
+const charactersList = document.querySelector('.characters');
+charactersList.innerHTML = '';
+filteredCharacters.forEach((character) => {
+  const characterHTML = `
+    <div class="character">
+      <img src="${character.img}" alt="${character.name}" />
+      <h3>${character.name}</h3>
+      <p>Species: ${character.species}</p>
+    </div>
+  `;
+  charactersList.insertAdjacentHTML('beforeend', characterHTML);
+}); */
+
+/* const filterSpeciesButton = document.querySelector('.dropdown.filter-species .dropbtn');
+filterSpeciesButton.addEventListener('click', filterCharactersBySpecies); */
+
+/*  function filterCharactersBySpecies() {
+  // Obtén el valor del input de búsqueda
+  const speciesInput = document.querySelector('.dropdown.filter-species #myInput');
+  const speciesValue = speciesInput.value.trim().toLowerCase();
+
+  // Filtra los personajes en función de la especie seleccionada
+  const filteredCharacters = characters.filter((character) => {
+    return character.species.toLowerCase().includes(speciesValue);
+  });
+
+  // Actualiza la lista de personajes con los personajes filtrados
+  const charactersList = document.querySelector('.characters');
+  charactersList.innerHTML = '';
+  filteredCharacters.forEach((character) => {
+    const characterHTML = `
+      <div class="character">
+        <img src="${character.img}" alt="${character.name}" />
+        <h3>${character.name}</h3>
+        <p>Species: ${character.species}</p>
+      </div>
+    `;
+    charactersList.insertAdjacentHTML('beforeend', characterHTML);
+  });
+}
+ */
+
+ export const filterCharactersBySpecies=(films)=> {
+  // Obtén el valor del input de búsqueda
+  const speciesInput = document.querySelector('.dropdown.filter-species #myInput');
+  const speciesValue = speciesInput.value.trim().toLowerCase();
+
+  // Filtra los personajes en función de la especie seleccionada
+  const filteredCharacters = films.filter((character) => {
+    return character.species.toLowerCase().includes(speciesValue);
+  });
+
+  // Actualiza la lista de personajes con los personajes filtrados
+  const charactersList = document.querySelector('.characters');
+  charactersList.innerHTML = '';
+  filteredCharacters.forEach((character) => {
+    const characterHTML = `
+      <div class="character">
+        <img src="${character.img}" alt="${character.name}" />
+        <h3>${character.name}</h3>
+        <p>Species: ${character.species}</p>
+      </div>
+    `;
+    charactersList.insertAdjacentHTML('beforeend', characterHTML);
+  });
+}
+
+ssssssssssssssiiiiiiiiiiiiiiiirrrrrrrrrrrrrrrrrveeeeeeeeeee
+
+
+function showCharacters(event){
+
+
+
+  walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
+  event.preventDefault();
+
+
+  
+mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>`
+
+ /*  `<div class="select filter-species">
+  <button class="dropbtn">Filter for Species</button>
+  <div id="myDropdown" class="select-content">` */
+  const dropdown = document.createElement("select");
+  const species = [
+    "All",
+    "Human",
+    "Spirit",
+    "Totoro",
+    "Cat",
+    "Witch",
+    "Raccoon Dog",
+    "Red elk",
+    "Wolf",
+    "Deity, Dragon",
+    "Spirit of The White Fox",
+    "unknown",
+    "Bird",
+    "Wizard",
+    "Witch/Human",
+    "Demon",
+    "Human/Scarecrow",
+    "Dog",
+    "Fish/Human",
+    "Deity",
+    "Borrower"
+  ] ;
+
+  species.forEach((s) => {
+    const link = document.createElement("option");
+    link.href = "#"+s;
+    link.textContent = s; link.addEventListener("click",filterSpecies);
+    dropdown.appendChild(link);
+  });
+  mainElement.appendChild(dropdown);
+  mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig">` + films.map((movie) => movie.people.map(character => `
+  
+    <div class="characterBig" >
+    <img src="`+ character.img + `" />
+    
+    <div class="overlay">
+    <h3>Name: `+ character.name +`</h3>
+    <h3>Gender: `+ character.gender +`</h3>
+    <h3>Age: `+ character.age +`</h3>
+    <h3>Eye color: `+ character.eye_color +`</h3>
+    <h3>Hair color: `+ character.hair_color +`</h3>
+    <h3>Specie: `+ character.specie +`</h3>
+    </div>
+        
+    </div>
+
+
+`).join("") ).join("")+`</div>`
+
+  )
+
+}
+
+function filterSpecies(filteredFilms){
+  console.log("filtrando especies")
+  console.log(this.innerHTML)
+  const speciesFilter = document.getElementById("charactersBig");
+  speciesFilter.innerHTML = films.map((movie) => movie.people.map(character => {
+    if (character.specie == this.innerHTML){
+console.log("lobo",character.name)
+    
+    return `
+  
+    <div class="characterBig" >
+    <img src="`+ character.img + `" />
+    
+    <div class="overlay">
+    <h3>Name: `+ character.name +`</h3>
+    <h3>Gender: `+ character.gender +`</h3>
+    <h3>Age: `+ character.age +`</h3>
+    <h3>Eye color: `+ character.eye_color +`</h3>
+    <h3>Hair color: `+ character.hair_color +`</h3>
+    <h3>Specie: `+ character.specie +`</h3>
+    </div>
+        
+    </div>
+
+
+`} else return "";}).join("") ).join("")
+console.log(speciesFilter)
+}
+
+
+function filterSpecies(event){
+
+  console.log("filtrando especies")
+  console.log(this.innerHTML)
+  const speciesFilter = document.getElementById("charactersBig");
+  speciesFilter.innerHTML = films.map((movie) => movie.people.map(character => {
+    if (character.specie == this.innerHTML){
+console.log("lobo",character.name)
+    
+    return `
+  
+    <div class="characterBig" >
+    <img src="`+ character.img + `" />
+    
+    <div class="overlay">
+    <h3>Name: `+ character.name +`</h3>
+    <h3>Gender: `+ character.gender +`</h3>
+    <h3>Age: `+ character.age +`</h3>
+    <h3>Eye color: `+ character.eye_color +`</h3>
+    <h3>Hair color: `+ character.hair_color +`</h3>
+    <h3>Specie: `+ character.specie +`</h3>
+    </div>
+        
+    </div>
+
+
+`} else return "";}).join("") ).join("")
+console.log(speciesFilter)
+}
