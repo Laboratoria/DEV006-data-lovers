@@ -1,12 +1,42 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <!-- FAVICON -->
+  <link rel="icon" type="" href="img/favicon.png" />
+  <!-- FONT BERLIN SANS -->
+  <link href="https://fonts.cdnfonts.com/css/berlin-sans-fb-demi" rel="stylesheet">
+  <!-- FONT ROBOTO -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+  <title>Pokédex</title>
+
+</head>
+
+<body>
+  <header>
+    <img src="img/header.png ">
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Pokédex</a></li>
+        <li><a href="#">Regions</a></li>
+        <li><a href="#" class="type"> Types</a></li>
+        <li><a href="#">Rarety</a></li>
+        <li><a href="#">Egg</a></li>
+        <input type="text" id="search" placeholder="Pokémon name or number">
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="pokemon-container">
+    </div>
+    <button id="load-more">Load more</button>
+  </main>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
