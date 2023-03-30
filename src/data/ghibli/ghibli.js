@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://i.pinimg.com/564x/66/b9/f0/66b9f051b3eb8ebec1ebe066051c8070--chibi-totoro-anime-mangas.jpg",
+          "img": "https://art.ngfiles.com/images/643000/643698_kayas-kosmos_chibi-totoro-speedpaint.png?f1537386750",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
