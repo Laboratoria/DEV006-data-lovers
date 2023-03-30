@@ -97,4 +97,8 @@ button:hover {
     margin-top: 5%;
     flex-flow: column wrap;
   }
+  .button {
+    display: flex;
+    width: 70%;
+  }
 }

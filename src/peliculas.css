@@ -1,0 +1,10 @@
+#movieTitlesBtn {
+    bottom: 15%;
+    margin-top: 5%;
+}
+
+#movieTitles {
+    font-family: "Jockey One", sans-serif;
+    font-size: 20px;
+    margin: center;
+}
