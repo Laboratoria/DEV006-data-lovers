@@ -1,13 +1,21 @@
-/*html {
-  height: 100%;
-  width: 1440px;
-}*/
+hmtl{
+ padding: 0;
+  margin: 0;
+}
+body{
+  background-color: #261C2C;
+}
 #logo {
-  position:relative;
-  width: 100%;
-  height: auto;
-  left: 0px;
-  top: 0px;
+position: relative;
+left: 0px;
+top: 0px;
+border: none !important;
+margin: 0px;
+padding: 0px;
+width: 1447px;
+line-height: 0%;
+
+
 }
 nav {
   width: 85%;
@@ -17,12 +25,12 @@ nav {
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
-  /*background: #5C527F;
+  background: #5C527F;
   position: absolute;
-  width: 1447px;
+  width: 1510.2px;
   height: 68px;
-  left: -7px;
-  top: 272px;*/
+  left: -144px;
+  top: 285px;
   
 }
 ul {
@@ -31,6 +39,9 @@ ul {
   padding: 0;
   overflow: hidden;
   position: sticky;
+  top: 5px;
+  margin-top: 20px;
+  margin-left: 100px;
 }
 li {
   float: left;
@@ -42,7 +53,7 @@ li, a{
   padding-left: 10px;
   padding-right: 10px;
   text-decoration: none;
-  color:black;
+  color:#ffff;
   }
   a:hover{
     color: #6E85B2;
