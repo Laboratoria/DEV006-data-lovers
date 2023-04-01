@@ -12,7 +12,6 @@ for(let i = 0; i < champion.length; i++){
   const championCard = document.createElement("div");
   championCard.classList.add("champion-card"); 
 
-  // Creación div y clase para img verde de fondo
   const championImgContainer = document.createElement("div");
   championImgContainer.classList.add("champion-img-container");
 
