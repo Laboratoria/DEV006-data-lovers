@@ -1,11 +1,12 @@
-/*html {
-  height: 100%;
-  width: 1440px;
-}*/
+
 #logo {
-  position:relative;
-  width: 100%;
-  height: auto;
-  left: 0px;
-  top: 0px;
+position: fixed;
+left: 0px;
+top: 0px;
+border: none !important;
+margin: 0px;
+padding: 0px;
+width: 100%;
+line-height: 0%;
+
 }
