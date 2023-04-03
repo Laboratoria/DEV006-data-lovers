@@ -13,12 +13,44 @@
     </header>
     <main>
       <section class="content">
-        <p id="filterText">Filtros : </p>
-        <button class="buttonFilter" >Directores</button>
-        <button class="buttonFilter" >Productores</button>
-        <button class="buttonFilter" >Puntuación</button>
-        <button class="buttonFilter" >Año</button>
-        <button class="buttonFilter" >Especie</button>
+        <p id="filterText">Filtros: </p>
+          <select> 
+            <option disabled selected>Directores</option>
+            <option value="">Hayao Miyazaki</option>
+            <option value="">Isao Takahata</option>
+            <option value="">Yoshifumi Kondo</option>
+            <option value="">Hiroyuki Morita</option>
+            <option value="">Goro Miyazaki</option>
+            <option value="">Hiromasa Yonebayashi</option>
+          </select>
+
+          <select> 
+            <option disabled selected>Productores</option>
+            <option value="">Hayao Miyazaki</option>
+            <option value="">Isao Takahata</option>
+            <option value="">Toru Hara</option>
+            <option value="">Toshio Suzuki</option>
+            <option value="">Yoshiaki Nishimura</option>
+          </select>
+
+            <select> 
+              <option disabled selected>Puntuación</option>
+              <option value="">De más alta a más baja</option>
+              <option value="">De más baja a más alta</option>
+            </select>
+
+          <select>
+          <option disabled selected>Año de estreno</option>
+              <option value="">De más nueva a más antigua</option>
+              <option value="">De más antigua a más nueva</option>
+        </select>
+
+        <select>
+        <option disabled selected>Especie</option>
+              <option value="">Humanos</option>
+              <option value="">Otros</option>
+            </select>
+            
         <input class="buttonFilter" type="text" id="searchSpace" placeholder="Ingresa tu busqueda">
       </section>
       <section id="filmsZone" class="filmsZone">
