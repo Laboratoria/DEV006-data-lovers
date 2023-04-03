@@ -54,23 +54,48 @@ export const filterCharacter = (characters, selectedSpecies,selectedAnimations) 
   counter.textContent = `${count} characters found`;
 }
 
-export const filterOrden = (films,container,order) => {
-  container.innerHTML= "";
-  films.sort((a, b) => {
-    const nameA = a.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
-    const nameB = b.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
-    if(nameA > nameB && order === 1){
-      return 1;
-    }
-    else if(nameA < nameB && order === -1){
-      return 1;
-    }
-    return 0;
-  })
-  films.forEach(function (ch) {
+export const filterOrden = (charactersArray, container, order) => {
+  container.innerHTML = "";
+  charactersArray.sort((a, b) => {
+    const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
+    const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
+    /* return nameA.localeCompare(nameB) * order; */
+
+      if (nameA < nameB) {
+        return -order;
+      }
+      if (nameA > nameB) {
+        return order;
+      }
+      return 0;
+  });
+  charactersArray.forEach(function (ch) {
     container.appendChild(ch);
   });
 }
+
+/* export const filterOrden = (charactersArray,container,order/* ,selectOrden ) => {
+  container.innerHTML= "";
+/*   if (selectOrden === "Order ") 
+  charactersArray.sort((a, b) => {
+    const nameA = a.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
+    const nameB = b.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
+    console.log(nameA, "-----", nameB);
+    if(nameA > nameB && order === 1){
+      console.log("yo 1")
+      return 1;
+    }
+    else if(nameA < nameB && order === -1){
+      console.log("yo 2")
+      return 1;
+    }
+    console.log("Entra en 0")
+    return 0;
+  })
+  charactersArray.forEach(function (ch) {
+    container.appendChild(ch);
+  });
+} */
 
 export const sortAsc = (films) => {
 

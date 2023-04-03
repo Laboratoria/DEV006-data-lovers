@@ -225,6 +225,7 @@ display: inline-block;
     font-size: 12px;
     padding: 20px;
     text-align: left;
+    font-family:'ITC Avant Garde Gothic Std Book' ;
 }
 .characterBig:hover .overlay {
     opacity: 1;
@@ -328,6 +329,7 @@ display: inline-block;
   font-size: 1.5rem;
   font-family: 'ITC Avant Garde Gothic Std Book';
   color: white;
+  margin-left: 1rem;
 }
 
 /* formatted footer */
@@ -375,6 +377,7 @@ footer {
     color: white;
     font-family: 'ITC Avant Garde Gothic Std Book';
     font-weight: bold;
+    margin-left: 1rem;
   }
   
   select.filter {
