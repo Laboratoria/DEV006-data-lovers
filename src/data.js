@@ -58,3 +58,46 @@ export const sortDes = (films) => {
  
   return films
 }
+export const filterCharacter = (characters, selectedSpecies,selectedAnimations) => {
+  let count = 0;
+
+  characters.forEach((character) => {
+    const specie = character.querySelector("h3:nth-child(7)").textContent.split(": ")[1];
+    const animation = character.querySelector("h3:nth-child(1)").textContent.split(": ")[1];
+    if ((selectedSpecies === "All" || specie === selectedSpecies) && (selectedAnimations === "All" || animation === selectedAnimations) ){
+      character.style.display = "inline-block";
+      count++;
+    } else {
+      character.style.display = "none";
+    }
+  });
+
+  const counter = document.querySelector(".counter");
+  counter.textContent = `${count} characters found`;
+}
+
+export const filterOrden = (films,container,order) => {
+  container.innerHTML= "";
+  films.sort((a, b) => {
+    const nameA = a.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
+    const nameB = b.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
+    if(nameA > nameB && order === 1){
+      return 1;
+    }
+    else if(nameA < nameB && order === -1){
+      return 1;
+    }
+    return 0;
+  })
+  films.forEach(function (ch) {
+    container.appendChild(ch);
+  });
+}
+
+/* export const filterFilmsCharacter = (films, selectedAnimations) => {
+  if (selectedAnimations === "all") {
+    return films;
+  } else {
+    return films.filter(film => film.title.toLowerCase().replace(" ", "-") === selectedAnimations);
+  }
+} */

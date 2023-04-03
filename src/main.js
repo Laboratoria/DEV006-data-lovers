@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersforPeople, filterFilms, sortAsc, sortDes} from './data.js';
+import { totalMovie, countCharacters, countCharactersforPeople, filterFilms,filterCharacter, filterOrden, sortAsc, sortDes} from './data.js';
 
 
 const films = data.films;
@@ -317,24 +317,74 @@ function showCharacters(event){
   const species = getAllSpecies(films);
   species.unshift("All");
 
+
+  const dropdown2 = document.createElement("select");
+  dropdown2.classList.add("filter");
+  dropdown2.id="select-animations";
+
+  /*   const label2 = document.createElement("label");
+  label2.classList.add("filter-label");
+  label2.textContent = "Filter by animation: ";
+  label2.appendChild(dropdown2); */
+  
+  const animations = [
+    "All",
+    "Castle in the Sky",
+    "My Neighbor Totoro",
+    "Kiki's Delivery Service",
+    "Grave of the Fireflies",
+    "Only Yesterday",
+    "Porco Rosso",
+    "Pom Poko",
+    "Whisper of the Heart",
+    "Princess Mononoke",
+    "My Neighbors the Yamadas",
+    "Spirited Away",
+    "The Cat Returns",
+    "Howl's Moving Castle",
+    "Tales from Earthsea",
+    "Ponyo on the Cliff by the Sea",
+    "The Secret World of Arrietty",
+    "From Up on Poppy Hill",
+    "The Wind Rises",
+    "The Tale of the Princess Kaguya",
+    "When Marnie Was There"
+  ] ;
+  
+  const ordenado = document.createElement("button");
+  ordenado.classList.add("ordenado");
+  ordenado.addEventListener("click",ordenadosAlfabeto)
+
+
   species.forEach((s) => {
     const link = document.createElement("option");
     link.href = "#"+s;
-    link.textContent = s; 
+    link.textContent =s; 
     dropdown.appendChild(link);
     dropdown.addEventListener("click",filterSpecies);
+  });
+
+  animations.forEach((s) => {
+    const link = document.createElement("option");
+    link.href = "#"+s;
+    link.textContent =s; 
+    dropdown2.appendChild(link);
+    dropdown2.addEventListener("click",filterSpecies);
+    ordenado.innerHTML= "A-Z"
 
   });
 
-
-  
   mainElement.appendChild(dropdown);
-  mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig">` + films.map((movie) => movie.people.map(character => `
+  mainElement.appendChild(dropdown2);    
+  mainElement.appendChild(ordenado);  
+  mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig" >` + films.map((movie) => movie.people.map(character => `
   
     <div class="characterBig" >
+
     <img src="`+ character.img + `" />
     
     <div class="overlay">
+    <h3>title: `+ movie.title +`</h3>
     <h3>Name: `+ character.name +`</h3>
     <h3>Gender: `+ character.gender +`</h3>
     <h3>Age: `+ character.age +`</h3>
@@ -345,29 +395,34 @@ function showCharacters(event){
         
     </div>
 
-
 `).join("") ).join("")+`</div>`
 
   )
 }
 
 
-function filterSpecies(event) {
-  const selectedSpecies = event.target.value;
+function filterSpecies() {
+  const selectedSpecies = document.getElementById("select-species").value;
+  const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
+  filterCharacter(characters, selectedSpecies,selectedAnimations);
 
-  let count = 0;
-  characters.forEach((character) => {
-    const specie = character.querySelector("h3:nth-child(6)").textContent.split(": ")[1];
-    if (selectedSpecies === "All" || specie === selectedSpecies) {
-      character.style.display = "inline-block";
-      count++;
-    } else {
-      character.style.display = "none";
-    }
-  });
+}
 
-  const counter = document.querySelector(".counter");
-  counter.textContent = `${count} characters found`;
+function ordenadosAlfabeto(event){
+  const selectOrden = event.target.innerHTML;
+  let order= 0;
+  if(selectOrden === "A-Z"){
+    event.target.innerHTML =  "Z-A";
+    order = -1;
+  }else{
+    event.target.innerHTML =  "A-Z";
+    order = 1;
+  }
+  const characters = document.querySelectorAll(".characterBig");
+  const charactersArray = Array.prototype.slice.call(characters, 0);
+  const container = document.getElementById("charactersBig");
+  filterOrden(charactersArray, container,order)
+
 }
 

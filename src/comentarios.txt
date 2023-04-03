@@ -315,3 +315,22 @@ console.log("lobo",character.name)
 `} else return "";}).join("") ).join("")
 console.log(speciesFilter)
 }
+
+function filterSpecies(event) {
+  const selectedSpecies = event.target.value;
+  const characters = document.querySelectorAll(".characterBig");
+
+  let count = 0;
+  characters.forEach((character) => {
+    const specie = character.querySelector("h3:nth-child(6)").textContent.split(": ")[1];
+    if (selectedSpecies === "All" || specie === selectedSpecies) {
+      character.style.display = "inline-block";
+      count++;
+    } else {
+      character.style.display = "none";
+    }
+  });
+
+  const counter = document.querySelector(".counter");
+  counter.textContent = `${count} characters found`;
+}
