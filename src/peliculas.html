@@ -18,9 +18,30 @@
         </ul>
         </div>
     </header>
-    <div class="movieTitles"><button type="button" id="movieTitlesBtn">Ver películas</button>
-    <p id="movieTitles"></p></div>
+    
+    <label for="filterType">Filter by:</label>
+    <select id="filterType">
+      <option value="title">Title</option>
+      <option value="director">Director</option>
+      <option value="producer">Producer</option>
+      <option value="release_date">Release year</option>
+    </select>
+    
+    <label for="filterValue">Valor de filtrado:</label>
+    <input type="text" id="filterValue">
+    
+    <table id="moviesTable">
+        <tbody>
+            <tr>
+                <td id="moviesTableColumnOne"></td>
+                <td id="moviesTableColumnTwo"></td>
+              </tr>
+          <!-- aquí se insertarán las filas de la tabla -->
+        </tbody>
+      </table>
+    
 
     <script src="main.js" type="module"></script>
+    <script src="data.js" type="module"></script>
 </body>
 </html>
