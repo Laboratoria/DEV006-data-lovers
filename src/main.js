@@ -21,6 +21,7 @@ data.films
 
 function divCreator(x){
     const movieDiv = document.createElement("div");
+    movieDiv.className = "filmDivs"
     movieDiv.appendChild(x.title);
     movieDiv.appendChild(x.poster);
     return movieDiv
@@ -29,7 +30,7 @@ function divCreator(x){
 function createImage(uri){
         const image = document.createElement('img');
         image.src = uri
-        image.className = "images";
+        image.className = "posterImages";
         return image
 }
 
