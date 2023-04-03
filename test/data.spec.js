@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersforPeople} from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersforPeople, filterOrden} from '../src/data.js';
 
 
 describe('totalMovie', () => {
@@ -62,3 +62,5 @@ describe('filterOrden function', () => {
     expect(container.appendChild.mock.calls[1][0]).toBe(films[2]);
     expect(container.appendChild.mock.calls[2][0]).toBe(films[1]);
   });
+
+});

@@ -316,7 +316,7 @@ function showCharacters(event){
   const dropdown = document.createElement("select");
   const species = getAllSpecies(films);
   species.unshift("All");
-
+  dropdown.id="select-species";
 
   const dropdown2 = document.createElement("select");
   dropdown2.classList.add("filter");
