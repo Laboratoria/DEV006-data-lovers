@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersforPeople } from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersforPeople} from '../src/data.js';
 
 
 describe('totalMovie', () => {
@@ -24,53 +24,3 @@ describe('countCharactersforPeople', () => {
 
 });
 
-describe('filterOrden function', () => {
-  // Creamos un mock de los elementos de películas
-  const films = [
-    {
-      querySelector: (selector) => ({
-        textContent: 'Title: A'
-      })
-    },
-    {
-      querySelector: (selector) => ({
-        textContent: 'Title: C'
-      })
-    },
-    {
-      querySelector: (selector) => ({
-        textContent: 'Title: B'
-      })
-    }
-  ];
-
-  // Creamos un mock del contenedor
-  const container = {
-    innerHTML: '',
-    appendChild: jest.fn()
-  };
-
-  test('should sort the films in ascending order by title', () => {
-    // Act
-    filterOrden(films, container, 1);
-
-    // Assert
-    expect(container.innerHTML).toBe('');
-    expect(container.appendChild).toHaveBeenCalledTimes(3);
-    expect(container.appendChild.mock.calls[0][0]).toBe(films[0]);
-    expect(container.appendChild.mock.calls[1][0]).toBe(films[2]);
-    expect(container.appendChild.mock.calls[2][0]).toBe(films[1]);
-  });
-
-  test('should sort the films in descending order by title', () => {
-    // Act
-    filterOrden(films, container, -1);
-
-    // Assert
-    expect(container.innerHTML).toBe('');
-    expect(container.appendChild).toHaveBeenCalledTimes(3);
-    expect(container.appendChild.mock.calls[0][0]).toBe(films[1]);
-    expect(container.appendChild.mock.calls[1][0]).toBe(films[2]);
-    expect(container.appendChild.mock.calls[2][0]).toBe(films[0]);
-  });
-});

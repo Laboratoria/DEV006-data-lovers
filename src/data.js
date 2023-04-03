@@ -24,11 +24,15 @@ export const countCharactersforPeople = (films) => {
   
 };
 
-export const filterFilms = (films, selectedProducer) => {
-  if (selectedProducer === "all") {
+export const filterFilms = (films, selectedProducer, selectedDirector) => {
+  if (selectedDirector === "all" && selectedProducer === "all") {
     return films;
   } else {
-    return films.filter(film => film.producer.toLowerCase().replace(" ", "-") === selectedProducer);
+    return films.filter(film => {
+      const producerMatch = selectedProducer === "all" || film.producer === selectedProducer;
+      const directorMatch = selectedDirector === "all" || film.director === selectedDirector;
+      return producerMatch && directorMatch;
+    });
   }
 }
 
@@ -66,4 +70,26 @@ export const filterOrden = (films,container,order) => {
   films.forEach(function (ch) {
     container.appendChild(ch);
   });
+}
+
+export const sortAsc = (films) => {
+
+  films.sort((a, b) => {
+    if (a.title < b.title) return -1;
+    if (a.title > b.title) return 1;
+    return 0;
+  });
+ 
+  return films
+}
+
+export const sortDes = (films) => {
+
+  films.sort((a, b) => {
+    if (a.title > b.title) return -1;
+    if (a.title < b.title) return 1;
+    return 0;
+  });
+ 
+  return films
 }
