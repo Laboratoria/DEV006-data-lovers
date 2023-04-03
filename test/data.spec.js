@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersforPeople } from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersforPeople} from '../src/data.js';
 
 
 describe('totalMovie', () => {
@@ -22,3 +22,5 @@ describe('countCharactersforPeople', () => {
   });
 
 });
+
+

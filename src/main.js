@@ -1,7 +1,5 @@
-
-
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersforPeople, filterFilms} from './data.js';
+import { totalMovie, countCharacters, countCharactersforPeople, filterFilms, sortAsc, sortDes} from './data.js';
 
 
 const films = data.films;
@@ -9,68 +7,153 @@ const filmsBtn = document.getElementById("filmsBtn");
 const charactersBtn = document.getElementById("charactersBtn");
 const mainElement =  document.getElementById("main");
 const walpaper = document.getElementById("body");
-
 const totalPeople = countCharacters(films);
 
 
 filmsBtn.addEventListener("click",showMovies);
 
 
+function getAllProducers(films) {
+  const allProducers = [];
+  films.forEach ((film) => {
+    if (!allProducers.includes(film.producer)) {
+      allProducers.push(film.producer);
+    }
+  });
+  return allProducers;
+}
+
+function getAllDirectors(films) {
+  const allDirectors = [];
+  films.forEach ((film) => {
+    if (!allDirectors.includes(film.director)) {
+      allDirectors.push(film.director);
+    }
+  });
+  return allDirectors;
+}
+
 function showMovies(event) {
   event.preventDefault();
-   
-  // Create the <a> element
-  const link = document.createElement("a");
-  link.setAttribute("id", "returnHome");
-  // Set the href and text of the link
-  link.setAttribute("href", "index.html");
-  link.textContent = "Go back";
   //Modify the homepage background with the plain background image.
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
+  const mainElement = document.getElementById("main");
+  const returnHome = document.createElement("a");
+  const producers = getAllProducers(films);
+  const directors = getAllDirectors(films);
+  producers.unshift("all");
+  directors.unshift("all");
 
-
-  const producers = ["all", "Hayao Miyazaki", "Toshio Suzuki", "Isao Takahata", "Yoshiaki Nishimura", "Toru Hara"];
+  //Go Back button
+  returnHome.classList.add("returnButton");
+  returnHome.setAttribute("href", "index.html");
+  returnHome.textContent = "Back to Home";
+ 
+  //default value for filteredFilms will be films, before dropdown is selected
+  const filteredFilms = films;
+  //--------------Filtering by producer-----------------------------------------------------
+ 
   //create a dropdown menu for filtering by producer
-  const dropdown = document.createElement("select");
-
-  dropdown.classList.add("filter");
+  const dropdownProducers = document.createElement("select");
+  dropdownProducers.classList.add("filter");
   const label = document.createElement("label");
   label.classList.add("filter-label");
   label.textContent = "Filter by producer: ";
-  label.appendChild(dropdown);
+  label.appendChild(dropdownProducers);
   
   //appends the dropdown options with the producer names
   producers.forEach(function (producer) {
     const option = document.createElement("option");
-    option.value = producer.toLowerCase().replace(" ", "-");
+    option.value = producer;
     option.textContent = producer;
-    dropdown.appendChild(option);
+    dropdownProducers.appendChild(option);
+  });
+  //------------------------------------------------------------------------------------------
+  //--------------Filtering by director-------------------------------------------------------
+ 
+  //create a dropdown menu for filtering by director
+  const dropdownDirectors = document.createElement("select");
+  dropdownDirectors.classList.add("filter");
+  const labelDirectors = document.createElement("label");
+  labelDirectors.classList.add("filter-label");
+  labelDirectors.textContent = "Filter by director: ";
+  labelDirectors.appendChild(dropdownDirectors);
+  
+  //appends the dropdown options with the directors' names
+  directors.forEach(function (director) {
+    const option = document.createElement("option");
+    option.value = director;
+    option.textContent = director;
+    dropdownDirectors.appendChild(option);
+  });
+  //------------------------------------------------------------------------------------------
+  //--------------Order A-Z-------------------------------------------------------------------
+
+  const sortBtnAsc = document.createElement("button");
+  sortBtnAsc.classList.add("sortButton");
+  sortBtnAsc.textContent = "Order A-Z";
+ 
+
+  sortBtnAsc.addEventListener("click", function() {
+    // Make a copy of the films array
+    const sortedFilms = filteredFilms.slice();
+  
+    const sortedFilmsAsc = sortAsc(sortedFilms);
+  
+    // Show the sorted films
+    showPosters(sortedFilmsAsc);
+  });
+  //------------------------------------------------------------------------------------------
+  //--------------Order Z-A ------------------------------------------------------------------
+  const sortBtnDes = document.createElement("button");
+  sortBtnDes.classList.add("sortButton");
+  sortBtnDes.textContent = "Order Z-A";
+
+  sortBtnDes.addEventListener("click", function() {
+    // Make a copy of the films array
+    const sortedFilms = filteredFilms.slice();
+  
+    const sortedFilmsDes = sortDes(sortedFilms);
+  
+    // Show the sorted films
+    showPosters(sortedFilmsDes);
   });
 
-  const mainElement = document.getElementById("main");
+  //------------------------------------------------------------------------------------------
+
   mainElement.innerHTML = "";
-  mainElement.appendChild(link);
+  mainElement.appendChild(returnHome);
 
   //Add movie counter to main section
   const totalValue = document.createElement("p");
   totalValue.classList.add("counter");
   mainElement.appendChild(totalValue);
-  //add dropdown to main section
+  //add producers & directors filter dropdown to main section
   mainElement.appendChild(label);
+  mainElement.appendChild(labelDirectors);
+  mainElement.appendChild(sortBtnAsc);
+  mainElement.appendChild(sortBtnDes);
   //create the posters container
   const postersContainer = document.createElement("div");
   postersContainer.classList.add("posters-container");
+  //add posters container to main 
   mainElement.appendChild(postersContainer);
   
-  //default value for filteredFilms will be films, before dropdown is selected
-  const filteredFilms = films;
-  //event listener for dropdown, chosen option is asigned to selectedProducer, filterFilms is used to filter all the films by this producer
-  dropdown.addEventListener("change", function() {
-    const selectedProducer = dropdown.value;
-    const filtered = filterFilms(films, selectedProducer);
+
+
+  function handleFiltersChange() {
+    const selectedProducer = dropdownProducers.value;
+    const selectedDirector = dropdownDirectors.value;
+    const filtered = filterFilms(films, selectedProducer, selectedDirector);
     //showPosters is passed only the filtered films as an argument
     showPosters(filtered);
-  });
+  }
+  
+  dropdownProducers.addEventListener("change", handleFiltersChange);
+  
+  dropdownDirectors.addEventListener("change", handleFiltersChange);
+
+
   //default if dropdown is not used
   showPosters(filteredFilms);
   
@@ -96,17 +179,13 @@ function showPosters(filteredFilms) {
 
 }
 
-
-
-
-  
-
-
 function movieDetails(event){
 
   // create a button element for returning to HOME
   const returnButton = document.createElement("button");
   returnButton.textContent = "Return to Animations";
+  returnButton.classList.add("returnButton");
+  
   // add event listener to the button that goes back to HOME
   returnButton.addEventListener("click", showMovies);
 
@@ -171,8 +250,8 @@ function movieDetails(event){
       <div class="content">${selectedMovie.locations.map(place =>
     `<div class="place">
            <img src="${place.img}" alt="${place.name}" class="medium-img">
-           <div>${place.name}</div>
-         </div>`
+           <div>${place.name} </div>
+      </div>`
   ).join("")}</div>
       </div>
       </div>
@@ -202,52 +281,53 @@ function movieDetails(event){
 //event listener for the ChARACTERS button
 charactersBtn.addEventListener("click",showCharacters);
 
+//create an array with all species, without duplicates
+function getAllSpecies(films) {
+  const allSpecies = [];
+  films.forEach((film) => {
+    film.people.forEach((person) => {
+      if (!allSpecies.includes(person.specie)) {
+        allSpecies.push(person.specie);
+      }
+    });
+  });
+ 
+  return allSpecies;
+  
+}
+
 
 function showCharacters(event){
-
-
 
   walpaper.style.backgroundImage = "url(images/forest-background.jpg)";
   //characters button is an <a>, prevent default event (going to new page)
   event.preventDefault();
+  const backbtn = document.createElement("a");
+  //Go Back button
+  backbtn.classList.add("returnButton");
+  backbtn.setAttribute("href", "index.html");
+  backbtn.textContent = "Back to Home";
+  mainElement.innerHTML="";
+  mainElement.appendChild(backbtn);
+  mainElement.insertAdjacentHTML('beforeend', `<p class="counter">${totalPeople} characters found</p>`);
 
-
-  
-mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>`
+  /* mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
 
   const dropdown = document.createElement("select");
-  const species = [
-    "All",
-    "Human",
-    "Spirit",
-    "Totoro",
-    "Cat",
-    "Witch",
-    "Raccoon Dog",
-    "Red elk",
-    "Wolf",
-    "Deity, Dragon",
-    "Spirit of The White Fox",
-    "unknown",
-    "Bird",
-    "Wizard",
-    "Witch/Human",
-    "Demon",
-    "Human/Scarecrow",
-    "Dog",
-    "Fish/Human",
-    "Deity",
-    "Borrower"
-  ] ;
+  const species = getAllSpecies(films);
+  species.unshift("All");
 
   species.forEach((s) => {
     const link = document.createElement("option");
     link.href = "#"+s;
-    link.textContent = s; link.addEventListener("click",filterSpecies);
+    link.textContent = s; 
     dropdown.appendChild(link);
-    
+    dropdown.addEventListener("click",filterSpecies);
 
   });
+
+
+  
   mainElement.appendChild(dropdown);
   mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig">` + films.map((movie) => movie.people.map(character => `
   
