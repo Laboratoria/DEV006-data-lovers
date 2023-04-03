@@ -1,0 +1,63 @@
+body {
+    background-color: hsl(226, 46%, 29%);
+    margin: 0px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    background-color: hsl(226, 54%, 68%);
+    display: flex;
+    height: calc(100vh - 60px);
+    width: 100%;
+    /*margin: 5px;*/
+}
+
+aside {
+    background-color: hsl(54, 49%, 49%);
+    width: 170px;
+    display: grid;
+}
+
+#logo {
+    width: 100%;
+    display: flex;
+
+}
+
+section {
+    background-color: hsl(123, 54%, 68%);
+    width: calc(100vw - 170px);
+    text-align: center;
+}
+
+#textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#title {
+    max-width: 500px;
+    width: 100%;
+}
+
+#about {
+    background-color: greenyellow;
+    max-width: 650px;
+    width: 100%;
+    height: 600px;
+}
+
+footer {
+    background-color: hsl(223, 26%, 22%);
+    height: 60px;
+    width: 100%;
+}
+button{
+margin: 10px;    
+radius
+}
