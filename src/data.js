@@ -67,11 +67,3 @@ export const filterOrden = (films,container,order) => {
     container.appendChild(ch);
   });
 }
-
-/* export const filterFilmsCharacter = (films, selectedAnimations) => {
-  if (selectedAnimations === "all") {
-    return films;
-  } else {
-    return films.filter(film => film.title.toLowerCase().replace(" ", "-") === selectedAnimations);
-  }
-} */
