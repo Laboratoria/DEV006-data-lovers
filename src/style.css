@@ -3,7 +3,7 @@ body{
     margin-left: 0%;
     margin-right: 0%;
     margin-bottom: 0%;
-    background-color: black;
+    background-color: rgb(24, 24, 24);
 }
 header{
     width: 100%;
@@ -15,36 +15,45 @@ header{
 }
 .content{
     display: flex;
-    margin-top: 20px;
+    margin-top: 0;
     padding-top: 20px;
     padding-bottom: 20px;
-    background-color: rgb(24, 24, 24);
+    background-color: rgb(0, 0, 0);
 }
 .buttonFilter{
     margin-left: 20px;
     width: 200px ;
     background-color: white;
     border-style:hidden;
-    color: black;
+    color: rgb(0, 0, 0);
     border-radius: 5px;
     font-family:Arial, Helvetica, sans-serif;
 }
 #filmsZone{
     display: flex;
-    align-content:center;
     color:white;
     flex-wrap: wrap;
+    align-content:center;
 }
-.grupoTitulos {
-    color: white;
+.titles{
+    display: flex;
+    justify-content: center;
+    font-family:Arial, Helvetica, sans-serif;
+    margin-bottom: 5px;
+    margin-top: 20px;
+
 }
-.images{
+.posterImages{
     height: 300px;
     width: 200px;
     padding: 5px;
-    margin: 50px;
+    margin-top: 10px;
+    margin-left: 40px ;
+    margin-right: 40px;
+    margin-bottom: 60px;
+    border-radius: 5%;
 }
-.images:hover{
+.posterImages:hover{
     opacity: 30%;
 
 }
