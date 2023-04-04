@@ -1,13 +1,8 @@
 
 export const dataFilter = (directores, data) => {
-
-  let directores1 = data.films.filter(films => films.director == directores)
-
-  console.log(directores1)
-
-
-  
-  return 'example';
+//filtro
+  const directores1 = data.films.filter(films => films.director === directores)
+  return directores1;
 };
 
 export const sortData = () => {
