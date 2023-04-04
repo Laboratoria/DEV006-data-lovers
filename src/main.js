@@ -4,6 +4,14 @@ import { stats } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
+let directores =  document.getElementById("Directores");
+const directorSection = document.getElementById("directorSection")
+const productores =  document.getElementById("productores");
+const puntuacion =  document.getElementById("puntuacion");
+const añoDeEstreno=  document.getElementById("añoDeEstreno");
+const especie =  document.getElementById("especie");
+
+
 console.log(dataFilter, sortData, stats, data);
 
 class titleAndPoster {
@@ -17,7 +25,6 @@ class titleAndPoster {
 
   }
 }
-
 data.films
   .map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
   .map(Element => divCreator(Element))
@@ -42,7 +49,6 @@ function divCreatorhover(x){
   return movieDivHover
 }
 
-
 function createImage(uri){
   const image = document.createElement('img');
   image.src = uri
@@ -58,4 +64,7 @@ function createTitle(titleMovie){
 }
 
 
+directores.addEventListener("change",function(){
+    directorSection.innerHTML = dataFilter(directores.value,data);
+}  )
 
