@@ -43,6 +43,8 @@ button {
   border-radius: 0px 25px 25px 0px;
   width: 70%;
   margin: 20px 0px;
+  border: none;
+  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.584);
 }
 
 .titleMain {
@@ -74,7 +76,7 @@ footer {
 
 .imageEscobar {
   position: absolute;
-  height: 40%;
-  bottom: -45px;
+  height: 60%;
+  bottom: -60px;
   right: -38px;
 }
