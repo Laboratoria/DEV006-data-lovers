@@ -14,47 +14,50 @@
     <main>
       <section class="content">
         <p id="filterText">Filtros: </p>
-          <select> 
+          <select name="Directores" id="Directores"> 
             <option disabled selected>Directores</option>
-            <option value="">Hayao Miyazaki</option>
-            <option value="">Isao Takahata</option>
-            <option value="">Yoshifumi Kondo</option>
-            <option value="">Hiroyuki Morita</option>
-            <option value="">Goro Miyazaki</option>
-            <option value="">Hiromasa Yonebayashi</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Yoshifumi Kondo">Yoshifumi Kondo</option>
+            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+            <option value="Goro Miyazaki">Goro Miyazaki</option>
+            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
           </select>
 
-          <select> 
+          <select name="Productores" id="Productores"> 
             <option disabled selected>Productores</option>
-            <option value="">Hayao Miyazaki</option>
-            <option value="">Isao Takahata</option>
-            <option value="">Toru Hara</option>
-            <option value="">Toshio Suzuki</option>
-            <option value="">Yoshiaki Nishimura</option>
+            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+            <option value="Isao Takahata">Isao Takahata</option>
+            <option value="Toru Hara">Toru Hara</option>
+            <option value="Toshio Suzuki">Toshio Suzuki</option>
+            <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
           </select>
 
-            <select> 
+            <select name="Puntuacion" id="Puntuacion"> 
               <option disabled selected>Puntuación</option>
-              <option value="">De más alta a más baja</option>
-              <option value="">De más baja a más alta</option>
+              <option value="De más alta a más baja">De más alta a más baja</option>
+              <option value="De más baja a más alta">De más baja a más alta</option>
             </select>
 
-          <select>
+          <select name="Año de estreno" id="Año de estreno">
           <option disabled selected>Año de estreno</option>
-              <option value="">De más nueva a más antigua</option>
-              <option value="">De más antigua a más nueva</option>
+              <option value="De más nueva a más antigua">De más nueva a más antigua</option>
+              <option value="De más antigua a más nueva">De más antigua a más nueva</option>
         </select>
 
-        <select>
+        <select name="Especie" id="Especie">
         <option disabled selected>Especie</option>
-              <option value="">Humanos</option>
-              <option value="">Otros</option>
+              <option value="Humanos">Humanos</option>
+              <option value="Otros">Otros</option>
             </select>
             
         <input class="buttonFilter" type="text" id="searchSpace" placeholder="Ingresa tu busqueda">
       </section>
       <section id="filmsZone" class="filmsZone">
       </section>
+      <section class="directorSection" id="directorSection"></section>
+      <section class="productorSection"></section>
+      <section class="SpecieSection"></section>
     </main>
     <div id="root"></div>
     <script src="main.js" type="module"></script>
