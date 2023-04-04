@@ -25,77 +25,16 @@ export const countCharactersMovie = (films) => {
 };
 
 export const filterFilms = (films, selectedProducer, selectedDirector) => {
-  if (selectedDirector === "all" && selectedProducer === "all") {
+  if (selectedDirector === "All" && selectedProducer === "All") {
     return films;
   } else {
     return films.filter(film => {
-      const producerMatch = selectedProducer === "all" || film.producer === selectedProducer;
-      const directorMatch = selectedDirector === "all" || film.director === selectedDirector;
+      const producerMatch = selectedProducer === "All" || film.producer === selectedProducer;
+      const directorMatch = selectedDirector === "All" || film.director === selectedDirector;
       return producerMatch && directorMatch;
     });
   }
 }
-
-export const filterCharacter = (characters, selectedSpecies,selectedAnimations) => {
-  let count = 0;
-
-  characters.forEach((character) => {
-    const specie = character.querySelector("h3:nth-child(7)").textContent.split(": ")[1];
-    const animation = character.querySelector("h3:nth-child(1)").textContent.split(": ")[1];
-    if ((selectedSpecies === "All" || specie === selectedSpecies) && (selectedAnimations === "All" || animation === selectedAnimations) ){
-      character.style.display = "inline-block";
-      count++;
-    } else {
-      character.style.display = "none";
-    }
-  });
-
-  const counter = document.querySelector(".counter");
-  counter.textContent = `${count} characters found`;
-}
-
-export const filterOrden = (charactersArray, container, order) => {
-  
-  charactersArray.sort((a, b) => {
-    const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
-    const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
-    /* return nameA.localeCompare(nameB) * order; */
-
-    if (nameA < nameB) {
-      return -order;
-    }
-    if (nameA > nameB) {
-      return order;
-    }
-    return 0;
-  });
-  charactersArray.forEach(function (ch) {
-    container.appendChild(ch);
-  });
-}
-
-/* export const filterOrden = (charactersArray,container,order/* ,selectOrden ) => {
-  container.innerHTML= "";
-/*   if (selectOrden === "Order ") 
-  charactersArray.sort((a, b) => {
-    const nameA = a.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
-    const nameB = b.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
-    console.log(nameA, "-----", nameB);
-    if(nameA > nameB && order === 1){
-      console.log("yo 1")
-      return 1;
-    }
-    else if(nameA < nameB && order === -1){
-      console.log("yo 2")
-      return 1;
-    }
-    console.log("Entra en 0")
-    return 0;
-  })
-  charactersArray.forEach(function (ch) {
-    container.appendChild(ch);
-  });
-} */
 
 export const sortAsc = (films) => {
 
@@ -120,9 +59,6 @@ export const sortDes = (films) => {
 }
 
 
-
-
-
 export const filterCharacter = (character, selectedSpecies,selectedAnimations, specie, animation) => {
   let count = 0;
 
@@ -137,23 +73,22 @@ export const filterCharacter = (character, selectedSpecies,selectedAnimations, s
   return count;
 }
 
+export const filterOrden = (charactersArray, container, order) => {
+  
+  charactersArray.sort((a, b) => {
+    const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
+    const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
+    /* return nameA.localeCompare(nameB) * order; */
 
-
-export const filterOrden = (films,container,order) => {
-  container.innerHTML= "";
-  films.sort((a, b) => {
-    const nameA = a.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
-    const nameB = b.querySelector("h3:nth-child(2)").textContent.split(": ")[1];
-    if(nameA > nameB && order === 1){
-      return 1;
+    if (nameA < nameB) {
+      return -order;
     }
-    else if(nameA < nameB && order === -1){
-      return 1;
+    if (nameA > nameB) {
+      return order;
     }
     return 0;
-  })
-  films.forEach(function (ch) {
+  });
+  charactersArray.forEach(function (ch) {
     container.appendChild(ch);
   });
 }
- 

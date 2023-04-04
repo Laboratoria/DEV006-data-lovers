@@ -453,22 +453,22 @@ describe('filterFilms', () => {
   
 
   it('should return all films when "all" is selected for both producer and director', () => {
-    const selectedProducer = 'all';
-    const selectedDirector = 'all';
+    const selectedProducer = 'All';
+    const selectedDirector = 'All';
     const filteredFilms = filterFilms(movies, selectedProducer, selectedDirector);
     expect(filteredFilms).toEqual(movies);
   });
 
   it('should filter by producer when a specific producer is selected', () => {
     const selectedProducer = 'Isao Takahata';
-    const selectedDirector = 'all';
+    const selectedDirector = 'All';
     const expectedFilms = [movies[0]];
     const filteredFilms = filterFilms(movies, selectedProducer, selectedDirector);
     expect(filteredFilms).toEqual(expectedFilms);
   });
 
   it('should filter by director when a specific director is selected', () => {
-    const selectedProducer = 'all';
+    const selectedProducer = 'All';
     const selectedDirector = 'Isao Takahata';
     const expectedFilms = [movies[3], movies[4]];
     const filteredFilms = filterFilms(movies, selectedProducer, selectedDirector);
@@ -506,6 +506,16 @@ describe('sortAsc', () => {
 describe('sortDes', () => {
   test('sorts an array of films in descending order', () => {
     const unsortedFilms = [ movies[0], movies[1]];
+
+    const expectedFilms = [movies[1], movies[0]];
+
+    const sortedFilms = sortDes(unsortedFilms);
+
+    expect(sortedFilms).toEqual(expectedFilms);
+  });
+
+  test('sorts an array of films in descending order, when films are already ordered', () => {
+    const unsortedFilms = [ movies[1], movies[0]];
 
     const expectedFilms = [movies[1], movies[0]];
 
@@ -562,7 +572,7 @@ describe('filterCharacter', () => {
 describe('filterOrden', () => {
   test('should sort characters array alphabetically by name in ascending order', () => {
     // Arrange
-    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Morty',        }),      },      {        querySelector: () => ({          textContent: 'Name: Summer',        }),      },      {        querySelector: () => ({          textContent: 'Name: Rick',        }),      },    ];
+    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Chihiro',        }),      },      {        querySelector: () => ({          textContent: 'Name: Totoro',        }),      },      {        querySelector: () => ({          textContent: 'Name: Kiki',        }),      },    ];
     const container = {
       innerHTML: '',
       appendChild: jest.fn(),
@@ -573,15 +583,15 @@ describe('filterOrden', () => {
     filterOrden(charactersArray, container, order);
 
     // Assert
-    expect(charactersArray[0].querySelector().textContent).toBe('Name: Morty');
-    expect(charactersArray[1].querySelector().textContent).toBe('Name: Rick');
-    expect(charactersArray[2].querySelector().textContent).toBe('Name: Summer');
+    expect(charactersArray[0].querySelector().textContent).toBe('Name: Chihiro');
+    expect(charactersArray[1].querySelector().textContent).toBe('Name: Kiki');
+    expect(charactersArray[2].querySelector().textContent).toBe('Name: Totoro');
     expect(container.appendChild).toHaveBeenCalledTimes(3);
   });
 
   test('should sort characters array alphabetically by name in descending order', () => {
     // Arrange
-    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Morty',        }),      },      {        querySelector: () => ({          textContent: 'Name: Summer',        }),      },      {        querySelector: () => ({          textContent: 'Name: Rick',        }),      },    ];
+    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Chihiro',        }),      },      {        querySelector: () => ({          textContent: 'Name: Totoro',        }),      },      {        querySelector: () => ({          textContent: 'Name: Kiki',        }),      },    ];
     const container = {
       innerHTML: '',
       appendChild: jest.fn(),
@@ -592,11 +602,32 @@ describe('filterOrden', () => {
     filterOrden(charactersArray, container, order);
 
     // Assert
-    expect(charactersArray[0].querySelector().textContent).toBe('Name: Summer');
-    expect(charactersArray[1].querySelector().textContent).toBe('Name: Rick');
-    expect(charactersArray[2].querySelector().textContent).toBe('Name: Morty');
+    expect(charactersArray[0].querySelector().textContent).toBe('Name: Totoro');
+    expect(charactersArray[1].querySelector().textContent).toBe('Name: Kiki');
+    expect(charactersArray[2].querySelector().textContent).toBe('Name: Chihiro');
     expect(container.appendChild).toHaveBeenCalledTimes(3);
   });
+
+
+  test('should leave as it is when both characters are equal', () => {
+    // Arrange
+    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Chihiro',        }),      },     {        querySelector: () => ({          textContent: 'Name: Chihiro',        }),      }  ];
+    const container = {
+      innerHTML: '',
+      appendChild: jest.fn(),
+    };
+    const order = -1;
+
+    // Act
+    filterOrden(charactersArray, container, order);
+
+    // Assert
+    expect(charactersArray[0].querySelector().textContent).toBe('Name: Chihiro');
+    expect(charactersArray[1].querySelector().textContent).toBe('Name: Chihiro');
+    expect(container.appendChild).toHaveBeenCalledTimes(2);
+  });
+
+
 });
 
 

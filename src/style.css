@@ -25,19 +25,19 @@ body {
 
 /* Contenido principal centrado con sus margenes */
 main {
-margin-top: 2.5rem;
+margin-top: 4rem;
 margin-bottom: 10rem;
 margin-left: 1rem;
 margin-right: 1rem;
 flex-wrap: wrap;
 
 }
-
+/* 
 .container{
   width: 900%;
   max-width: 80rem;
   margin: 0 auto;
-}
+} */
 /* Nav de botones pmodificando su posición */
 .main-menu{
     margin-top: 5rem;

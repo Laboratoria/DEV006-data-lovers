@@ -50,8 +50,8 @@ function showMovies(event) {
   const returnHome = document.createElement("a");
   const producers = getAllProducers(films);
   const directors = getAllDirectors(films);
-  producers.unshift("all");
-  directors.unshift("all");
+  producers.unshift("All");
+  directors.unshift("All");
 
   //Go Back button
   returnHome.classList.add("returnButton");
