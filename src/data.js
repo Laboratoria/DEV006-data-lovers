@@ -38,14 +38,18 @@ dataFilms.forEach((movie) => {
     //console.log(place.name);
   //})
 //})
-
+/*const director = "Hayao Miyazaki"; // the genre to filter by
+const filteredFilms = dataFilms.filter(movie => movie.director === director);
 
 const moviesTable = document.getElementById("moviesTable");
 const columnOne = document.getElementById("moviesTableColumnOne");
 const columnTwo = document.getElementById("moviesTableColumnTwo");
 
-dataFilms.forEach((movie, index) => {
+filteredFilms.forEach((movie, index) => {
+
+//dataFilms.forEach((movie, index) => {
   const tableRow = document.createElement("tr");
+  
   const posterCell = document.createElement("td");
   const posterImg = document.createElement("img");
   posterImg.src = movie.poster;
@@ -100,7 +104,68 @@ dataFilms.forEach((movie, index) => {
   moviesTable.appendChild(tableRow);
 
 });
-  
+  */
+
+//const director = "Hayao Miyazaki"; // the genre to filter by
+//const filteredFilms = dataFilms.filter(movie => movie.director === director);
+
+//const allDirectors = dataFilms;
+//console.log(dataFilms.filter(movie => movie.director).map(movie => movie.director));
+
+const moviesTable = document.getElementById("moviesTable");
+const moviesBody = moviesTable.getElementsByTagName('tbody')[0];
+let tableBody = "";
+
+export function filterBy(director){
+  let filteredFilms = dataFilms;
+  const chosenDirector = document.getElementById("directorSelect").value;
+  console.log(chosenDirector);
+
+  if (director !== "allDirectors"){
+    filteredFilms = dataFilms.filter(movie => movie.director === chosenDirector);
+  } 
+
+  tableBody="";
+  filteredFilms.forEach((movie, index) => {
+    if (index % 3 === 0) {
+      tableBody = tableBody + "<tr>"
+    }
+    tableBody = tableBody + "<td>"
+
+    const posterImg = "<img src='" + movie.poster +"' class='moviePoster'/>"
+    const movieTitle = "<h3>" + movie.title + "</h3>";
+    const releaseDate = "<p>" + movie.release_date + "</p>";
+    const description = "<p class='justify'>" + movie.description + "</p>";
+    const director = "<p>" + movie.director + "</p>";
+
+    tableBody = tableBody + posterImg + movieTitle + releaseDate + description + director;
+    tableBody = tableBody + "</td>"
+
+    if(index % 3 === 2) {
+      tableBody = tableBody + "</tr>";
+    }
+  });
+  moviesBody.innerHTML = tableBody;
+}
+
+filterBy("allDirectors");
+
+//moviesBody.insertAdjacentHTML('afterbegin', tableBody);
+
+
+/*const titleContainer = document.getElementById("titleContainer");
+dataFilms.forEach(movie => {
+  const title = document.createElement("table");
+  title.textContent = movie.title;
+  titleContainer.appendChild(title);
+});
+export const example = () => {
+  return 'example';
+};
+export const anotherExample = () => {
+  return 'OMG';
+};*/
+//console.log("films", data.films[1]);
 
 
 /*const titleContainer = document.getElementById("titleContainer");

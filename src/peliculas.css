@@ -1,5 +1,5 @@
 
-table {
+/*table {
     width: 50%;
     font-family: "Jockey One", sans-serif;
     font-size: 120%;
@@ -25,6 +25,38 @@ table {
   #moviesTableColumnTwo {
     width: 50%;
     margin: auto;
+  }*/
+
+  table {
+    width: 80%;
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+    margin:auto;
+    text-align: justify;
+  }
+  .moviePoster {
+    width: 80%;
+    height: 10%;
+  }
+  #moviesTableColumnOne {
+    width: 50%;
+    margin:auto;
+  }
+  #moviesTableColumnTwo {
+    width: 50%;
+    margin-top: 15%;
+  }
+  #moviesTable td {
+    vertical-align: top;
+    padding: 20px;
+    text-align: center;
+  }
+  #moviesTable img {
+    height: 342px;
+    width: 250px;
+  }
+  .justify {
+    text-align: justify;
   }
  
  

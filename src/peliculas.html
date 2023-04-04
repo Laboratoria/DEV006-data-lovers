@@ -19,19 +19,19 @@
         </div>
     </header>
     
-    <label for="filterType">Filter by:</label>
-    <select id="filterType">
-      <option value="title">Title</option>
-      <option value="director">Director</option>
-      <option value="producer">Producer</option>
-      <option value="release_date">Release year</option>
-    </select>
-    
-    <label for="filterValue">Valor de filtrado:</label>
-    <input type="text" id="filterValue">
+    <label for="directorSelect">Filter by director:</label>
+      <select id="directorSelect">
+        <option value="allDirectors">All</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+      </select>
     
     <table id="moviesTable">
-        <tbody>
+        <tbody id="moviesTableBody">
             <tr>
                 <td id="moviesTableColumnOne"></td>
                 <td id="moviesTableColumnTwo"></td>
