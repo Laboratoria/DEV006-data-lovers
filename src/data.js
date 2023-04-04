@@ -17,10 +17,10 @@ export const countCharacters = (films) => {
   
 };
 
-export const countCharactersforPeople = (films) => {
+export const countCharactersMovie = (films) => {
   
-  const characterCountP = films.people.length;
-  return characterCountP;
+  const characterMovie = films.people.length;
+  return characterMovie;
   
 };
 
@@ -76,6 +76,10 @@ export const filterCharacter = (characters, selectedSpecies,selectedAnimations) 
   counter.textContent = `${count} characters found`;
 }
 
+
+
+
+
 export const filterOrden = (films,container,order) => {
   container.innerHTML= "";
   films.sort((a, b) => {
@@ -93,11 +97,4 @@ export const filterOrden = (films,container,order) => {
     container.appendChild(ch);
   });
 }
-
-/* export const filterFilmsCharacter = (films, selectedAnimations) => {
-  if (selectedAnimations === "all") {
-    return films;
-  } else {
-    return films.filter(film => film.title.toLowerCase().replace(" ", "-") === selectedAnimations);
-  }
-} */
+ 
