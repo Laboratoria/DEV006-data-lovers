@@ -2,7 +2,12 @@
     margin: 0;
     padding: 0;
 }
-
+/* html {
+  background-image: url(images/main-background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} */
 /* Fondo de imagen para el header y estilos  */
 header {
     width: 100%;
@@ -11,9 +16,21 @@ header {
     background-size: cover;
     background-position: center;
 }
+html, body {
+  height: 100%;
+}
 
-/* Fondo para la pagina con estilos para que no se repita */
 body {
+  background-image: url(images/main-background.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  font-family: 'ITC Avant Garde Gothic Std Book';
+}
+/* Fondo para la pagina con estilos para que no se repita */
+/* body {
     background-image: url(images/main-background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -21,7 +38,7 @@ body {
     display: flex;
     flex-direction: column;
     font-family:'ITC Avant Garde Gothic Std Book' ;
-}
+} */
 
 /* Contenido principal centrado con sus margenes */
 main {
