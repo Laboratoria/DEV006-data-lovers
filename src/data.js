@@ -58,7 +58,9 @@ export const sortDes = (films) => {
  
   return films
 }
-export const filterCharacter = (characters, selectedSpecies,selectedAnimations) => {
+
+
+/* export const filterCharacter = (characters, selectedSpecies,selectedAnimations) => {
   let count = 0;
 
   characters.forEach((character) => {
@@ -74,9 +76,21 @@ export const filterCharacter = (characters, selectedSpecies,selectedAnimations) 
 
   const counter = document.querySelector(".counter");
   counter.textContent = `${count} characters found`;
+} */
+
+export const filterCharacter = (character, selectedSpecies,selectedAnimations, specie, animation) => {
+  let count = 0;
+
+  if ((selectedSpecies === "All" || specie === selectedSpecies) && (selectedAnimations === "All" || animation === selectedAnimations) ){
+    character.style.display = "inline-block";
+    count++;
+  } else {
+    character.style.display = "none";
+  }
+
+
+  return count;
 }
-
-
 
 
 

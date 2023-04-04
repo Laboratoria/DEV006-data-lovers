@@ -429,7 +429,21 @@ function filterSpecies() {
   const selectedSpecies = document.getElementById("select-species").value;
   const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
-  filterCharacter(characters, selectedSpecies,selectedAnimations);
+
+  let totalCount  = 0; 
+  characters.forEach((character) => {
+    const specie = character.querySelector("h3:nth-child(7)").textContent.split(": ")[1];
+    const animation = character.querySelector("h3:nth-child(1)").textContent.split(": ")[1];
+   
+    totalCount += filterCharacter(character,selectedSpecies,selectedAnimations,specie,animation);
+
+  });
+  
+  const counter = document.querySelector(".counter");
+  counter.textContent = `${totalCount} characters found`;
+  
+  
+  /*   filterCharacter(characters, selectedSpecies,selectedAnimations); */
  
 }
 
