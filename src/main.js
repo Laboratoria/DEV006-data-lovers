@@ -3,7 +3,6 @@ import {
   totalMovie, 
   countCharacters, 
   countCharactersMovie, 
-  countCharactersforPeople, 
   filterFilms,
   filterCharacter, 
   filterOrden, 
@@ -335,9 +334,9 @@ function showCharacters(event){
   mainElement.appendChild(backbtn);
   mainElement.insertAdjacentHTML('beforeend', `<p class="counter">${totalPeople} characters found</p>`);
 
-/*   mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
+  /*   mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
   /*   `<label for="species">Select the specie:</label>` */
-/*   const dropdown = document.createElement("select");
+  /*   const dropdown = document.createElement("select");
   dropdown.classList.add("filter");
   dropdown.id="select-species";
 
@@ -367,7 +366,7 @@ function showCharacters(event){
   /* mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
  
 
-/*   const dropdown = document.createElement("select");
+  /*   const dropdown = document.createElement("select");
   dropdown.classList.add("filter");
   dropdown.id="select-species";
   const species = getAllSpecies(films);
@@ -442,7 +441,7 @@ function showCharacters(event){
     const link = document.createElement("option");
     link.href = "#"+s;
     link.textContent =s; 
-/*     dropdown.appendChild(link);
+    /*     dropdown.appendChild(link);
     dropdown.addEventListener("click",filterSpecies); */
     ordenado.innerHTML= "Order A-Z"
     sortBtnDes.innerHTML= "Order Z-A"
@@ -468,7 +467,7 @@ function showCharacters(event){
   mainElement.appendChild(labelChar);
   mainElement.appendChild(dropdown2);    
   mainElement.appendChild(ordenado); 
-  mainElement.appendChild(label); 
+  /*   mainElement.appendChild(label);  */
   mainElement.appendChild(label2); 
   mainElement.appendChild(sortBtnDes); 
   mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig" >` + films.map((movie) => movie.people.map(character => `
@@ -530,6 +529,7 @@ function ordenadosAlfabeto(event) {
   const characters = document.querySelectorAll(".characterBig");
   const charactersArray = Array.from(characters);
   const container = document.getElementById("charactersBig");
+  container.innerHTML = "";
   filterOrden(charactersArray, container, order);
 }
 

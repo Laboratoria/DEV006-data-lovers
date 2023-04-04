@@ -55,19 +55,19 @@ export const filterCharacter = (characters, selectedSpecies,selectedAnimations) 
 }
 
 export const filterOrden = (charactersArray, container, order) => {
-  container.innerHTML = "";
+  
   charactersArray.sort((a, b) => {
     const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
     const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
     /* return nameA.localeCompare(nameB) * order; */
 
-      if (nameA < nameB) {
-        return -order;
-      }
-      if (nameA > nameB) {
-        return order;
-      }
-      return 0;
+    if (nameA < nameB) {
+      return -order;
+    }
+    if (nameA > nameB) {
+      return order;
+    }
+    return 0;
   });
   charactersArray.forEach(function (ch) {
     container.appendChild(ch);

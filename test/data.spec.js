@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes} from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes,filterCharacter,filterOrden} from '../src/data.js';
 
 
 
@@ -528,42 +528,45 @@ describe('sortDes', () => {
 
 
 
-/* describe('filterOrden function', () => {
-  // Creamos un mock de los elementos de películas
-  const films = [
-    {
-      querySelector: (selector) => ({
-        textContent: 'Title: A'
-      })
-    },
-    {
-      querySelector: (selector) => ({
-        textContent: 'Title: C'
-      })
-    },
-    {
-      querySelector: (selector) => ({
-        textContent: 'Title: B'
-      })
-    }
-  ];
 
-  // Creamos un mock del contenedor
-  const container = {
-    innerHTML: '',
-    appendChild: jest.fn()
-  };
+describe('filterOrden', () => {
+  test('should sort characters array alphabetically by name in ascending order', () => {
+    // Arrange
+    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Morty',        }),      },      {        querySelector: () => ({          textContent: 'Name: Summer',        }),      },      {        querySelector: () => ({          textContent: 'Name: Rick',        }),      },    ];
+    const container = {
+      innerHTML: '',
+      appendChild: jest.fn(),
+    };
+    const order = 1;
 
-  test('should sort the films in ascending order by title', () => {
     // Act
-    filterOrden(films, container, 1);
+    filterOrden(charactersArray, container, order);
 
     // Assert
-    expect(container.innerHTML).toBe('');
+    expect(charactersArray[0].querySelector().textContent).toBe('Name: Morty');
+    expect(charactersArray[1].querySelector().textContent).toBe('Name: Rick');
+    expect(charactersArray[2].querySelector().textContent).toBe('Name: Summer');
     expect(container.appendChild).toHaveBeenCalledTimes(3);
-    expect(container.appendChild.mock.calls[0][0]).toBe(films[0]);
-    expect(container.appendChild.mock.calls[1][0]).toBe(films[2]);
-    expect(container.appendChild.mock.calls[2][0]).toBe(films[1]);
   });
 
-}); */
+  test('should sort characters array alphabetically by name in descending order', () => {
+    // Arrange
+    const charactersArray = [      {        querySelector: () => ({          textContent: 'Name: Morty',        }),      },      {        querySelector: () => ({          textContent: 'Name: Summer',        }),      },      {        querySelector: () => ({          textContent: 'Name: Rick',        }),      },    ];
+    const container = {
+      innerHTML: '',
+      appendChild: jest.fn(),
+    };
+    const order = -1;
+
+    // Act
+    filterOrden(charactersArray, container, order);
+
+    // Assert
+    expect(charactersArray[0].querySelector().textContent).toBe('Name: Summer');
+    expect(charactersArray[1].querySelector().textContent).toBe('Name: Rick');
+    expect(charactersArray[2].querySelector().textContent).toBe('Name: Morty');
+    expect(container.appendChild).toHaveBeenCalledTimes(3);
+  });
+});
+
+

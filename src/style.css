@@ -483,16 +483,16 @@ footer {
       grid-template-columns: repeat(3, 1fr);
   }
   header {
-      grid-template-columns: repeat(3, 1fr);
-  }
+      background: url(./images/movilHeader.png);
+        }
 }
 @media only screend and (max-width: 760px) {
   main {
       grid-template-columns: repeat(2, 1fr);
   }
   header {
-      grid-template-columns: repeat(2, 1fr);
-  }
+    background: url(./images/movilHeader.png);
+      }
 }
 
 
