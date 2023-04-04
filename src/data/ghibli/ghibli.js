@@ -448,7 +448,7 @@ export default {
         {
           "id": "62346d33-caa0-4c17-8016-0aca56f3066b",
           "name": "Karikiya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e3/Majo002.jpg",
+          "img": "https://scontent.fcen1-1.fna.fbcdn.net/v/t1.6435-9/169002578_10159614315637755_5242424898896044577_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=SRlRVHN59_YAX_aP2Pq&_nc_ht=scontent.fcen1-1.fna&oh=00_AfAPt6-_0WZBfG592btZrGICR6jllDbqLozklBe3lXEfgQ&oe=645274E5",
           "climate": "Mild",
           "terrain": "City",
           "surface_water": "30",
@@ -775,7 +775,7 @@ export default {
         {
           "id": "d8f893b5-1dd9-41a1-9918-0099c1aa2de8",
           "name": "Red Wing",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8f/Porco%27s_Plane.jpg",
+          "img": "https://files.eventival.com/377/editions/2197/films/877838/accessories/1235834.jpg",
           "description": "An experimental aircraft captured by Porco. Named Savoia S.21",
           "vehicle_class": "Airplane",
           "length": "20",
@@ -977,7 +977,7 @@ export default {
         {
           "id": "42f787d8-1fcb-4d3d-82f2-a74409869368",
           "name": "Seiji's House",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a7/Mimi011.jpg",
+          "img": "https://scontent.fcen1-1.fna.fbcdn.net/v/t1.6435-9/93256451_2731079666960652_765438252470501376_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=730e14&_nc_ohc=TtX9SMQ4xW4AX871QLg&_nc_ht=scontent.fcen1-1.fna&oh=00_AfAYv22x9gKgToJrgpjGRe_cieJISQrkLP3voiHu3suM2A&oe=6452830C",
           "climate": "Continental",
           "terrain": "City",
           "surface_water": "0",
@@ -1438,7 +1438,7 @@ export default {
         {
           "id": "a8bd9c03-7c80-4a97-b7c0-6a668acaf576",
           "name": "The Cat Kingdom",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/a9/Baron022.jpg",
+          "img": "https://pbs.twimg.com/media/FWC1DqVXkAMbA2N.jpg:large",
           "climate": "Continental",
           "terrain": "Plain",
           "surface_water": "30",
@@ -1698,7 +1698,7 @@ export default {
         {
           "id": "bcc54f38-8847-45b0-97b1-307c94b2b517",
           "name": "Enland",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/0/0e/Ged007.jpg",
+          "img": "https://www.alternateending.com/wp-content/uploads/2019/12/7GauLmcFx3tzic3B7DxvRM9Y7cN.jpg",
           "climate": "Wet",
           "terrain": "Earthsea",
           "surface_water": "100",
@@ -1848,7 +1848,7 @@ export default {
         {
           "id": "923d70c9-8f15-4972-ad53-0128b261d628",
           "name": "Sosuke's Boat",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c1/PonyoS%C5%8DsukeBoat.jpg",
+          "img": "https://i.pinimg.com/originals/f2/fc/3f/f2fc3f6e261e04054b7cd64c5019b494.png",
           "description": "A toy boat where Sosuke plays",
           "vehicle_class": "Boat",
           "length": "10",
@@ -1954,7 +1954,7 @@ export default {
         {
           "id": "1e7ed524-4b4f-466b-978c-69dda9777396",
           "name": "Sho's house",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/86/Karigurashi002.jpg",
+          "img": "https://minniemeorange.files.wordpress.com/2012/03/zz1932aff0-550x29611.jpg",
           "climate": "Warm",
           "terrain": "Forest",
           "surface_water": "10",
@@ -1965,7 +1965,7 @@ export default {
         {
           "id": "f2148ab5-f272-4057-b05a-1321e35227b4",
           "name": "Karigurashi's house",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/cd/Karigurashi019.jpg",
+          "img": "https://rare-gallery.com/mocahbig/417692-artwork-digital-art-nature-trees-house-Karigurashi.jpg",
           "climate": "Warm",
           "terrain": "Under the floorboards",
           "surface_water": "10",
@@ -2177,7 +2177,7 @@ export default {
         {
           "id": "2b380662-626d-42fb-9e3a-14f951201c8b",
           "name": "Nagoya",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/2/20/Kazetachinu009.jpg",
+          "img": "https://i0.wp.com/biffbampop.com/wp-content/uploads/2017/01/the-wind-rises-earthquake.png?resize=423%2C238&ssl=1",
           "climate": "Damp",
           "terrain": "Hill",
           "surface_water": "20",
@@ -2190,7 +2190,7 @@ export default {
         {
           "id": "411f66ed0-771c-46d3-8f68-a3b65c6dd91c",
           "name": "Mitsubishi 1MF9 ",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/4/41/Kazetachinu044.jpg",
+          "img": "https://diariodefriki.files.wordpress.com/2019/11/the-wind-rises-54bbff85723c1.jpg?w=640",
           "description": "The Mitsubishi 1MF9 or Mitsubishi Experimental Taka-type Carrier Fighter was a prototype Japanese fighter aircraft of the 1920s. It was a single-engined, single-seat biplane intended to operate from the Imperial Japanese Navy's aircraft carriers, but only two were built, with the type being rejected by the Navy.",
           "vehicle_class": "War plane",
           "length": "8",
@@ -2296,7 +2296,7 @@ export default {
         {
           "id": "682df5c3-b09e-46af-94d1-ae0d17f9b4b6",
           "name": "Bamboo Forest",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/ec/Ghibli-kaguya-bamboo-forest.jpg",
+          "img": "https://images.squarespace-cdn.com/content/v1/59e512ddf43b55c29c71b996/1508700842603-6BGBXW0HC3LEIJ4KJ1MB/princesskaguya.jpg",
           "climate": "Tropical",
           "terrain": "Forest",
           "surface_water": "10",

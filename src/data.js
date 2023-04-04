@@ -17,10 +17,10 @@ export const countCharacters = (films) => {
   
 };
 
-export const countCharactersforPeople = (films) => {
+export const countCharactersMovie = (films) => {
   
-  const characterCountP = films.people.length;
-  return characterCountP;
+  const characterMovie = films.people.length;
+  return characterMovie;
   
 };
 

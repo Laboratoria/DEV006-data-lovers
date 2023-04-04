@@ -1,5 +1,15 @@
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersforPeople, filterFilms,filterCharacter, filterOrden, sortAsc, sortDes} from './data.js';
+import { 
+  totalMovie, 
+  countCharacters, 
+  countCharactersMovie, 
+  countCharactersforPeople, 
+  filterFilms,
+  filterCharacter, 
+  filterOrden, 
+  sortAsc, 
+  sortDes} 
+  from './data.js';
 
 
 const films = data.films;
@@ -97,11 +107,11 @@ function showMovies(event) {
   sortBtnAsc.addEventListener("click", function() {
     // Make a copy of the films array
     const sortedFilms = filteredFilms.slice();
-  
-    const sortedFilmsAsc = sortAsc(sortedFilms);
-  
-    // Show the sorted films
-    showPosters(sortedFilmsAsc);
+    const selectedProducer = dropdownProducers.value;
+    const selectedDirector = dropdownDirectors.value;
+    const filtered = filterFilms(sortedFilms, selectedProducer, selectedDirector);
+    const sortedDes = sortAsc(filtered);
+    showPosters(sortedDes);
   });
   //------------------------------------------------------------------------------------------
   //--------------Order Z-A ------------------------------------------------------------------
@@ -112,11 +122,12 @@ function showMovies(event) {
   sortBtnDes.addEventListener("click", function() {
     // Make a copy of the films array
     const sortedFilms = filteredFilms.slice();
-  
-    const sortedFilmsDes = sortDes(sortedFilms);
-  
-    // Show the sorted films
-    showPosters(sortedFilmsDes);
+    const selectedProducer = dropdownProducers.value;
+    const selectedDirector = dropdownDirectors.value;
+    const filtered = filterFilms(sortedFilms, selectedProducer, selectedDirector);
+    const sortedDes = sortDes(filtered);
+    showPosters(sortedDes);
+    
   });
 
   //------------------------------------------------------------------------------------------
@@ -175,7 +186,7 @@ function showPosters(filteredFilms) {
   //value for movie counter
   const totalMovies = totalMovie(filteredFilms);
   const totalValue = document.querySelector(".counter");
-  totalValue.innerHTML = `<p> Se muestran ${totalMovies} resultados</p>`;
+  totalValue.innerHTML = `<p> ${totalMovies} movies found</p>`;
 
 }
 
@@ -194,7 +205,7 @@ function movieDetails(event){
   const elementId = clickedElement.getAttribute("id");
   //compare poster id to id's in data to retrieve movie
   const selectedMovie = films.find(movie => movie.id === elementId);
-  const peopleTotal = countCharactersforPeople(selectedMovie);
+  const peopleTotal = countCharactersMovie(selectedMovie);
   //Div for all the movie information
   const movieDetailsDiv = document.createElement("div");
   movieDetailsDiv.classList.add("movie-details");
@@ -238,21 +249,34 @@ function movieDetails(event){
       </div>
       <div class="container">
       <div class="label">Vehicles</div>
-      <div class="content">${selectedMovie.vehicles.map(vehicle =>
-    `<div class="vehicle">
+      <div class="content">   ${selectedMovie.vehicles.length === 0 ? "None found" :
+    selectedMovie.vehicles.map(vehicle =>
+      `<div class="vehicle">
            <img src="${vehicle.img}" alt="${vehicle.name}" class="medium-img">
-           <div>${vehicle.name}</div>
+           <div class="vehicle-details">
+             <div class="vehicle-name">${vehicle.name}</div>
+             <div class="vehicle-description">${vehicle.description}</div>
+           </div>
          </div>`
-  ).join("")}</div>
-      </div>
+    ).join("")}
+    </div>
+  </div>
       <div class="container">
       <div class="label">Locations</div>
-      <div class="content">${selectedMovie.locations.map(place =>
-    `<div class="place">
+      <div class="content">${selectedMovie.locations.length === 0 ? "None found" :
+    selectedMovie.locations.map(place =>
+      `<div class="place">
            <img src="${place.img}" alt="${place.name}" class="medium-img">
-           <div>${place.name} </div>
+           <div class="place-details">
+           <div class="place-name">${place.name}</div>
+           <div class="place-climate">Climate: ${place.climate}</div>
+           <div class="place-terrain">Terrain: ${place.terrain}</div>
+           <div class="place-surface-water">Surface Water: ${place.surface_water}</div>
+           <div class="place-residents">Residents: ${place.residents.length === 0 ? "None" :
+    place.residents.map(resident => resident.name).join(", ")}</div>
+         </div>
       </div>`
-  ).join("")}</div>
+    ).join("")}</div>
       </div>
       </div>
       
@@ -343,7 +367,7 @@ function showCharacters(event){
   /* mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
  
 
-  const dropdown = document.createElement("select");
+/*   const dropdown = document.createElement("select");
   dropdown.classList.add("filter");
   dropdown.id="select-species";
   const species = getAllSpecies(films);
@@ -351,7 +375,22 @@ function showCharacters(event){
   const label = document.createElement("label");
   label.classList.add("filter-label");
   label.textContent = "Filter by species: ";
-  label.appendChild(dropdown);
+  label.appendChild(dropdown); */
+  
+
+  const dropdownChar = document.createElement("select");
+  const species = getAllSpecies(films);
+  species.unshift("All");
+  dropdownChar.id="select-species";
+  dropdownChar.classList.add("filter");
+
+
+
+
+  const labelChar = document.createElement("label");
+  labelChar.classList.add("filter-label");
+  labelChar.textContent = "Filter by director: ";
+  labelChar.appendChild(dropdownChar);
 
 
   const dropdown2 = document.createElement("select");
@@ -361,6 +400,9 @@ function showCharacters(event){
   label2.classList.add("filter-label");
   label2.textContent = "Filter by animation: ";
   label2.appendChild(dropdown2);
+
+  
+
   
   const animations = [
     "All",
@@ -400,11 +442,15 @@ function showCharacters(event){
     const link = document.createElement("option");
     link.href = "#"+s;
     link.textContent =s; 
-    dropdown.appendChild(link);
-    dropdown.addEventListener("click",filterSpecies);
+/*     dropdown.appendChild(link);
+    dropdown.addEventListener("click",filterSpecies); */
     ordenado.innerHTML= "Order A-Z"
     sortBtnDes.innerHTML= "Order Z-A"
+    dropdownChar.appendChild(link);
+    dropdownChar.addEventListener("click",filterSpecies);
   });
+
+  
 
   animations.forEach((s) => {
     const link = document.createElement("option");
@@ -419,9 +465,11 @@ function showCharacters(event){
 
 
   
+  mainElement.appendChild(labelChar);
+  mainElement.appendChild(dropdown2);    
+  mainElement.appendChild(ordenado); 
   mainElement.appendChild(label); 
   mainElement.appendChild(label2); 
-  mainElement.appendChild(ordenado); 
   mainElement.appendChild(sortBtnDes); 
   mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig" >` + films.map((movie) => movie.people.map(character => `
   
@@ -452,10 +500,24 @@ function filterSpecies() {
   const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
   filterCharacter(characters, selectedSpecies,selectedAnimations);
-
+ 
 }
 
-
+/* function ordenadosAlfabeto(event){
+  const selectOrden = event.target.innerHTML;
+  let order= 0;
+  if(selectOrden === "A-Z"){
+    event.target.innerHTML =  "Z-A";
+    order = -1;
+  }else{
+    event.target.innerHTML =  "A-Z";
+    order = 1;
+  }
+  const characters = document.querySelectorAll(".characterBig");
+  const charactersArray = Array.prototype.slice.call(characters, 0);
+  const container = document.getElementById("charactersBig");
+  filterOrden(charactersArray, container,order);
+} */
 function ordenadosAlfabeto(event) {
   const selectOrden = event.target.innerHTML;
   let order = 0;

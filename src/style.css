@@ -280,25 +280,45 @@ display: inline-block;
   position: relative;
 }
 .vehicle img {
+  z-index: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.25rem;
 }
-.vehicle div {
+
+.vehicle-details {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 8rem; /* set the tooltip to the left of the image */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  opacity: 0;
+  pointer-events: none; /* prevent the tooltip from interfering with mouse events on the image */
+  transition: opacity 0.3s ease-in-out;
+  font-size: 0.8rem;
+  font-family: 'ITC Avant Garde Gothic Std Book';
+}
+
+
+/* .vehicle-details {
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  background-color:#db766d93;
+  background-color: #db766d93;
   color: white;
   font-size: 0.8rem;
   padding: 0.25rem;
   text-align: center;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-}
-.vehicle:hover div {
+} */
+
+.vehicle:hover .vehicle-details {
   opacity: 1;
 }
 
@@ -311,12 +331,13 @@ display: inline-block;
   position: relative;
 }
 .place img {
+  z-index: 0  ;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 0.25rem;
 }
-.place div {
+/* .place div {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -328,10 +349,34 @@ display: inline-block;
   text-align: center;
   opacity: 0;
   transition: opacity 0.2s ease-in-out;
-}
-.place:hover div {
+} */
+/* .place:hover div {
   opacity: 1;
 }
+ */
+.place-details {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 8rem; /* set the tooltip to the left of the image */
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 200px;
+  opacity: 0;
+  pointer-events: none; /* prevent the tooltip from interfering with mouse events on the image */
+  transition: opacity 0.3s ease-in-out;
+  font-size: 0.8rem;
+  font-family: 'ITC Avant Garde Gothic Std Book';
+}
+
+.place:hover .place-details {
+  opacity: 1;
+}
+
+
+
+
 
 /*  */
 .counter{
