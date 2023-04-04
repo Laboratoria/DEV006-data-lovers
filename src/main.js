@@ -1,18 +1,18 @@
-import { dataFilter } from './data.js';
+import { filterDirector } from './data.js';
+import { filterProducer} from './data.js';
+import { filterSpecies} from './data.js';
 import { sortData } from './data.js';
 import { stats } from './data.js';
 
 import data from './data/ghibli/ghibli.js';
 
 const directores =  document.getElementById("Directores");
-const directorSection = document.getElementById("directorSection")
-const productores =  document.getElementById("productores");
+const filterSection = document.getElementById("filterSection")
+const productores =  document.getElementById("Productores");
 const puntuacion =  document.getElementById("puntuacion");
 const añoDeEstreno=  document.getElementById("añoDeEstreno");
 const especie =  document.getElementById("especie");
 
-
-console.log(dataFilter, sortData, stats, data);
 
 //constructor de objetos para seleccionar datos a mostrar
 class titleAndPoster {
@@ -29,7 +29,7 @@ class titleAndPoster {
 }
 //llamar los datos
 data.films
-//creamos un array de obejtos con los datos que queremos sacar.
+//creamos un array de objetos con los datos que queremos sacar.
   .map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
   //creamos otro array con etiquetas (div)
   .map(Element => divCreator(Element))
@@ -78,7 +78,7 @@ function createImage(uri){
 function createText(textMovie){
   //aqui se crea el elemento "p"
   const text = document.createElement("p");
-  //el contenido texto obtendrá el valor de argumento ingresado
+  //el contenido texto obtendrá el valor del argumento ingresado
   text.innerText = textMovie;
   //le damos la clase
   text.className =  "text";
@@ -88,14 +88,47 @@ function createText(textMovie){
 //agregamos el evento para que al seleccionar el director que quiere se dispare
 //la función de filtrar
 directores.addEventListener("change",function() {
-  document.getElementById("directorSection").innerHTML = "";
-  const directorNuevo = dataFilter(directores.value,data);
+  document.getElementById("filterSection").innerHTML = "";
+  const directorNuevo = filterDirector(directores.value,data);
   directorNuevo.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
-  .map(Element => divCreator(Element))
-  .forEach(Element =>document.getElementById("directorSection").appendChild(Element))
+    .map(Element => divCreator(Element))
+    .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
-  document.getElementById ("directorSection").style.display = "flex";
+  document.getElementById ("filterSection").style.display = "flex";
 } )
 
+productores.addEventListener("change",function() {
+  //limpiar la pagina
+  document.getElementById("filterSection").innerHTML = "";
+  //utilizar la funcion filtrar
+  const producerNuevo = filterProducer (productores.value,data);
+  //devuelve un array con objetos del resultado del filtro
+  producerNuevo.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
+  //crea array con los divs 
+    .map(Element => divCreator(Element))
+    //poner los divs en pantalla
+    .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
+  //ocultar la pantalla de inicio al usar el filtro
+  document.getElementById("filmsZone").style.display = "none";
+  //deberia mostrar el resultado del filtro
+  document.getElementById ("filterSection").style.display = "flex";
+} )
+
+especie.addEventListener("change",function() {
+  //limpiar la pagina
+  document.getElementById("filterSection").innerHTML = "";
+  //utilizar la funcion filtrar
+  const especieNueva = filterSpecies (especie.value,data);
+  //devuelve un array con objetos del resultado del filtro
+  especieNueva.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
+  //crea array con los divs 
+    .map(Element => divCreator(Element))
+    //poner los divs en pantalla
+    .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
+  //ocultar la pantalla de inicio al usar el filtro
+  document.getElementById("filmsZone").style.display = "none";
+  //deberia mostrar el resultado del filtro
+  document.getElementById ("filterSection").style.display = "flex";
+} )

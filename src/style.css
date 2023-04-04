@@ -83,7 +83,7 @@ header{
 .text{
     color: white;
 }
-.directorSection{
+.filterSection{
     display: none;
     flex-wrap: wrap;
 }
