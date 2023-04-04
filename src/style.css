@@ -1,0 +1,182 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Limelight';
+
+}
+
+/*Barra de navegación*/
+#navigation .logotipo { 
+    width: 80px;
+    height: 90px;
+}
+
+.navegacion {
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+}
+
+.navegacion ul {
+    list-style: none;
+}
+
+.navegacion a {
+    text-decoration: none;
+}
+
+.menu-nav {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #000;
+    height: 70px;
+}
+
+.menu-nav li{
+    flex-basis: 0;
+    flex-grow: 1;
+    position: relative;
+    border-right: 1px solid #8d8b8b;
+}
+
+.menu-nav .primerItem{
+    border-left: 1px solid #8d8b8b;
+}
+
+.menu-nav li a {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    font-family: 'Limelight';
+   
+    
+}
+
+.menu-nav .itemImagen { 
+    width: 0%;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    transition: .4s ease-in;
+}
+  
+
+.menu-nav li a .texto-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 0%;
+    transition: .4s ease-out;
+}
+
+.menu-nav li a .down-item {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    transition: .4s ease-in;
+}
+
+
+.menu-nav li:hover .down-item, .menu-nav li:hover .texto-item{
+top: 100%;
+height: 115%;
+}
+
+.menu-nav li:hover .itemImagen{
+    width: 30%;
+    right: 80px;
+}
+
+.titulo-principal {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.titulo-principal h1{
+    font-size: 100px;
+    margin-top: 70px;
+    text-align: center;
+    color: #FFD700;
+}
+
+.titulo-principal img {
+    width: 700px;
+    height: 200px;
+
+}
+
+#conteItemsCarrusel {
+    height: 540px;
+    overflow: hidden;
+}
+
+.itemCarrusel {
+    height: 100%;
+    position: relative;
+}
+
+.tarjetaCarrusel {
+    background-color: #19A7CE;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.tarjetaCarrusel .texto-Foto{
+width: 85.5%;
+height: 90px;
+margin-top: 10px;
+background-image: url('./img/pokemones.jpg');
+background-size: contain;
+opacity: 0.7;
+
+}
+
+.tarjetaCarrusel h3 {
+    text-align: center;
+    padding-top: 30px;
+    color: #000;
+    font-size: 30px;
+    font-weight: bold;
+   
+}
+
+.tarjetaCarrusel img {
+    width: 700px;
+    height: 350px;
+}
+
+.flechasCarrusel {
+    height: 100%;
+    position: absolute;
+    top: 5px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+footer {
+    background-color: #868585;
+    text-align: center;
+}
