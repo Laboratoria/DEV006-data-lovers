@@ -89,7 +89,9 @@ function createText(textMovie){
 //la función de filtrar
 directores.addEventListener("change",function() {
   const directorNuevo = dataFilter(directores.value,data);
-  directorNuevo.forEach(Element =>document.getElementById("directorSection").appendChild(Element))
+  directorNuevo.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
+  .map(Element => divCreator(Element))
+  .forEach(Element =>document.getElementById("directorSection").appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
