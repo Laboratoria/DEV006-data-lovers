@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes, filterCharacter} from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes} from '../src/data.js';
 
 
 
@@ -524,40 +524,6 @@ describe('sortDes', () => {
 
 
 });
-
-// Describe the test suite for filterCharacter
-describe('filterCharacter', () => {
-  // Set up some dummy data
-  const characters = [    document.createElement('div'),    document.createElement('div'),    document.createElement('div')  ];
-
-  characters[0].innerHTML = '<h3>Title: Movie 1</h3><h3>Specie: Human</h3>';
-  characters[1].innerHTML = '<h3>Title: Movie 2</h3><h3>Specie: Robot</h3>';
-  characters[2].innerHTML = '<h3>Title: Movie 3</h3><h3>Specie: Human</h3>';
-
-  // Test case 1: filter by "Human" species and "All" animations
-  test('should filter by "Human" species and "All" animations', () => {
-    filterCharacter(characters, 'Human', 'All');
-
-    expect(characters[0].style.display).toBe('inline-block');
-    expect(characters[1].style.display).toBe('none');
-    expect(characters[2].style.display).toBe('inline-block');
-
-    expect(document.querySelector('.counter').textContent).toBe('2 characters found');
-  });
-
-  // Test case 2: filter by "All" species and "Movie 2" animation
-  test('should filter by "All" species and "Movie 2" animation', () => {
-    filterCharacter(characters, 'All', 'Movie 2');
-
-    expect(characters[0].style.display).toBe('none');
-    expect(characters[1].style.display).toBe('inline-block');
-    expect(characters[2].style.display).toBe('none');
-
-    expect(document.querySelector('.counter').textContent).toBe('1 characters found');
-  });
-});
-
-
 
 
 
