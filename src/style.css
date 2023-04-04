@@ -80,3 +80,10 @@ header{
     margin-bottom: 60px;
     border-radius: 5%;
 }
+.text{
+    color: white;
+}
+.directorSection{
+    display: none;
+    flex-wrap: wrap;
+}
