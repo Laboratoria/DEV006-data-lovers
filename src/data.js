@@ -16,8 +16,16 @@ export const filterSpecies = (especie,data) => {
 };
 
 
-export const sortData = () => {
-  return 'OMG';
+export const sortData = (ordenAs,data) => {
+  let orden = "";
+  if (ordenAs === "ascendente"){
+    orden = data.films.sort((x, y) => x.rt_score - y.rt_score)
+  } 
+  else {orden = data.films.sort((x, y) => x.rt_score - y.rt_score).reverse((x, y) => x.rt_score - y.rt_score)
+  } 
+
+  return orden;
+
 };
 
 export const stats = () => {
