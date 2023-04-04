@@ -88,6 +88,7 @@ function createText(textMovie){
 //agregamos el evento para que al seleccionar el director que quiere se dispare
 //la función de filtrar
 directores.addEventListener("change",function() {
+  document.getElementById("directorSection").innerHTML = "";
   const directorNuevo = dataFilter(directores.value,data);
   directorNuevo.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
   .map(Element => divCreator(Element))
