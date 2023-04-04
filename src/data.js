@@ -7,3 +7,5 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
+//aqui es donde van las funciones puras 
