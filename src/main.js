@@ -1,5 +1,14 @@
 import data from './data/ghibli/ghibli.js';
-import { totalMovie, countCharacters, countCharactersMovie, filterFilms,filterCharacter, filterOrden, sortAsc, sortDes} from './data.js';
+import { 
+  totalMovie, 
+  countCharacters, 
+  countCharactersMovie, 
+  filterFilms,
+  filterCharacter, 
+  filterOrden, 
+  sortAsc, 
+  sortDes} 
+  from './data.js';
 
 
 const films = data.films;
@@ -325,6 +334,47 @@ function showCharacters(event){
   mainElement.appendChild(backbtn);
   mainElement.insertAdjacentHTML('beforeend', `<p class="counter">${totalPeople} characters found</p>`);
 
+  /*   mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
+  /*   `<label for="species">Select the specie:</label>` */
+  /*   const dropdown = document.createElement("select");
+  dropdown.classList.add("filter");
+  dropdown.id="select-species";
+
+  const species = [
+    "All",
+    "Human",
+    "Spirit",
+    "Totoro",
+    "Cat",
+    "Witch",
+    "Raccoon Dog",
+    "Red elk",
+    "Wolf",
+    "Deity, Dragon",
+    "Spirit of The White Fox",
+    "unknown",
+    "Bird",
+    "Wizard",
+    "Witch/Human",
+    "Demon",
+    "Human/Scarecrow",
+    "Dog",
+    "Fish/Human",
+    "Deity",
+    "Borrower"
+  ] ; */
+  /* mainElement.innerHTML = `<p class="counter">${totalPeople} characters found</p>` */
+ 
+
+  /*   const dropdown = document.createElement("select");
+  dropdown.classList.add("filter");
+  dropdown.id="select-species";
+  const species = getAllSpecies(films);
+  species.unshift("All");
+  const label = document.createElement("label");
+  label.classList.add("filter-label");
+  label.textContent = "Filter by species: ";
+  label.appendChild(dropdown); */
   
 
   const dropdownChar = document.createElement("select");
@@ -345,6 +395,10 @@ function showCharacters(event){
   const dropdown2 = document.createElement("select");
   dropdown2.classList.add("filter");
   dropdown2.id="select-animations";
+  const label2 = document.createElement("label");
+  label2.classList.add("filter-label");
+  label2.textContent = "Filter by animation: ";
+  label2.appendChild(dropdown2);
 
   
 
@@ -372,16 +426,25 @@ function showCharacters(event){
     "The Tale of the Princess Kaguya",
     "When Marnie Was There"
   ] ;
-  
-  const ordenado = document.createElement("button");
-  ordenado.classList.add("ordenado");
-  ordenado.addEventListener("click",ordenadosAlfabeto)
 
+  const sortBtnDes = document.createElement("button");
+  sortBtnDes.classList.add("sortButton");
+  sortBtnDes.textContent = "Order Z-A";
+  sortBtnDes.addEventListener("click",ordenadosAlfabeto)
+
+  const ordenado = document.createElement("button");
+  ordenado.classList.add("sortButton");
+  ordenado.textContent = "Order A-Z";
+  ordenado.addEventListener("click",ordenadosAlfabeto)
 
   species.forEach((s) => {
     const link = document.createElement("option");
     link.href = "#"+s;
     link.textContent =s; 
+    /*     dropdown.appendChild(link);
+    dropdown.addEventListener("click",filterSpecies); */
+    ordenado.innerHTML= "Order A-Z"
+    sortBtnDes.innerHTML= "Order Z-A"
     dropdownChar.appendChild(link);
     dropdownChar.addEventListener("click",filterSpecies);
   });
@@ -394,13 +457,19 @@ function showCharacters(event){
     link.textContent =s; 
     dropdown2.appendChild(link);
     dropdown2.addEventListener("click",filterSpecies);
-    ordenado.innerHTML= "A-Z"
+    ordenado.innerHTML= "Order A-Z"
+    sortBtnDes.innerHTML= "Order Z-A"
 
   });
+
+
   
   mainElement.appendChild(labelChar);
   mainElement.appendChild(dropdown2);    
-  mainElement.appendChild(ordenado);  
+  mainElement.appendChild(ordenado); 
+  /*   mainElement.appendChild(label);  */
+  mainElement.appendChild(label2); 
+  mainElement.appendChild(sortBtnDes); 
   mainElement.insertAdjacentHTML('beforeend', `<div id="charactersBig" >` + films.map((movie) => movie.people.map(character => `
   
     <div class="characterBig" >
@@ -408,7 +477,7 @@ function showCharacters(event){
     <img src="`+ character.img + `" />
     
     <div class="overlay">
-    <h3>title: `+ movie.title +`</h3>
+    <h3>Title: `+ movie.title +`</h3>
     <h3>Name: `+ character.name +`</h3>
     <h3>Gender: `+ character.gender +`</h3>
     <h3>Age: `+ character.age +`</h3>
@@ -447,7 +516,7 @@ function filterSpecies() {
  
 }
 
-function ordenadosAlfabeto(event){
+/* function ordenadosAlfabeto(event){
   const selectOrden = event.target.innerHTML;
   let order= 0;
   if(selectOrden === "A-Z"){
@@ -461,6 +530,20 @@ function ordenadosAlfabeto(event){
   const charactersArray = Array.prototype.slice.call(characters, 0);
   const container = document.getElementById("charactersBig");
   filterOrden(charactersArray, container,order);
+} */
+function ordenadosAlfabeto(event) {
+  const selectOrden = event.target.innerHTML;
+  let order = 0;
+  if (selectOrden === "Order A-Z") {
+    order = 1;
+  } else if (selectOrden === "Order Z-A") {
+    order = -1;
+  }
 
+  const characters = document.querySelectorAll(".characterBig");
+  const charactersArray = Array.from(characters);
+  const container = document.getElementById("charactersBig");
+  container.innerHTML = "";
+  filterOrden(charactersArray, container, order);
 }
 
