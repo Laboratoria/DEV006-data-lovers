@@ -1,7 +1,7 @@
 
 # GHIBLIPEDIA
 
-Esta pagina permite a usuarios fanaticos y nuevos fanaticos de studios ghibli conocer sobre las maravillas de estas animaciones, ver sus personajes y caracteristicas conocer mas a fondo de estas animaciones y sus maravilloso creadores.
+Esta pagina permite a usuarios fanaticos y nuevos fanaticos de studios ghibli conocer sobre las maravillas de estas animaciones, ver sus personajes y caracteristicas conocer mas a fondo de estas animaciones y sus maravillosos creadores.
 
 
 ## Logo
@@ -20,27 +20,18 @@ Esta pagina permite a usuarios fanaticos y nuevos fanaticos de studios ghibli co
 
 
 ## Screenshots
-
 ![Prototipo de baja](https://user-images.githubusercontent.com/90260920/229853980-bad54996-c24c-4ba6-ab89-f4d3d507b36e.png)
 
 
+
+
 ## Demo
-
-Insert gif or link to demo
-
-
-## Authors
-
-- [@octokatherine](https://www.github.com/octokatherine)
-
-
-## 🚀 About Me
-I'm a full stack developer...
+[screen-capture.webm](https://user-images.githubusercontent.com/90260920/229858616-51d2ecc9-8538-4086-bb32-1b373390b5ed.webm)
 
 
 
 ## 🛠 Skills
-Javascript, HTML, CSS...
+Javascript, HTML, CSS.
 
 
 ## Installation
@@ -60,3 +51,7 @@ To run tests, run the following command
   npm run test
 ```
 
+## Authors
+
+- [@danipreciado](https://github.com/danipreciado)
+- [@jhosefin](https://github.com/jhosefin)
