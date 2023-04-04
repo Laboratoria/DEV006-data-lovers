@@ -10,8 +10,8 @@ for(let i = 0; i < champion.length; i++){
   const name = data.data[key].name;
   const img  = data.data[key].img;
   const blurb = data.data[key].blurb;
-  //const info = data.data[key].info;
-  //console.log(info)
+  const info = data.data[key].info;
+  console.log(info)                     
 
   const championCard = document.createElement("div");
   championCard.classList.add("champion-card"); 
@@ -21,6 +21,7 @@ for(let i = 0; i < champion.length; i++){
 
   const championImg = document.createElement("img");
   championImg.src = img;
+  championImg.setAttribute("src",img)
   championImg.alt = name;
   championImg.classList.add("champion-img");
 
@@ -31,18 +32,19 @@ for(let i = 0; i < champion.length; i++){
   championName.classList.add("champion-name");
 
   const championBlurb = document.createElement("p");
-  championBlurb.textContent = name.charAt(0).toUpperCase() + blurb.slice(1);
+  championBlurb.textContent = blurb.charAt(0).toUpperCase() + blurb.slice(1);
   championBlurb.classList.add("blurb");
   
-  //const championInfo = document.createElement("p")
-  //championInfo.textContent = name.charAt(0).toUpperCase() + info.slice(1);
-  //console.log(championInfo)
-  //championInfo.classList.add("info");
+
+  const championInfo = document.createElement("p");
+  championInfo.innerHTML = info;
+  championInfo.classList.add("info");
   
+
   championImgContainer.appendChild(championImg);
   championCard.appendChild(championName);
   championCard.appendChild(championImgContainer);
   contenedor.appendChild(championCard);
+  championCard.appendChild(championInfo);
   championCard.appendChild(championBlurb);
-  //championCard.appendChild(championInfo);
 }

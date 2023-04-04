@@ -162,5 +162,7 @@ a:hover{
   top: -12px;
 }
 .info{
-  color:chocolate;
+  overflow: visible;
+  color: #FFFFFF;
+
 }
