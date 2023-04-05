@@ -17,7 +17,8 @@ body {
     background-image: url(images/main-background.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
+    background-size:cover ;
+/*     width: 100%; */
     display: flex;
     flex-direction: column;
     font-family:'ITC Avant Garde Gothic Std Book' ;

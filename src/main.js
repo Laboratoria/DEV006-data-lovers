@@ -440,7 +440,6 @@ function filterSpecies() {
   const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
   filterCharacter(characters, selectedSpecies,selectedAnimations);
- 
 }
 
 function ordenadosAlfabeto(event) {
