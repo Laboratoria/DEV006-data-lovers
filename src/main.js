@@ -7,7 +7,8 @@ import {
   filterCharacter, 
   filterOrden, 
   sortAsc, 
-  sortDes} 
+  sortDes,
+  calculatePercentage} 
   from './data.js';
 
 
@@ -138,6 +139,15 @@ function showMovies(event) {
   const totalValue = document.createElement("p");
   totalValue.classList.add("counter");
   mainElement.appendChild(totalValue);
+
+  // create an element to display the percentage
+  const percentageValue = document.createElement("p");
+  percentageValue.classList.add("counter");
+  mainElement.appendChild(percentageValue);
+
+
+
+
   //add producers & directors filter dropdown to main section
   mainElement.appendChild(label);
   mainElement.appendChild(labelDirectors);
@@ -155,6 +165,37 @@ function showMovies(event) {
     const selectedProducer = dropdownProducers.value;
     const selectedDirector = dropdownDirectors.value;
     const filtered = filterFilms(films, selectedProducer, selectedDirector);
+
+    const percentage = calculatePercentage(films,filtered);
+
+    let selectedDirectorText = "";
+    let selectedProducerText = "";
+    
+
+    if (selectedDirector === 'All') {
+      
+      selectedDirectorText = 'no specific director';
+    } else {
+      selectedDirectorText = selectedDirector;
+    }
+    
+    
+    if (selectedProducer === 'All') {
+      
+      selectedProducerText = 'no specific producer';
+    } else {
+      
+      selectedProducerText = selectedProducer;
+    }
+    
+
+
+    // set the text content of the percentage element
+    percentageValue.textContent = `${percentage}% of all movies were directed by ${selectedDirectorText} and were produced by ${selectedProducerText}`;
+
+
+    
+
     //showPosters is passed only the filtered films as an argument
     showPosters(filtered);
   }
