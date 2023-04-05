@@ -10,8 +10,8 @@ for(let i = 0; i < champion.length; i++){
   const name = data.data[key].name;
   const img  = data.data[key].img;
   const blurb = data.data[key].blurb;
-  const info = data.data[key].info;
-  console.log(info)                     
+  const title = data.data[key].title
+                     
 
   const championCard = document.createElement("div");
   championCard.classList.add("champion-card"); 
@@ -21,7 +21,7 @@ for(let i = 0; i < champion.length; i++){
 
   const championImg = document.createElement("img");
   championImg.src = img;
-  championImg.setAttribute("src",img)
+  //championImg.setAttribute("src",img)
   championImg.alt = name;
   championImg.classList.add("champion-img");
 
@@ -35,16 +35,24 @@ for(let i = 0; i < champion.length; i++){
   championBlurb.textContent = blurb.charAt(0).toUpperCase() + blurb.slice(1);
   championBlurb.classList.add("blurb");
   
-
-  const championInfo = document.createElement("p");
-  championInfo.innerHTML = info;
-  championInfo.classList.add("info");
+  const championTitle = document.createElement("h4");
+  championTitle.classList.add("title")
+  championTitle.innerHTML = title;
   
 
   championImgContainer.appendChild(championImg);
   championCard.appendChild(championName);
   championCard.appendChild(championImgContainer);
   contenedor.appendChild(championCard);
-  championCard.appendChild(championInfo);
+  championCard.appendChild(championTitle)
   championCard.appendChild(championBlurb);
 }
+
+//championCard.appendChild(championInfo);
+
+//const info = data.data[key].info;
+//console.log(info)   
+
+// const championInfo = document.createElement("p");
+// championInfo.innerHTML = info;
+// championInfo.classList.add("info");
