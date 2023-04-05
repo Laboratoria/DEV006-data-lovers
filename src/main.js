@@ -480,6 +480,7 @@ function filterSpecies() {
   const selectedSpecies = document.getElementById("select-species").value;
   const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
+  
 
   let totalCount  = 0; 
   characters.forEach((character) => {
@@ -513,3 +514,18 @@ function ordenadosAlfabeto(event) {
   container.innerHTML = "";
   filterOrden(charactersArray, container, order);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  let menuBtn = document.querySelector('.menu-icon');
+  let menu = document.querySelector('.main-menu ul');
+
+  menuBtn.addEventListener('click', function() {
+    if(menu.classList.contains('show')){
+      menu.classList.remove('show');
+    }else {
+      menu.classList.add('show');
+    }
+  });
+  
+});
