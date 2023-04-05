@@ -33,11 +33,11 @@ flex-wrap: wrap;
 
 }
 
-.container{
+/* .container{
   width: 900%;
   max-width: 80rem;
   margin: 0 auto;
-}
+} */
 /* Nav de botones pmodificando su posición */
 .main-menu{
     margin-top: 5rem;
