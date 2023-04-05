@@ -323,9 +323,9 @@ function getAllSpecies(films) {
 function getAllAnimations(films) {
   const allAnimations = [];
   films.forEach((film) => {
-      if (!allAnimations.includes(film.title)) {
-        allAnimations.push(film.title);
-      }
+    if (!allAnimations.includes(film.title)) {
+      allAnimations.push(film.title);
+    }
   });
  
   return allAnimations;

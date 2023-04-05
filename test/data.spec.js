@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes/* ,filterCharacter */,filterOrden} from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes, filterCharacter, filterOrden} from '../src/data.js';
 
 
 
