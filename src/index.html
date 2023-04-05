@@ -2,11 +2,46 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Data Lovers</title>
+    <link rel="icon" type="images.png" href="images/barra-menu.png">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap" rel="stylesheet">
+    <title>Pokemon Go</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="header">
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu"><img class="img-menu" src="images/menu.png"></label>
+      <nav class="elements">
+        <ul>
+          <li><a href="inicio.html">LOG IN</a></li>
+          <li><a href="jugar.html">PLAY</a></li>
+          <li><a href="buscar.html">SEARCH</a></li>
+          <li><a href="cerrar.html">SIGN OFF</a></li>
+        </ul>
+      </nav>
+    </header>
+
+  <main>
+    <section class="pokemon">
+        <div class="portadaBox">
+          <picture class="portada">
+            <source media="(max-width: 1500px)" srcset="images/portada 1.png">
+            <source media="(max-width: 1000px)" srcset="images/pikachu-portada.jpg">
+            <source media="(max-width: 1000px)" srcset="images/portada 4.jpg">
+            <source media="(max-width: 1000px)" srcset="images/portada 2.png">
+            <source media="(max-width: 1000px)" srcset="images/portada 3.jpg">
+            <img src="images/principal.jpeg" style="width: auto;">
+          </picture>
+        </div>
+        <div class="searcher">
+          <div>
+            <input type="search" id="search" class="search comun" place holder="by name" autocomplete="off" spellcheck="false">
+            <img src="images/icon-search.png" alt="">
+          </div>
+        </div>
     <div id="root"></div>
+    </section>
+  </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>
