@@ -2,12 +2,6 @@
     margin: 0;
     padding: 0;
 }
-/* html {
-  background-image: url(images/main-background.png);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-} */
 /* Fondo de imagen para el header y estilos  */
 header {
     width: 100%;
@@ -31,17 +25,6 @@ body {
   
   
 }
-/* Fondo para la pagina con estilos para que no se repita */
-/* body {
-    background-image: url(images/main-background.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size:cover ;
-/*     width: 100%; */
-    display: flex;
-    flex-direction: column;
-    font-family:'ITC Avant Garde Gothic Std Book' ;
-} */
 
 /* Contenido principal centrado con sus margenes */
 main {
@@ -63,7 +46,6 @@ flex-wrap: wrap;
     margin-top: 5rem;
     display: flex;
     justify-content: flex-end;
-/*     font-family:  'ITC Avant Garde Gothic Std Book'; */
 }
 
 /* Estylos a los botones */
@@ -105,7 +87,6 @@ flex-wrap: wrap;
     transform: translateX(20%);
     font-size: 4rem;
     line-height: 1.3em;
-/*     font-family: 'ITC Avant Garde Gothic Std Book'; */
 }
 
 /* Mensaje de bienvenida */
@@ -121,8 +102,6 @@ flex-wrap: wrap;
     opacity: 0.9;
     border-radius: 20px;
     padding-top: 50px;
-    font-size: 1rem;
-/*     font-family: 'ITC Avant Garde Gothic Std Book'; */
 }
 
 /* Contenedor de los poster de animación,Alineando el poster y Tamaño a la imagen */
@@ -254,7 +233,6 @@ display: inline-block;
     font-size: 12px;
     padding: 20px;
     text-align: left;
-  /*   font-family:'ITC Avant Garde Gothic Std Book' ; */
 }
 .characterBig:hover .overlay {
     opacity: 1;
@@ -320,23 +298,8 @@ display: inline-block;
   pointer-events: none; /* prevent the tooltip from interfering with mouse events on the image */
   transition: opacity 0.3s ease-in-out;
   font-size: 0.8rem;
-  font-family: 'ITC Avant Garde Gothic Std Book';
 }
 
-
-/* .vehicle-details {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #db766d93;
-  color: white;
-  font-size: 0.8rem;
-  padding: 0.25rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-} */
 
 .vehicle:hover .vehicle-details {
   opacity: 1;
@@ -357,23 +320,7 @@ display: inline-block;
   object-fit: cover;
   border-radius: 0.25rem;
 }
-/* .place div {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color:#329da196;
-  color: white;
-  font-size: 0.8rem;
-  padding: 0.25rem;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-} */
-/* .place:hover div {
-  opacity: 1;
-}
- */
+
 .place-details {
   z-index: 1;
   position: absolute;
@@ -387,7 +334,6 @@ display: inline-block;
   pointer-events: none; /* prevent the tooltip from interfering with mouse events on the image */
   transition: opacity 0.3s ease-in-out;
   font-size: 0.8rem;
-  font-family: 'ITC Avant Garde Gothic Std Book';
 }
 
 .place:hover .place-details {
@@ -401,7 +347,6 @@ display: inline-block;
 /*  */
 .counter{
   font-size: 1.5rem;
-/*   font-family: 'ITC Avant Garde Gothic Std Book'; */
   color: white;
   margin-left: 1rem;
 }
@@ -417,7 +362,6 @@ footer {
 
   .counter{
     color: white;
-/*     font-family: 'ITC Avant Garde Gothic Std Book'; */
     font-weight: bold;
   }
   
@@ -425,7 +369,6 @@ footer {
     display: inline-block;
     margin-right: 10px;
     color: white;
-/*     font-family: 'ITC Avant Garde Gothic Std Book'; */
     font-weight: bold;
     margin-left: 1rem;
   }
@@ -456,7 +399,6 @@ footer {
     border-radius: 0.25em;
     border: 2px solid #329da1;
     transition: background-color 0.3s, color 0.3s, border 0.3s;
-/*     font-family: 'ITC Avant Garde Gothic Std Book'; */
     font-weight: bold;
   }
   
@@ -480,7 +422,6 @@ footer {
     text-decoration: none;
     border-radius: 0.25em;
     transition: background-color 0.3s, color 0.3s;
-/*     font-family: 'ITC Avant Garde Gothic Std Book'; */
     font-weight: bold;
   }
   
@@ -516,15 +457,25 @@ footer {
 }
 
 
-@media only screend and (max-width: 500px) {
+@media(max-width: 500px) {
   header {
 background: url(./images/movilHeader.png);
+display: flex;
+background-repeat: no-repeat;
   }
-  .main-menu{
+/*   .main-menu{
 
     background-color: #6d5041;
+  } */
+  body{
+    background: url(./images/movilBackground.png);
+    background-repeat: no-repeat;
+/*     background-attachment: fixed; */
+    background-size: cover;
+    display: flex;
+/*     flex-direction: column; */
   }
-  footer {
+/*   footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -540,5 +491,5 @@ title{
 .welcomeMsg{
     margin-right: 1rem;
     background-color: #329da1;
-  }
+  } */
 }
