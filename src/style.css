@@ -28,6 +28,8 @@ body {
   display: flex;
   flex-direction: column;
   font-family: 'ITC Avant Garde Gothic Std Book';
+  
+  
 }
 /* Fondo para la pagina con estilos para que no se repita */
 /* body {
