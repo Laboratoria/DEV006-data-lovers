@@ -1,3 +1,4 @@
+/*-- ESTILOS GENERALES--*/
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
 *{font-family: 'Changa One', cursive;
     font-family: 'Maven Pro', sans-serif;}
@@ -19,9 +20,9 @@ padding: 0;
 
 /*-- ESTILOS DE LA BARRA DE MENÚ--*/
 .header{
-    width: 100%;
-    max-width: 100%;
-    background: linear-gradient(to right, #419aff6c, #0fff071f, #02ffb38f, #01c2fd88);
+    width: 1000%;
+    background: linear-gradient(to right, #0f7fff88, #0fff073f, #02ffb38f, #01c2fd88);
+    border-radius: 30px;
     font-family: 'Changa One', cursive;
 } 
 
@@ -60,9 +61,9 @@ background-color: rgba(0, 28, 190, 0.514), rgba(12, 255, 182, 0.301), rgba(0, 17
 
 
 .elements a:hover{
-   color: #0184ffbd;
+   color: #007ef5c5;
    font-size: 23px;
-   font-weight: 700;
+   font-weight: 800;
 }
 
 .elements li a{
