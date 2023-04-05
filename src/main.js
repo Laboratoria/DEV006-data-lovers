@@ -50,8 +50,8 @@ function showMovies(event) {
   const returnHome = document.createElement("a");
   const producers = getAllProducers(films);
   const directors = getAllDirectors(films);
-  producers.unshift("all");
-  directors.unshift("all");
+  producers.unshift("All");
+  directors.unshift("All");
 
   //Go Back button
   returnHome.classList.add("returnButton");
@@ -323,9 +323,9 @@ function getAllSpecies(films) {
 function getAllAnimations(films) {
   const allAnimations = [];
   films.forEach((film) => {
-      if (!allAnimations.includes(film.title)) {
-        allAnimations.push(film.title);
-      }
+    if (!allAnimations.includes(film.title)) {
+      allAnimations.push(film.title);
+    }
   });
  
   return allAnimations;
@@ -439,7 +439,23 @@ function filterSpecies() {
   const selectedSpecies = document.getElementById("select-species").value;
   const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
-  filterCharacter(characters, selectedSpecies,selectedAnimations);
+  
+
+  let totalCount  = 0; 
+  characters.forEach((character) => {
+    const specie = character.querySelector("h3:nth-child(7)").textContent.split(": ")[1];
+    const animation = character.querySelector("h3:nth-child(1)").textContent.split(": ")[1];
+   
+    totalCount += filterCharacter(character,selectedSpecies,selectedAnimations,specie,animation);
+
+  });
+  
+  const counter = document.querySelector(".counter");
+  counter.textContent = `${totalCount} characters found`;
+  
+  
+  /*   filterCharacter(characters, selectedSpecies,selectedAnimations); */
+ 
 }
 
 function ordenadosAlfabeto(event) {

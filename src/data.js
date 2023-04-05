@@ -25,51 +25,15 @@ export const countCharactersMovie = (films) => {
 };
 
 export const filterFilms = (films, selectedProducer, selectedDirector) => {
-  if (selectedDirector === "all" && selectedProducer === "all") {
+  if (selectedDirector === "All" && selectedProducer === "All") {
     return films;
   } else {
     return films.filter(film => {
-      const producerMatch = selectedProducer === "all" || film.producer === selectedProducer;
-      const directorMatch = selectedDirector === "all" || film.director === selectedDirector;
+      const producerMatch = selectedProducer === "All" || film.producer === selectedProducer;
+      const directorMatch = selectedDirector === "All" || film.director === selectedDirector;
       return producerMatch && directorMatch;
     });
   }
-}
-
-export const filterCharacter = (characters, selectedSpecies,selectedAnimations) => {
-  let count = 0;
-
-  characters.forEach((character) => {
-    const specie = character.querySelector("h3:nth-child(7)").textContent.split(": ")[1];
-    const animation = character.querySelector("h3:nth-child(1)").textContent.split(": ")[1];
-    if ((selectedSpecies === "All" || specie === selectedSpecies) && (selectedAnimations === "All" || animation === selectedAnimations) ){
-      character.style.display = "inline-block";
-      count++;
-    } else {
-      character.style.display = "none";
-    }
-  });
-
-  const counter = document.querySelector(".counter");
-  counter.textContent = `${count} characters found`;
-}
-
-export const filterOrden = (charactersArray, container, order) => {
-  
-  charactersArray.sort((a, b) => {
-    const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
-    const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
-    if (nameA < nameB) {
-      return -order;
-    }
-    if (nameA > nameB) {
-      return order;
-    }
-    return 0;
-  });
-  charactersArray.forEach(function (ch) {
-    container.appendChild(ch);
-  });
 }
 
 export const sortAsc = (films) => {
@@ -92,4 +56,39 @@ export const sortDes = (films) => {
   });
  
   return films
+}
+
+
+export const filterCharacter = (character, selectedSpecies,selectedAnimations, specie, animation) => {
+  let count = 0;
+
+  if ((selectedSpecies === "All" || specie === selectedSpecies) && (selectedAnimations === "All" || animation === selectedAnimations) ){
+    character.style.display = "inline-block";
+    count++;
+  } else {
+    character.style.display = "none";
+  }
+
+
+  return count;
+}
+
+export const filterOrden = (charactersArray, container, order) => {
+  
+  charactersArray.sort((a, b) => {
+    const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
+    const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
+    /* return nameA.localeCompare(nameB) * order; */
+
+    if (nameA < nameB) {
+      return -order;
+    }
+    if (nameA > nameB) {
+      return order;
+    }
+    return 0;
+  });
+  charactersArray.forEach(function (ch) {
+    container.appendChild(ch);
+  });
 }
