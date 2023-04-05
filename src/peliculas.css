@@ -58,5 +58,31 @@
   .justify {
     text-align: justify;
   }
+
+  button {
+    display: flex;
+    width: auto;
+  }
+
+  #sortByDate {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    margin-left: 50%;
+    display: inline-flex;
+  }
  
+  #sortByTitle {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    display: inline-flex;
+  }
+
+  #refresh {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    display: inline-flex;
+  }
  
