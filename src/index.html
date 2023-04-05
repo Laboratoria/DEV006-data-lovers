@@ -1,63 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header >
-      <div>
-        <img id="imageHeader" src="Group 4.png" alt="GhibliStudio" >
-      </div>
-    </header>
-    <main>
-      <section class="content">
-        <p id="filterText">Filtros: </p>
-          <select name="Directores" id="Directores"> 
-            <option disabled selected>Directores</option>
-            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-            <option value="Isao Takahata">Isao Takahata</option>
-            <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
-            <option value="Hiroyuki Morita">Hiroyuki Morita</option>
-            <option value="Gorō Miyazaki">Gorō Miyazaki</option>
-            <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
-          </select>
 
-          <select name="Productores" id="Productores"> 
-            <option disabled selected>Productores</option>
-            <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-            <option value="Isao Takahata">Isao Takahata</option>
-            <option value="Toru Hara">Toru Hara</option>
-            <option value="Toshio Suzuki">Toshio Suzuki</option>
-            <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
-          </select>
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-            <select name="Puntuacion" id="Puntuacion"> 
-              <option disabled selected>Puntuación</option>
-              <option value="ascendente">De más baja a más alta</option>
-              <option value="descendente">De más alta a más baja</option>
-            </select>
+<body>
+  <header>
+    <div>
+      <img id="imageHeader" src="Group 4.png" alt="GhibliStudio">
+    </div>
+  </header>
+  <main>
+    <section class="content">
+      <p id="filterText">Filtros: </p>
+      <select class="Filtros" name="Directores" id="Directores">
+        <option disabled selected>Directores</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+      </select>
 
-          <select name="Año de estreno" id="Año de estreno">
-          <option disabled selected>Año de estreno</option>
-              <option value="De más nueva a más antigua">De más nueva a más antigua</option>
-              <option value="De más antigua a más nueva">De más antigua a más nueva</option>
-        </select>
+      <select class="Filtros" name="Productores" id="Productores">
+        <option disabled selected>Productores</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Toru Hara">Toru Hara</option>
+        <option value="Toshio Suzuki">Toshio Suzuki</option>
+        <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
+      </select>
 
-        <select name="Especie" id="Especie">
+      <select class="Filtros"  name="Puntuacion" id="Puntuacion">
+        <option disabled selected>Puntuación</option>
+        <option value="ascendente">De más baja a más alta</option>
+        <option value="descendente">De más alta a más baja</option>
+      </select>
+
+      <select  class="Filtros" name="Año de estreno" id="Año de estreno">
+        <option disabled selected>Año de estreno</option>
+        <option value="De más nueva a más antigua">De más nueva a más antigua</option>
+        <option value="De más antigua a más nueva">De más antigua a más nueva</option>
+      </select>
+
+      <select  class="Filtros" name="Especie" id="Especie">
         <option disabled selected>Especie</option>
-              <option value="Humanos">Humanos</option>
-              <option value="Otros">Otros</option>
-            </select>
-            
-        <input class="buttonFilter" type="text" id="searchSpace" placeholder="Ingresa tu busqueda">
-      </section>
-      <section id="filmsZone" class="filmsZone">
-      </section>
-      <section class="filterSection" id="filterSection"></section>
-    </main>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+        <option value="Humanos">Humanos</option>
+        <option value="Otros">Otros</option>
+      </select>
+
+      <input class="Filtros" type="text" id="searchSpace" placeholder="Ingresa tu busqueda">
+    </section>
+    <section id="filmsZone" class="filmsZone">
+    </section>
+    <section class="filterSection" id="filterSection"></section>
+  </main>
+  <div id="root"></div>
+  <script src="main.js" type="module"></script>
+</body>
+
 </html>
