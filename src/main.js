@@ -517,8 +517,8 @@ function ordenadosAlfabeto(event) {
 
 document.addEventListener('DOMContentLoaded', function() {
 
-  let menuBtn = document.querySelector('.menu-icon');
-  let menu = document.querySelector('.main-menu ul');
+  const menuBtn = document.querySelector('.menu-icon');
+  const menu = document.querySelector('.main-menu ul');
 
   menuBtn.addEventListener('click', function() {
     if(menu.classList.contains('show')){
