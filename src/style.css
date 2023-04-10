@@ -1,5 +1,5 @@
 :root {
-    --main-color: hotpink;
+    --pink-color: rgba(242, 15, 124, 0.5);
 }
 
 * {
@@ -12,6 +12,15 @@ html {
     font-family: 'M PLUS Code Latin', sans-serif;
     font-family: 'Major Mono Display', monospace;
 }
+
+/* ------------------ PÁGINA DE INICIO ------------------ */
+.mainFixed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
 .divContainerInicio {
     display: grid;
     grid-template-columns: 50% 50%;
@@ -21,18 +30,75 @@ html {
     width: 100%;
     height: 100%;
 }
+.flexDescubrir {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.LogoGL {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
 .logoGhibli {
-    width: 8%;
+    width: 7%;
+}
+.titleLogo {
+    font-size: 2.5rem;
+}
+.messageDescubrir {
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-weight: bold;
+    font-size: 7rem;
+    text-align: center;
+    margin-top: 20px;
+    background: #D692D1;
+    background: linear-gradient(to bottom, #D692D1 10%, #FF3797 20%, #FEC263 70%, #8DF4FE 0%, #D692D1 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+}
+.buttonDescubrir {
+    width: 20%;
+    height: 5%;
+    text-align: start;
+    border-radius: 20px;
+    background-color: transparent;
+    border: 2px solid #D692D1;
+    font-size: 2rem;
+    font-weight: bold;
+    background: #F7B2C0;
+    background: linear-gradient(to bottom, #F7B2C0 30%, #CB5FCB 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.buttonDescubrir a {
+    margin-left: 13px;
+}
+.anclaFlecha {
+    position: relative;
+    bottom: 4.4%;
+    left: 10%;
+}
+.iconFlecha {
+    width: 35%;
 }
 .gridDescription {
     display: grid;
     grid-template-columns: 50% 50%;
 }
 .descriptionGhibli {
+    padding: 30px;
     font-family: 'M PLUS Code Latin', sans-serif;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 3rem;
     text-align: justify;
-
+    line-height: 50px;
+    color: var(--pink-color);
 }
  

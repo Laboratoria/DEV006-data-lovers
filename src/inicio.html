@@ -12,26 +12,37 @@
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Code+Latin:wght@300;400;700&family=Major+Mono+Display&display=swap" rel="stylesheet">
 </head>
 <body>
-    <main>
+    <main class="mainFixed">
         <div class="divContainerInicio">
+            <!----------------------------- PRIMER CASILLERO ----------------------------->
             <section>
                 <img class="imagen1" src="./Assets/imagenInicio1.jpg" alt="Imagen de la Película mi Vecino Totoro">
             </section>
 
-            <section>
-                <img class="logoGhibli" src="./Assets/logoGhibli.png" alt="Imágen de la Película el Castillo Ambulante">
-                <h1>GHIBLI<br>LOVERS</h1>
-                <p>¡Encuentra todo sobre STUDIO GHIBLI en un sólo lugar!</p>
-                <button><a href="./index.html"></a>DESCUBRIR</button>
+            <!----------------------------- SEGUNDO CASILLERO ----------------------------->
+            <section class="flexDescubrir">
+                <section class="LogoGL">
+                    <img class="logoGhibli" src="./Assets/logoGhibli.png" alt="Logo de Ghibli Lovers">
+                    <h1 class="titleLogo">GHIBLI<br>LOVERS</h1>
+                </section>
+                
+                <p class="messageDescubrir">¡Encuentra todo sobre STUDIO GHIBLI en un sólo lugar!</p>
+
+                <button class="buttonDescubrir"><a href="./index.html">DESCUBRIR</a></button>
+
+                <a class="anclaFlecha" href=""><img class="iconFlecha" src="./Assets/flecha.png" alt="Imagen de una flecha indicando a la derecha"></a>
             </section>
 
+            <!----------------------------- TERCER CASILLERO ----------------------------->
             <section class="gridDescription">
-                <img class="imagen2" src="./Assets/imagenInicio2.jpg" alt="">
+                <img class="imagen2" src="./Assets/imagenInicio2.jpg" alt="Imagen de la Película el Castillo Ambulante">
+            
                 <p class="descriptionGhibli">El Studio Ghibli es un estudio de animación japonés, con sede en Tokio. Fue fundada en 1985 por Hayao Miyazaki y Isao Takahata, y a día de hoy, han realizado más de 20 películas.</p>
             </section>
 
+            <!----------------------------- CUARTO CASILLERO ----------------------------->
             <section>
-                <img class="imagen3" src="./Assets/imagenInicio3.jpg" alt="Imagen de la Película la Princesa Mononoke">
+                <img class="imagen3" src="./Assets/imagenInicio3.jpg" alt="Imagen de la Película la Princesa Mononoke" >
             </section>
         </div>
     </main>
