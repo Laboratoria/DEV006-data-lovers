@@ -11,34 +11,40 @@
     <header>
         <div class="navbar">
         <ul>
-            <li><a href="index.html">INICIO</a></li>
-            <li><a href="#">REGÍSTRATE</a></li>
-            <li><a href="#">CURIOSEA</a></li>
-            <li><a href="#">COMPRA</a></li>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="novato.html">NEWBIE</a></li>
+            <li><a href="fandom.html">FANDOM</a></li>
         </ul>
         </div>
     </header>
     
-    <label for="filterType">Filter by:</label>
-    <select id="filterType">
-      <option value="title">Title</option>
-      <option value="director">Director</option>
-      <option value="producer">Producer</option>
-      <option value="release_date">Release year</option>
-    </select>
-    
-    <label for="filterValue">Valor de filtrado:</label>
-    <input type="text" id="filterValue">
-    <br/>
+    <label for="directorSelect">Filter by director:</label>
+      <select id="directorSelect">
+        <option value="allDirectors">All</option>
+        <option value="Hayao Miyazaki">Hayao Miyazaki</option>
+        <option value="Isao Takahata">Isao Takahata</option>
+        <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
+        <option value="Hiroyuki Morita">Hiroyuki Morita</option>
+        <option value="Gorō Miyazaki">Gorō Miyazaki</option>
+        <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+      </select>
+
+      <button id="sortMoviesByDateID">Sort by date</button>
+      <button id="sortMoviesByTitleID" onclick="sortMoviesByTitle">Sort by alphabetical order</button>
+      <button id="refresh">Undo sort</button>
+
+
+
     
     <table id="moviesTable">
-        <tbody>
+        <tbody id="moviesTableBody">
+            <tr>
+                <td id="moviesTableColumnOne"></td>
+                <td id="moviesTableColumnTwo"></td>
+              </tr>
           <!-- aquí se insertarán las filas de la tabla -->
         </tbody>
       </table>
-    
-
-    <script src="main.js" type="module"></script>
-  
+  <script src="main.js" type="module"></script>
 </body>
 </html>

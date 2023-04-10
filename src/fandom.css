@@ -14,9 +14,9 @@
         flex-flow: column wrap;
         }
     }
-.History {
+.Characters {
     width: 70%;
-    background-image: url("Imágenes/newbiepage/newbie01.png");
+    background-image: url("Imágenes/fandompage/fandom04.png");
     background-size: contain;
     background-position: right;
     overflow: hidden;
@@ -28,27 +28,15 @@
     background-position: right;
     overflow: hidden;
 }
-.Park {
+.Locations {
     width: 70%;
-    background-image: url("Imágenes/newbiepage/newbie03.png");
+    background-image: url("Imágenes/fandompage/fandom03.png");
     background-size: contain;
     overflow: hidden;
 }
-.Founders {
+.Directors {
     width: 70%;
-    background-image: url("Imágenes/newbiepage/newbie04.png");
-    background-size: contain;
-    overflow: hidden;
-}
-.Mangas {
-    width: 70%;
-    background-image: url("Imágenes/newbiepage/newbie05.png");
-    background-size: contain;
-    overflow: hidden;
-}
-.Museum {
-    width: 70%;
-    background-image: url("Imágenes/newbiepage/newbie06.png");
+    background-image: url("Imágenes/fandompage/fandom01.png");
     background-size: contain;
     overflow: hidden;
 }
@@ -63,7 +51,7 @@
     margin: center;
     margin-left: 25%;
     margin-right: 10%;
-    margin-top: 2%;
+    margin-top: 7%;
     color: rgb(67, 21, 91);
 }
 .secondBtn:hover {
@@ -100,9 +88,4 @@
 .close-modal {
     margin-top: -25%;
 }    
-    
-    
-    
-    
-    
     

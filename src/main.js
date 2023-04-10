@@ -1,26 +1,21 @@
-//import {"title"} from './ghibli.js';
-// import data from './data/lol/lol.js';
-//import data from './data/ghibli/ghibli.js';
 
-import {/*moviePosters,*/ movieTitles} from './data.js';
+import {filterBy, sortMoviesByDate, sortMoviesByTitle} from './data.js';
 
-//console.log(movieTitles);
+const directorSelect = document.getElementById("directorSelect");
+directorSelect.addEventListener("change", () => {
+  filterBy(directorSelect.value);
+  console.log(directorSelect.value);
+});
 
+const sortByDateButton = document.getElementById("sortMoviesByDateID");
+sortByDateButton.addEventListener("click", sortMoviesByDate);
 
+const sortByTitleButton = document.getElementById("sortMoviesByTitleID")
+sortByTitleButton.addEventListener("click", () => { 
+  sortMoviesByTitle();
+});
 
-const MovieTitlesButton = document.getElementById("movieTitlesBtn")
-// MovieTitlesButton.addEventListener("click", ()=>{
-//   document.getElementById("movieTitles").innerHTML = movieTitles;
-//   //document.getElementById("movieTitles").innerHTML = moviePosters;
-// });
-
-//const MoviePostersButton = document.getElementById("moviePostersBtn")
-//MoviePostersButton.addEventListener("click", ()=>{
- // document.getElementById("moviePosters").innerHTML = moviePosters;
-//});
-
-
-
-//const moviePosters = document.getElementsById("moviePosters").innerHTML = moviePosters;
-
-
+const buttonRefresh = document.getElementById("refresh")
+buttonRefresh.addEventListener("click",()=>{
+  history.go(0);
+});
