@@ -40,12 +40,12 @@ export function filterBy(director){
 }
 filterBy("allDirectors");
 
-export function sortByDate() {
+export function sortMoviesByDate() {
   dataFilms.sort((a, b) => (a.release_date) - (b.release_date));
   filterBy("allDirectors");
-}
+} 
 
-export function sortByTitle() {
+export function sortMoviesByTitle() {
   dataFilms.sort((a, b) => (a.title).localeCompare(b.title));
   filterBy("allDirectors");
 }
@@ -53,12 +53,4 @@ export function sortByTitle() {
 console.log(new Date);
 
 dataFilms.forEach(movie => console.log(movie.release_date));
-
-
-
-
-
-
-
-
-
+dataFilms.forEach(movie => console.log(movie.producer));

@@ -13,7 +13,7 @@
         <ul>
             <li><a href="index.html">HOME</a></li>
             <li><a href="novato.html">NEWBIE</a></li>
-            <li><a href="#">FANDOM</a></li>
+            <li><a href="fandom.html">FANDOM</a></li>
         </ul>
         </div>
     </header>
@@ -29,8 +29,8 @@
         <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
       </select>
 
-      <button id="sortByDate" onclick="sortByDate()">Sort by date</button>
-      <button id="sortByTitle" onclick="sortByTitle()">Sort by alphabetical order</button>
+      <button id="sortMoviesByDateID">Sort by date</button>
+      <button id="sortMoviesByTitleID" onclick="sortMoviesByTitle">Sort by alphabetical order</button>
       <button id="refresh">Undo sort</button>
 
 
@@ -45,9 +45,6 @@
           <!-- aquí se insertarán las filas de la tabla -->
         </tbody>
       </table>
-    
-
-    <script src="main.js" type="module"></script>
-    <script src="data.js" type="module"></script>
+  <script src="main.js" type="module"></script>
 </body>
 </html>

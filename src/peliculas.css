@@ -64,19 +64,33 @@
     width: auto;
   }
 
-  #sortByDate {
+  #sortMoviesByDateID {
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
     margin-left: 50%;
     display: inline-flex;
+    background-color: #3CD1EF;
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
   }
+  #sortMoviesByDateID:hover {
+    background-color: #ee9547;
+    color: #fff;
+    }
  
-  #sortByTitle {
+  #sortMoviesByTitleID {
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
     display: inline-flex;
+    background-color: #3CD1EF;
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+  }
+  #sortMoviesByTitleID:hover {
+  background-color: #ee9547;
+  color: #fff;
   }
 
   #refresh {
@@ -84,5 +98,24 @@
     flex-wrap: wrap;
     margin: auto;
     display: inline-flex;
+    background-color: #3CD1EF;
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
   }
- 
+  #refresh:hover {
+  background-color: #ee9547;
+  color: #fff;
+  }
+
+  label {
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+    color: #fff;
+  }
+
+  #directorSelect {
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+    background-color: #3CD1EF;
+  }
+  

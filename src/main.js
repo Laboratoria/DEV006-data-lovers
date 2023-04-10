@@ -1,5 +1,5 @@
 
-import {filterBy, sortByDate, sortByTitle} from './data.js';
+import {filterBy, sortMoviesByDate, sortMoviesByTitle} from './data.js';
 
 const directorSelect = document.getElementById("directorSelect");
 directorSelect.addEventListener("change", () => {
@@ -7,14 +7,12 @@ directorSelect.addEventListener("change", () => {
   console.log(directorSelect.value);
 });
 
-const sortByDateButton = document.getElementById("sortByDate")
-sortByDateButton.addEventListener("click", () => { 
-  sortByDate();
-});
+const sortByDateButton = document.getElementById("sortMoviesByDateID");
+sortByDateButton.addEventListener("click", sortMoviesByDate);
 
-const sortByTitleButton = document.getElementById("sortByTitle")
+const sortByTitleButton = document.getElementById("sortMoviesByTitleID")
 sortByTitleButton.addEventListener("click", () => { 
-  sortByTitle();
+  sortMoviesByTitle();
 });
 
 const buttonRefresh = document.getElementById("refresh")
