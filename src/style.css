@@ -41,7 +41,7 @@ footer {
 }
 
 button {
-  background-color: darkgoldenrod;
+  background-color: #D0A63B;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: antiquewhite;
   font-size: medium;
@@ -104,3 +104,5 @@ td {
 .PersonInfo {
   display: flex;
 }
+
+
