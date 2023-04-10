@@ -1,9 +1,14 @@
-// estas funciones son de ejemplo
+import data from "./data/harrypotter/data.js";
+const rawData= "./data/harrypotter/data.js";
+console.log: rawData;
 
-export const example = () => {
+export const fetchHP = () => {
+  fetch(rawData)  
+  
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
 };
+
