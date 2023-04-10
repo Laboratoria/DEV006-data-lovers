@@ -115,19 +115,19 @@ productores.addEventListener("change", function () {
 
 especie.addEventListener("change",function() {
 //limpiar la pagina
-document.getElementById("filterSection").innerHTML = "";
+  document.getElementById("filterSection").innerHTML = "";
 //utilizar la funcion filtrar
-const especieNueva = filterSpecies (especie.value,data);
+  const especieNueva = filterSpecies (especie.value,data);
 //devuelve un array con objetos del resultado del filtro
-especieNueva.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
+  especieNueva.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
 //crea array con los divs 
- .map(Element => divCreator(Element))
+    .map(Element => divCreator(Element))
 //poner los divs en pantalla
- .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
+    .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
 //ocultar la pantalla de inicio al usar el filtro
- document.getElementById("filmsZone").style.display = "none";
+  document.getElementById("filmsZone").style.display = "none";
 //deberia mostrar el resultado del filtro
- document.getElementById ("filterSection").style.display = "flex";
+  document.getElementById ("filterSection").style.display = "flex";
 } )
 
 puntuacion.addEventListener("change", function () {

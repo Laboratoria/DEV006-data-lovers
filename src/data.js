@@ -13,7 +13,7 @@ export const filterProducer = (productores, data) => {
 export const filterSpecies = (especie, data) => {
   
   const specie1 = data.films.filter(films => films.people.specie === especie)
-                                   .forEach(element => console.log(element))
+    .forEach(element => console.log(element))
 
   console.log("hola");
   return specie1;
