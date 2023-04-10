@@ -1,5 +1,5 @@
-export default {
-  "pokemon": [{
+
+export const objetos={"pokemon": [{
     "num": "001",
     "name": "bulbasaur",
     "generation": {
