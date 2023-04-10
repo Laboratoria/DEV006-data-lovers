@@ -1,9 +1,9 @@
 import data from "./data/harrypotter/data.js";
 const rawData= "./data/harrypotter/data.js";
-console.log: rawData;
+console.log(data);
 
-export const fetchHP = () => {
-  fetch(rawData)  
+export const HP = () => {
+  
   
   return 'example';
 };
