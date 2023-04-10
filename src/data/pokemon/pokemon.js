@@ -1,4 +1,4 @@
-export default {
+export const Objetos = {
   "pokemon": [{
     "num": "001",
     "name": "bulbasaur",
