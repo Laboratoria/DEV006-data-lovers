@@ -2,9 +2,8 @@ import { filterDirector, sortDataYear, filterProducer,sortData, filterSpecies} f
 
 
 import data from './data/ghibli/ghibli.js';
-
+const filterSection = document.getElementById ("filterSection")
 const directores = document.getElementById("Directores");
-const filterSection = document.getElementById("filterSection")
 const productores = document.getElementById("Productores");
 const puntuacion = document.getElementById("Puntuacion");
 const añoDeEstreno = document.getElementById("añoDeEstreno");
@@ -24,6 +23,20 @@ class titleAndPoster {
 
   }
 }
+
+class Character {
+  constructor(nombre, image, gender, age, eye_color, hair_color, specie) {
+    //"this" indica el objeto en concreto que se utilizará (o algo así)
+    this.poster = createImage(image);
+    this.name = createText(nombre);
+    this.gender = createText(gender);
+    this.age = createText(age);
+    this.eye_color = createText(eye_color);
+    this.hair_color = createText(hair_color);
+    this.specie = createText(specie);
+  }
+}
+
 //llamar los datos
 data.films
   //creamos un array de objetos con los datos que queremos sacar.
@@ -79,26 +92,26 @@ function createText(textMovie) {
   text.innerText = textMovie;
   //le damos la clase
   text.className = "text";
-  return text
+  return text 
 }
 
 //agregamos el evento para que al seleccionar el director que quiere se dispare
 //la función de filtrar
 directores.addEventListener("change", function () {
-  document.getElementById("filterSection").innerHTML = "";
+  filterSection.innerHTML = "";
   const directorNuevo = filterDirector(directores.value, data);
   directorNuevo.map(film => new titleAndPoster(film.title, film.poster, film.director, film.release_date, film.rt_score, film.description))
     .map(Element => divCreator(Element))
-    .forEach(Element => document.getElementById("filterSection").appendChild(Element))
+    .forEach(Element => filterSection.appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
-  document.getElementById("filterSection").style.display = "flex";
+  filterSection.style.display = "flex";
 })
 
 productores.addEventListener("change", function () {
   //limpiar la pagina
-  document.getElementById("filterSection").innerHTML = "";
+  filterSection.innerHTML = "";
   //utilizar la funcion filtrar
   const producerNuevo = filterProducer(productores.value, data);
   //devuelve un array con objetos del resultado del filtro
@@ -106,7 +119,7 @@ productores.addEventListener("change", function () {
     //crea array con los divs 
     .map(Element => divCreator(Element))
     //poner los divs en pantalla
-    .forEach(Element => document.getElementById("filterSection").appendChild(Element))
+    .forEach(Element => filterSection.appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
@@ -115,15 +128,15 @@ productores.addEventListener("change", function () {
 
 especie.addEventListener("change",function() {
 //limpiar la pagina
-  document.getElementById("filterSection").innerHTML = "";
+  filterSection.innerHTML = "";
 //utilizar la funcion filtrar
-  const especieNueva = filterSpecies (especie.value,data);
+  const especieNueva = filterSpecies(especie.value,data);
 //devuelve un array con objetos del resultado del filtro
-  especieNueva.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
+  especieNueva.map(film => new Character(film.people.name, film.people.img, film.people.gender, film.people.age, film.people.eye_color, film.people.hair_color, film.people.specie) )
 //crea array con los divs 
     .map(Element => divCreator(Element))
 //poner los divs en pantalla
-    .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
+    .forEach(Element => filterSection.appendChild(Element))
 //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
 //deberia mostrar el resultado del filtro
@@ -132,7 +145,7 @@ especie.addEventListener("change",function() {
 
 puntuacion.addEventListener("change", function () {
   //limpiar la pagina
-  document.getElementById("filterSection").innerHTML = "";
+  filterSection.innerHTML = "";
   //utilizar la funcion filtrar
   const nuevoOrden = sortData(puntuacion.value, data);
   //devuelve un array con objetos del resultado del filtro
@@ -140,7 +153,7 @@ puntuacion.addEventListener("change", function () {
     //crea array con los divs 
     .map(Element => divCreator(Element))
     //poner los divs en pantalla
-    .forEach(Element => document.getElementById("filterSection").appendChild(Element))
+    .forEach(Element => filterSection.appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
@@ -149,7 +162,7 @@ puntuacion.addEventListener("change", function () {
 
 añoDeEstreno.addEventListener("change", function () {
   //limpiar la pagina
-  document.getElementById("filterSection").innerHTML = "";
+  filterSection.innerHTML = "";
   //utilizar la funcion filtrar
   const nuevoOrden = sortDataYear(añoDeEstreno.value, data);
   //devuelve un array con objetos del resultado del filtro
@@ -157,7 +170,7 @@ añoDeEstreno.addEventListener("change", function () {
     //crea array con los divs 
     .map(Element => divCreator(Element))
     //poner los divs en pantalla
-    .forEach(Element => document.getElementById("filterSection").appendChild(Element))
+    .forEach(Element => filterSection.appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
