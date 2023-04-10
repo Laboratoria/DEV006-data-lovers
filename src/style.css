@@ -1,0 +1,38 @@
+:root {
+    --main-color: hotpink;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-family: 'Major Mono Display', monospace;
+}
+.divContainerInicio {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 50vh 50vh;
+}
+.imagen1, .imagen2, .imagen3 {
+    width: 100%;
+    height: 100%;
+}
+.logoGhibli {
+    width: 8%;
+}
+.gridDescription {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.descriptionGhibli {
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-align: justify;
+
+}
+ 
