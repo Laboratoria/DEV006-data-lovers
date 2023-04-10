@@ -1,16 +1,18 @@
-// estas funciones son de ejemplo
 
-export const example = () => {
-  return 'example';
-};
 
-export const anotherExample = () => {
-  return 'OMG';
-};
-//Hola Mariana espero que estes viendo esto
-//Hola Risell, si lo veoooo
-//Esta funcionando 
-// Excelente servicio
+// export const example = () => {
+//   return 'example';
+// };
 
-//Wenooos diaas
-//Hay mucha info en este proyecto aaah 
+// export const anotherExample = () => {
+//   return 'OMG';
+// };
+
+//Creando filtro de buscador
+
+inputSearch= document.getElementbyId("search");
+
+function buscador_interno(){
+
+  filter=inputSearch.value.toUpperCase();
+}
