@@ -33,7 +33,7 @@ championCard.classList.add("champion-card");
   
 
 }
-
+ 
   const championImgContainer = document.createElement("div");
   championImgContainer.classList.add("champion-img-container");
 
@@ -60,6 +60,8 @@ championCard.classList.add("champion-card");
   championTitle.classList.add("title")
 
 
+  
+
 
   championImgContainer.appendChild(championImg);
   championCard.appendChild(championName);
@@ -67,8 +69,14 @@ championCard.classList.add("champion-card");
   contenedor.appendChild(championCard);
   championCard.appendChild(championTitle)
   championCard.appendChild(championBlurb);
+
  
 
 
 
   }
+
+}
+
+
+
