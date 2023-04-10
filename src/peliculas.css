@@ -1,10 +1,9 @@
 
 table {
-    width: 50%;
+    width: 80%;
     font-family: "Jockey One", sans-serif;
     font-size: 120%;
     margin:auto;
-    margin-top: 5%;
     text-align: justify;
   }
 
@@ -17,14 +16,27 @@ table {
   
   #moviesTableColumnOne {
     width: 50%;
-    margin: auto;
-   
-
+    margin:auto;
   }
 
   #moviesTableColumnTwo {
     width: 50%;
-    margin: auto;
+    margin-top: 15%;
+  }
+
+  #moviesTable td {
+    vertical-align: top;
+    padding: 20px;
+    text-align: center;
+  }
+
+  #moviesTable img {
+    height: 342px;
+    width: 250px;
+  }
+
+  .justify {
+    text-align: justify;
   }
  
  

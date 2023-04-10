@@ -9,10 +9,10 @@ import {/*moviePosters,*/ movieTitles} from './data.js';
 
 
 const MovieTitlesButton = document.getElementById("movieTitlesBtn")
-MovieTitlesButton.addEventListener("click", ()=>{
-  document.getElementById("movieTitles").innerHTML = movieTitles;
-  //document.getElementById("movieTitles").innerHTML = moviePosters;
-});
+// MovieTitlesButton.addEventListener("click", ()=>{
+//   document.getElementById("movieTitles").innerHTML = movieTitles;
+//   //document.getElementById("movieTitles").innerHTML = moviePosters;
+// });
 
 //const MoviePostersButton = document.getElementById("moviePostersBtn")
 //MoviePostersButton.addEventListener("click", ()=>{

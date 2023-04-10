@@ -66,7 +66,21 @@ ul li:hover {
   border-radius: 8%;
   background-image: url("Imágenes/fandom.png");
 }
-button {
+#newbieBtn {
+  width: 20%;
+  padding: 14px;
+  margin-top: 48%;
+  margin-left: 40%;
+  /*margin-right: 48%;
+        margin-bottom: 25%;*/
+  background-color: #3cd1ef;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Jockey One", sans-serif;
+  font-size: 20px;
+}
+#fandomBtn {
   width: 20%;
   padding: 14px;
   margin-top: 48%;
