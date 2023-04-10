@@ -30,5 +30,18 @@
     "createdAt": "2023-03-14T23:47:54.313Z",
     "version": "5.6.0",
     "commit": "ffa75c8b2bede153844195479abeff01f3e34227"
-  }
+  },
+  "description": "* [1. Preámbulo](#1-preámbulo)\r * [2. Resumen del proyecto](#2-resumen-del-proyecto)\r * [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)\r * [4. Consideraciones generales](#4-consideraciones-generales)\r * [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)\r * [6. Hacker edition](#6-hacker-edition)\r * [7. Consideraciones técnicas](#7-consideraciones-técnicas)\r * [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)\r * [9. Checklist](#9-checklist)",
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dul31/DEV006-data-lovers-POKEM-N.git"
+  },
+  "author": "Nacdul y Raquel",
+  "bugs": {
+    "url": "https://github.com/Dul31/DEV006-data-lovers-POKEM-N/issues"
+  },
+  "homepage": "https://github.com/Dul31/DEV006-data-lovers-POKEM-N#readme"
 }
