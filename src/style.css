@@ -245,14 +245,28 @@ article > section:nth-child(2){
     height: 60px;
     border-radius: 50%;
    
-    
-   
-  
 }
 
 #seccion2 img:hover {
     box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);
 }
+
+#seccion2 button {
+    width: 90px;
+    height: 45px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    text-align: center;
+    background-color: #023E73;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#seccion2 button:hover {
+    box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);  
+}
+
 
 article > section:nth-child(3){
     padding: 4rem;
