@@ -1,5 +1,5 @@
-
-export const objetos={"pokemon": [{
+export const Objetos = {
+  "pokemon": [{
     "num": "001",
     "name": "bulbasaur",
     "generation": {

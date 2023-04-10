@@ -2,3 +2,5 @@
 *.swp
 coverage/
 node_modules/
+.hintrc
+package-lock.json
