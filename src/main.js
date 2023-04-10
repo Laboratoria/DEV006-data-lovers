@@ -1,8 +1,5 @@
-import { filterDirector } from './data.js';
-import { filterProducer } from './data.js';
-import { filterSpecies } from './data.js';
-import { sortData } from './data.js';
-import { stats } from './data.js';
+import { filterDirector, sortDataYear, filterProducer,sortData, filterSpecies} from './data.js';
+
 
 import data from './data/ghibli/ghibli.js';
 
@@ -11,7 +8,7 @@ const filterSection = document.getElementById("filterSection")
 const productores = document.getElementById("Productores");
 const puntuacion = document.getElementById("Puntuacion");
 const añoDeEstreno = document.getElementById("añoDeEstreno");
-const especie = document.getElementById("especie");
+const especie = document.getElementById("Especie");
 
 
 //constructor de objetos para seleccionar datos a mostrar
@@ -116,28 +113,45 @@ productores.addEventListener("change", function () {
   document.getElementById("filterSection").style.display = "flex";
 })
 
-//especie.addEventListener("change",function() {
+especie.addEventListener("change",function() {
 //limpiar la pagina
-//document.getElementById("filterSection").innerHTML = "";
+document.getElementById("filterSection").innerHTML = "";
 //utilizar la funcion filtrar
-//const especieNueva = filterSpecies (especie.value,data);
+const especieNueva = filterSpecies (especie.value,data);
 //devuelve un array con objetos del resultado del filtro
-//especieNueva.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
+especieNueva.map(film => new titleAndPoster(film.title,film.poster,film.director,film.release_date,film.rt_score,film.description))
 //crea array con los divs 
-// .map(Element => divCreator(Element))
+ .map(Element => divCreator(Element))
 //poner los divs en pantalla
-// .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
+ .forEach(Element =>document.getElementById("filterSection").appendChild(Element))
 //ocultar la pantalla de inicio al usar el filtro
-// document.getElementById("filmsZone").style.display = "none";
+ document.getElementById("filmsZone").style.display = "none";
 //deberia mostrar el resultado del filtro
-// document.getElementById ("filterSection").style.display = "flex";
-//} )
+ document.getElementById ("filterSection").style.display = "flex";
+} )
 
 puntuacion.addEventListener("change", function () {
   //limpiar la pagina
   document.getElementById("filterSection").innerHTML = "";
   //utilizar la funcion filtrar
   const nuevoOrden = sortData(puntuacion.value, data);
+  //devuelve un array con objetos del resultado del filtro
+  nuevoOrden.map(film => new titleAndPoster(film.title, film.poster, film.director, film.release_date, film.rt_score, film.description))
+    //crea array con los divs 
+    .map(Element => divCreator(Element))
+    //poner los divs en pantalla
+    .forEach(Element => document.getElementById("filterSection").appendChild(Element))
+  //ocultar la pantalla de inicio al usar el filtro
+  document.getElementById("filmsZone").style.display = "none";
+  //deberia mostrar el resultado del filtro
+  document.getElementById("filterSection").style.display = "flex";
+})
+
+añoDeEstreno.addEventListener("change", function () {
+  //limpiar la pagina
+  document.getElementById("filterSection").innerHTML = "";
+  //utilizar la funcion filtrar
+  const nuevoOrden = sortDataYear(añoDeEstreno.value, data);
   //devuelve un array con objetos del resultado del filtro
   nuevoOrden.map(film => new titleAndPoster(film.title, film.poster, film.director, film.release_date, film.rt_score, film.description))
     //crea array con los divs 
