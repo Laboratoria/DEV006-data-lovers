@@ -2,6 +2,7 @@ header {
   text-align: center;
   margin: 20px 20px -25px 20px;
 }
+
 body {
   background-image: url(imagenes/fondo.jpg);
   background-repeat: no-repeat;
@@ -101,8 +102,10 @@ td {
   display: grid;
 }
 
-.PersonInfo {
+#charactersInfo {
   display: flex;
+  background-color: lightgreen;
+  height: 200px;
+  width: 170px;
+  border-radius: 15%;
 }
-
-
