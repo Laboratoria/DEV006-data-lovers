@@ -1,18 +1,2 @@
 
-
-// export const example = () => {
-//   return 'example';
-// };
-
-// export const anotherExample = () => {
-//   return 'OMG';
-// };
-
-//Creando filtro de buscador
-
-inputSearch= document.getElementbyId("search");
-
-function buscador_interno(){
-
-  filter=inputSearch.value.toUpperCase();
-}
+//import data from './data/lol/lol.js';

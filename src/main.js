@@ -1,11 +1,25 @@
 import data from './data/lol/lol.js';
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 const contenedor = document.querySelector('.contenedor'); 
 
 const champion = Object.keys(data.data)
 
-    
- 
 
 for(let i = 0; i < champion.length; i++){
   const key = champion[i]
@@ -15,25 +29,24 @@ for(let i = 0; i < champion.length; i++){
   const img  = data.data[key].img;
   const blurb = data.data[key].blurb;
   const title = data.data[key].title;
-const infoObject = data.data[key].info;
+  const infoObject = data.data[key].info;
 
-const championCard = document.createElement("div");
-championCard.classList.add("champion-card");
+  const championCard = document.createElement("div");
+  championCard.classList.add("champion-card");
 
   
   for (const subKey in infoObject) {
-    if (infoObject.hasOwnProperty(subKey)) {
+    // eslint-disable-next-line no-prototype-builtins
+    if (infoObject.hasOwnProperty(subKey)){
       const subValue = infoObject[subKey];
-      const statElement = document.createElement("p");
+      const statElement = document.createElement("p")
       statElement.innerHTML = `${subKey}: ${subValue}`;
       championCard.appendChild(statElement);
       statElement.classList.add("info")
     }
+      
+  }
 
-  
-
-}
- 
   const championImgContainer = document.createElement("div");
   championImgContainer.classList.add("champion-img-container");
 
@@ -60,23 +73,57 @@ championCard.classList.add("champion-card");
   championTitle.classList.add("title")
 
 
-  
-
-
-  championImgContainer.appendChild(championImg);
-  championCard.appendChild(championName);
-  championCard.appendChild(championImgContainer);
-  contenedor.appendChild(championCard);
-  championCard.appendChild(championTitle)
-  championCard.appendChild(championBlurb);
 
  
 
 
-
-  }
-
+  
+  
+  
+  
+  championImgContainer.appendChild(championImg);
+  //championCard.appendChild(searchInput);
+  championCard.appendChild(championName);
+  championCard.appendChild(championImgContainer);
+  contenedor.appendChild(championCard);
+  championCard.appendChild(championTitle);
+  championCard.appendChild(championBlurb);
+  
 }
+//funcion de buscado
+
+const buscar = document.querySelector('#buscar');
+const botonBuscar = document.querySelector('#botonBuscar');
+const resultados = document.querySelector("#resultados")
+
+const filtrar = ()=>{
+//console.log(buscar.value);
+  resultados.innerHTML = '';
+
+  const texto = buscar.value.toLowerCase();
+  for (const card of champion){
+    const name = card.name.toLowerCase();
+    if(name.indexOf(texto) !== -1){
+      resultados.innerHTML += `
+      <li>${card.name} - champion: ${card.championCard}</li> 
+      `
+    }
+  }
+  if(resultados.innerHTML === ''){
+    resultados.innerHTML += `
+      <li>Champion not found</li>
+    `
+  }
+}
+
+botonBuscar.addEventListener("click", filtrar)
+
+
+  
+ 
+
+
+
 
 
 

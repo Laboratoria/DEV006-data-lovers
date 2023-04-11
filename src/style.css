@@ -160,7 +160,7 @@ input[type="text"]{
   display: flex;
  flex-direction: row;
  flex-wrap: wrap;
- margin-top: 200px;
+ margin-top: 80px;
  margin-left: 25px;
  gap: 5%;
 }
@@ -175,7 +175,7 @@ input[type="text"]{
   height: 100%;
   width: 100%;
   position: relative;
-  bottom: 90px;
+  bottom: 120px;
 }
 .champion-name{
   font-family: Arial, Helvetica, sans-serif;
@@ -185,7 +185,7 @@ input[type="text"]{
  line-height: 29px;
  color: white;
  position: relative;
- bottom: 80px;
+ bottom: 109px;
  }
  .champion-card{
   background-color:  #6E85B2;
@@ -218,10 +218,10 @@ input[type="text"]{
   color: #FFFFFF;
   z-index: 1;
   display: grid;
-  grid-template-columns: 3.5cm;
-  grid-template-rows: 6cm;
+  grid-template-columns: 3.3cm;
+  grid-template-rows: 6.5cm;
   position: relative;
-  bottom: 110px;
+  bottom: 150px;
 }
 .title{
   font-family: Arial, Helvetica, sans-serif;
@@ -231,7 +231,7 @@ input[type="text"]{
   text-align: center;
   color: #FFFFFF;
   position: relative;
-  bottom: 90px;
+  bottom: 130px;
 }
 
 .info{
@@ -239,19 +239,20 @@ input[type="text"]{
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  text-align: center;
+  text-align:justify;
   color:white;
   position: relative;
-  top: 380px;
+  top: 328px;
   line-height: 0px;
-  left: 70px;
+  left: 145px;
 }
-#search{
-  
-  position: relative;
-  top: 110px;
-  left: 130px;
-  height: 40px;
-  width: 210px;
-  border-radius: 12px;
+#botonBuscar {
+  margin-top: 116px;
+  margin-left: 340px;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+}
+#buscar {
+  margin-left: -10px;
 }
