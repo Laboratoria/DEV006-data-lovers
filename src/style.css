@@ -254,4 +254,11 @@ input[type="text"]{
   height: 40px;
   width: 210px;
   border-radius: 12px;
+  
+}
+.Sort{
+
+  color: black;
+  top: 300px;
+  
 }

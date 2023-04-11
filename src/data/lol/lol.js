@@ -217,7 +217,11 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Amumu_0.jpg",
       blurb:
+<<<<<<< HEAD
+        "''Solitude can be lonelier than death.''A lonely and melancholy soul from ancient Shurima, Amumu roams the world in search of a friend. Cursed by an ancient spell, he is doomed to remain alone forever, as his touch is death and his affection ...",
+=======
         "''Solitude can be lonelier than death. A lonely and melancholy soul from ancient Shurima, Amumu roams the world in search of a friend. Cursed by an ancient spell, he is doomed to remain alone forever, as his touch is death and his affection ...",
+>>>>>>> d3a5829c281630573cc72eb931e16547493a4bf8
       info: {
         attack: 2,
         defense: 6,
@@ -676,7 +680,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Braum_0.jpg",
       blurb:
-        "''Would you like a bedtime story?''<br><br>''Grandma, I'm too old for that.''<br><br>''You're never too old to be told a story.''<br><br>The girl reluctantly crawls into bed and waits, knowing she won't win this battle. A bitter wind howls outside, ...",
+        "''Would you like a bedtime story?''<br><br>''Grandma, I'm too old for that.''<br><br>''You're never too old to be told a story.''The girl reluctantly crawls into bed and waits, knowing she won't win this battle. A bitter wind howls outside, ...",
       info: {
         attack: 3,
         defense: 9,
@@ -727,7 +731,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Caitlyn_0.jpg",
       blurb:
-        "''Go ahead, run. I'll give you a five minute head start.''<br><br>One of the reasons Piltover is known as the City of Progress is because it has an extraordinarily low crime rate. This hasn't always been the case; brigands and thieves of all sorts ...",
+        "''Go ahead, run. I'll give you a five minute head start.''One of the reasons Piltover is known as the City of Progress is because it has an extraordinarily low crime rate. This hasn't always been the case; brigands and thieves of all sorts ...",
       info: {
         attack: 8,
         defense: 2,
@@ -5267,7 +5271,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/TahmKench_0.jpg",
       blurb:
-        "''The whole world's a river, and I'm its king.''<br>Tahm Kench travels Runeterra's waterways, feeding his insatiable appetite with the misery of the unsuspecting. The singularly charming gourmand savors every moment of his victims' suffering.  A deal ...",
+        "''The whole world's a river, and I'm its king.''Tahm Kench travels Runeterra's waterways, feeding his insatiable appetite with the misery of the unsuspecting. The singularly charming gourmand savors every moment of his victims' suffering.  A deal ...",
       info: {
         attack: 3,
         defense: 9,
@@ -5279,9 +5283,9 @@ export default {
         sprite: "champion3.png",
         group: "champion",
         x: 0,
-        y: 48,
-        w: 48,
-        h: 48
+        y: 0,
+        w: 0,
+        h: 0
       },
       tags: ["Support", "Tank"],
       partype: "MP",
@@ -5522,7 +5526,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Thresh_0.jpg",
       blurb:
-        "''The mind is a wondrous thing to tear apart.''<br><br>Sadistic and cunning, Thresh is a restless spirit who prides himself on tormenting mortals and breaking them with slow, excruciating inventiveness. His victims suffer far beyond the point of death,...",
+        "''The mind is a wondrous thing to tear apart.''Sadistic and cunning, Thresh is a restless spirit who prides himself on tormenting mortals and breaking them with slow, excruciating inventiveness. His victims suffer far beyond the point of death,...",
       info: {
         attack: 5,
         defense: 6,
@@ -5777,7 +5781,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Twitch_0.jpg",
       blurb:
-        "H.I.V.E. Incident Report<br>Code Violation: Industrial Homicide<br>Casefile Status: Unsolved<br>Investigating Agent: Rol, P.<br><br>Team responded to report of suspicious character, criminal activity; proceeded to Sump Works, Sector 90TZ. Sector 90TZ ...",
+        "H.I.V.E. Incident Report Code Violation: Industrial Homicide Casefile Status: Unsolved Investigating Agent: Rol, P. Team responded to report of suspicious character, criminal activity; proceeded to Sump Works, Sector 90TZ. Sector 90TZ ...",
       info: {
         attack: 9,
         defense: 2,
@@ -6283,7 +6287,7 @@ export default {
       key: "106",
       name: "Volibear",
       title: "the Thunder's Roar",
-      img: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg",
+      img: "https://images3.alphacoders.com/129/1295580.jpg",
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Volibear_0.jpg",
       blurb:
@@ -6542,7 +6546,7 @@ export default {
       splash:
         "http://ddragon.leagueoflegends.com/cdn/img/champion/splash/Yorick_0.jpg",
       blurb:
-        "''These isles… How they scream.''<br>The last survivor of a long-forgotten religious order, Yorick is both blessed and cursed with power over the dead. Trapped on the Shadow Isles, his only companions are the rotting corpses and shrieking spirits that ...",
+        "''These isles… How they scream.''The last survivor of a long-forgotten religious order, Yorick is both blessed and cursed with power over the dead. Trapped on the Shadow Isles, his only companions are the rotting corpses and shrieking spirits that ...",
       info: {
         attack: 6,
         defense: 6,
