@@ -47,7 +47,7 @@ function showMovies(event) {
   event.preventDefault();
   //Modify the homepage background with the plain background image.
   document.getElementById("body").style.backgroundImage="url(images/forest-background.jpg)";
-  const mainElement = document.getElementById("main");
+/*   const mainElement = document.getElementById("main"); */
   const returnHome = document.createElement("a");
   const producers = getAllProducers(films);
   const directors = getAllDirectors(films);
@@ -66,10 +66,10 @@ function showMovies(event) {
   //create a dropdown menu for filtering by producer
   const dropdownProducers = document.createElement("select");
   dropdownProducers.classList.add("filter");
-  const label = document.createElement("label");
-  label.classList.add("filter-label");
-  label.textContent = "Filter by producer: ";
-  label.appendChild(dropdownProducers);
+  const labelProducers = document.createElement("label");
+  labelProducers.classList.add("filter-label");
+  labelProducers.textContent = "Filter by producer: ";
+  labelProducers.appendChild(dropdownProducers);
   
   //appends the dropdown options with the producer names
   producers.forEach(function (producer) {
@@ -110,8 +110,8 @@ function showMovies(event) {
     const selectedProducer = dropdownProducers.value;
     const selectedDirector = dropdownDirectors.value;
     const filtered = filterFilms(sortedFilms, selectedProducer, selectedDirector);
-    const sortedDes = sortAsc(filtered);
-    showPosters(sortedDes);
+    const sortedAsc = sortAsc(filtered);
+    showPosters(sortedAsc);
   });
   //------------------------------------------------------------------------------------------
   //--------------Order Z-A ------------------------------------------------------------------
@@ -149,7 +149,7 @@ function showMovies(event) {
 
 
   //add producers & directors filter dropdown to main section
-  mainElement.appendChild(label);
+  mainElement.appendChild(labelProducers);
   mainElement.appendChild(labelDirectors);
   mainElement.appendChild(sortBtnAsc);
   mainElement.appendChild(sortBtnDes);
@@ -324,7 +324,7 @@ function movieDetails(event){
   
   
   //add movieDetails div to the main section
-  const mainElement = document.getElementById("main");
+/*   const mainElement = document.getElementById("main"); */
   mainElement.innerHTML = "";
   // add the return button to the page
   mainElement.appendChild(returnButton);
@@ -427,7 +427,7 @@ function showCharacters(event){
     link.href = "#"+s;
     link.textContent =s; 
     dropdownChar.appendChild(link);
-    dropdownChar.addEventListener("click",filterSpecies);
+    dropdownChar.addEventListener("click",filterChar);
     sortCharAsc.innerHTML= "Order A-Z"
     sortCharDes.innerHTML= "Order Z-A"
   });
@@ -439,7 +439,7 @@ function showCharacters(event){
     link.href = "#"+s;
     link.textContent =s; 
     dropdownfilms.appendChild(link);
-    dropdownfilms.addEventListener("click",filterSpecies);
+    dropdownfilms.addEventListener("click",filterChar);
     sortCharAsc.innerHTML= "Order A-Z"
     sortCharDes.innerHTML= "Order Z-A"
 
@@ -476,7 +476,7 @@ function showCharacters(event){
 }
 
 
-function filterSpecies() {
+function filterChar() {
   const selectedSpecies = document.getElementById("select-species").value;
   const selectedAnimations = document.getElementById("select-animations").value;
   const characters = document.querySelectorAll(".characterBig");
@@ -486,7 +486,6 @@ function filterSpecies() {
   characters.forEach((character) => {
     const specie = character.querySelector("h3:nth-child(7)").textContent.split(": ")[1];
     const animation = character.querySelector("h3:nth-child(1)").textContent.split(": ")[1];
-   
     totalCount += filterCharacter(character,selectedSpecies,selectedAnimations,specie,animation);
 
   });
@@ -494,9 +493,6 @@ function filterSpecies() {
   const counter = document.querySelector(".counter");
   counter.textContent = `${totalCount} characters found`;
   
-  
-  /*   filterCharacter(characters, selectedSpecies,selectedAnimations); */
- 
 }
 
 function ordenadosAlfabeto(event) {

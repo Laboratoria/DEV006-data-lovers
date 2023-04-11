@@ -9,7 +9,9 @@ header {
     background-image: url(images/header.png);
     background-size: cover;
     background-position: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap;/* permite a los elementos hijos flexibles ajustarse en múltiples líneas 
+                    dentro del contenedor flexible, lo que es útil en el diseño responsivo
+                    donde deseo una disposición flexible de los elementos en diferentes tamaños de pantalla. */
 }
 html, body {
   height: 100%;
@@ -99,7 +101,7 @@ flex-wrap: wrap;
     height: 200px;
     transform: translateX(10%);
     /* background-color: #DB776D ; */
-    opacity: 0.9;
+/*     opacity: 0.9; */
     border-radius: 20px;
     padding-top: 50px;
 }
@@ -269,7 +271,7 @@ display: inline-block;
   opacity: 1;
 }
 
-/*  */
+/* Estilos y formato para los vehiculos que se muestran en el acordion */
 .vehicle {
   display: inline-block;
   width: 8rem;
@@ -305,7 +307,7 @@ display: inline-block;
   opacity: 1;
 }
 
-/*  */
+/*Estilos y formato para los lugares que se muestran en el acordion  */
 .place {
   display: inline-block;
   width: 8rem;
@@ -341,14 +343,12 @@ display: inline-block;
 }
 
 
-
-
-
-/*  */
+/*Estilos del contador que se va actualizando  */
 .counter{
   font-size: 1.5rem;
   color: white;
   margin-left: 1rem;
+  font-weight: bold;
 }
 
 /* formatted footer */
@@ -366,88 +366,89 @@ footer {
 }
 
 
-  .counter{
-    color: white;
-    font-weight: bold;
-  }
-  
-  .filter-label {
+
+/* Botones de filtrado,ordenado y retorno estilos */
+.filter-label {
     display: inline-block;
     margin-right: 10px;
     color: white;
     font-weight: bold;
     margin-left: 1rem;
-  }
+}
   
-  select.filter {
-    background-color: white;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    color: #6d5041;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-    margin: 1rem;
-  }
-  .ordenado{
-    color: #6d5041;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 10px;
-  }
-  .returnButton {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 1em;
-    background-color: #329da1;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0.25em;
-    border: 2px solid #329da1;
-    transition: background-color 0.3s, color 0.3s, border 0.3s;
-    font-weight: bold;
-  }
+select.filter {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  color: #6d5041;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+  margin: 1rem;
+}
+.ordenado{
+  color: #6d5041;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px;
+}
+.returnButton {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 1em;
+  background-color: #329da1;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25em;
+  border: 2px solid #329da1;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+  font-weight: bold;
+}
   
-   .returnButton:hover {
-    background-color: #fff;
-    color: #329da196;
-    border: 2px solid #329da1;
-  }
+  .returnButton:hover {
+  background-color: #fff;
+  color: #329da196;
+  border: 2px solid #329da1;
+}
   
-  .returnButton:active {
-    background-color: #329da1;
-    color: #fff;
-    border: 2px solid #329da1;
-  }
-  .sortButton {
-    display: inline-block;
-    padding: 0.5em 1em;
-    margin: 1em;
-    background-color: #a7b07a;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 0.25em;
-    transition: background-color 0.3s, color 0.3s;
-    font-weight: bold;
-  }
+.returnButton:active {
+  background-color: #329da1;
+  color: #fff;
+  border: 2px solid #329da1;
+}
+.sortButton {
+  display: inline-block;
+  padding: 0.5em 1em;
+  margin: 1em;
+  background-color: #a7b07a;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 0.25em;
+  transition: background-color 0.3s, color 0.3s;
+  font-weight: bold;
+}
   
-   .sortButton:hover {
-    background-color: #fff;
-    color: #a7b07a;
-    
-  }
+.sortButton:hover {
+  background-color: #fff;
+  color: #a7b07a;
   
-  .sortButton:active {
-    background-color: #a7b07a;
-    color: #fff;
-    
-  }
+}
+  
+.sortButton:active {
+  background-color: #a7b07a;
+  color: #fff;
+  
+}
+
+/* Boton para el responsive movil */
 .menu-icon{
   display: none;
 }
 
-  /* This space is to give a responsive to the page */
 
+/* This space is to give a responsive to the page */
+
+/* Pantallas con un minimo de ancho de 1500px */
 @media (min-width: 1500px) {
 header {
   background: url(./images/header.png);
@@ -522,6 +523,7 @@ margin-left: 70rem;
 }
 }
 
+/* Pntallas con un maximo de 760 px */
 @media (max-width: 760px) {
 header {
 background: url(./images/header.png);
@@ -593,7 +595,7 @@ footer {
 }
 }
 
-
+/* Para pantallas moviles */
 @media(max-width: 500px) {
 header {
   background: url(./images/header-mobile\ \(665x179\).png);
@@ -643,7 +645,7 @@ html {
   display: block;
   text-align: center;
   position: relative;
-  z-index: 9999;
+  z-index: 9999;/* Posición enfrente de todo */
 }
 
 .main-menu ul li{

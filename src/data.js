@@ -63,7 +63,7 @@ export const filterCharacter = (character, selectedSpecies,selectedAnimations, s
   let count = 0;
 
   if ((selectedSpecies === "All" || specie === selectedSpecies) && (selectedAnimations === "All" || animation === selectedAnimations) ){
-    character.style.display = "inline-block";
+    character.style.display = "inline-block";/* Alineo las imagenes de los personajes */
     count++;
   } else {
     character.style.display = "none";
@@ -78,7 +78,7 @@ export const filterOrden = (charactersArray, container, order) => {
   charactersArray.sort((a, b) => {
     const nameA = a.querySelector("h3:nth-child(2)").textContent.toLowerCase();
     const nameB = b.querySelector("h3:nth-child(2)").textContent.toLowerCase();
-    /* return nameA.localeCompare(nameB) * order; */
+    /* return nameA.localeCompare(nameB) * order; Tambien puede ordenar*/
 
     if (nameA < nameB) {
       return -order;
@@ -89,7 +89,7 @@ export const filterOrden = (charactersArray, container, order) => {
     return 0;
   });
   charactersArray.forEach(function (ch) {
-    container.appendChild(ch);
+    container.appendChild(ch);/* AAgrego las imagenes ordenadas en el container */
   });
 }
 
