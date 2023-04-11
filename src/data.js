@@ -2,6 +2,7 @@ import {Objetos} from './data/pokemon/pokemon.js';
 
 // estas funciones son de ejemplo
 
+
 export const example = () => {
   return 'example';
 };
@@ -9,6 +10,7 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+
 
 export  function mostrarPokemon(data) {
   const filterByType = data.length > 0 ? data: Objetos.pokemon
@@ -47,5 +49,7 @@ listaPokemon.innerHTML = " ";
  const tipos = Objetos.pokemon.filter(pokemon => pokemon.type.includes(botonId))
  mostrarPokemon(tipos);
 } 
+
+
 
 
