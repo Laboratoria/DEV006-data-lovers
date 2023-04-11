@@ -1,4 +1,4 @@
-import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes, filterCharacter, filterOrden} from '../src/data.js';
+import { totalMovie, countCharacters, countCharactersMovie, filterFilms, sortAsc, sortDes, filterCharacter, filterOrden, calculatePercentage} from '../src/data.js';
 
 
 
@@ -628,6 +628,41 @@ describe('filterOrden', () => {
   });
 
 
+});
+
+
+
+describe('calculatePercentage', () => {
+  test('returns the correct percentage', () => {
+    const films = [
+      { id: 1, title: 'Film 1' },
+      { id: 2, title: 'Film 2' },
+      { id: 3, title: 'Film 3' },
+    ];
+
+    const filteredFilms = [
+      { id: 1, title: 'Film 1' },
+      { id: 2, title: 'Film 2' },
+    ];
+
+    const result = calculatePercentage(films, filteredFilms);
+
+    expect(result).toEqual('66.67');
+  });
+
+  test('returns 100 when all films are filtered', () => {
+    const films = [
+      { id: 1, title: 'Film 1' },
+      { id: 2, title: 'Film 2' },
+      { id: 3, title: 'Film 3' },
+    ];
+
+    const filteredFilms = [...films];
+
+    const result = calculatePercentage(films, filteredFilms);
+
+    expect(result).toEqual('100.00');
+  });
 });
 
 

@@ -98,4 +98,5 @@ export const calculatePercentage = (films, filteredFilms) => {
   const totalFilms = films.length;
   const filteredCount = filteredFilms.length;
   return ((filteredCount / totalFilms) * 100).toFixed(2);
+  
 }
