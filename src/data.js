@@ -12,10 +12,13 @@ export const filterProducer = (productores, data) => {
 
 export const filterSpecies = (especie, data) => {
   
-  const specie1 = data.films.map(films => films.people);
 
-  console.log(specie1);
-  return specie1;
+  if (especie !== "Else"){
+    return data.films.flatMap(film => film.people)
+    .filter(element => element.specie === especie)
+  }
+   return  data.films.flatMap(film => film.people)
+  .filter(element => ["Wolf","Red elk","Deity","Bird","unknown","Spirit of The White Fox","Dragon","Wizard","Demon","Human/Scarecrow","Dog","Arch-mage/Human","Fish/Human"].includes(element.specie))
 };
 
 

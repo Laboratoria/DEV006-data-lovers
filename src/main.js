@@ -15,25 +15,27 @@ class titleAndPoster {
   constructor(title, poster, director, release_date, rt_score, description) {
     //"this" indica el objeto en concreto que se utilizará (o algo así)
     this.poster = createImage(poster);
-    this.title = createText(title);
-    this.director = createText(director);
-    this.release_date = createText(release_date);
-    this.rt_score = createText(rt_score);
-    this.description = createText(description);
+    this.title = createText("Titulo: " + title);
+    this.director = createText("Director: " + director);
+    this.release_date = createText("Fecha de estreno: " + release_date);
+    this.rt_score = createText("Puntuacion: " + rt_score);
+    this.description = createText("Descripcion: " + description);
 
   }
 }
 
-class Character {
-  constructor(nombre, image, gender, age, eye_color, hair_color, specie) {
+//constructor de objetos para seleccionar datos a mostrar
+class characters {
+  constructor(title, poster, director, release_date, rt_score, description, specie) {
     //"this" indica el objeto en concreto que se utilizará (o algo así)
-    this.poster = createImage(image);
-    this.name = createText(nombre);
-    this.gender = createText(gender);
-    this.age = createText(age);
-    this.eye_color = createText(eye_color);
-    this.hair_color = createText(hair_color);
-    this.specie = createText(specie);
+    this.title = createText("Nombre: " + title);
+    this.poster = createImage(poster);
+    this.director = createText("Genero: " + director);
+    this.release_date = createText("Edad: " + release_date);
+    this.rt_score = createText("Color de ojos: " + rt_score);
+    this.description = createText("Color de Pelo: " + description);
+    this.specie = createText("Especie: " + specie);
+
   }
 }
 
@@ -60,6 +62,20 @@ function divCreatorhover(x) {
   return movieDivHover
 }
 
+function divCreatorhoverCharacter(x) {
+  const movieDivHover = document.createElement("div");
+  //este le da clase
+  movieDivHover.className = "filmDivsHover"
+  //al div creado le agregamos hijos con información tipo texto
+  movieDivHover.appendChild(x.title);
+  movieDivHover.appendChild(x.director);
+  movieDivHover.appendChild(x.release_date);
+  movieDivHover.appendChild(x.rt_score);
+  movieDivHover.appendChild(x.description);
+  movieDivHover.appendChild(x.specie)
+  return movieDivHover
+}
+
 //crea el div para que se organice el conjunto de datos
 function divCreator(x) {
   //se crea el div
@@ -70,6 +86,19 @@ function divCreator(x) {
   movieDiv.appendChild(x.poster);
   //a el div anterior le damos otro div(hijo) con la información 
   movieDiv.appendChild(divCreatorhover(x))
+  return movieDiv
+}
+
+//crea el div para que se organice el conjunto de datos
+function divCreatorCharacter(x) {
+  //se crea el div
+  const movieDiv = document.createElement("div");
+  //le da una clase para poder manipularlos en CSS 
+  movieDiv.className = "filmDivs"
+  // creamos un hijo con el tag img
+  movieDiv.appendChild(x.poster);
+  //a el div anterior le damos otro div(hijo) con la información 
+  movieDiv.appendChild(divCreatorhoverCharacter(x))
   return movieDiv
 }
 
@@ -132,9 +161,9 @@ especie.addEventListener("change",function() {
 //utilizar la funcion filtrar
   const especieNueva = filterSpecies(especie.value,data);
 //devuelve un array con objetos del resultado del filtro
-  especieNueva.map(film => new Character(film.people.name, film.people.img, film.people.gender, film.people.age, film.people.eye_color, film.people.hair_color, film.people.specie) )
+especieNueva.map(film => new characters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie) )
 //crea array con los divs 
-    .map(Element => divCreator(Element))
+    .map(Element => divCreatorCharacter(Element))
 //poner los divs en pantalla
     .forEach(Element => filterSection.appendChild(Element))
 //ocultar la pantalla de inicio al usar el filtro
