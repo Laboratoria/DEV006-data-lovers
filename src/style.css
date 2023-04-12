@@ -323,3 +323,153 @@ article > section:nth-child(3){
 .pokemon-nombre {
     font-size: 1.4rem;
 }
+
+.pokemon button{
+    width: 70px;
+    height: 35px;
+    background-color: rgba(4,25,216,.17);
+    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);
+    border-radius: 20px;
+    border:white;
+    color:white;
+    font: size 12px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.pokemon button:hover{
+    background-color: #8BD9D1;
+    color:black;
+
+}
+
+.contenedorModal{
+    opacity: 0;
+    visibility: hidden;
+    position:fixed;
+    z-index:1;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal{
+    width: 70%;
+    height: 85%;
+    background-color:#8BD9D1;
+    border-radius:30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position:relative;
+    transition:transform 1s;
+    transform:translateY(0%);
+    /*overflow: hidden;*/
+}
+
+.modal-close{
+   transform:translateY(-200%);
+}
+
+.close{
+    border: 1px solid red;
+    width: 25px;
+    height: 25px;
+    margin-top: 10px;
+    
+}
+
+.modal .caja1{
+    display:flex;
+    justify-content: space-between;
+    margin: top 20px; 
+    padding: 0px 10px; 
+}
+
+.modal .imagen-pokemon{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    width: 500px;
+    height: 250px;
+
+}
+
+.modal .imagen-pokemon p{
+    font-size:20px;
+    color:#023E73;
+    font-weight: bold;  
+}
+
+
+
+.modal img{
+    width: 50%;
+    height: 700px;
+   
+}
+
+.modal .infoGeneral {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 200px;
+    
+}
+
+.modal .infoGeneral p{
+    padding: 0px 15px;
+    font-size: 20px;
+    color: #023E73;
+    text-align: center;
+}
+
+.modal .infoGeneral .fa-solid{
+    color:#FFD700
+}
+
+.modal .caja-alineada{
+display: flex;
+justify-content: space-around;
+margin-top:20px;
+}
+
+.caja-alineada .baseDefensa .fa-solid{
+    color:#FFD700
+}
+
+.caja-alineada .baseDefensa{
+    margin-top: 22px;
+    padding-top: 30px;
+}
+
+.modal .resistant{
+    border:4px solid #19e938;
+    border-radius: 30px;
+    width: 180px;
+    height: 200px;
+
+}
+
+.modal .weaknesses{
+    border:4px solid #d20906;
+    border-radius: 30px;
+    width: 180px;
+    height: 200px;
+    
+}
+
+.modal .caja-alineada2{
+    display: flex;
+    justify-content: space-around;
+
+}
+

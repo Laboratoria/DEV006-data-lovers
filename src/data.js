@@ -34,11 +34,30 @@ export  function mostrarPokemon(data) {
    <p class="medida">${pokemones.size.height}</p>
    <p class="medida">${pokemones.size.weight}</p>
 </div>
+<button type="button" class="btn-modal" id="${pokemones.num}">Ver mas</button>
 </div>
   
  `
  listaPokemon.append(div);
+
+ 
+
  });
+
+ const abrir=document.querySelectorAll(".btn-modal");
+ const modal=document.querySelectorAll(".modal");
+ const modalC=document.querySelectorAll(".contenedorModal");
+ console.log(abrir)
+ 
+ abrir.forEach( btn=>btn.addEventListener("click", (e)=>{
+   e.preventDefault();
+   modalC.style.opacity="1";
+   modal.style.visibility="visible";
+   modal.classList.toggle("modal-close");
+   
+   }))
+
+
   
   };
 
