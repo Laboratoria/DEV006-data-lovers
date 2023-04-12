@@ -1,8 +1,8 @@
-import { filterDirector, sortDataYear, filterProducer,sortData, filterSpecies} from './data.js';
+import { filterDirector, sortDataYear, filterProducer, sortData, filterSpecies } from './data.js';
 
 
 import data from './data/ghibli/ghibli.js';
-const filterSection = document.getElementById ("filterSection")
+const filterSection = document.getElementById("filterSection")
 const directores = document.getElementById("Directores");
 const productores = document.getElementById("Productores");
 const puntuacion = document.getElementById("Puntuacion");
@@ -121,7 +121,7 @@ function createText(textMovie) {
   text.innerText = textMovie;
   //le damos la clase
   text.className = "text";
-  return text 
+  return text
 }
 
 //agregamos el evento para que al seleccionar el director que quiere se dispare
@@ -155,22 +155,22 @@ productores.addEventListener("change", function () {
   document.getElementById("filterSection").style.display = "flex";
 })
 
-especie.addEventListener("change",function() {
-//limpiar la pagina
+especie.addEventListener("change", function () {
+  //limpiar la pagina
   filterSection.innerHTML = "";
-//utilizar la funcion filtrar
-  const especieNueva = filterSpecies(especie.value,data);
-//devuelve un array con objetos del resultado del filtro
-especieNueva.map(film => new characters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie) )
-//crea array con los divs 
+  //utilizar la funcion filtrar
+  const especieNueva = filterSpecies(especie.value, data);
+  //devuelve un array con objetos del resultado del filtro
+  especieNueva.map(film => new characters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
+    //crea array con los divs 
     .map(Element => divCreatorCharacter(Element))
-//poner los divs en pantalla
+    //poner los divs en pantalla
     .forEach(Element => filterSection.appendChild(Element))
-//ocultar la pantalla de inicio al usar el filtro
+  //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
-//deberia mostrar el resultado del filtro
-  document.getElementById ("filterSection").style.display = "flex";
-} )
+  //deberia mostrar el resultado del filtro
+  document.getElementById("filterSection").style.display = "flex";
+})
 
 puntuacion.addEventListener("change", function () {
   //limpiar la pagina
