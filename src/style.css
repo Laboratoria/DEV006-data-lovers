@@ -41,7 +41,7 @@ footer {
 }
 
 button {
-  background-color: #D0A63B;
+  background-color: #d0a63b;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: antiquewhite;
   font-size: medium;
@@ -96,13 +96,30 @@ td {
   width: 10%;
   height: 10%;
 }
-
-.tablePerson {
-  display: grid;
-}
-
-.PersonInfo {
+.articlePerson {
   display: flex;
 }
 
+#charactersInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 15px;
+}
 
+.idCard {
+  background-image: url(imagenes/fondoPerson.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 170px;
+  border-radius: 25px;
+  padding: 6%;
+  overflow-y: auto;
+}
+
+li {
+  list-style-type: none;
+  font-family: "Times New Roman", Times, serif;
+}
