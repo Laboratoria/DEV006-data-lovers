@@ -1,11 +1,11 @@
 *{box-sizing: border-box;margin: 0;padding: 0;}
 
-/* Estilos del background */
-body {
-    background-image: url('../images/img1.jpeg');
+body{
+
+    background-image: url('../images/imgluna.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: auto;
     
 }
 header {
@@ -50,22 +50,4 @@ header nav a {
 header nav a:hover {
     background: #48F143;
     border-radius: 10px ;
-}
-
-main {
-    font-family: Tahoma;
-    width: 40%;
-    max-width: 600px;
-    color: #F9F9F9;
-    margin-top: 50px;
-    text-align: left;
-}
-main article{   
-    padding: 10px 10px;
-    font-size: 15px;
-}
-main section{   
-    padding: 10px 10px;
-    font-size: 8px;
-    font-weight: lighter;
 }
