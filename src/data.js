@@ -1,14 +1,9 @@
-import data from "./data/harrypotter/data.js";
-const rawData= "./data/harrypotter/data.js";
-console.log(data);
+import dataHP from "./data/harrypotter/data.js";
+console.log(dataHP);
 
-export const HP = () => {
-  
-  
-  return 'example';
-};
+export const HP = (dataHP, characters) => {
+  const filterByCharacters = dataHP.filter((harryPotter) => harryPotter.characters.includes(characters));
+  return filterByCharacters;
+}; 
 
-export const anotherExample = () => {
-  return 'OMG';
-};
 

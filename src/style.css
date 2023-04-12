@@ -2,6 +2,7 @@ header {
   text-align: center;
   margin: 20px 20px -25px 20px;
 }
+
 body {
   background-image: url(imagenes/fondo.jpg);
   background-repeat: no-repeat;
@@ -83,15 +84,6 @@ footer {
   right: -38px;
 }
 
-td {
-  background-color: rgba(240, 248, 255, 0.495);
-  text-align: center;
-  margin: 50px;
-  border-radius: 10px;
-  width: 180px;
-  height: 50px;
-}
-
 .imageReset {
   width: 10%;
   height: 10%;
@@ -101,8 +93,31 @@ td {
   display: grid;
 }
 
-.PersonInfo {
-  display: flex;
+#charactersInfo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+  grid-gap: 15px;
+
 }
 
+.iDCard {
+  background-image: url(Images/LABEL_H.png );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 6%;
+  overflow-y: auto;
+}
 
+#housesLogos {
+  height: 10rem;
+  width: auto;
+}
