@@ -12,6 +12,16 @@
     background-attachment: fixed;
 }
 
+.main-login .sound{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #ff09ca6b; 
+  }
+
 #contenedor-login{
     display: flex;
     flex-flow: column wrap;
@@ -98,6 +108,15 @@ transform: scale(0.5s);
     color: #ffff;
     font-family: 'Maven Pro', sans-serif;
     font-size: 14px;
+}
+
+.footer-login{
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 13px;
+    font-weight: 650;
+    color: #030303;
+    text-align: center;
+    margin-top: -25px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
