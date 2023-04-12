@@ -1,5 +1,5 @@
-import { HP } from "./data.js";
-import dataHP from "./data/harrypotter/data.js";
+import {HP} from "./data.js";
+/* import data from "./data/harrypotter/data.js";
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -19,8 +19,4 @@ function displayPerson(personajes) {
   });
 }
 
-selectPerson.addEventListener("input", () => {
-  const characters = selectPerson.value;
-  displayPerson(filterByCharacters(dataHP.characters, characters));
-});
-displayPerson(dataHP.characters);
+console.log(example, data);*/
