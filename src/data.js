@@ -1,6 +1,7 @@
 
 export const filterDirector = (directores, data) => {
   //filtro
+
   const directores1 = data.films.filter(films => films.director === directores)
   return directores1;
 };
@@ -11,14 +12,14 @@ export const filterProducer = (productores, data) => {
 };
 
 export const filterSpecies = (especie, data) => {
-  
 
-  if (especie !== "Else"){
+
+  if (especie !== "Else") {
     return data.films.flatMap(film => film.people)
-    .filter(element => element.specie === especie)
+      .filter(element => element.specie === especie)
   }
-   return  data.films.flatMap(film => film.people)
-  .filter(element => ["Wolf","Red elk","Deity","Bird","unknown","Spirit of The White Fox","Dragon","Wizard","Demon","Human/Scarecrow","Dog","Arch-mage/Human","Fish/Human"].includes(element.specie))
+  return data.films.flatMap(film => film.people)
+    .filter(element => ["Wolf", "Red elk", "Deity", "Bird", "unknown", "Spirit of The White Fox", "Dragon", "Wizard", "Demon", "Human/Scarecrow", "Dog", "Arch-mage/Human", "Fish/Human"].includes(element.specie))
 };
 
 
