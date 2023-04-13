@@ -27,6 +27,9 @@ header {
     float:left;
     line-height: 150px;
     cursor: pointer;
+    width: 380px;
+    height: 200px;
+    padding-bottom: 50px;
     
 }
 
