@@ -1,4 +1,4 @@
-*{box-sizing: border-box;margin: 0;padding: 0;}
+*{box-sizing: border-box;padding: 0;}
 
 /* Estilos del background */
 body {
@@ -16,6 +16,12 @@ header {
     opacity: 80%;
     margin-top: 20px;
 }
+
+.side{
+    display: flex;
+}
+
+
 .wrapper {
     width: 90%;
     max-width: 1200px;
@@ -29,8 +35,11 @@ header {
     cursor: pointer;
     width: 380px;
     height: 200px;
-    padding-bottom: 50px;
-    
+    padding: 0px 65px 35px 3px;
+}
+
+.down{
+    padding-right: 30px;
 }
 
 header nav {
