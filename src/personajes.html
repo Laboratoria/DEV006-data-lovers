@@ -10,7 +10,9 @@
 <body>
   <main>
     <nav>
-      <img src="imagenes/LogoOne.png" class="logo" />
+      <a href="index.html">
+        <img src="imagenes/LogoOne.png" class="logo" alt="logo que lleva a index"/>
+      </a>
       <button>HECHIZOS</button>
       <button>CASAS</button>
       <button>CRIATURAS MAGICAS</button>
@@ -26,13 +28,17 @@
               <option value="fantasmas">fantasmas</option>
             </select>
           </label>
-          <img src="imagenes/reset.png" alt="imagen para resetear información señalada" class="imageReset">
+          <img src="imagenes/reset.png" alt="imagen para resetear información señalada" class="imageReset" onclick="location.reload()">
         </div>
         <div class="typeSearch">
           <input type="text" />
         </div>
       </section>
       <section class="tablePerson">
+        <div class="buttonsNB">
+        <button class="backNext">Back</button>
+        <button class="backNext">Next</button>
+      </div>
         <div id="charactersInfo"></div>
       </section>
     </article>
