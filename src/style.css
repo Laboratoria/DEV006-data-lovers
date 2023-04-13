@@ -104,7 +104,7 @@ line-height: 0%;
   position: absolute;
   width: 845.5px;
   height: 39px;
-  left: 320px;
+  left: 220px;
   top: 400px;
   border-radius: 10px;
   z-index: -3;
@@ -156,13 +156,14 @@ input[type="text"]{
   color:black;
 }
 .contenedor{
-  width: 1510px;
+  width: 1490px;
   display: flex;
  flex-direction: row;
  flex-wrap: wrap;
- margin-top: 200px;
+ margin-top: 8px;
  margin-left: 25px;
  gap: 5%;
+ animation: fade-out 0.5s ease;
 }
 
 .champion-img-container{
@@ -175,7 +176,7 @@ input[type="text"]{
   height: 100%;
   width: 100%;
   position: relative;
-  bottom: 90px;
+  bottom: 120px;
 }
 .champion-name{
   font-family: Arial, Helvetica, sans-serif;
@@ -185,7 +186,7 @@ input[type="text"]{
  line-height: 29px;
  color: white;
  position: relative;
- bottom: 80px;
+ bottom: 109px;
  }
  .champion-card{
   background-color:  #6E85B2;
@@ -218,10 +219,10 @@ input[type="text"]{
   color: #FFFFFF;
   z-index: 1;
   display: grid;
-  grid-template-columns: 3.5cm;
-  grid-template-rows: 6cm;
+  grid-template-columns: 3.3cm;
+  grid-template-rows: 6.5cm;
   position: relative;
-  bottom: 110px;
+  bottom: 150px;
 }
 .title{
   font-family: Arial, Helvetica, sans-serif;
@@ -231,7 +232,7 @@ input[type="text"]{
   text-align: center;
   color: #FFFFFF;
   position: relative;
-  bottom: 90px;
+  bottom: 130px;
 }
 
 .info{
@@ -239,26 +240,68 @@ input[type="text"]{
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
-  text-align: center;
-  color:white;
+  text-align:justify;
+  color: #261C2C;
   position: relative;
-  top: 380px;
+  top: 350px;
   line-height: 0px;
-  left: 70px;
-}
-#search{
-  
-  position: relative;
-  top: 110px;
-  left: 130px;
+  left: 142px;
+  background-color: #FFFFFF;
+  width: 500px;
   height: 40px;
-  width: 210px;
-  border-radius: 12px;
+}
+
+#botonBuscar {
+  margin-top: 0px;
+  margin-left: 700px;
+  border-radius: 5px;
+  width: 80px;
+  height: 30px;
+  position: relative;
+  top: -28px;
+}
+#buscar {
+  margin-left: 350px;
+  margin-top: 100px;
+}
+
+.sort{
+  margin-top: 210px;
+  right: -950px;
+  position: relative;
+  width: 90px;
+  height: 33px;
+  border-radius: 7px;
   
 }
-.Sort{
-
-  color: black;
-  top: 300px;
-  
+h3 {
+  color:#FFFFFF;
+  position: relative;
+  align-content:baseline;
+  top: 0px;
+  left: 450px;
+  text-decoration: none;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal;
+  font-size: 25px;
+  opacity: 75%;
+  width: auto;
+}
+#botonLimpiar{
+  top: -28px;
+  position: relative;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+#resultados {
+  width: auto;
+  display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ margin-top: -30px;
+ left: 50px;
+ gap: 5%;
+ align-content: center;
+ position:sticky;
 }

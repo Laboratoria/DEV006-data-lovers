@@ -1,7 +1,7 @@
 import data from './data/lol/lol.js';
 
 
- //VISUALIZADOR
+//VISUALIZADOR
 
 const contenedor = document.querySelector('.contenedor'); 
 
@@ -12,19 +12,21 @@ const champion = Object.keys(data.data)
 
 for(let i = 0; i < champion.length; i++){
   const key = champion[i]
+  const card=data.data[key];
 
 
-  const name = data.data[key].name;
-  const img  = data.data[key].img;
-  const blurb = data.data[key].blurb;
-  const title = data.data[key].title;
-const infoObject = data.data[key].info;
+  const name = card.name;
+  const img  = card.img;
+  const blurb = card.blurb;
+  const title = card.title;
+  const infoObject = card.info;
 
-const championCard = document.createElement("div");
-championCard.classList.add("champion-card");
+  const championCard = document.createElement("div");
+  championCard.classList.add("champion-card");
 
   
   for (const subKey in infoObject) {
+    // eslint-disable-next-line no-prototype-builtins
     if (infoObject.hasOwnProperty(subKey)) {
       const subValue = infoObject[subKey];
       const statElement = document.createElement("p");
@@ -35,7 +37,7 @@ championCard.classList.add("champion-card");
 
   
 
-}
+  }
 
   const championImgContainer = document.createElement("div");
   championImgContainer.classList.add("champion-img-container");
@@ -72,14 +74,14 @@ championCard.classList.add("champion-card");
   championCard.appendChild(championBlurb);
  
 
+  card.championCard=championCard;
 
-
-  }
+}
  
-  //ORGANIZADOR
+//ORGANIZADOR
 
   
-  const allChampions = Object.keys(data.data);
+const allChampions = Object.keys(data.data);
 
 const sortBy = (sortOrder) => {
   allChampions.sort((a, b) => sortOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
