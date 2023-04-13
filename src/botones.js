@@ -1,40 +1,25 @@
-//llamando a los input del login por su ID
-const user = document.getElementById('user');
-const password = document.getElementById('password');
-const passwordIncorrect = document.getElementById('wrongPassword');
-//ventanas y vistas
-const ventanalogin = document.getElementById('login');
-const vistaError = document.getElementById('vista-error');
+//crear la funcion validarFormulario() para validar los inputs y reemplazarlos con los va.lolres del placeholder
+function validarFormulario(event){
+  event.preventDefault();
+  const formulario = document.getElementById('contenedor-login');
+  //obtener los valores de los inputs
+  const username = document.getElementById('user');
+  const password = document.getElementById('password');
 
-//boton ingresar para abrir en la pag saludo
+  //para verificar si los inputs son válidos
+  if (username.value === "Laboratoria" && password.value === "Dev006" ){
+    formulario.submit();
+    window.location.href ="saludo.html";
+  } else {
+    alert("Oh noooo!... Your username or password are incorrect, try again.")
+  }
+}
+
+const form = document.getElementById('contenedor-login');
+form.addEventListener('submit', validarFormulario);
+
+//agregar un evento de click en boton ENTER
 const btnEnter = document.getElementById('btn-enter');
 btnEnter.addEventListener('click', () => {
-  window.location.href = "saludo.html";
-});
-
-//boton ingresar user y password
-let prueba = 3;
-btnEnter.addEventListener('click', () => {
-  if (password.value === "" && user.value === "") {
-    passwordIncorrect.innerHTML = '<strong>Please, enter your username and password.</strong>';
-  } else if (password.value === "") {
-    passwordIncorrect.innerHTML = '<strong>Please, enter your password.</strong>';
-    document.getElementById('user').value = '';
-  } else if (user.value === "") {
-    passwordIncorrect.innerHTML = '<strong>Please, enter your username.</strong>';
-    document.getElementById('password').value = '';
-  } else if (user.value === 'Laboratoria' && password.value === 'Dev006') {
-    ventanalogin.classList.add('hide');
-  } else {
-    if (prueba === 0) {
-      ventanalogin.classList.add('hide');
-      vistaError.classList.remove('hide');
-    } else {
-      // eslint-disable-next-line no-undef
-      wrongPassword.innerHTML = '<strong>Incorrect data, you have' + prueba + 'attempts.</strong>';
-      user.value = '';
-      password.value = '';
-      prueba--;
-    }
-  }
+  validarFormulario();
 });

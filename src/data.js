@@ -1,8 +1,8 @@
 //buscar por nombre en minuscula
-export const searchPokByName = (name,dataList) => {
-  const result = dataList.pokemon.find(p =>p.name.toLowerCase() === name.toLowerCase());
+export function searchPokByName(name, dataList) {
+  const result = dataList.pokemon.find(p => p.name.toLowerCase() === name.toLowerCase());
   return result || null;
-};
+}
 
 
 

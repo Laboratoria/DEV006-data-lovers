@@ -1,11 +1,10 @@
-import {} from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
 import{
     searchPokByName,
-    order,
+    orderAz,
     searchPokByNumber,
-    filterByType
+    filterByType,
+    /*--seguir filtrando por tipo--*/
 }
 
 
