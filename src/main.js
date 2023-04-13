@@ -1,13 +1,18 @@
 import { filterDirector, sortDataYear, filterProducer, sortData, filterSpecies } from './data.js';
-
-
 import data from './data/ghibli/ghibli.js';
-const filterSection = document.getElementById("filterSection")
+
+const movies = document.getElementById("movies");
+const filterSection = document.getElementById("filterSection");
 const directores = document.getElementById("Directores");
 const productores = document.getElementById("Productores");
 const puntuacion = document.getElementById("Puntuacion");
 const añoDeEstreno = document.getElementById("añoDeEstreno");
 const especie = document.getElementById("Especie");
+
+movies.addEventListener("click", function (){
+  document.getElementById("welcome").style.display = "none"
+  document.getElementById("filmsZone").style.display = "flex"
+})
 
 
 //constructor de objetos para seleccionar datos a mostrar

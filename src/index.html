@@ -9,11 +9,19 @@
 
 <body>
   <header>
-    <div>
-      <img id="imageHeader" src="Group 4.png" alt="GhibliStudio">
-    </div>
   </header>
-  <main>
+  <main class="welcome" id="welcome">
+    <div>
+      <img id="logo" src="Group 11.png" alt="imagen-ghibli">
+    </div>
+    <div id="buttonZone">
+      <button class="buttonWelcome"> Ghibli Club</button>
+      <button class="buttonWelcome" id="movies"> Movies </button>
+      <button class="buttonWelcome"> Characters </button>
+      <button class="buttonWelcome"> Trivia </button>
+    </div>
+  </main>
+  <section>
     <section class="content">
       <p id="filterText">Filtros: </p>
       <select class="Filtros" name="Directores" id="Directores">
@@ -65,7 +73,7 @@
     <section id="filmsZone" class="filmsZone">
     </section>
     <section class="filterSection" id="filterSection"></section>
-  </main>
+  </section>
   <div id="root"></div>
   <script src="main.js" type="module"></script>
 </body>
