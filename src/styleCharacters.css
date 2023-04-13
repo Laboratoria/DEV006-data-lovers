@@ -27,6 +27,9 @@ header {
     float:left;
     line-height: 150px;
     cursor: pointer;
+    width: 380px;
+    height: 200px;
+    padding-bottom: 50px;
     
 }
 
@@ -50,4 +53,45 @@ header nav a {
 header nav a:hover {
     background: #48F143;
     border-radius: 10px ;
+}
+
+main {
+    font-family: Tahoma;
+    color: #F9F9F9;
+    
+}
+main article{   
+    padding: 10px 10px;
+    font-size: 15px;
+}
+main section{   
+    padding: 10px 10px;
+    font-size: 8px;
+    font-weight: lighter;
+}
+main aside{
+    display: block;
+    width: 60%;
+    float: right;
+
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.caja img{
+    border-radius: 30px;
+}
+.caja{
+    margin: 15px;
+}
+.caja p{
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F9F9F9;
+    
 }
