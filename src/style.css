@@ -6,15 +6,6 @@ body {
     background-color: rgb(24, 24, 24);
 }
 
-header {
-    width: 100%;
-    height: 200px;
-}
-
-#imageHeader {
-    width: 100%;
-    height: 200px;
-}
 
 #filterText {
     margin-left: 5%;
@@ -24,9 +15,17 @@ header {
     font-size: small;
     font-family: Arial, Helvetica, sans-serif;
 }
-
-.content {
+.welcome {
     display: flex;
+    height: 100%;
+    background-image: url("https://r4.wallpaperflare.com/wallpaper/892/692/922/howl-s-moving-castle-studio-ghibli-fantasy-art-clouds-daylight-hd-wallpaper-3be62c2d93012fc995842bf94d4cdc00.jpg");
+}
+
+#logo{
+    width: 20%;
+}
+.content {
+    display: none;
     flex-wrap: wrap;
     size: 10%;
     padding: 10px;
@@ -58,7 +57,7 @@ header {
 }
 
 #filmsZone {
-    display: flex;
+    display: none;
     color: white;
     flex-wrap: wrap;
     align-content: center;
