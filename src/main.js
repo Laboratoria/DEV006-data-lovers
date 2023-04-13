@@ -1,22 +1,46 @@
-import {HP} from "./data.js";
-/* import data from "./data/harrypotter/data.js";
+/*Importar data*/
+import { HP } from "./data.js";
+import dataHP from "./data/harrypotter/data.js";
+console.log(HP);
 
-const selectPerson = document.getElementById("selectPerson");
+let selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
+const housesLogo = "./images/houses_logo.png";
+
 function filterByCharacters(characters) {
   return HP(dataHP.characters, characters);
 }
-function displayPerson(personajes) {
+
+function displayPersonajes(personajes) {
+  // la línea de abajo sirve para al realizar una nueva busqueda el contenido anterior se borre
+  divCharacters.innerHTML = "";
   personajes.forEach((characters) => {
-    divCharacters.innerHTML += `<div class="idCard">
-    <ul>
-    <li><strong> ID: </strong> ${characters.id}</li>
-    <li><strong>NAME:</strong> ${characters.name}</li>
-    <li><strong>BIRTH:</strong> ${characters.birth}</li>
-    <li><strong>HOUSE</strong> ${characters.house}</li>
-    </ul>
-  </div>`;
+    /* '+=' indica que el contenido anterior no se eliminará y 
+    el contenido nuevo se agrega al final */
+    /* '#$' se utiliza para insertar el valor de la propiedad id, name, etc.
+     de cada objeto "characters" */
+    /* <img id="housesLogos" src="${housesLogo}" alt="housesLogo"> */
+    divCharacters.innerHTML += `<div class="iDCard">
+     <ul>
+     <li><strong> ID: </strong> ${characters.id}</li>
+     <li><strong>NAME:</strong> ${characters.name}</li>
+     <li><strong>BIRTH:</strong> ${characters.birth}</li>
+     <li><strong>HOUSE</strong> ${characters.house}</li>
+     </ul>
+      </div>`;
   });
 }
+displayPersonajes(dataHP.characters);
 
-console.log(example, data);*/
+selectPerson.addEventListener("input", () => {
+  const characters = selectPerson.value;
+  displayPersonajes(filterByCharacters(dataHP.characters, characters));
+});
+/*displayPersonajes(filterByCharacters(characters));*/
+
+/*btnAllTypes.addEventListener("click", function () {
+ pokemonDiv.innerHTML = "";
+ mostrarPokemon(data.pokemon);
+ */
+/*let charactersInfo = document.getElementById("charactersInfo")
+let characterId= CharacterData.[1];*/
