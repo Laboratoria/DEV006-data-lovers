@@ -104,7 +104,7 @@ line-height: 0%;
   position: absolute;
   width: 845.5px;
   height: 39px;
-  left: 320px;
+  left: 220px;
   top: 400px;
   border-radius: 10px;
   z-index: -3;
@@ -156,13 +156,14 @@ input[type="text"]{
   color:black;
 }
 .contenedor{
-  width: 1510px;
+  width: 1490px;
   display: flex;
  flex-direction: row;
  flex-wrap: wrap;
- margin-top: 80px;
+ margin-top: 8px;
  margin-left: 25px;
  gap: 5%;
+ animation: fade-out 0.5s ease;
 }
 
 .champion-img-container{
@@ -240,19 +241,67 @@ input[type="text"]{
   font-weight: 700;
   font-size: 12px;
   text-align:justify;
-  color:white;
+  color: #261C2C;
   position: relative;
-  top: 328px;
+  top: 350px;
   line-height: 0px;
-  left: 145px;
+  left: 142px;
+  background-color: #FFFFFF;
+  width: 500px;
+  height: 40px;
 }
+
 #botonBuscar {
-  margin-top: 116px;
-  margin-left: 340px;
+  margin-top: 0px;
+  margin-left: 700px;
   border-radius: 5px;
   width: 80px;
   height: 30px;
+  position: relative;
+  top: -28px;
 }
 #buscar {
-  margin-left: -10px;
+  margin-left: 350px;
+  margin-top: 100px;
+}
+
+.sort{
+  margin-top: 210px;
+  right: -950px;
+  position: relative;
+  width: 90px;
+  height: 33px;
+  border-radius: 7px;
+  
+}
+h3 {
+  color:#FFFFFF;
+  position: relative;
+  align-content:baseline;
+  top: 0px;
+  left: 450px;
+  text-decoration: none;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style:normal;
+  font-size: 25px;
+  opacity: 75%;
+  width: auto;
+}
+#botonLimpiar{
+  top: -28px;
+  position: relative;
+  width: 80px;
+  height: 30px;
+  border-radius: 5px;
+}
+#resultados {
+  width: auto;
+  display: flex;
+ flex-direction: row;
+ flex-wrap: wrap;
+ margin-top: -30px;
+ left: 50px;
+ gap: 5%;
+ align-content: center;
+ position:sticky;
 }
