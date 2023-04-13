@@ -1,58 +1,29 @@
-
-/*table {
-    width: 50%;
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-    margin:auto;
-    margin-top: 5%;
-    text-align: justify;
-  }
-
-
-  .moviePoster {
-    width: 80%;
-    height: 10%;
-    
-  }
-  
-  #moviesTableColumnOne {
-    width: 50%;
-    margin: auto;
-   
-
-  }
-
-  #moviesTableColumnTwo {
-    width: 50%;
-    margin: auto;
-  }*/
-
-  table {
+table {
     width: 80%;
     font-family: "Jockey One", sans-serif;
     font-size: 120%;
     margin:auto;
     text-align: justify;
   }
-  .moviePoster {
+  .characterImg {
     width: 80%;
     height: 10%;
     border-radius: 8%;
   }
-  #moviesTableColumnOne {
+  #charactersTableColumnOne {
     width: 50%;
     margin:auto;
   }
-  #moviesTableColumnTwo {
+  #charactersTableColumnTwo {
     width: 50%;
     margin-top: 15%;
   }
-  #moviesTable td {
+  #charactersTable td {
     vertical-align: top;
     padding: 20px;
     text-align: center;
   }
-  #moviesTable img {
+  #charactersTable img {
     height: 342px;
     width: 250px;
   }
@@ -65,22 +36,22 @@
     width: auto;
   }
 
-  #sortMoviesByDateNewestOldest {
+  #sortMoviesByDateID {
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
-    margin-left: 40%;
+    margin-left: 50%;
     display: inline-flex;
     background-color: #3CD1EF;
     font-family: "Jockey One", sans-serif;
     font-size: 120%;
   }
-  #sortMoviesByDateNewestOldest:hover {
+  #sortMoviesByDateID:hover {
     background-color: #ee9547;
     color: #fff;
     }
  
-  #sortMoviesByDateOldestNewest {
+  #sortMoviesByTitleID {
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
@@ -89,7 +60,7 @@
     font-family: "Jockey One", sans-serif;
     font-size: 120%;
   }
-  #sortMoviesByDateOldestNewest:hover {
+  #sortMoviesByTitleID:hover {
   background-color: #ee9547;
   color: #fff;
   }
@@ -114,9 +85,29 @@
     color: #fff;
   }
 
-  #directorSelect {
+  #genderSelect {
     font-family: "Jockey One", sans-serif;
     font-size: 120%;
     background-color: #3CD1EF;
   }
-  
+
+  #charactersSpecieSelect {
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+    background-color: #3CD1EF;
+  }
+
+  #sortCharactersByAge {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    display: inline-flex;
+    background-color: #3CD1EF;
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+  }
+
+  #sortCharactersByAge:hover {
+    background-color: #ee9547;
+    color: #fff;
+    }
