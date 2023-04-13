@@ -24,9 +24,4 @@ btnEnter.addEventListener('click', () => {
   validarFormulario();
 });
 
-//de pagina intro a login
-const siguientePag = document.getElementById('boton-next');
-siguientePag.addEventListener('click', () => {
-  window.location.href ="login.html";
-});
 
