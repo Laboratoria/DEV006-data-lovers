@@ -1,4 +1,4 @@
-*{box-sizing: border-box;margin: 0;padding: 0;}
+*{box-sizing: border-box; padding: 0;}
 
 body{
 
@@ -23,14 +23,21 @@ header {
     overflow: hidden;
 }
 
+.abajo{
+    padding-right: 30px;
+}
+
+.side{
+    display: flex;
+}
+
 .logo {
     float:left;
     line-height: 150px;
     cursor: pointer;
     width: 380px;
     height: 200px;
-    padding-bottom: 50px;
-    
+    padding: 0px 65px 35px 3px;
 }
 
 header nav {
