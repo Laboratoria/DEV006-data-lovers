@@ -1,4 +1,5 @@
 import data from './data/pokemon/pokemon.js';
+
 import{
     searchPokByName,
     orderAz,
@@ -8,6 +9,12 @@ import{
 }
 
 
+
+
+//const btnBuscarPorNombre = document.getElementById('search');
+//btnBuscarPorNombre.addEventListener('click', () =>{
+
+//})
 
 console.log(example, data);
 
