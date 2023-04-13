@@ -48,6 +48,7 @@ button {
   font-size: medium;
   border-radius: 0px 25px 25px 0px;
   width: 70%;
+  height:80px ;
   margin: 20px 0px;
   border: none;
   box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.584);
@@ -77,7 +78,7 @@ footer {
   font-size: large;
 }
 
-.imageEscobar {
+.imageEscoba {
   position: absolute;
   height: 60%;
   bottom: -60px;
@@ -93,7 +94,23 @@ footer {
   display: grid;
 }
 
+.buttonsNB{
+height: 80px;
+width: auto;
+display: flex;
+margin: 5px;
+justify-content: space-between;
+
+}
+
+.backNext{
+  height: 50px;
+  width: auto;
+border-radius: 0% 45% 45% 0%;
+}
+
 #charactersInfo {
+  overflow-y: hidden;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
