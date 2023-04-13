@@ -1,4 +1,5 @@
-
+import { getCharacters } from "./data";
+getCharacters()
 
 const backgrounds = [];
 backgrounds[0] = '../images/img1.jpeg';
@@ -14,3 +15,4 @@ window.onload = function (){
   const setBackground = Math.floor(Math.random() * backgrounds.length);
   document.body.style.backgroundImage = `url(${backgrounds[setBackground]})`;
 }
+
