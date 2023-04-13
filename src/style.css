@@ -1,0 +1,49 @@
+body{
+    background-image: url('./img/triangulos-blancos.jpg');
+}
+
+.header{
+    position: fixed;/*hace que el elemento se posicione de forma fija en la pantalla*/
+    top: 0;/*coloca el elem en la parte superior*/
+    left: 0;/*coloca el elem en el borde izquierdo*/
+    background-image: url('./img/espacio-verde.jpg');
+    background-repeat: repeat-x;/*repetir solo horizontalmente*/
+    background-size:contain; /*como quiero que se vea el tamaño de mi imagen*//*asegura que la imagen se adapte al tamaño del navegador*/
+    background-position: center;
+    width: 100%;/*establece el ancho del 100% de la pantalla*/
+    height: 150px; /*ajuste de altura, modificar si es necesario*/
+    color: rgb(255, 255, 255); /*color de texto en funcion del fondo*/
+    display: flex;
+    justify-content:flex-start;
+}
+
+
+/*Logos*/
+#logo{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+   /* display: inline-block; /*para mostrar los logos en linea*/
+}
+
+#logo img{
+    /*height: 50px; /*ajustar tamaño*/
+    vertical-align:middle;/*para ajustar su alineacion vertical*/
+    margin-top: 40px;
+    margin-right: 20px;/*espacio entre las imagenes*/
+}
+
+#logo-riot{
+    height: 30px;
+}
+
+#logo-lol{
+    height: 50px;
+}
+
+
+/*NAVEGADOR*/
+.navegador{
+    
+}
+
