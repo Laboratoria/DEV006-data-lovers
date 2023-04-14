@@ -1,0 +1,70 @@
+
+
+.block{
+    width: 50%;
+    height: 100%;
+
+}
+h1{ 
+    text-align: center;
+}
+table {
+    width: 80%;
+    font-family: "Jockey One", sans-serif;
+    font-size: 120%;
+    margin:auto;
+    text-align: center;
+  }
+
+#locationsTableColumnOne {
+    width: 50%;
+    margin:auto;
+    margin-left: 10%;
+    text-align: center;
+  }
+  #locationsTableColumnTwo {
+    width: 50%;
+    margin-top: 15%;
+    margin-left: 10%;
+    text-align: center;
+  }
+  
+  #locationsTable img {
+    margin-left: 10%;
+    height: 242px;
+    width: 250px;
+  }
+ 
+  #vehiclesTableColumnOne {
+    width: 50%;
+    margin:auto;
+    margin-left: 20%;
+    text-align: center;
+
+  }
+  #vehiclesTableColumnTwo {
+    width: 50%;
+    margin-top: 15%;
+    margin-left: 10%;
+    text-align: center;
+    width: 250px;
+    
+  }
+  
+  #vehiclesTable img {
+    margin-left: 10%;
+    height: 242px;
+    width: 250px;
+  }
+
+  .justify {
+    text-align: justify;
+    width: 250px;
+    margin-left: 10%;
+  }
+
+  td{
+
+    vertical-align: top;
+    
+  }
