@@ -23,7 +23,7 @@ nav{
     display:flex;
     align-items: flex-start;
 }
-#homePng {
+.homePng {
     width: 50%;
     margin-left: 40px ;
     padding-top: 15%;
@@ -85,6 +85,8 @@ nav{
     background-color:#829460;
 }
 
+
+
 #filterText {
     margin-left: 5%;
     margin-top: 10px;
@@ -94,6 +96,11 @@ nav{
     font-family: Arial, Helvetica, sans-serif;
 }
 
+#filterText {
+    font-size: xx-large;
+    font-family: 'Patrick Hand', cursive;
+    color: #D3D9DA;
+}
 .Filtros {
     padding: 8px 60px;
     background-color: #D9DFCF;
@@ -103,9 +110,12 @@ nav{
     font-size: xx-large;
     font-family: 'Patrick Hand', cursive;
     border: solid 5px #829460;
-    font-family: 'Patrick Hand', cursive;
     opacity: 80%;
     margin-left: 3%;
+}
+
+.options {
+    font-size: large;
 }
 
 .Filtros:hover {
@@ -120,20 +130,39 @@ nav{
 
 #filmsZone {
     display: none;
-    color: white;
+    background-color: #EEEEEE;
     flex-wrap: wrap;
     align-content: center;
 }
 
 .filmDivs {
-    display: flex;
-    align-items: flex-start;
-    width: 50%;
+    display:flexbox;
+    width: 20%;
+    border: 8px solid  #a9b690;
+    border-spacing: 50% ;
+    border-radius: 10%;
+    margin-left: 9.5%;
+    margin-top: 4% ;
+    justify-content: center;
+    background-color: #EEEEEE;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 
 }
 
+.infoText {
+    color: #514E46;
+    font-size: x-large;
+    text-justify: center;
+    margin-left: 13%;
+    margin-right:13%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    
+}
+
+
 .filmDivs:hover {
-    background-color: rgb(126, 185, 146);
+    background-color: rgba(194, 196, 190, 0.534);
 }
 
 .filmDivsHover {
@@ -147,24 +176,27 @@ nav{
     margin-bottom: 5px;
     margin-top: 20px;
 
+
 }
 
 .posterImages {
-    height: 300px;
-    width: 200px;
+    height: 350px;
+    width: 300px;
     padding: 5px;
-    margin-top: 10px;
-    margin-left: 40px;
-    margin-right: 40px;
-    margin-bottom: 60px;
+    margin-left: 10%;
+    margin-top: 5%;
     border-radius: 5%;
-}
-
-.text {
-    color: white;
 }
 
 .filterSection {
     display: none;
     flex-wrap: wrap;
+}
+
+.characterSection {
+    display: none;
+}
+footer {
+    display:flex ;
+    justify-content: flex-end;
 }

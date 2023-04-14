@@ -10,10 +10,10 @@
 <body id="body">
   <main id="welcome" >
     <header id="homeHeader">
-      <img id= "header-content"src="Group 14.png" alt="home-Header">
+      <img id= "header-content" src="Group 14.png" alt="home-Header">
     </header>
     <nav id="buttonZone">
-     <div> <img src="Vector.png" id ="homePng" alt="home-icon"></div>
+     <div> <img src="Vector.png" class ="homePng" alt="home-icon"></div>
       <button class="homeButtons" id="aboutButton"> About</button>
       <button class="homeButtons" id="movies"> Movies </button>
       <button class="homeButtons"> Characters </button>
@@ -37,60 +37,55 @@
   </section>
 
   <section class="content" id="content">
-    <div> <img src="Vector.png" id ="homePng" alt="home-icon"></div>
-  <p id="filterText">Filtros: </p>
+    <div> <img src="Vector.png" class ="homePng" alt="home-icon"></div>
+  <p id="filterText">Filter by: </p>
     <select class="Filtros" name="Directores" id="Directores">
-      <option disabled selected>Directores</option>
-      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-      <option value="Isao Takahata">Isao Takahata</option>
-      <option value="Yoshifumi Kondō">Yoshifumi Kondō</option>
-      <option value="Hiroyuki Morita">Hiroyuki Morita</option>
-      <option value="Gorō Miyazaki">Gorō Miyazaki</option>
-      <option value="Hiromasa Yonebayashi">Hiromasa Yonebayashi</option>
+      <option disabled selected class="options" >Directors</option>
+      <option value="Hayao Miyazaki" class="options">Hayao Miyazaki</option>
+      <option value="Isao Takahata" class="options">Isao Takahata</option>
+      <option value="Yoshifumi Kondō" class="options">Yoshifumi Kondō</option>
+      <option value="Hiroyuki Morita" class="options">Hiroyuki Morita</option>
+      <option value="Gorō Miyazaki" class="options">Gorō Miyazaki</option>
+      <option value="Hiromasa Yonebayashi" class="options">Hiromasa Yonebayashi</option>
     </select>
 
     <select class="Filtros" name="Productores" id="Productores">
-      <option disabled selected>Productores</option>
-      <option value="Hayao Miyazaki">Hayao Miyazaki</option>
-      <option value="Isao Takahata">Isao Takahata</option>
-      <option value="Toru Hara">Toru Hara</option>
-      <option value="Toshio Suzuki">Toshio Suzuki</option>
-      <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
+      <option disabled selected class="options">Producers</option>
+      <option value="Hayao Miyazaki" class="options">Hayao Miyazaki</option>
+      <option value="Isao Takahata" class="options">Isao Takahata</option>
+      <option value="Toru Hara" class="options">Toru Hara</option>
+      <option value="Toshio Suzuki" class="options">Toshio Suzuki</option>
+      <option value="Yoshiaki Nishimura" class="options">Yoshiaki Nishimura</option>
     </select>
     
       <select class="Filtros" name="añoDeEstreno" id="añoDeEstreno">
-      <option disabled selected>Año de estreno</option>
-      <option value="ascendente">Ascendente</option>
-      <option value="descendente">Descendente</option>
+      <option disabled selected class="options">Release Date</option>
+      <option value="oldest" class="options">Oldest</option>
+      <option value="newest" class="options">Newest</option>
     </select>
 
-    <!-- <select class="Filtros" name="Puntuacion" id="Puntuacion">
-      <option disabled selected>Puntuación</option>
-      <option value="ascendente">Ascendente</option>
-      <option value="descendente">Descendente</option>
-    </select>
-
-    
-
+    <!--
      <select class="Filtros" name="Especie" id="Especie">
       <option disabled selected>Especie</option>
-      <option value="Human">Humanos</option>
-      <option value="Witch">Brujas</option>
-      <option value="Cat">Gatos</option>
+      <option value="Human">Humans</option>
+      <option value="Witch">Witches</option>
+      <option value="Cat">Cats</option>
       <option value="Totoro">Totoros</option>
-      <option value="Raccoon Dog">Tanukis</option>
-      <option value="Witch">Brujas</option>
-      <option value="Spirit">Espíritus</option>
-      <option value="Borrower">Incursores</option>
-      <option value="Else">Otros</option>
+      <option value="Raccoon Dog">Raccoon Dogs</option>
+      <option value="Spirit">Spirits</option>
+      <option value="Borrower">Borrowers</option>
+      <option value="Else">Others</option>
     </select>
   -->
+ 
   </section>
   <section id="filmsZone" class="filmsZone">
+   
   </section>
   <section class="filterSection" id="filterSection"></section>
   </section>
   <div id="root"></div>
+  <footer><img src="pngegg(28) 1.png" id="footerImage" alt=""></footer>
   <script src="main.js" type="module"></script>
 </body>
 
