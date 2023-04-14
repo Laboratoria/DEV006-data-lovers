@@ -1,11 +1,11 @@
-*{box-sizing: border-box;padding: 0;}
+*{box-sizing: border-box; padding: 0;}
 
-/* Estilos del background */
-body {
-    background-image: url('../images/img1.jpeg');
+body{
+
+    background-image: url('../images/imgluna.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: auto;
     
 }
 header {
@@ -16,17 +16,19 @@ header {
     opacity: 80%;
     margin-top: 20px;
 }
-
-.side{
-    display: flex;
-}
-
-
 .wrapper {
     width: 90%;
     max-width: 1200px;
     margin: auto;
     overflow: hidden;
+}
+
+.abajo{
+    padding-right: 30px;
+}
+
+.side{
+    display: flex;
 }
 
 .logo {
@@ -36,10 +38,6 @@ header {
     width: 380px;
     height: 200px;
     padding: 0px 65px 35px 3px;
-}
-
-.down{
-    padding-right: 30px;
 }
 
 header nav {
@@ -66,11 +64,8 @@ header nav a:hover {
 
 main {
     font-family: Tahoma;
-    width: 40%;
-    max-width: 600px;
     color: #F9F9F9;
-    margin-top: 50px;
-    text-align: left;
+    
 }
 main article{   
     padding: 10px 10px;
@@ -80,4 +75,30 @@ main section{
     padding: 10px 10px;
     font-size: 8px;
     font-weight: lighter;
+}
+main aside{
+    display: block;
+    width: 60%;
+    float: right;
+
+}
+.container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.caja img{
+    border-radius: 30px;
+}
+.caja{
+    margin: 15px;
+}
+.caja p{
+    text-decoration: none;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: #F9F9F9;
+    
 }
