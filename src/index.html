@@ -9,11 +9,12 @@
 
 <body id="body">
   <main id="welcome" >
-    <header>
+    <header id="homeHeader">
       <img id= "header-content"src="Group 14.png" alt="home-Header">
     </header>
     <nav id="buttonZone">
-      <button class="homeButtons"> About</button>
+     <div> <img src="Vector.png" id ="homePng" alt="home-icon"></div>
+      <button class="homeButtons" id="aboutButton"> About</button>
       <button class="homeButtons" id="movies"> Movies </button>
       <button class="homeButtons"> Characters </button>
       <button class="homeButtons"> Trivia </button>
@@ -30,8 +31,14 @@
       </div>
     </section>
   </main>
-  <section class="content">
-    <p id="filterText">Filtros: </p>
+
+  <section id="movieHeaderSection">
+  <header id="movieHeader"> <img src="Group 15.png" id="moviesHeader" alt="movie-header2"></header>
+  </section>
+
+  <section class="content" id="content">
+    <div> <img src="Vector.png" id ="homePng" alt="home-icon"></div>
+  <p id="filterText">Filtros: </p>
     <select class="Filtros" name="Directores" id="Directores">
       <option disabled selected>Directores</option>
       <option value="Hayao Miyazaki">Hayao Miyazaki</option>
@@ -50,20 +57,22 @@
       <option value="Toshio Suzuki">Toshio Suzuki</option>
       <option value="Yoshiaki Nishimura">Yoshiaki Nishimura</option>
     </select>
-
-    <select class="Filtros" name="Puntuacion" id="Puntuacion">
-      <option disabled selected>Puntuación</option>
-      <option value="ascendente">Ascendente</option>
-      <option value="descendente">Descendente</option>
-    </select>
-
-    <select class="Filtros" name="añoDeEstreno" id="añoDeEstreno">
+    
+      <select class="Filtros" name="añoDeEstreno" id="añoDeEstreno">
       <option disabled selected>Año de estreno</option>
       <option value="ascendente">Ascendente</option>
       <option value="descendente">Descendente</option>
     </select>
 
-    <select class="Filtros" name="Especie" id="Especie">
+    <!-- <select class="Filtros" name="Puntuacion" id="Puntuacion">
+      <option disabled selected>Puntuación</option>
+      <option value="ascendente">Ascendente</option>
+      <option value="descendente">Descendente</option>
+    </select>
+
+    
+
+     <select class="Filtros" name="Especie" id="Especie">
       <option disabled selected>Especie</option>
       <option value="Human">Humanos</option>
       <option value="Witch">Brujas</option>
@@ -75,15 +84,13 @@
       <option value="Borrower">Incursores</option>
       <option value="Else">Otros</option>
     </select>
-
-    <input class="Filtros" type="text" id="searchSpace" placeholder="Ingresa tu busqueda">
+  -->
   </section>
   <section id="filmsZone" class="filmsZone">
   </section>
   <section class="filterSection" id="filterSection"></section>
   </section>
   <div id="root"></div>
-  <footer>hola</footer>
   <script src="main.js" type="module"></script>
 </body>
 
