@@ -1,4 +1,5 @@
-
+import { getCharacters } from "./data.js";
+getCharacters()
 
 const backgrounds = [];
 backgrounds[0] = '../images/img1.jpeg';
