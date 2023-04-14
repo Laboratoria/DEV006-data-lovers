@@ -48,7 +48,7 @@ button {
   font-size: medium;
   border-radius: 0px 25px 25px 0px;
   width: 70%;
-  height:80px ;
+  height: 80px;
   margin: 20px 0px;
   border: none;
   box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.584);
@@ -94,19 +94,27 @@ footer {
   display: grid;
 }
 
-.buttonsNB{
-height: 80px;
-width: auto;
-display: flex;
-margin: 5px;
-justify-content: space-between;
-
+#next {
+  display: block;
 }
 
-.backNext{
+#back {
+  display: block;
+}
+
+.buttonsNB {
+  height: 80px;
+  width: auto;
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+
+.backNext {
   height: 50px;
   width: auto;
-border-radius: 0% 45% 45% 0%;
+  border-radius: 0% 45% 45% 0%;
 }
 
 #charactersInfo {
