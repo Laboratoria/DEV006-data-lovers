@@ -1,6 +1,5 @@
 import { example } from './data.js';
 import data from './data/lol/lol.js';
-//import { encabezado } from '../content.js';
 import { header } from './content.js';
 
 const mainContainer = document.createElement(`div`);
