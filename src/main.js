@@ -15,3 +15,4 @@ window.onload = function (){
   const setBackground = Math.floor(Math.random() * backgrounds.length);
   document.body.style.backgroundImage = `url(${backgrounds[setBackground]})`;
 }
+
