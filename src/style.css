@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
 body{
     background-image: url('./img/triangulos-blancos.jpg');
 }
@@ -14,7 +16,9 @@ body{
     height: 150px; /*ajuste de altura, modificar si es necesario*/
     color: rgb(255, 255, 255); /*color de texto en funcion del fondo*/
     display: flex;
-    justify-content:flex-start;
+    /*padding: 20px 20px;*/
+    justify-content:space-between;
+    align-items: center;
 }
 
 
@@ -23,27 +27,77 @@ body{
     display: flex;
     justify-content:flex-start;
     align-items: center;
-   /* display: inline-block; /*para mostrar los logos en linea*/
 }
 
 #logo img{
     /*height: 50px; /*ajustar tamaño*/
     vertical-align:middle;/*para ajustar su alineacion vertical*/
-    margin-top: 40px;
     margin-right: 20px;/*espacio entre las imagenes*/
 }
 
 #logo-riot{
     height: 30px;
+    margin-right: 20px;
 }
 
 #logo-lol{
     height: 50px;
 }
 
+.contenedor1 {
+    display: flex;
+    align-items: center;
+  }
+  
+  .contenedor2 {
+    display: flex;
+    align-items: center;
+  }
 
 /*NAVEGADOR*/
-nav{
-    display: flex; 
+.nav1 ul .nav2 ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.nav1 {
+    margin-left: 20px;
+  }
+  
+  .nav1 ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav1 li {
+    margin-right: 20px;
+  }
+  
+  .nav1 a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav1 a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  .nav2 li {
+    margin-right: 20px;
+  }
+  
+  .nav2 a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .nav2 a:hover {
+    text-decoration: underline;
+  }
