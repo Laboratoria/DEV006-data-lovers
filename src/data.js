@@ -2,6 +2,12 @@
 import data from './data/ghibli/ghibli.js';
 const dataFilms = data.films;
 
+import {filteredlocations} from './vehiculos.js';
+const climateSelect = document.querySelector('#climateSelect');
+climateSelect.addEventListener('change', (event) => { 
+    filteredlocations();
+});
+
 const moviesTable = document.getElementById("moviesTable");
 const moviesBody = moviesTable.getElementsByTagName('tbody')[0];
 let tableBody = "";
@@ -49,8 +55,3 @@ export function sortMoviesByTitle() {
   dataFilms.sort((a, b) => (a.title).localeCompare(b.title));
   filterBy("allDirectors");
 }
-
-console.log(new Date);
-
-dataFilms.forEach(movie => console.log(movie.release_date));
-dataFilms.forEach(movie => console.log(movie.producer));
