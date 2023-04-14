@@ -1,16 +1,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
-
 body {
     margin-top: 0%;
     margin-left: 0%;
     margin-right: 0%;
     margin-bottom: 0%;
-    background-color: rgb(162, 216, 191);
+    background-color: #D3D9DA;
     font-family: 'Patrick Hand', cursive;
 }
-header{
+#homeHeader{
     padding: 0%;
     margin: 0%;
 }
@@ -20,15 +18,34 @@ header{
 }
 nav{
     background-color: #829460;
-    margin-top: 0%;
-    height: 60px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+    height: 3%;
+    align-items: center;
+    display:flex;
+    align-items: flex-start;
+}
+#homePng {
+    width: 50%;
+    margin-left: 40px ;
+    padding-top: 15%;
+}
+
+#aboutButton {
+    margin-left: 1%;
 }
 .homeButtons{
     font-family: 'Patrick Hand', cursive;
+    font-size: xx-large;
+    width: 15%;
+    padding: 8px 60px;
+    border-radius: 15px ;
+    border: solid 5px #829460;
+    opacity: 80%;
+    margin-left: 3%;
+    color: #514E46;
+    background-color: #D9DFCF;
+
 }
+
 .home-Content{
     display: flex;
     align-items: flex-start;
@@ -45,13 +62,27 @@ nav{
     text-align: center;
     font-size: xx-large;
 }
+#movieHeaderSection {
+    display: none;
+    padding: 0%;
+    margin: 0%;
+    width:cover;
+}
+#movieHeader {
+    width: 100%;
+}
+#moviesHeader{
+    height: 100%;
+    width: 100%;
+}
+
 .content {
     display: none;
     flex-wrap: wrap;
     size: 10%;
     padding: 10px;
     margin-top: 0;
-    background-color: rgb(0, 0, 0);
+    background-color:#829460;
 }
 
 #filterText {
@@ -64,21 +95,21 @@ nav{
 }
 
 .Filtros {
-    margin-top: 10px;
-    margin-left: 10px;
-    width: 10%;
-    height: 10%;
-    background-color: rgb(102, 99, 99);
-    border-style: hidden;
-    color: rgb(89, 161, 117);
-    border-radius: 5px;
-    font-family: Arial, Helvetica, sans-serif;
-
+    padding: 8px 60px;
+    background-color: #D9DFCF;
+    width: 15%;
+    color: #514E46;
+    border-radius: 15px;
+    font-size: xx-large;
+    font-family: 'Patrick Hand', cursive;
+    border: solid 5px #829460;
+    font-family: 'Patrick Hand', cursive;
+    opacity: 80%;
+    margin-left: 3%;
 }
 
 .Filtros:hover {
-    background-color: rgb(29, 145, 87);
-    color: white;
+    background-color: rgb(182, 212, 186);
 }
 
 #searchSpace {

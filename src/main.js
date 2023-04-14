@@ -12,7 +12,8 @@ const especie = document.getElementById("Especie");
 movies.addEventListener("click", function (){
   document.getElementById("welcome").style.display = "none"
   document.getElementById("filmsZone").style.display = "flex"
-  document.getElementById()
+  document.getElementById("content").style.display = "flex"
+  document.getElementById("movieHeaderSection").style.display = "flex"
 })
 
 
