@@ -1,13 +1,24 @@
 import { getCharacters } from "./data.js";
 // getCharacters()
 
-const characters = getCharacters()
-console.log(characters); {
-let body= ""
-for (let i = 0; i<characters.lenght; i++){
-    body += '<tr><td>${characters[i].id}</td></tr>'
-    }
-}
+const characters = getCharacters();
+console.log(characters);
+const container = document.querySelector(".container");
+console.log(container);
+container.innerHTML = characters.map(character =>`
+    <div class="card"> 
+            <div class="card-body"> 
+              <a href=" "> <img src="${character.image}" ></a>
+              <div>
+                <h5 class="card-title">${character.name}</h5>
+              </div>
+            </div>
+          </div>
 
-//const characters = getCharacters();
-//console.log(characters);
+    `
+);
+/*function createdCards(usuarios) {
+ 
+  });
+}
+*/
