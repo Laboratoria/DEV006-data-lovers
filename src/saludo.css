@@ -11,35 +11,64 @@
     display: flex;
 }
 
-.dialogo2{
-    display: none;
+#text1 {
+padding-top: 27%;
+position: absolute;
+top: 28%;
+left: 25%;
+transform: translate(-50%,-50%);
+text-align: center;
+line-height: 36px;
+width: 100%;
+font-size: 28px;
+z-index:1;
+font-weight: 650;
 }
 
-.dialogo1 img{
+#text2 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    font-weight: 650;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 0);
+    z-index: 1;
+}
+
+
+/*-.dialogo1{
     height: 50vh;
-    width: 38vw;
+    width: 50vw;
     position: relative;
     padding-top: 25px;
     padding-left: 20px;
 }
 
-.dialogo2 img{
+.dialogo1 img{
+    max-height: 70vh;
+    padding-top: 165px;
+    width: 100%;
+}
+.dialogo2{
     height: 50vh;
     width: 33vw;
     padding-top: 25px;
     padding-left: 20px;
 }
 
-.imagen-saludo img{
-    max-height: 70vh;
+
+.dialogo2 img{
+    max-height: 80vh;
     padding-top: 165px;
     width: 100%;
 }
 
-.imagen-dialogo2 img{
-    max-height: 80vh;
-    padding-top: 165px;
-    width: 100%;
+/*-- que desaparezca de la pag hasta que se termine de mostrar el dialogo1--*/
+.dialogo2{
+    display: none;
 }
 
 .next-instrucc #boton-next-instrucc{
@@ -47,6 +76,7 @@
     max-width: 60px;
     bottom: 15px;
     right: 40px;
+    margin-bottom: 50%;
 }
 
 .next-instrucc #boton-next-instrucc:hover{
