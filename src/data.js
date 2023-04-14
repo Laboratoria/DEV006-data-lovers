@@ -44,6 +44,7 @@ export function filterBy(director){
   });
   moviesBody.innerHTML = tableBody;
 }
+
 filterBy("allDirectors");
 
 export function sortMoviesByDate() {
