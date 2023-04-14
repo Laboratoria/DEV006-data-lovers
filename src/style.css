@@ -2,7 +2,7 @@ body{
     background-image: url('./img/triangulos-blancos.jpg');
 }
 
-.header{
+.encabezado{
     position: fixed;/*hace que el elemento se posicione de forma fija en la pantalla*/
     top: 0;/*coloca el elem en la parte superior*/
     left: 0;/*coloca el elem en el borde izquierdo*/
@@ -43,7 +43,7 @@ body{
 
 
 /*NAVEGADOR*/
-.navegador{
-    
+nav{
+    display: flex; 
 }
 
