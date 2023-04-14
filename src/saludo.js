@@ -7,7 +7,7 @@ function transicion() {
   document.getElementById("dialogo2").style.display="flex";
 }
 
-setTimeout(transicion, 3000);
+setTimeout(transicion, 4000);
 
 
 //de pagina saludo al index

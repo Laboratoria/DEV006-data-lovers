@@ -6,7 +6,7 @@
     background-image: url("images/fondo-intro1.jpg");
     background-size: cover;
     transition: background-image 0.6s ease-in-out;  /* Ajusta la duración y la animación de la transición */
-    animation: cambiarFondo 10s forwards; /* Establece la animación para cambiar el fondo */
+    animation: cambiarFondo 8s forwards; /* Establece la animación para cambiar el fondo */
 }
     @keyframes cambiarFondo{
         0%{
@@ -153,9 +153,5 @@ transform: scale(0.5s);
     color: #030303;
     text-align: center;
     margin-top: -25px;
-}
-
-.hide{
-    display: none !important;
 }
 
