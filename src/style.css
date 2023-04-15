@@ -156,7 +156,7 @@ input[type="text"]{
   color:black;
 }
 .contenedor{
-  width: 1490px;
+  width: auto;
   display: flex;
  flex-direction: row;
  flex-wrap: wrap;
@@ -176,7 +176,7 @@ input[type="text"]{
   height: 100%;
   width: 100%;
   position: relative;
-  bottom: 120px;
+  bottom: 110px;
 }
 .champion-name{
   font-family: Arial, Helvetica, sans-serif;
@@ -186,7 +186,7 @@ input[type="text"]{
  line-height: 29px;
  color: white;
  position: relative;
- bottom: 109px;
+ bottom: 95px;
  }
  .champion-card{
   background-color:  #6E85B2;
@@ -199,6 +199,7 @@ input[type="text"]{
   height: 250px;
   width: 220px;
   overflow: hidden;
+ 
 }
  .champion-card:hover{
   transform: scale(1.2);
@@ -206,6 +207,9 @@ input[type="text"]{
   transform-origin: center;
   height: 520px;
   transition: all .3s ease-in-out;
+  border-radius: 12px;
+  /* offset-x | offset-y | blur-radius | color */
+  box-shadow: 9px 10px 9px black;
  }
 .blurb{
   font-family: Arial, Helvetica, sans-serif;
@@ -213,16 +217,18 @@ input[type="text"]{
   font-weight: 520;
   font-size: 11px;
   line-height: 15px;
-  text-align:justify;
+  text-align:center;
   margin-left: 7px;
   margin-right: 10px;
   color: #FFFFFF;
   z-index: 1;
   display: grid;
-  grid-template-columns: 3.3cm;
+  grid-template-columns: 5.3cm;
   grid-template-rows: 6.5cm;
   position: relative;
-  bottom: 150px;
+  bottom: 130px;
+
+
 }
 .title{
   font-family: Arial, Helvetica, sans-serif;
@@ -232,10 +238,10 @@ input[type="text"]{
   text-align: center;
   color: #FFFFFF;
   position: relative;
-  bottom: 130px;
+  bottom: 120px;
 }
 
-.info{
+/* .info {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -244,12 +250,12 @@ input[type="text"]{
   color: #261C2C;
   position: relative;
   top: 350px;
-  line-height: 0px;
+  line-height: -20px;
   left: 142px;
-  background-color: #FFFFFF;
+  background-color:greenyellow;
   width: 500px;
   height: 40px;
-}
+} */
 
 #botonBuscar {
   margin-top: 0px;
@@ -305,3 +311,25 @@ h3 {
  align-content: center;
  position:sticky;
 }
+
+h5{
+
+  line-height: 0px;
+  color: #261C2C;
+flex-wrap: wrap;
+  position: relative;
+  top: 440px;
+  left: 0px;
+  font-family: sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: capitalize;
+  display: inline-block;
+  margin-right: 5px;
+  padding: 10px;
+  margin-top: 0px;
+  background-color: rgba(61, 5, 66, 0.2);
+
+}
+
