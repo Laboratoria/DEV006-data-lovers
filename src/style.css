@@ -1,5 +1,8 @@
 :root {
     --pink-color: rgba(242, 15, 124, 0.5);
+    --black-color: #000000;
+    --white-color: #FFFFFF;
+    --lighBlack--color: #181818;
 }
 
 * {
@@ -43,16 +46,17 @@ html {
     align-items: center;
     margin-top: 12px;
 }
-.logoGhibli {
-    width: 7%;
+.logoGl {
+    width: 60px;
 }
 .titleLogo {
     font-size: 2.3rem;
 }
 .messageDescubrir {
+    width: 75%;
     font-family: 'M PLUS Code Latin', sans-serif;
     font-weight: bold;
-    font-size: 5.5rem;
+    font-size: 4.5rem;
     text-align: center;
     margin-top: 15px;
     background: #D692D1;
@@ -62,9 +66,14 @@ html {
     -webkit-text-fill-color: transparent;
     margin-bottom: 18px;
 }
+.containerButton {
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+}
 .buttonDescubrir {
-    width: 23%;
-    height: 5%;
+    width: 180px;
+    height: 35px;
     text-align: start;
     border-radius: 20px;
     background-color: transparent;
@@ -80,13 +89,11 @@ html {
 .buttonDescubrir a {
     margin-left: 8px;
 }
-.anclaFlecha {
-    position: relative;
-    bottom: 4.8%;
-    left: 12%;
-}
 .iconFlecha {
-    width: 35%;
+    position: relative;
+    right: 40px;
+    width: 30px;
+    height: 30px;
 }
 .gridDescription {
     display: grid;
@@ -102,3 +109,85 @@ html {
     color: var(--pink-color);
 }
  
+/* ------------------ PÁGINA DE PELÍCULAS ------------------ */
+header {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat (2, auto);
+}
+.sectionBienvenida {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--black-color);
+}
+.msjBienvenida {
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.8rem;
+    color: var(--white-color);
+    padding: 8px 0px 8px 50px;
+    letter-spacing: 2px;
+}
+.apps {
+    padding: 8px 50px 8px 0px;
+}
+.iconApp {
+    margin-left: 30px;
+}
+.sectionLogo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.logoGhibli {
+    width: 100px;
+    padding: 8px;
+}
+.titleghibliLovers {
+    font-size: 3rem;
+}
+.navContainer {
+    width: 100%;
+    padding: 12px;
+    display: grid;       
+    grid-template-columns: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    background: var(--black-color);
+}
+.containerInput {
+    display: flex;
+    width: 250px;
+    background: var(--lighBlack--color);
+    border: 1px solid #E6E6E6;
+    border-radius: 5px;
+}
+.containerInput input {
+    background: none;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.5rem;
+    margin-left: 10px;
+    outline: none;
+    color: white;
+}
+.containerInput::placeholder {
+    color: #E6E6E6;
+}
+.iconLupa{
+    padding: 7px;
+}
+.navContainer a {
+    font-weight: 300;
+    text-decoration: none;
+    font-size: 1.9rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    color: var(--white-color);
+}
+.navContainer a:hover {
+    text-decoration: underline;
+}
+
