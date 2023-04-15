@@ -90,20 +90,15 @@ for(let i = 0; i < champion.length; i++){
 const allChampions = Object.keys(data.data);
 let currentChampions= allChampions
 
-console.log(allChampions)
 const sortBy = (sortOrder) => {
-  console.log(data.data,'esto es data.data')
   currentChampions.sort((a, b) => sortOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
   console.log(currentChampions)
   contenedor.innerHTML = '';
   currentChampions.forEach(key => {
-    console.log(key,'este es el key');
     const champion = data.data[key];
-    console.log(champion)
-    //const { name, img, blurb, title, info } = champion;
-    const championCard = champion.championCard; // retrieve existing champion card
-    championCard.style.display = 'block'; // show the existing card
-    contenedor.appendChild(championCard); // append existing card to the container
+    const championCard = champion.championCard; 
+    championCard.style.display = 'block';
+    contenedor.appendChild(championCard); 
   });
 };
 
@@ -114,36 +109,41 @@ const sortBy = (sortOrder) => {
 const buscar = document.querySelector('#buscar');
 const botonBuscar = document.querySelector('#botonBuscar');
 const botonLimpiar = document.querySelector('#botonLimpiar')
-const resultados = document.querySelector('#resultados')
+//const resultados = document.querySelector('#resultados')
 const notFound = "Champion not found"
 
-
-const filtrar = ()=>{
-  currentChampions= [];
-  resultados.innerHTML = '';
- 
-  const texto = buscar.value.toLowerCase();
-
-  for (const key in data.data){
-    const card = data.data[key];
-    const name = card.name.toLowerCase();
+const champions = Object.keys(data.data)
+const texto = buscar.value.toLowerCase();
+console.log(texto)
+  function filtrado(texto){
+   const filtrar = champions.filter(campeon=>campeon.id===texto)
+  //for (const key in data.data){
     
-    if(name.includes(texto)){
-      resultados.appendChild(card.championCard);
-      card.championCard.style.display = 'block';
-      currentChampions.push(card.id)
-    }  else {
-      card.championCard.style.display = 'none';
-    }
+
+    //resultados.innerHTML = '';
+return filtrar
+
+console.log(filtrar)
+
+    
+//     if(name.includes(texto)){
+//       resultados.appendChild(card.championCard);
+//       card.championCard.style.display = 'block';
+//       currentChampions.push(card.id)
+//     }  else {
+//       card.championCard.style.display = 'none';
+//     }
   
-  }
-  console.log(currentChampions);
-  if(resultados.innerHTML === ''){
-    resultados.innerHTML += `
-      <h3>${notFound}</h3>
-    `
-    // eslint-disable-next-line no-undef
-  }
-  //buscar.value = "";
-}
-export {sortBy,filtrar};
+//   }
+ 
+//   if(resultados.innerHTML === ''){
+//     resultados.innerHTML += `
+//       <h3>${notFound}</h3>
+//     `
+//     // eslint-disable-next-line no-undef
+//   }
+//   //buscar.value = "";
+ }
+
+  
+export {sortBy,filtrado};

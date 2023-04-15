@@ -1,5 +1,5 @@
 
-import {sortBy,filtrar} from './data.js';
+import {sortBy,filtrado} from './data.js';
 
 
 //ORGANIZACION A-Z y Z-A
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonBuscar.addEventListener("click", () => {
   resultados.innerHTML = '';
-  filtrar();
+  filtrado()
 });
  
 botonLimpiar.addEventListener("click",function() {
