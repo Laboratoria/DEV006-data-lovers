@@ -57,8 +57,11 @@ body{
     display: flex;
     align-items: center;
 }
+
+
 /*IMG ICON INICIO SESION*/
 .inicio-sesion{
+    vertical-align: middle;
     height: 20px;
 }
 
@@ -129,4 +132,15 @@ body{
     justify-content:space-between;
     font-family: "Julius Sans One", Arial, Helvetica, sans-serif;
     border-radius: 20px 20px 0 0;
+}
+
+footer .navfooter img{
+    height: 20px;
+    filter: invert(100%);/*invertirá los colores de la imagen, en este caso la imagen es negra y se vuelve blanca*/
+}
+
+.navfooter ul{
+    display: flex;
+    justify-content: baseline;
+    list-style-type: none;
 }
