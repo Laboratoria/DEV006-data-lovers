@@ -46,6 +46,7 @@ body{
 
 #logo-lol{
     height: 50px;
+    cursor: pointer;
 }
 
 .contenedor1 {
@@ -114,6 +115,10 @@ body{
     text-decoration: underline;
   }
 
+ li:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+  }
 
   /*Footer*/
   footer{
@@ -127,16 +132,28 @@ body{
     height: 100px; /*ajuste de altura, modificar si es necesario*/
     width: 100%;/*establece el ancho del 100% de la pantalla*/
     display: flex;
-    color: rgb(255, 255, 255); /*color de texto en funcion del fondo*/
     align-items: center;
-    justify-content:space-between;
+    color: rgb(255, 255, 255); /*color de texto en funcion del fondo*/
+    justify-content:center;
     font-family: "Julius Sans One", Arial, Helvetica, sans-serif;
     border-radius: 20px 20px 0 0;
 }
 
 footer .navfooter img{
+    margin: 10px;
     height: 20px;
     filter: invert(100%);/*invertirá los colores de la imagen, en este caso la imagen es negra y se vuelve blanca*/
+}
+
+.navfooter .logo-riot2{
+    filter: invert(100%);
+    opacity: 0.5;
+    height: 30px;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
 }
 
 .navfooter ul{

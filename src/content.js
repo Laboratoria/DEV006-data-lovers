@@ -29,4 +29,19 @@ export const header =`<header class="encabezado">
 
 </header>`
 
-//export const footer =
+export const footer = `<footer>
+<nav class="navfooter">
+  <ul class="redessociales">
+    <li><a href="#"></a><img src="./icon/instagram.png" alt=""></li>
+    <li><a href="#"></a><img src="./icon/youtube.png" alt=""></li>
+    <li><a href="#"></a><img src="./icon/facebook.png" alt=""></li>
+    <li><a href="#"></a><img src="./icon/gorjeo.png" alt=""></li>
+    <li><a href="#"></a><img src="./icon/discord.png" alt=""></li>
+  </ul>
+
+  <div class="logo-riot2">
+    <img src="./img/riot-game-blanco-logo.png" alt="logo-riot" id="logo-riot2">
+  </div>
+</nav>
+
+</footer>`
