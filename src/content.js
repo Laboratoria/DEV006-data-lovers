@@ -1,4 +1,4 @@
-export const header = `<header class="encabezado">
+export const header =`<header class="encabezado">
 
 <div class="contenedor1">
   <div id="logo">
@@ -22,9 +22,11 @@ export const header = `<header class="encabezado">
 <div class="contenedor2">
   <nav class="nav2">
     <ul class="sesion">
-      <li><a href="#"></a>Inicio de sesion</li>
+      <li><a href="#"><img src="./icon/iniciodesesion-2px.png" class="inicio-sesion" alt="icon"></a>Inicio de sesion</li>
     </ul>
   </nav>
 </div>
 
 </header>`
+
+//export const footer =

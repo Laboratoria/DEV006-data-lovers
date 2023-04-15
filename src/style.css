@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');*/
+*{
+    font-size: 13px;
+}
 body{
     background-image: url('./img/triangulos-blancos.jpg');
 }
@@ -13,12 +16,13 @@ body{
     background-size:contain; /*como quiero que se vea el tamaño de mi imagen*//*asegura que la imagen se adapte al tamaño del navegador*/
     background-position: center;
     width: 100%;/*establece el ancho del 100% de la pantalla*/
-    height: 150px; /*ajuste de altura, modificar si es necesario*/
+    height: 100px; /*ajuste de altura, modificar si es necesario*/
     color: rgb(255, 255, 255); /*color de texto en funcion del fondo*/
     display: flex;
-    /*padding: 20px 20px;*/
     justify-content:space-between;
     align-items: center;
+    border-radius: 0 0 20px 20px;
+    font-family: "Julius Sans One", Arial, Helvetica, sans-serif;
 }
 
 
@@ -47,12 +51,16 @@ body{
 .contenedor1 {
     display: flex;
     align-items: center;
-  }
+}
   
-  .contenedor2 {
+.contenedor2 {
     display: flex;
     align-items: center;
-  }
+}
+/*IMG ICON INICIO SESION*/
+.inicio-sesion{
+    height: 20px;
+}
 
 /*NAVEGADOR*/
 .nav1 ul .nav2 ul{
@@ -91,6 +99,7 @@ body{
   
   .nav2 li {
     margin-right: 20px;
+    list-style-type: none;
   }
   
   .nav2 a {
@@ -101,3 +110,23 @@ body{
   .nav2 a:hover {
     text-decoration: underline;
   }
+
+
+  /*Footer*/
+  footer{
+    position: fixed;/*hace que el elemento se posicione de forma fija en la pantalla*/
+    bottom: 0;
+    left: 0;/*coloca el elem en el borde izquierdo*/
+    background-repeat: repeat-x;/*repetir solo horizontalmente*/
+    background-image: url('./img/espacio-verde.jpg');
+    background-position: center;
+    background-size:contain; /*como quiero que se vea el tamaño de mi imagen*//*asegura que la imagen se adapte al tamaño del navegador*/
+    height: 100px; /*ajuste de altura, modificar si es necesario*/
+    width: 100%;/*establece el ancho del 100% de la pantalla*/
+    display: flex;
+    color: rgb(255, 255, 255); /*color de texto en funcion del fondo*/
+    align-items: center;
+    justify-content:space-between;
+    font-family: "Julius Sans One", Arial, Helvetica, sans-serif;
+    border-radius: 20px 20px 0 0;
+}
