@@ -255,6 +255,61 @@ header {
     min-width: 250px;
 }
 
+/* ------------------ SECCIÓN DE POSTERS  ------------------ */
+.postersContainer {
+    grid-column: 2/3;
+    background-color: var(--lighBlack--color);
+    /* display: flex;
+    justify-content:space-between; */
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    row-gap: 80px;
+    column-gap: 50px;
+    /* flex-wrap: wrap; */
+    margin: 30px 0px 80px;
+}
+.postersContainer .poster {
+    width: 15vw;
+    cursor: pointer;
+    border-radius: 5px;
+    min-width: 210px;
+}
+.containerFrase1 {
+    background: var(--white-color);
+    grid-area: 2/3/3/5;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fraseGhibli {
+    color: var(--pink-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2.3rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 50px;
+}
+.containerFrase2 {
+    background: var(--white-color);
+    grid-area: 5/1/6/3;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sabiasQueGhibli {
+    color: var(--pink-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 30px;
+    padding: 15px;
+}
+
 /* ------------------ FOOTER ------------------ */
 .footerContainer {
     display: flex;
