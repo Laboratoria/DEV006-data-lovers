@@ -190,4 +190,83 @@ header {
 .navContainer a:hover {
     text-decoration: underline;
 }
+/* ------------------ SECCIÓN DE REPRODUCCIÓN DE VIDEOS ------------------ */
+.container {
+    display: grid;
+    grid-template-columns: 15vw 70vw 15vw;
+    grid-template-rows: 50vh auto;
+    background-color: var(--lighBlack--color);
+}
+.portadasContainer {
+    position: sticky;
+    top:0;
+    grid-column: 2/3;
+}
+.portadaMascara {
+    position: absolute;
+    background: linear-gradient(to top,#181818 15%,transparent);
+    width: 70vw;
+    height: 3vw;
+    margin-top: calc(50vh - 3vw);
+    z-index: 2;
+}
+.portadaInfo {
+    position: absolute;  
+    background: linear-gradient(to right,#181818 10%,#181818 15%,#181818,20%,#181818 25%,#181818 30%, #181818 35%,#181818 45%,#181818 45%,transparent);  
+    height: 50vh;
+    width: 70vw;
+    display: block;
+    z-index: 1; 
+} 
+.titleLogoContainer {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2vh;
+    width: 25vw;
+    max-height: 20vh;
+}
+.titleLogoContainer .imgTitle {
+    width: 70%;
+}
+.parrafoContainer{
+    width: 25vw;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    height: 5vw;       
+}
+.parrafoContainer .parrafo {
+    color: var(--white-color);
+    text-align: justify;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.6rem;
+}
+
+.portadaVideo {
+    position: relative; 
+    height: 100%;
+    background-color: var(--lighBlack--color);
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+}
+.portadaVideo video {
+    filter:brightness(1.2);
+    min-width: 250px;
+}
+
+/* ------------------ FOOTER ------------------ */
+.footerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 12px;
+    background: var(--black-color);
+}
+.parrafoFooter {
+    color: var(--white-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.5rem;
+}
 
