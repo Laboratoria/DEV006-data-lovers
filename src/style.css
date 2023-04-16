@@ -190,7 +190,7 @@ header {
 .navContainer a:hover {
     text-decoration: underline;
 }
-/* ------------------ SECCIÓN DE REPRODUCCIÓN DE VIDEOS ------------------ */
+/* ------------------ SECCIÓN DE VIDEO ------------------ */
 .container {
     display: grid;
     grid-template-columns: 15vw 70vw 15vw;
@@ -253,6 +253,24 @@ header {
 .portadaVideo video {
     filter:brightness(1.2);
     min-width: 250px;
+}
+
+/* ------------------ TITULO: ANIMATED FILMS ------------------ */
+.containerTitlePelicula {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 9vh;
+    background: linear-gradient(90deg, #333333 5.1%, #181818 95.03%);
+    grid-column: 2/3;
+}
+.titlePeliculas {
+    font-weight: 700;
+    color: var(--white-color);
+    font-size: 4rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    letter-spacing: 18px;
 }
 
 /* ------------------ SECCIÓN DE POSTERS  ------------------ */
