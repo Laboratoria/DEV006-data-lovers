@@ -1,4 +1,4 @@
-/*--css para inicio de sesion de web y movil--*/
+/*--css para intro e inicio de sesion de web y movil--*/
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
 .contenedor-fondoIntro{
     height: 100vh;
@@ -44,7 +44,10 @@
     background-image: url(images/fondo.jpeg);
     background-size: cover;
     background-position: center;
+/*-la imagen de fondo se mostrará una sola vez sin importar el tamaño del elemento-*/
+    background-repeat: no-repeat;
     background-attachment: fixed;
+/*- background-attachment scroll es para mover el contenido de la pag a medida que el ujsuiariko desplaza ls pag-*/
 }
 
 .main-login .sound{
@@ -68,7 +71,7 @@ audio::-webkit-media-controls-panel {
     box-shadow: 2px 2px 1px rgba (0,0,0,0.1);
     border-radius: 30px;
     width: 345px;
-    height: 540px;
+    height: 560px;
 }
 
 #contenedor-login.active{
@@ -146,6 +149,7 @@ transform: scale(0.5s);
     font-size: 14px;
 }
 
+/*-footer para movil-*/
 .footer-login{
     font-family: 'Maven Pro', sans-serif;
     font-size: 13px;

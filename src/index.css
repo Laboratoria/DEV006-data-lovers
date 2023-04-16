@@ -1,15 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
+/*-- impotar los estilos para crear efectos de volteo de tarjeta --*/
+@import url(index-cards.css);
+
 *{font-family: 'Changa One', cursive;
     font-family: 'Maven Pro', sans-serif;}
 
 body{
-    margin: 0;
-    padding: 0;
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466), rgba(169, 234, 255, 0.548), #02e1ff86);
 }
-.pokemon{
+/*-.pokemon{
     background-color: rgba(7, 39, 219, 0.527), rgba(0, 255, 0, 0.438),rgba(0, 255, 179, 0.514), rgba(0, 174, 255, 0.397);
-}
+}-*/
 
 * {
 margin: 0;
@@ -17,83 +18,125 @@ box-sizing: border-box;
 padding: 0;   
 }
 
-/*-- ESTILOS DE LA BARRA DE MENÚ--*/
-.header{
+/*-- ESTILOS DE LA BARRA DE MENÚ PARA PC--*/
+header{
     width: 100vw;
-    background: linear-gradient(to right, #0f7fff88, #0fff071f, #02ffb38f, #01c2fd88);
-    border-radius: 20px;
-    font-family: 'Changa One', cursive;
+    height: 70px;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    left: 0;
 } 
 
-#btn-menu .img-menu{
-    width: 100px;
-    height: auto;
+
+.contenedor-barra{
+    width: 100vw;
+}
+
+.contenedor-logo{
+    margin-left: 13px;
+}
+
+.img-menu{
+    width: 250px;
+    height: 68px;
+    float: left;
+    margin-top: 2px;
+}
+
+header label{
+    /*-para ocultar vistas-*/
+    display: none !important;
+    float: right;
+}
+
+header img{
+    float: left;
+}
+
+.barra-menu{
+display: flex;
 }
 
 #btn-menu{
-    display: flex;
-}
-
-.header label{
     display: none;
-    width: 30px;
-    height: 30px;
-    padding: 12px;
+    width: 100vw;
 }
 
-.header label:hover{
-display: block;
-width: 30px;
-height: 30px;
-padding: 12px;
-background-color: rgba(0, 28, 190, 0.514), rgba(12, 255, 182, 0.301), rgba(0, 174, 255, 0.397);
-}
-
-
+/*-barra de menu-*/
 .elements ul{
-    margin: 0em;
-    padding: 0em;
+    background: #ffffffae;
+    height: 70px;
+    float: right;
     list-style: none;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    padding-left: 0;
 }
 
+
+.elements ul ul{
+    display: none;
+}
+
+.elements a{
+    display: block;
+    padding: 18px 32px;
+    font-weight: 700;
+    font-size: 19px;
+    color:rgba(0, 0, 0, 0.999);
+    text-decoration: none;
+}
 
 .elements a:hover{
-   color: #0184ffbd;
-   font-size: 23px;
+   color: rgb(255, 225, 0);
+   text-shadow: -2px -2px 7px blue, 2px -2px 7px blue, -2px 2px 7px blue, 2px 2px 7px blue;
+   font-size: 24px;
+   height: 70px;
    font-family: 'Changa One', cursive;
+   top: 0%;
+   background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
 }
 
-.elements li a{
+
+.elements ul li:hover .sub-menu-order{
     display: block;
-    padding: 20px 30px;
-    color: white;
-    text-decoration: none;  
+    position: absolute;
+    width: 182px;
+    height: 240px;
+    text-shadow: -2px -2px 7px rgba(255, 255, 255, 0.83), 2px -2px 7px rgb(255, 255, 255, 0.83), -2px 2px 7px rgb(255, 255, 255, 0.83), 2px 2px 7px rgb(255, 255, 255, 0.83);
+    background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
 }
 
-@media(max-width:768px){
-    .header label{
-        display:block;
-        width: 100vw;
+.elements ul li:hover .sub-menu-filtrar{
+    display: block;
+    position: absolute;
+    width: 207px;
+    height: 305px;
+    text-shadow: -2px -2px 7px rgba(255, 255, 255, 0.83), 2px -2px 7px rgb(255, 255, 255, 0.83), -2px 2px 7px rgb(255, 255, 255, 0.83), 2px 2px 7px rgb(255, 255, 255, 0.83);
+    background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
 }
-    .elements {
-        position:absolute;
-        background-color: linear-gradient(to right, #419aff6c, #0fff071f, #02ffb38f, #01c2fd88);
-        width: -160px;
-        margin-left: -160px;
-        transition: all 0.5s;
-    }
-    .elements ul{
-        flex-direction: column;
-    }
-    #btn-menu:checked ~ .elements{
-        margin: 5px;
-    }
+
+.elements img{
+    max-height: 45px;
 }
+
+.glyphicon{
+    font-size: 24px;
+}
+
+/*-seccion busqueda-*/
+.pokemon{
+position: relative;
+top: 70px;
+}
+
 
 .searcher {
-    padding: 16px 0em;
+    padding: 16px 0;
 }
 
 .searcher div{
@@ -107,7 +150,7 @@ background-color: rgba(0, 28, 190, 0.514), rgba(12, 255, 182, 0.301), rgba(0, 17
 
 .search-comun{
     font-size: 20px;
-    margin: 0em auto;
+    margin: 0 auto;
     height: 42px;
     width: 32px;
     min-width: 300px;
@@ -124,7 +167,7 @@ background-color: rgba(0, 28, 190, 0.514), rgba(12, 255, 182, 0.301), rgba(0, 17
 
 .search-comun:hover{
     border-radius: 30px;
-    border: solid 8px #00e078;
+    border: solid 4px #00e078;
 }
 
 
@@ -141,3 +184,32 @@ background-color: rgba(0, 28, 190, 0.514), rgba(12, 255, 182, 0.301), rgba(0, 17
     font-family: 'Maven Pro', sans-serif;
 }
 
+
+/*- barra de menu para cel -*/
+@media (max-width:768px){
+    header label {
+      display: block !important;
+      font-size: 28px;
+      margin: 10px 10px;
+      margin-top: 16px;
+  }
+    .elements{
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        transition: all 0.4s;
+        transform: translateX(-100);
+    }
+    
+    .elements ul{
+        display: block;
+        background: #00ff9d55;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .elements ul li:hover ul{
+        display: none;
+    }
+}

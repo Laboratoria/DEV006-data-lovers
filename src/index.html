@@ -3,25 +3,45 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="images.png" href="images/barra-menu.png">
-    <link hrenpmf="https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap" rel="stylesheet">
     <title>Pokemon Go</title>
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <header class="header">
-      <input type="button" id="btn-menu">
-      <label for="btn-menu"><img class="img-menu" src="images/menu.png"></label>
-      <nav class="elements">
-        <ul>
-          <li><a href="intro.html">HOME</a></li>
-          <li><a href="login.html">LOG IN</a></li>
-          <li><a href="jugar.html">PLAY</a></li>
-          <li><a href="buscar.html">SEARCH</a></li>
-          <li><a href="cerrar.html">SIGN OFF</a></li>
-        </ul>
-      </nav>
+    <header class ="barra-menu" id="barra-menu">
+      <div class="contenedor-barra">
+        <div class="contenedor-logo">
+          <img class="img-menu" src="images/iconos/menu.png">
+        </div>
+        <input type="checkbox" id="btn-menu">
+        <label class="glyphicon glyphicon-align-justify" for="btn-menu"></label>
+        <nav class="elements">
+         <ul>
+          <li><a href="intro.html"><img src="images/iconos/inicio.png">HOME</a></li>
+          <li><a href="login.html"><img src="images/iconos/login.png">LOG IN</a></li>
+          <li class="item-menu"><a><img src="images/iconos/order.png">ORDER</a>
+              <ul class="sub-menu-order">
+                <li><a id="az"> A-Z </a></li>
+                <li><a id="za"> Z-A </a></li>
+                <li><a id="ascendente">ASCENDING</a></li>
+                <li><a id="descendente">DESCENDING</a></li>                
+              </ul>
+          </li>
+          <li class="item-menu"><a><img src="images/iconos/filtrar.png">TO FILTER</a>
+            <ul class="sub-menu-filtrar">
+              <li><a id="type">TYPE</a></li>
+              <li><a id="debilidades">WEAKNESSES</a></li>
+              <li><a id="fortaleza">STRENGTH</a></li>
+              <li><a id="generacion">GENERATION</a></li>
+              <li><a id="resistencia">RESISTANT</a></li>
+            </ul>
+          </li>
+          <li ><a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US"><img src="images/iconos/jugar.png">PLAY</a></li>
+          <li><a href="cerrar.html"><img src="images/iconos/salida.png">SIGN OFF</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
-
   <main>
     <section class="pokemon">
         <div class="portadaBox">
@@ -32,12 +52,19 @@
         <div class="searcher">
           <div>
             <input type="search" id="search" class="search-comun" placeholder= "search by name" autocomplete="off" spellcheck="false">
-            <img src="images/icon-search.png" alt="">
+            <img src="images/icon-search.png" alt="buscar">
           </div>
         </div>
-    <div id="root"></div>
+    </section>
+    <br>
+    <section class="contenedor-pokemones">
+      <div class="contenedor-cards">
+
+      </div>
     </section>
   </main>
-    <script src="main.js" type="module"></script>
+    <script src="./data/pokemon/pokemon.js"></script>
+    <script src="data.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
