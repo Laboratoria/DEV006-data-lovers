@@ -376,3 +376,21 @@ header {
     outline: none;
 }
 
+/* ------------------ SECCIóN CONTADOR DE PELICULAS ------------------ */
+.sectionContadorMovies {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    width: 100%;
+    grid-column: 2/3;
+    margin-top: 40px;
+}
+.contadorParrafo {
+    color: var(--white-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.imgContador {
+    width: 30px;
+}
