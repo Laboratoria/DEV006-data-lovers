@@ -190,6 +190,7 @@ header {
 .navContainer a:hover {
     text-decoration: underline;
 }
+
 /* ------------------ SECCIÓN DE VIDEO ------------------ */
 .container {
     display: grid;
@@ -341,5 +342,37 @@ header {
     color: var(--white-color);
     font-family: 'M PLUS Code Latin', sans-serif;
     font-size: 1.5rem;
+}
+
+/* ------------------ SECCIÓN DE FILTROS  ------------------ */
+.containerFilters {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 2/3;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+.subtitleFiltros {
+    color: var(--white-color);
+    font-size: 2rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    letter-spacing: 3px;
+}
+.selectOption {
+    width: 18vh;
+    height: 50%;
+    border-radius: 7px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.selectOption:hover, :focus {
+    box-shadow: 0px 0px 4px 0 #d166dd, 0px 0px 4px 0 #d66, 0px 0px 4px 0 #ddc566;
+    outline: none;
 }
 
