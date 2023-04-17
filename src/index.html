@@ -8,39 +8,49 @@
 </head>
 
 <body id="body">
-  <main id="welcome" >
-    <header id="homeHeader">
-      <img id= "header-content" src="Group 14.png" alt="home-Header">
-    </header>
-    <nav id="buttonZone">
-     <div> <img src="Vector.png" class ="homePng" alt="home-icon"></div>
-      <button class="homeButtons" id="aboutButton"> About</button>
-      <button class="homeButtons" id="movies"> Movies </button>
-      <button class="homeButtons"> Characters </button>
-      <button class="homeButtons"> Trivia </button>
-      <button class="homeButtons"> More </button>
-    </nav>
-    <section class="home-Content">
-        <img  id="home-Collage" src="Group 12.png" alt="Image-home">
-        <div class="welcome-Text">
-        <p>Welcome to Ghibli Club! the place where you can find everything Ghibli related like their movies, characters,
-          a little trivia to test your Ghibli knowledge and some more information that might be of your interest if you
-          consider yourself a Ghibli fan!<br>
-          <br>
-          We hope you have fun and enjoy your visit!</p>
-      </div>
-    </section>
-  </main>
+
+
+
+  <header id="homeHeader">
+    <img id="header-content" src="Group 14.png" alt="home-Header">
+  </header>
+
+
+  <header id="moreHeader">
+    <img src="Group 17(1).png" id="moreHeaderImage" alt="more-header2">
+  </header>
+
+
+  <nav id="buttonZone">
+    <div> <img src="Vector.png" class="homePng" alt="home-icon"></div>
+    <button class="homeButtons" id="aboutButton"> About</button>
+    <button class="homeButtons" id="movies"> Movies </button>
+    <button class="homeButtons" id="characters"> Characters </button>
+    <button class="homeButtons"> Trivia </button>
+    <button class="homeButtons" id="more"> More </button>
+  </nav>
+  <section class="home-Content" id="home-Content">
+    <img id="home-Collage" src="Group 12.png" alt="Image-home">
+    <div class="welcome-Text">
+      <p>Welcome to Ghibli Club! the place where you can find everything Ghibli related like their movies, characters,
+        a little trivia to test your Ghibli knowledge and some more information that might be of your interest if you
+        consider yourself a Ghibli fan!<br>
+        <br>
+        We hope you have fun and enjoy your visit!
+      </p>
+    </div>
+  </section>
+
 
   <section id="movieHeaderSection">
-  <header id="movieHeader"> <img src="Group 15.png" id="moviesHeader" alt="movie-header2"></header>
+    <header id="movieHeader"> <img src="Group 15.png" id="moviesHeader" alt="movie-header2"></header>
   </section>
 
   <section class="content" id="content">
-    <div> <img src="Vector.png" class ="homePng" alt="home-icon"></div>
-  <p id="filterText">Filter by: </p>
+    <div> <img src="Vector.png" class="homePng" alt="home-icon"></div>
+    <p id="filterText">Filter by: </p>
     <select class="Filtros" name="Directores" id="Directores">
-      <option disabled selected class="options" >Directors</option>
+      <option disabled selected class="options">Directors</option>
       <option value="Hayao Miyazaki" class="options">Hayao Miyazaki</option>
       <option value="Isao Takahata" class="options">Isao Takahata</option>
       <option value="Yoshifumi Kondō" class="options">Yoshifumi Kondō</option>
@@ -57,16 +67,30 @@
       <option value="Toshio Suzuki" class="options">Toshio Suzuki</option>
       <option value="Yoshiaki Nishimura" class="options">Yoshiaki Nishimura</option>
     </select>
-    
-      <select class="Filtros" name="añoDeEstreno" id="añoDeEstreno">
+
+    <select class="Filtros" name="añoDeEstreno" id="añoDeEstreno">
       <option disabled selected class="options">Release Date</option>
       <option value="oldest" class="options">Oldest</option>
       <option value="newest" class="options">Newest</option>
     </select>
+  </section>
 
-    <!--
-     <select class="Filtros" name="Especie" id="Especie">
-      <option disabled selected>Especie</option>
+  <section id="filmsZone" class="filmsZone">
+  </section>
+
+ 
+
+  
+
+  <section id="characterHeaderSection">
+    <header id="characterHeader"> <img src="Group 18(1).png" id="characterImage" alt="character-header2"></header>
+  </section>
+
+  <section class="characterContent" id="characterContent">
+    <div> <img src="Vector.png" class="homePng" alt="home-icon"></div>
+    <p id="filterText">Filter by: </p>
+    <select class="Filtros" name="Especie" id="Especie">
+      <option disabled selected>Specie</option>
       <option value="Human">Humans</option>
       <option value="Witch">Witches</option>
       <option value="Cat">Cats</option>
@@ -76,14 +100,31 @@
       <option value="Borrower">Borrowers</option>
       <option value="Else">Others</option>
     </select>
-  -->
- 
   </section>
-  <section id="filmsZone" class="filmsZone">
-   
+
+  <section id="charactersZone" class="charactersZone">
   </section>
+
   <section class="filterSection" id="filterSection"></section>
   </section>
+
+
+  <section id="moreSection">
+    <div class="moreDivs">
+      <img class="more-Images" src="ghibli_park_map(1).jpg" alt="Image-park">
+      <a href="https://ghibli-park.jp/en/" class="moreText"> Themed Park </a>
+    </div>
+    <div class="moreDivs">
+      <img class="more-Images" src="image(1).jpg" alt="Image-museum">
+      <a href="https://www.ghibli-museum.jp/en/" class="moreText"> Museum </a>
+    </div>
+    <div class="moreDivs">
+      <img class="more-Images" src="ghibli(1).jpg" alt="Image-web">
+      <a href="https://www.ghibli.jp/" class="moreText"> Official Website </a>
+    </div>
+  </section>
+
+
   <div id="root"></div>
   <footer><img src="pngegg(28) 1.png" id="footerImage" alt=""></footer>
   <script src="main.js" type="module"></script>
