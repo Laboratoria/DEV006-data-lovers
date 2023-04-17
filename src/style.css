@@ -50,7 +50,7 @@ header nav {
 
 header nav a {
     display: inline-block;
-    color: #F9F9F9;
+    color: #ffffff;;
     text-decoration: none;
     padding: 10px 20px;
     line-height: normal;
@@ -68,7 +68,7 @@ main {
     font-family: Tahoma;
     width: 40%;
     max-width: 600px;
-    color: #F9F9F9;
+    color: #ffffff;;
     margin-top: 50px;
     text-align: left;
 }
