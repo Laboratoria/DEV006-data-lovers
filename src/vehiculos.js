@@ -7,12 +7,20 @@ export function filteredlocations(climate) {
     //console.log("charactersTable element not found")
     return;
   }
+<<<<<<< HEAD
   const locationsBody = locationsTable.getElementsByTagName("tbody")[0];
   const climateSelection = document.getElementById("climateSelect").value;
 
   const filteredlocations = dataFilms.flatMap((films) => {
     if(climateSelection === "allclimate"){
         return films.locations;
+=======
+  const LocationsTable = locationsTable.getElementsByTagName("tbody")[0];
+  const climateSelection = document.getElementById("climateSelect").value;
+  const filteredlocations = dataFilms.flatMap((films) => {
+    if(climateSelection === "allclimate"){
+      return films.locations;
+>>>>>>> main
     }
     return films.locations.filter((location) => {
       if (location !== "allclimate") {
@@ -22,6 +30,7 @@ export function filteredlocations(climate) {
   });
   populateLocations(filteredlocations);
 }
+<<<<<<< HEAD
 
 const locations = dataFilms.flatMap((films) => {
     return films.locations
@@ -34,6 +43,15 @@ const vehiclesTable = document.getElementById("vehiclesTable");
 const vehiclesBody = vehiclesTable.getElementsByTagName("tbody")[0];
 let tBody = "";
 
+=======
+const locations = dataFilms.flatMap((films) => {
+  return films.locations
+});
+populateLocations(locations);
+const vehiclesTable = document.getElementById("vehiclesTable");
+const vehiclesBody = vehiclesTable.getElementsByTagName("tbody")[0];
+let tBody = "";
+>>>>>>> main
 tBody = "";
 let indexOne = 0;
 dataFilms.forEach((film) => {
@@ -42,17 +60,26 @@ dataFilms.forEach((film) => {
       tBody = tBody + "<tr>";
     }
     tBody = tBody + "<td>";
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
     const vehicleImg = "<img src='" + vehicle.img + "' class='imgvehicle'/>";
     const vehicleName = "<h3>" + vehicle.name + "</h3>";
     const description = "<p class= 'justify'>" + vehicle.description + "</p>";
     const vehicleClass = "<p> Class: " + vehicle.vehicle_class + "</p>";
     const pilotName = "<p> Pilot name: " + location.surface_water + "</p>";
+<<<<<<< HEAD
 
     tBody =
       tBody + vehicleImg + vehicleName + description + vehicleClass + pilotName;
     tBody = tBody + "</td>";
 
+=======
+    tBody =
+      tBody + vehicleImg + vehicleName + description + vehicleClass + pilotName;
+    tBody = tBody + "</td>";
+>>>>>>> main
     if (indexOne % 2 === 1) {
       tBody = tBody + "</tr>";
     }
@@ -60,13 +87,17 @@ dataFilms.forEach((film) => {
   });
 });
 vehiclesBody.innerHTML = tBody;
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
 function populateLocations(locations) {
   const locationsTable = document.getElementById("locationsTable");
   const locationsBody = locationsTable.getElementsByTagName("tbody")[0];
   locationsBody.innerHTML = "";
   let tableBody = "";
   let index = 0;
+<<<<<<< HEAD
     locations.forEach((location) => {
       if (index % 2 === 0) {
         tableBody = tableBody + "<tr>";
@@ -82,12 +113,28 @@ function populateLocations(locations) {
         "<p> surface water: " + location.surface_water + "</p>";
 
       tableBody =
+=======
+  locations.forEach((location) => {
+    if (index % 2 === 0) {
+      tableBody = tableBody + "<tr>";
+    }
+    tableBody = tableBody + "<td>";
+    const locationImg =
+        "<img src='" + location.img + "' class='imgLocation'/>";
+    const locationName = "<h3>" + location.name + "</h3>";
+    const climate = "<p> Climate: " + location.climate + "</p>";
+    const terrain = "<p> Terrain: " + location.terrain + "</p>";
+    const surfaceWater =
+        "<p> surface water: " + location.surface_water + "</p>";
+    tableBody =
+>>>>>>> main
         tableBody +
         locationImg +
         locationName +
         climate +
         terrain +
         surfaceWater;
+<<<<<<< HEAD
       tableBody = tableBody + "</td>";
 
       if (index % 2 === 1) {
@@ -97,3 +144,13 @@ function populateLocations(locations) {
     });
     locationsBody.innerHTML = tableBody;
 }
+=======
+    tableBody = tableBody + "</td>";
+    if (index % 2 === 1) {
+      tableBody = tableBody + "</tr>";
+    }
+    index++;
+  });
+  locationsBody.innerHTML = tableBody;
+}
+>>>>>>> main

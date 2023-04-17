@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 .block{
@@ -6,6 +7,13 @@
 
 }
 h1{ 
+=======
+.block{
+    width: 50%;
+    height: 100%;
+}
+h1{
+>>>>>>> main
     text-align: center;
 }
 table {
@@ -15,7 +23,20 @@ table {
     margin:auto;
     text-align: center;
   }
+<<<<<<< HEAD
 
+=======
+  .vehicleImg {
+    width: 80%;
+    height: 10%;
+    border-radius: 8%;
+  }
+  .locationImg {
+    width: 80%;
+    height: 10%;
+    border-radius: 8%;
+  }
+>>>>>>> main
 #locationsTableColumnOne {
     width: 50%;
     margin:auto;
@@ -28,19 +49,28 @@ table {
     margin-left: 10%;
     text-align: center;
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> main
   #locationsTable img {
     margin-left: 10%;
     height: 242px;
     width: 250px;
   }
+<<<<<<< HEAD
  
+=======
+>>>>>>> main
   #vehiclesTableColumnOne {
     width: 50%;
     margin:auto;
     margin-left: 20%;
     text-align: center;
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
   }
   #vehiclesTableColumnTwo {
     width: 50%;
@@ -48,23 +78,35 @@ table {
     margin-left: 10%;
     text-align: center;
     width: 250px;
+<<<<<<< HEAD
     
   }
   
+=======
+  }
+>>>>>>> main
   #vehiclesTable img {
     margin-left: 10%;
     height: 242px;
     width: 250px;
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> main
   .justify {
     text-align: justify;
     width: 250px;
     margin-left: 10%;
   }
+<<<<<<< HEAD
 
   td{
 
     vertical-align: top;
     
+=======
+  td{
+    vertical-align: top;
+>>>>>>> main
   }
