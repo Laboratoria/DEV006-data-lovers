@@ -31,6 +31,7 @@ const postersGhibli = (ghibliData) => {
             portadaVideo.innerHTML = video;
             parrafoContainer.innerHTML = parrafo;
             titleLogoContainer.innerHTML = titleLogo;
+
         })
 
   })

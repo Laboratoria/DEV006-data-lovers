@@ -187,8 +187,9 @@ header {
     font-family: 'M PLUS Code Latin', sans-serif;
     color: var(--white-color);
 }
-.navContainer a:hover {
+.navContainer a:hover, :focus-visible {
     text-decoration: underline;
+    outline: none;
 }
 
 /* ------------------ SECCIÓN DE VIDEO ------------------ */
@@ -223,7 +224,7 @@ header {
     display: flex;
     justify-content: start;
     align-items: center;
-    margin-top: 2vh;
+    margin-top: 4vh;
     width: 25vw;
     max-height: 20vh;
 }
@@ -231,6 +232,9 @@ header {
     width: 70%;
 }
 .parrafoContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
     width: 25vw;
     margin-top: 2vh;
     margin-bottom: 2vh;
@@ -242,7 +246,16 @@ header {
     font-family: 'M PLUS Code Latin', sans-serif;
     font-size: 1.6rem;
 }
-
+/* .buttonContainer {
+    background-image: url(./Assets/read-more.png);
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    margin-left: 10vw;
+} */
 .portadaVideo {
     position: relative; 
     height: 100%;
@@ -274,6 +287,61 @@ header {
     letter-spacing: 18px;
 }
 
+/* ------------------ SECCIÓN DE FILTROS  ------------------ */
+.containerFilters {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    grid-column: 2/3;
+    flex-wrap: wrap;
+    margin-top: 55px;
+}
+.subtitleFiltros {
+    color: var(--white-color);
+    font-size: 2rem;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    letter-spacing: 3px;
+}
+.selectOption {
+    width: 18vh;
+    height: 50%;
+    border-radius: 7px;
+    font-family: 'M PLUS Code Latin', sans-serif;
+    text-align: center;
+    font-size: 1.6rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+.selectOption:hover {
+    box-shadow: 0px 0px 4px 0 #d166dd, 0px 0px 4px 0 #d66, 0px 0px 4px 0 #ddc566;
+    
+}
+.selectOption:focus {
+    box-shadow: 0px 0px 4px 0 #d166dd, 0px 0px 4px 0 #d66, 0px 0px 4px 0 #ddc566;
+    outline: none;
+}
+
+/* ------------------ SECCIÓN CONTADOR DE PELICULAS ------------------ */
+.sectionContadorMovies {
+    display: flex;
+    align-items: end;
+    gap: 10px;
+    width: 100%;
+    grid-column: 2/3;
+    margin-top: 40px;
+}
+.contadorParrafo {
+    color: var(--white-color);
+    font-family: 'M PLUS Code Latin', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+}
+.imgContador {
+    width: 30px;
+}
+
 /* ------------------ SECCIÓN DE POSTERS  ------------------ */
 .postersContainer {
     grid-column: 2/3;
@@ -293,6 +361,8 @@ header {
     border-radius: 5px;
     min-width: 210px;
 }
+
+/* ------------------ frase Ghibli , ¿sabias qué? ------------------ */
 .containerFrase1 {
     background: var(--white-color);
     grid-area: 2/3/3/5;
@@ -344,53 +414,3 @@ header {
     font-size: 1.5rem;
 }
 
-/* ------------------ SECCIÓN DE FILTROS  ------------------ */
-.containerFilters {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    grid-column: 2/3;
-    flex-wrap: wrap;
-    margin-top: 55px;
-}
-.subtitleFiltros {
-    color: var(--white-color);
-    font-size: 2rem;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    letter-spacing: 3px;
-}
-.selectOption {
-    width: 18vh;
-    height: 50%;
-    border-radius: 7px;
-    font-family: 'M PLUS Code Latin', sans-serif;
-    text-align: center;
-    font-size: 1.6rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-.selectOption:hover, :focus {
-    box-shadow: 0px 0px 4px 0 #d166dd, 0px 0px 4px 0 #d66, 0px 0px 4px 0 #ddc566;
-    outline: none;
-}
-
-/* ------------------ SECCIóN CONTADOR DE PELICULAS ------------------ */
-.sectionContadorMovies {
-    display: flex;
-    align-items: end;
-    gap: 10px;
-    width: 100%;
-    grid-column: 2/3;
-    margin-top: 40px;
-}
-.contadorParrafo {
-    color: var(--white-color);
-    font-family: 'M PLUS Code Latin', sans-serif;
-    font-size: 1.8rem;
-    letter-spacing: 2px;
-}
-.imgContador {
-    width: 30px;
-}

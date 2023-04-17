@@ -201,13 +201,6 @@ export default {
             "name": "Colonel Muska"
           }
         }
-      ],
-      "info":[
-        {
-        "logoTitleUrl": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSU4ij2AnOs9SCPvVmawuZpLgpraZARRUlDu-ZrP_sBrTRlS48XQiHNXO9eHwOE10IbmBB_QoaZUN1hiNZOt4LTdQDy=w1920-h902",
-        "videoUrl":"<//www.youtube.com/embed/ksNEwaQN53g",
-        "texto":"In this children's adventure, a young miner and a mysterious girl search for a lost island that, according to legend, hides great wealth."
-      }
       ]
     },
     {
@@ -356,14 +349,7 @@ export default {
           ]
         }
       ],
-      "vehicles": [],
-      "info":[
-        {
-        "logoTitleUrl": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOQPQpK0U4oFQim4wysC-Rr9SvqoA6Abe5j8NtR4Ve-ppzMYbkPaCwbEJSQ-3BI2D-pgiBOTGLSnKFANpXsiTTsmz9Mhlw=w1920-h902",
-        "videoUrl":"https://rr2---sn-nja7snll.c.drive.google.com/videoplayback?expire=1681375864&ei=OIo3ZKi4Namqhwbqpbi4DA&ip=38.25.17.153&cp=QVRNU0RfVFhURVhPOjhaYUppaFBxU0VTNE0wQlk2WWt0dV8xdnlNU3JXSlV6U1ZQSFE5OFB2U0w&id=d39dc6db3dda39c2&itag=22&source=webdrive&requiressl=yes&mh=R5&mm=32&mn=sn-nja7snll&ms=su&mv=m&mvi=2&pl=24&ttl=transient&susc=dr&driveid=14vLkfvQ5kWorpJ8ANFFEbkEqZMGtx0A-&app=explorer&mime=video/mp4&vprv=1&prv=1&dur=10.913&lmt=1681303685544561&mt=1681361090&subapp=DRIVE_WEB_FILE_VIEWER&txp=0016224&sparams=expire,ei,ip,cp,id,itag,source,requiressl,ttl,susc,driveid,app,mime,vprv,prv,dur,lmt&sig=AOq0QJ8wRAIgIYE450aDzxnRgleM8KnITt65tL_lOGnGSKThbzIleQACIAhXT_5LYePdiTa-bNBvaHHgYNo0jenNq-xzTkv4BN8x&lsparams=mh,mm,mn,ms,mv,mvi,pl&lsig=AG3C_xAwRQIgNbjPUATwBdWFOCqmP5hOfaivFoqFvvSYx2EnhfUPSCACIQDhhOHGlZNclRoino2AxyjOnNh2X741BjST0g5qg7o6uw==&cpn=rUUlupoDPoS6SA7m&c=WEB_EMBEDDED_PLAYER&cver=1.20230409.00.00",
-        "texto":"Cuando hospitalizan a su madre, estas dos hermanas van a la campiña japonesa a pasar el verano con su padre."
-      }
-      ]
+      "vehicles": []
     },
     {
       "id": "ea660b10-85c4-4ae3-8a5f-41cea3648e3e",
@@ -489,14 +475,7 @@ export default {
           ]
         }
       ],
-      "vehicles": [],
-      "info":[
-        {
-        "logoTitleUrl": "https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSa2WA1prYtZUPGBKd2lQHNtssOYa7TOVt6GyspbFGUKfJvJ5GlwqPOTdryoM84NKe3rEo97WqPhF7IvWk6ezXwhoqRzw=w1920-h902",
-        "videoUrl":"https://drive.google.com/file/d/1Kii16sT8URnmnMFOolgFecINLBIEu3Kt/preview",
-        "texto":"En esta aventura animada, Kiki se muda fuera de la casa de sus padres para perfeccionar su magia, pero descubre que hacer nuevos amigos es más difícil de lo que parece."
-      }
-      ]
+      "vehicles": []
     },
     {
       "id": "12cfb892-aac0-4c5b-94af-521852e46d6a",
