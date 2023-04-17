@@ -23,10 +23,6 @@ header {
     overflow: hidden;
 }
 
-.abajo{
-    padding-right: 30px;
-}
-
 .side{
     display: flex;
     margin: 60px 40px 0px 40px;
