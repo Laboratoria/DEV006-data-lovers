@@ -22,6 +22,9 @@ header {
     overflow: hidden;
 }
 
+.sideleft{
+    width: 30%;
+}
 
 .side{
     display: flex;
@@ -81,15 +84,16 @@ main section{
 }
 main aside{
     display: block;
-    width: 60%;
     float: right;
     margin-top: 0%;
 }
 .container{
-    width: 100%;
+    width: 60%;
+    float: right;
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
+    
 } 
 .card {
     display: flex;

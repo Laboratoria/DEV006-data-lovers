@@ -6,8 +6,9 @@ console.log(characters);
 const container = document.querySelector(".container");
 console.log(container);
 
-/*const elements = [];
-for (const character in characters){
+const elements = [];
+for (let i=0;i<characters.length; i++){
+  const character = characters[i];
   const element = `
    <div class="card"> 
             <div class="card-body"> 
@@ -20,10 +21,10 @@ for (const character in characters){
     `;
   elements.push(element);
 } 
-container.innerHTML = elements; */
+container.innerHTML = elements.join(""); 
 
 
-container.innerHTML = characters.map(character =>`
+/* container.innerHTML = characters.map(character =>`
     <div class="card"> 
             <div class="card-body"> 
               <a href=" "> <img src="${character.image}"></a>
@@ -33,7 +34,7 @@ container.innerHTML = characters.map(character =>`
             </div>
           </div>
     `
-);
+); */
 
 const searchInput = document.getElementById("search-input");
 searchInput.addEventListener("input", () => {
@@ -56,6 +57,6 @@ function renderCharacters(characters) {
     </div>
   `).join("");
 }
-renderCharacters(characters);
+//renderCharacters(characters);
     
 
