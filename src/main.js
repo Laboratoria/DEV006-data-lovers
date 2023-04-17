@@ -1,4 +1,4 @@
-import { getCharacters } from "./data";
+import { getCharacters } from "./data.js";
 getCharacters()
 
 const backgrounds = [];
