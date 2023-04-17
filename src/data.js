@@ -9,6 +9,7 @@ export const example = () => {
 export const anotherExample = () => {
   return 'OMG';
 };
+*/
 
 
 export function getCharacters () {
