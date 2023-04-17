@@ -9,14 +9,17 @@ body {
 
 }
 
+html{
+    font-size: 16px;
+}
 /*Barra de navegación*/
 #logo{
     position: relative;
 }
 
 #logo img { 
-    width: 40px;
-    height: 40px;
+    max-width: 40px;
+    min-height: 40px;
     position: absolute;
     top: 30%;
    
@@ -61,7 +64,7 @@ body {
 .menu-nav li a {
     display: flex;
     flex-direction: column;
-    font-size: 20px;
+    font-size:1.25rem;
     font-family: 'Limelight';
    
     
@@ -96,7 +99,7 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(4, 25, 216, .17);
+    /*background-color: rgba(4, 25, 216, .17);*/
     box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);
     transition: .4s ease-in;
 }
@@ -104,13 +107,14 @@ body {
 
 .menu-nav li:hover .down-item, .menu-nav li:hover .texto-item{
 top: 100%;
-height: 115%;
+min-height: 115%;
 }
 
 .menu-nav li:hover .itemImagen{
     width: 30%;
     right: 80px;
 }
+
 
 .titulo-principal {
 display: flex;
@@ -119,7 +123,7 @@ align-items: center;
 }
 
 .titulo-principal h1{
-    font-size: 100px;
+    font-size: 5rem;
     margin-top: 70px;
     text-align: center;
     color: #FFD700;
@@ -142,7 +146,7 @@ align-items: center;
 }
 
 .tarjetaCarrusel {
-    background-color: #023E73;
+    background-color:#8BD9D1 ;
     height: 100%;
     display: flex;
     align-items: center;
@@ -152,27 +156,32 @@ align-items: center;
 
 
 .tarjetaCarrusel .texto-Foto{
-width: 85.5%;
-height: 90px;
+width: 33.5%;
+height: 100px;
 margin-top: 10px;
 background-image: url('./img/pokemones.jpg');
 background-size: contain;
-opacity: 0.7;
+filter: brightness(1.1);
+mix-blend-mode: multiply;
+opacity: 0.9;
+object-fit:contain
 
 }
 
 .tarjetaCarrusel h3 {
     text-align: center;
     padding-top: 30px;
-    color: #000;
-    font-size: 30px;
-    font-weight: bold;
+    color:black;
+    font-size: 20px;
+    font-weight:10px;
    
 }
 
 .tarjetaCarrusel img {
     width: 700px;
     height: 350px;
+    object-fit: contain;
+
 }
 
 .flechasCarrusel {
@@ -184,11 +193,15 @@ opacity: 0.7;
     align-items: center;
     justify-content: space-between;
     padding: 20px;
+    
 }
 
+
+
 footer {
-    background-color: #868585;
+    background-color:#8BD9D1;
     text-align: center;
+    font-weight: lighter;
 }
 
 /*SEGUNDA PAGINA*/
@@ -368,20 +381,25 @@ article > section:nth-child(3){
     display: flex;
     flex-direction: column;
     position:relative;
-    transition:transform 1s;
+    transition:transform 0.8s;
     transform:translateY(0%);
     /*overflow: hidden;*/
 }
 
 .modal-close{
-   transform:translateY(-200%);
+   display:none;
 }
 
 .close{
     border: 1px solid red;
     width: 25px;
     height: 25px;
-    margin-top: 10px;
+   /* margin-top: 10px;*/
+   position: absolute;
+   top:5px;
+   right:5px;
+   display: inline-block;
+    cursor: pointer;
     
 }
 
@@ -389,7 +407,7 @@ article > section:nth-child(3){
     display:flex;
     justify-content: space-between;
     margin: top 20px; 
-    padding: 0px 10px; 
+    padding: 40px 10px; 
 }
 
 .modal .imagen-pokemon{
