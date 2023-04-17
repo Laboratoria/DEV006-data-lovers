@@ -1,19 +1,52 @@
-import { filterDirector, sortDataYear, filterProducer } from './data.js';
+import { filterDirector, sortDataYear, filterProducer, filterSpecies } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const movies = document.getElementById("movies");
 const filterSection = document.getElementById("filterSection");
+//const filmsZone = document.getElementById("filmsZone")
 const directores = document.getElementById("Directores");
 const productores = document.getElementById("Productores");
 const añoDeEstreno = document.getElementById("añoDeEstreno");
-//const especie = document.getElementById("Especie");
+const more = document.getElementById("more");
 const characters = document.getElementById("characters");
+const especie = document.getElementById("Especie");
 
-movies.addEventListener("click", function (){
-  document.getElementById("welcome").style.display = "none"
+
+
+movies.addEventListener("click", function () {
+  document.getElementById("homeHeader").style.display = "none";
+  document.getElementById("home-Content").style.display = "none";
   document.getElementById("filmsZone").style.display = "flex"
   document.getElementById("content").style.display = "flex"
+  document.getElementById("moreSection").style.display = "none";
+  document.getElementById("buttonZone").style.display = "none";
+  document.getElementById("moreHeader").style.display = "none";
   document.getElementById("movieHeaderSection").style.display = "flex"
+})
+
+more.addEventListener("click", function () {
+  document.getElementById("homeHeader").style.display = "none";
+  document.getElementById("filmsZone").style.display = "none";
+  document.getElementById("home-Content").style.display = "none";
+  document.getElementById("content").style.display = "none";
+  document.getElementById("movieHeaderSection").style.display = "none";
+  document.getElementById("moreHeader").style.display = "flex";
+  document.getElementById("moreSection").style.display = "flex";
+})
+
+characters.addEventListener("click", function () {
+  document.getElementById("homeHeader").style.display = "none";
+  document.getElementById("home-Content").style.display = "none";
+  document.getElementById("filmsZone").style.display = "none"
+  document.getElementById("content").style.display = "none"
+  document.getElementById("moreSection").style.display = "none";
+  document.getElementById("buttonZone").style.display = "none";
+  document.getElementById("moreHeader").style.display = "none";
+  document.getElementById("movieHeaderSection").style.display = "none";
+  document.getElementById("characterHeaderSection").style.display = "flex"
+  document.getElementById("characterContent").style.display = "flex"
+  document.getElementById("charactersZone").style.display = "flex"
+
 })
 
 
@@ -22,7 +55,7 @@ class titleAndPoster {
   constructor(title, poster, director, release_date, rt_score) {
     //"this" indica el objeto en concreto que se utilizará (o algo así)
     this.poster = createImage(poster);
-    this.title = createText("Title: " +  "'" + title + "'");
+    this.title = createText("Title: " + "'" + title + "'");
     this.director = createText("Director: " + director);
     this.release_date = createText("Release date: " + release_date);
     this.rt_score = createText("Score: " + rt_score);
@@ -31,7 +64,7 @@ class titleAndPoster {
 }
 
 //constructor de objetos para seleccionar datos a mostrar
-/*class characters {
+class showCharacters {
   constructor(title, poster, director, release_date, rt_score, description, specie) {
     //"this" indica el objeto en concreto que se utilizará (o algo así)
     this.title = createText("Name: " + title);
@@ -44,7 +77,7 @@ class titleAndPoster {
 
   }
 }
-*/
+
 //llamar los datos
 data.films
   //creamos un array de objetos con los datos que queremos sacar.
@@ -53,6 +86,17 @@ data.films
   .map(Element => divCreator(Element))
   //mostrar los objetos en una sección particular del HTML.
   .forEach(movieDiv => document.getElementById("filmsZone").appendChild(movieDiv))
+
+
+//data.films
+//.map(film => new showCharacters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
+
+//.map(Element => divCreatorCharacter(Element))
+//.forEach(Element => filterSection.appendChild(Element))
+//document.getElementById("filterSection").style.display = "flex";
+
+
+
 
 // esto crea un div 
 function divCreatorhover(x) {
@@ -67,7 +111,7 @@ function divCreatorhover(x) {
   return movieDivHover
 }
 
-/*function divCreatorhoverCharacter(x) {
+function divCreatorhoverCharacter(x) {
   const movieDivHover = document.createElement("div");
   //este le da clase
   movieDivHover.className = "filmDivsHover"
@@ -79,7 +123,7 @@ function divCreatorhover(x) {
   movieDivHover.appendChild(x.specie)
   return movieDivHover
 }
-*/
+
 
 //crea el div para que se organice el conjunto de datos
 function divCreator(x) {
@@ -94,7 +138,7 @@ function divCreator(x) {
   return movieDiv
 }
 
-/*//crea el div para que se organice el conjunto de datos
+//crea el div para que se organice el conjunto de datos
 function divCreatorCharacter(x) {
   //se crea el div
   const movieDiv = document.createElement("div");
@@ -106,7 +150,7 @@ function divCreatorCharacter(x) {
   movieDiv.appendChild(divCreatorhoverCharacter(x))
   return movieDiv
 }
-*/
+
 
 //creamos un tag img
 function createImage(uri) {
@@ -161,13 +205,13 @@ productores.addEventListener("change", function () {
   document.getElementById("filterSection").style.display = "flex";
 })
 
-/*especie.addEventListener("change", function () {
+especie.addEventListener("change", function () {
   //limpiar la pagina
   filterSection.innerHTML = "";
   //utilizar la funcion filtrar
   const especieNueva = filterSpecies(especie.value, data);
   //devuelve un array con objetos del resultado del filtro
-  especieNueva.map(film => new characters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
+  especieNueva.map(film => new showCharacters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
     //crea array con los divs 
     .map(Element => divCreatorCharacter(Element))
     //poner los divs en pantalla
@@ -176,7 +220,7 @@ productores.addEventListener("change", function () {
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
   document.getElementById("filterSection").style.display = "flex";
-}) */
+})
 
 añoDeEstreno.addEventListener("change", function () {
   //limpiar la pagina

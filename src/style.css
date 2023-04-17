@@ -12,6 +12,7 @@ body {
     padding: 0%;
     margin: 0%;
 }
+
 #header-content{
     width: 100%;
     height: 100%;
@@ -180,8 +181,7 @@ nav{
 }
 
 .posterImages {
-    height: 350px;
-    width: 300px;
+    width: 70%;
     padding: 5px;
     margin-left: 10%;
     margin-top: 5%;
@@ -192,8 +192,37 @@ nav{
     display: none;
     flex-wrap: wrap;
 }
+#moreHeader{
+    display: none;
+}
+#moreHeaderImage{
+    width: 100%;
+}
+#moreSection{
+    display: none;
+    flex-wrap: wrap ;
+}
+.more-Images{
+    width: 90%;
+    height: 80%;
+    margin: auto;
+}
 
-.characterSection {
+.moreText{
+    color: #514E46;
+    font-size: xx-large;
+    text-justify: center;
+}
+.moreDivs{
+    width: 30%;
+    margin:1%;
+    text-align: center;
+}
+
+#characterHeaderSection{
+    display: none;
+}
+.characterContent{
     display: none;
 }
 footer {
