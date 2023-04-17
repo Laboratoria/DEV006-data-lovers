@@ -11,7 +11,7 @@
   <main>
     <nav>
       <a href="index.html">
-        <img src="imagenes/LogoOne.png" class="logo" alt="logo que lleva a index"/>
+        <img src="Images/LogoOne.png" class="logo" alt="logo que lleva a index"/>
       </a>
       <button>HECHIZOS</button>
       <button>CASAS</button>
@@ -23,12 +23,13 @@
         <div>
           <label for="selectPerson">
             <select name="selectPerson" id="selectPerson">
+              <option value="all">Todos</option>
               <option value="magos">Magos</option>
-              <option value="muggles">Muggles</option>
-              <option value="fantasmas">fantasmas</option>
+              <option value="Muggles">Muggles</option>
+              <option value="fantasmas">Fantasmas</option>
             </select>
           </label>
-          <img src="imagenes/reset.png" alt="imagen para resetear información señalada" class="imageReset" onclick="location.reload()">
+          <img src="Images/reset.png" alt="imagen para resetear información señalada" class="imageReset" onclick="location.reload()">
         </div>
         <div class="typeSearch">
           <input type="text" />
@@ -36,14 +37,14 @@
       </section>
       <section class="tablePerson">
         <div class="buttonsNB">
-        <button class="backNext">Back</button>
-        <button class="backNext">Next</button>
+        <button class="backNext" id="back" >Back</button>
+        <button class="backNext" id="next" >Next</button>
       </div>
         <div id="charactersInfo"></div>
       </section>
     </article>
-  </main>
-  <footer>hecho por Tama y Andrea</footer>
+   </main>
+   <footer>hecho por Tama y Andrea</footer>
 
   <script src="main.js" type="module"></script>
 </body>
