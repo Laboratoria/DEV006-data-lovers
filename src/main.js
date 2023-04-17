@@ -2,11 +2,9 @@
 import { HP } from "./data.js";
 import dataHP from "./data/harrypotter/data.js";
 import { filterWizards } from "./data.js";
-// console.log(filterMuggles);
 import { filterMuggles } from "./data.js";
-// console.log(filterWizards);
 import { filterGhosts } from "./data.js";
-// console.log(filterWizards);
+
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -45,66 +43,63 @@ function displayPersonajes(personajes) {
  //console.log("prueba:",CallCharacters(dataHP.characters, characters))
   updateButtons();
 });*/
-
-/*Personajes por página */
+/*personajes por pagina*/
 const charactersPerPage = 42;
 let page = 0;
-const initialCharacter = page * charactersPerPage;
-const finalCharacter = page * charactersPerPage + charactersPerPage;
-const screenCharacters = dataHP.characters.slice(
-  initialCharacter,
-  finalCharacter
-);
 
-displayPersonajes(screenCharacters);
-/*button next: se indica que al momento de clickear de nuevo me tome el clickeado y me haga formula para mostrar data actualizada*/
+/*llamado de botones next y back*/
+const buttonNext = document.getElementById("next");
+buttonNext.addEventListener("click", nextPage);
 
-document.getElementById("next").addEventListener("click", buttonNext);
-document.getElementById("back").addEventListener("click", buttonBack);
-function buttonNext() {
-  page++;
+const buttonBack = document.getElementById("back");
+buttonBack.addEventListener("click", previousPage);
+
+/*declaración de la función getScreenCharacters*/
+function getScreenCharacters() {
   const initialCharacter = page * charactersPerPage;
   const finalCharacter = page * charactersPerPage + charactersPerPage;
-  const screenCharacters = dataHP.characters.slice(
-    initialCharacter,
-    finalCharacter
-  );
-  updateButtons();
-  //console.log(screenCharacters);
-  displayPersonajes(screenCharacters);
+  const screenCharacters = dataHP.characters.slice(initialCharacter, finalCharacter);
+  return screenCharacters
 }
-/*button back: */
 
-function buttonBack() {
+displayPersonajes(getScreenCharacters());
+
+function nextPage() {
+  /*Muestra 42 personajes a la vez*/
+  page++;
+  displayPersonajes(getScreenCharacters());
+  updateButtons();
+}
+
+function previousPage() {
+  /*Muestra 42 personajes a la vez*/
   if (page > 0) {
-    page = page - 1;
-    const initialCharacter = page * charactersPerPage;
-    const finalCharacter = page * charactersPerPage + charactersPerPage;
-    const screenCharacters = dataHP.characters.slice(
-      initialCharacter,
-      finalCharacter
-    );
+    page--;
+    displayPersonajes(getScreenCharacters());
     updateButtons();
-    displayPersonajes(screenCharacters);
   }
 }
 
 function updateButtons() {
-  const nextButton = document.querySelector("#next,backNext");
-  const backButton = document.querySelector("#back,backNext");
+  const nextButton = document.querySelector("#next");
+  const backButton = document.querySelector("#back");
 
+  /*Quitar y agrega boton next acorde a necesidad */
   if (page === 16) {
     nextButton.style.visibility = "hidden";
   } else {
     nextButton.style.visibility = "visible";
   }
 
+  /*Quitar y agrega boton back acorde a necesidad */
   if (page === 0) {
     backButton.style.visibility = "hidden";
   } else {
     backButton.style.visibility = "visible";
   }
 }
+
+console.log("Page value outside function:", page);
 
 /*FIILTRAR personajes */
 const callFilterForCharacters = document.getElementById("selectPerson");
