@@ -12,7 +12,7 @@ header {
 }
 
 body {
-  background-image: url(imagenes/fondo.jpg);
+  background-image: url(Images/Hogwartz\ Night.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -117,12 +117,21 @@ footer {
   border-radius: 0% 45% 45% 0%;
 }
 
+#back {
+  height: 50px;
+  width: auto;
+  border-radius: 0% 45% 45% 0%;
+  visibility: hidden;
+}
+
 #charactersInfo {
-  overflow-y: hidden;
+  overflow-y: auto;
+  height: 70vh;
+  width: 75vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
   grid-gap: 15px;
+  scroll-snap-type: y proximity;
 }
 
 .iDCard {
@@ -144,17 +153,4 @@ footer {
 #housesLogos {
   height: 10rem;
   width: auto;
-}
-
-.organicNumber {
-  display: flex;
-}
-
-.number {
-  width: 50px;
-  border-radius: 20%;
-  height: 30px;
-  margin: 10px;
-  background-color: rgba(240, 248, 255, 0.596);
-  color: black;
 }
