@@ -11,17 +11,6 @@ export const filterProducer = (productores, data) => {
   return productores1;
 };
 
-export const filterSpecies = (especie, data) => {
-
-
-  if (especie !== "Else") {
-    return data.films.flatMap(film => film.people)
-      .filter(element => element.specie === especie)
-  }
-  return data.films.flatMap(film => film.people)
-    .filter(element => ["Wolf", "Red elk", "Deity", "Bird", "unknown", "Spirit of The White Fox", "Dragon", "Wizard", "Demon", "Human/Scarecrow", "Dog", "Arch-mage/Human", "Fish/Human"].includes(element.specie))
-};
-
 
 export const sortDataYear = (ordenAs, data) => {
   let orden = "";
@@ -36,7 +25,45 @@ export const sortDataYear = (ordenAs, data) => {
 
 };
 
-export const stats = () => {
-  return 'OMGg';
+
+export const filterSpecies = (especie, data) => {
+
+
+  if (especie !== "Else") {
+    return data.films.flatMap(film => film.people)
+      .filter(element => element.specie === especie)
+  }
+  return data.films.flatMap(film => film.people)
+    .filter(element => ["Wolf", "Red elk", "Deity", "Bird", "unknown", "Spirit of The White Fox", "Dragon", "Wizard", "Demon", "Human/Scarecrow", "Dog", "Arch-mage/Human", "Fish/Human"].includes(element.specie))
 };
 
+export const characterMovie = (characterMovies, data) => {
+
+  return data.films.filter(films => films.title === characterMovies)
+    .flatMap(element => element.people);
+
+}
+
+export const functionSortAZ = (sortAZ, data) => {
+
+  const AZ = data.films.flatMap(element => element.people).sort(function (a, b) {
+    if (a.name < b.name) { return -1; }
+    if (a.name > b.name) { return 1; }
+    return 0;
+  })
+
+  if (sortAZ === "AZ") {
+    
+    return AZ
+  }
+
+  else {
+    const ZA = AZ.reverse((function (a, b) {
+      if (a.name < b.name) { return -1; }
+      if (a.name > b.name) { return 1; }
+      return 0;
+    }));
+
+    return ZA
+  }
+}
