@@ -4,7 +4,8 @@ import dataHP from "./data/harrypotter/data.js";
 import { filterWizards } from "./data.js";
 import { filterMuggles } from "./data.js";
 import { filterGhosts } from "./data.js";
-
+import {getScreenCharacters} from "./data.js";
+import {page} from "./data.js";
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -43,28 +44,23 @@ function displayPersonajes(personajes) {
  //console.log("prueba:",CallCharacters(dataHP.characters, characters))
   updateButtons();
 });*/
-/*personajes por pagina*/
-const charactersPerPage = 42;
-let page = 0;
+
+
+
+
+
+
 
 /*llamado de botones next y back*/
-const buttonNext = document.getElementById("next");
-buttonNext.addEventListener("click", nextPage);
+export const buttonNext = document.getElementById("next").addEventListener("click", nextPage);
+export const buttonBack = document.getElementById("back").addEventListener("click", previousPage);
 
-const buttonBack = document.getElementById("back");
-buttonBack.addEventListener("click", previousPage);
 
-/*declaración de la función getScreenCharacters*/
-function getScreenCharacters() {
-  const initialCharacter = page * charactersPerPage;
-  const finalCharacter = page * charactersPerPage + charactersPerPage;
-  const screenCharacters = dataHP.characters.slice(initialCharacter, finalCharacter);
-  return screenCharacters
-}
 
 displayPersonajes(getScreenCharacters());
 
 function nextPage() {
+
   /*Muestra 42 personajes a la vez*/
   page++;
   displayPersonajes(getScreenCharacters());
@@ -74,7 +70,7 @@ function nextPage() {
 function previousPage() {
   /*Muestra 42 personajes a la vez*/
   if (page > 0) {
-    page--;
+   page--;
     displayPersonajes(getScreenCharacters());
     updateButtons();
   }
@@ -99,7 +95,6 @@ function updateButtons() {
   }
 }
 
-console.log("Page value outside function:", page);
 
 /*FIILTRAR personajes */
 const callFilterForCharacters = document.getElementById("selectPerson");
