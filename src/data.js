@@ -2,18 +2,6 @@
 import data from './data/ghibli/ghibli.js';
 const dataFilms = data.films;
 
-<<<<<<< HEAD
-import {filteredlocations} from './vehiculos.js';
-const climateSelect = document.querySelector('#climateSelect');
-climateSelect.addEventListener('change', (event) => { 
-    filteredlocations();
-});
-
-const moviesTable = document.getElementById("moviesTable");
-const moviesBody = moviesTable.getElementsByTagName('tbody')[0];
-let tableBody = "";
-=======
->>>>>>> main
 
 export function filterByMovies(director) {
   const moviesTable = document.getElementById("moviesTable");
