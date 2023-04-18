@@ -12,18 +12,19 @@ const characters = document.getElementById("characters");
 const especie = document.getElementById("Especie");
 const characterMovies = document.getElementById("characterMovies");
 const sortAZ = document.getElementById("sortAZ");
+const trivia = document.getElementById("trivia");
 
 
 movies.addEventListener("click", function () {
   document.getElementById("homeHeader").style.display = "none";
   document.getElementById("home-Content").style.display = "none";
-  document.getElementById("filmsZone").style.display = "flex"
-  document.getElementById("content").style.display = "flex"
+  document.getElementById("filmsZone").style.display = "flex";
+  document.getElementById("content").style.display = "flex";
   document.getElementById("moreSection").style.display = "none";
   document.getElementById("buttonZone").style.display = "none";
   document.getElementById("moreHeader").style.display = "none";
-  document.getElementById("movieHeaderSection").style.display = "flex"
-  document.getElementById("charactersZone").style.display = "none"
+  document.getElementById("movieHeaderSection").style.display = "flex";
+  document.getElementById("charactersZone").style.display = "none";
 })
 
 more.addEventListener("click", function () {
@@ -34,22 +35,53 @@ more.addEventListener("click", function () {
   document.getElementById("movieHeaderSection").style.display = "none";
   document.getElementById("moreHeader").style.display = "flex";
   document.getElementById("moreSection").style.display = "flex";
-  document.getElementById("charactersZone").style.display = "none"
+  document.getElementById("charactersZone").style.display = "none";
 })
 
 characters.addEventListener("click", function () {
   document.getElementById("homeHeader").style.display = "none";
   document.getElementById("home-Content").style.display = "none";
-  document.getElementById("filmsZone").style.display = "none"
-  document.getElementById("content").style.display = "none"
+  document.getElementById("filmsZone").style.display = "none";
+  document.getElementById("content").style.display = "none";
   document.getElementById("moreSection").style.display = "none";
   document.getElementById("buttonZone").style.display = "none";
   document.getElementById("moreHeader").style.display = "none";
   document.getElementById("movieHeaderSection").style.display = "none";
-  document.getElementById("characterHeaderSection").style.display = "flex"
-  document.getElementById("characterContent").style.display = "flex"
-  document.getElementById("charactersZone").style.display = "flex"
+  document.getElementById("characterHeaderSection").style.display = "flex";
+  document.getElementById("characterContent").style.display = "flex";
+  document.getElementById("charactersZone").style.display = "flex";
 
+})
+
+
+
+trivia.addEventListener("click", function () {  
+  const peopleMap = data.films.flatMap(element => element.people);
+  const genderF = peopleMap.filter (people => people.gender === "Female");
+  const femalePercent = ((genderF.length * 100) / peopleMap.length); 
+
+  const genderM = peopleMap.filter (people => people.gender === "Male");
+  const malePercent = ((genderM.length * 100) / peopleMap.length) 
+
+  const genderNA = peopleMap.filter (people => people.gender === "NA")
+  const naPercent = ((genderNA.length * 100) / peopleMap.length) 
+
+  const genderUnknown = peopleMap.filter (people => people.gender === "Unknown (Possible Male)")
+  const unknownPercent = ((genderUnknown.length * 100) / peopleMap.length) 
+
+  console.log(Math.round(femalePercent), Math.round(malePercent), Math.round(naPercent), Math.round(unknownPercent))
+
+  document.getElementById("homeHeader").style.display = "none";
+  document.getElementById("filmsZone").style.display = "none";
+  document.getElementById("home-Content").style.display = "none";
+  document.getElementById("content").style.display = "none";
+  document.getElementById("movieHeaderSection").style.display = "none";
+  document.getElementById("moreHeader").style.display = "none";
+  document.getElementById("moreSection").style.display = "none";
+  document.getElementById("charactersZone").style.display = "none";
+  document.getElementById("triviaSection").style.display = "flex";
+  document.getElementById("triviaHeader").style.display = "flex";
+  
 })
 
 

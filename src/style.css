@@ -237,6 +237,42 @@ nav{
 .characterContent{
     display: none;
 }
+
+#triviaHeader {
+    display: none;
+    width: 100%;
+}
+
+#triviaHeaderImage {
+    width: 100%;
+    height: 100%;
+}
+
+#triviaSection {
+    display: none;
+}
+
+#divQuestion {
+    width: 40%;
+    margin:1%;
+    text-align: center;
+}
+
+.question {
+    text-align: center;
+    color: #514E46;
+    font-size: large;
+    text-align: center;
+    width: 60%;
+    height: auto;
+
+}
+.Answer {
+    width: 90%;
+    margin:1%;
+    text-align: center;
+}
+
 footer {
     display:flex ;
     justify-content: flex-end;

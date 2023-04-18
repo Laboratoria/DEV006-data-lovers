@@ -67,3 +67,9 @@ export const functionSortAZ = (sortAZ, data) => {
     return ZA
   }
 }
+
+
+export const genderTrivia = (data) => {
+  const gender = data.films.flatMap (element => element.people).flatMap(element => element.gender);
+  console.log(gender)
+}
