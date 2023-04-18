@@ -1,4 +1,4 @@
-import { filterDirector, sortDataYear, filterProducer, filterSpecies } from './data.js';
+import { filterDirector, sortDataYear, filterProducer, filterSpecies, characterMovie, functionSortAZ } from './data.js';
 import data from './data/ghibli/ghibli.js';
 
 const movies = document.getElementById("movies");
@@ -10,7 +10,8 @@ const añoDeEstreno = document.getElementById("añoDeEstreno");
 const more = document.getElementById("more");
 const characters = document.getElementById("characters");
 const especie = document.getElementById("Especie");
-
+const characterMovies = document.getElementById("characterMovies");
+const sortAZ = document.getElementById("sortAZ");
 
 
 movies.addEventListener("click", function () {
@@ -22,6 +23,7 @@ movies.addEventListener("click", function () {
   document.getElementById("buttonZone").style.display = "none";
   document.getElementById("moreHeader").style.display = "none";
   document.getElementById("movieHeaderSection").style.display = "flex"
+  document.getElementById("charactersZone").style.display = "none"
 })
 
 more.addEventListener("click", function () {
@@ -32,6 +34,7 @@ more.addEventListener("click", function () {
   document.getElementById("movieHeaderSection").style.display = "none";
   document.getElementById("moreHeader").style.display = "flex";
   document.getElementById("moreSection").style.display = "flex";
+  document.getElementById("charactersZone").style.display = "none"
 })
 
 characters.addEventListener("click", function () {
@@ -88,18 +91,17 @@ data.films
   .forEach(movieDiv => document.getElementById("filmsZone").appendChild(movieDiv))
 
 
-//data.films
-//.map(film => new showCharacters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
+data.films.flatMap(element => element.people)
+  .map(element => new showCharacters(element.name, element.img, element.gender, element.age, element.eye_color, element.hair_color, element.specie))
+  .map(Element => divCreatorCharacter(Element))
+  .forEach(characterDiv => document.getElementById("charactersZone").appendChild(characterDiv))
 
-//.map(Element => divCreatorCharacter(Element))
-//.forEach(Element => filterSection.appendChild(Element))
-//document.getElementById("filterSection").style.display = "flex";
 
 
 
 
 // esto crea un div 
-function divCreatorhover(x) {
+function infoDivCreator(x) {
   const movieDivHover = document.createElement("div");
   //este le da clase
   movieDivHover.className = "filmDivsHover"
@@ -111,7 +113,7 @@ function divCreatorhover(x) {
   return movieDivHover
 }
 
-function divCreatorhoverCharacter(x) {
+function divInfoCharacter(x) {
   const movieDivHover = document.createElement("div");
   //este le da clase
   movieDivHover.className = "filmDivsHover"
@@ -134,21 +136,21 @@ function divCreator(x) {
   // creamos un hijo con el tag img
   movieDiv.appendChild(x.poster);
   //a el div anterior le damos otro div(hijo) con la información 
-  movieDiv.appendChild(divCreatorhover(x))
+  movieDiv.appendChild(infoDivCreator(x))
   return movieDiv
 }
 
 //crea el div para que se organice el conjunto de datos
 function divCreatorCharacter(x) {
   //se crea el div
-  const movieDiv = document.createElement("div");
+  const characterDiv = document.createElement("div");
   //le da una clase para poder manipularlos en CSS 
-  movieDiv.className = "filmDivs"
+  characterDiv.className = "filmDivs"
   // creamos un hijo con el tag img
-  movieDiv.appendChild(x.poster);
+  characterDiv.appendChild(x.poster);
   //a el div anterior le damos otro div(hijo) con la información 
-  movieDiv.appendChild(divCreatorhoverCharacter(x))
-  return movieDiv
+  characterDiv.appendChild(divInfoCharacter(x))
+  return characterDiv
 }
 
 
@@ -185,7 +187,7 @@ directores.addEventListener("change", function () {
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
   //deberia mostrar el resultado del filtro
-  filterSection.style.display = "flex";
+  document.getElementById("filterSection").style.display = "flex";
 })
 
 productores.addEventListener("change", function () {
@@ -201,9 +203,19 @@ productores.addEventListener("change", function () {
     .forEach(Element => filterSection.appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
   document.getElementById("filmsZone").style.display = "none";
-  //deberia mostrar el resultado del filtro
   document.getElementById("filterSection").style.display = "flex";
 })
+
+characterMovies.addEventListener("change", function () {
+  filterSection.innerHTML = "";
+  const characterPerMovie = characterMovie(characterMovies.value, data);
+  characterPerMovie.map(film => new showCharacters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
+    .map(Element => divCreatorCharacter(Element))
+    .forEach(Element => filterSection.appendChild(Element))
+  document.getElementById("charactersZone").style.display = "none";
+  document.getElementById("filterSection").style.display = "flex";
+})
+
 
 especie.addEventListener("change", function () {
   //limpiar la pagina
@@ -217,8 +229,18 @@ especie.addEventListener("change", function () {
     //poner los divs en pantalla
     .forEach(Element => filterSection.appendChild(Element))
   //ocultar la pantalla de inicio al usar el filtro
-  document.getElementById("filmsZone").style.display = "none";
+  document.getElementById("charactersZone").style.display = "none";
   //deberia mostrar el resultado del filtro
+  document.getElementById("filterSection").style.display = "flex";
+})
+
+sortAZ.addEventListener("change", function () {
+  filterSection.innerHTML = "";
+  const characterSortAZ = functionSortAZ(sortAZ.value, data);
+  characterSortAZ.map(film => new showCharacters(film.name, film.img, film.gender, film.age, film.eye_color, film.hair_color, film.specie))
+    .map(Element => divCreatorCharacter(Element))
+    .forEach(Element => filterSection.appendChild(Element))
+  document.getElementById("charactersZone").style.display = "none";
   document.getElementById("filterSection").style.display = "flex";
 })
 
