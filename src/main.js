@@ -1,10 +1,9 @@
 /*Importar data*/
-import { HP } from "./data.js";
-import dataHP from "./data/harrypotter/data.js";
+import { charactersData } from "./data.js";
 import { filterWizards } from "./data.js";
 import { filterMuggles } from "./data.js";
 import { filterGhosts } from "./data.js";
-
+import { filterCharacters } from "./data.js";
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -43,10 +42,10 @@ const charactersPerPage = 42;
 let page = 0;
 
 /*declaración de la función getScreenCharacters*/
-let getScreenCharacters=()=> {
+let getScreenCharacters = () => {
   const initialCharacter = page * charactersPerPage;
   const finalCharacter = page * charactersPerPage + charactersPerPage;
-  const screenCharacters = dataHP.characters.slice(initialCharacter, finalCharacter);
+  const screenCharacters = charactersData.slice(initialCharacter, finalCharacter);
   return screenCharacters;
 }
 displayPersonajes(getScreenCharacters());
@@ -62,7 +61,7 @@ function nextPage() {
 function previousPage() {
   /*Muestra 42 personajes a la vez*/
   if (page > 0) {
-  page--;
+    page--;
     displayPersonajes(getScreenCharacters());
     updateButtons();
   }
@@ -92,26 +91,26 @@ function updateButtons() {
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
 function filterByTypeOfPerson() {
-  const selectPersonValue=selectPerson.value;
+  const selectPersonValue = selectPerson.value;
   console.log(selectPersonValue)
   switch (selectPersonValue) {
-  case "1":
-    displayPersonajes(filterWizards);
-    console.log(filterWizards)
-    break;
+    case "1":
+      displayPersonajes(filterCharacters(charactersData, "Human"));
+      console.log(filterCharacters(charactersData, "Human"))
+      break;
 
-  case "2":
-    displayPersonajes(filterMuggles);
-    console.log(filterMuggles)
-    break;
+    case "2":
+      displayPersonajes(filterCharacters(charactersData, "Muggle"));
+      console.log(filterCharacters(charactersData, "Muggle"))
+      break;
 
-  case "3":
-    displayPersonajes(filterGhosts);
-    console.log(filterGhosts)
-    break;
+    case "3":
+      displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+      console.log(filterCharacters(charactersData, "Human (formerly)"))
+      break;
 
-  default:
-    displayPersonajes(dataHP.characters);
+    default:
+      displayPersonajes(charactersData);
   }
 }
 
