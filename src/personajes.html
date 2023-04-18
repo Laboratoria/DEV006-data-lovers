@@ -13,6 +13,7 @@
       <a href="index.html">
         <img src="Images/LogoOne.png" class="logo" alt="logo que lleva a index"/>
       </a>
+      <button>PERSONAJES</button>
       <button>HECHIZOS</button>
       <button>CASAS</button>
       <button>CRIATURAS MAGICAS</button>
@@ -31,8 +32,15 @@
           </label>
           <img src="Images/reset.png" alt="imagen para resetear información señalada" class="imageReset" onclick="location.reload()">
         </div>
-        <div class="typeSearch">
-          <input type="text" />
+        <div>
+          <label for="filterfor">
+            <select name="" id="selectPerson">
+              <option value="0">Todos</option>
+              <option value="1">Magos</option>
+              <option value="2">Muggles</option>
+              <option value="3">Fantasmas</option>
+            </select>
+          </label>
         </div>
       </section>
       <section class="tablePerson">

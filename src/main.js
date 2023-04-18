@@ -4,17 +4,12 @@ import dataHP from "./data/harrypotter/data.js";
 import { filterWizards } from "./data.js";
 import { filterMuggles } from "./data.js";
 import { filterGhosts } from "./data.js";
-import {getScreenCharacters} from "./data.js";
-import {page} from "./data.js";
+
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
 const housesLogo = "./images/houses_logo.png";
 
-/* Llama a la data */
-function CallCharacters(characters) {
-  return HP(dataHP.characters, characters);
-}
 /* despliega la data */
 function displayPersonajes(personajes) {
   // console.log(personajes);
@@ -38,25 +33,22 @@ function displayPersonajes(personajes) {
   });
 }
 
-/*selectPerson.addEventListener("input", () => {
-  const characters = selectPerson.value;
-  displayPersonajes(CallCharacters(dataHP.characters, characters));
- //console.log("prueba:",CallCharacters(dataHP.characters, characters))
-  updateButtons();
-});*/
-
-
-
-
-
-
-
 /*llamado de botones next y back*/
 export const buttonNext = document.getElementById("next").addEventListener("click", nextPage);
 export const buttonBack = document.getElementById("back").addEventListener("click", previousPage);
 
 
+/*personajes por pagina*/
+const charactersPerPage = 42;
+let page = 0;
 
+/*declaración de la función getScreenCharacters*/
+let getScreenCharacters=()=> {
+  const initialCharacter = page * charactersPerPage;
+  const finalCharacter = page * charactersPerPage + charactersPerPage;
+  const screenCharacters = dataHP.characters.slice(initialCharacter, finalCharacter);
+  return screenCharacters;
+}
 displayPersonajes(getScreenCharacters());
 
 function nextPage() {
@@ -70,7 +62,7 @@ function nextPage() {
 function previousPage() {
   /*Muestra 42 personajes a la vez*/
   if (page > 0) {
-   page--;
+  page--;
     displayPersonajes(getScreenCharacters());
     updateButtons();
   }
@@ -103,45 +95,24 @@ function filterByTypeOfPerson() {
   const selectPersonValue=selectPerson.value;
   console.log(selectPersonValue)
   switch (selectPersonValue) {
-  case "magos":
+  case "1":
     displayPersonajes(filterWizards);
     console.log(filterWizards)
     break;
 
-  case "muggles":
+  case "2":
     displayPersonajes(filterMuggles);
     console.log(filterMuggles)
     break;
 
-  case "fantasmas":
+  case "3":
     displayPersonajes(filterGhosts);
     console.log(filterGhosts)
     break;
 
   default:
-    CallCharacters(dataHP.characters);
+    displayPersonajes(dataHP.characters);
   }
 }
 
-/*const selectedGender = event.target.value
-  if (selectedGender === "male") {
-    console.log(filterMale);
-    displayPersonajes(filterMale);
-  }
-  if (selectedGender === "female") {
-    console.log(filterFemale);
-    displayPersonajes(filterFemale);
-  }
-  if (selectedGender === "all") {
-    console.log(dataHP.characters);
-    displayPersonajes(dataHP.characters);
-  }*/
-
-/*displayPersonajes(filterByCharacters(characters));*/
-
-/*btnAllTypes.addEventListener("click", function () {
- pokemonDiv.innerHTML = "";
- mostrarPokemon(data.pokemon);
- */
-/*let charactersInfo = document.getElementById("charactersInfo")
-let characterId= CharacterData.[1];*/
+/*Ordenar de A-Z*/
