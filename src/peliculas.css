@@ -1,119 +1,109 @@
-
-/*table {
-    width: 50%;
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-    margin:auto;
-    text-align: justify;
+table {
+  width: 80%;
+  font-family: "Jockey One", sans-serif;
+  font-size: 120%;
+  margin:auto;
+  text-align: justify;
+}
+.moviePoster {
+  width: 80%;
+  height: 10%;
+  border-radius: 8%;
+}
+#moviesTableColumnOne {
+  width: 50%;
+  margin:auto;
+}
+#moviesTableColumnTwo {
+  width: 50%;
+  margin-top: 15%;
+}
+#moviesTable td {
+  vertical-align: top;
+  padding: 20px;
+  text-align: center;
+}
+#moviesTable img {
+  height: 342px;
+  width: 250px;
+}
+.justify {
+  text-align: justify;
+}
+button {
+  display: flex;
+  width: auto;
+}
+#sortMoviesByDateNewestOldest {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  margin-left: 40%;
+  display: inline-flex;
+  background-color: #3CD1EF;
+  font-family: "Jockey One", sans-serif;
+  font-size: 120%;
+}
+#sortMoviesByDateNewestOldest:hover {
+  background-color: #EE9547;
+  color: #fff;
   }
-
-
-  .moviePoster {
-    width: 80%;
-    height: 10%;
-    
-  }
-  
-  #moviesTableColumnOne {
-    width: 50%;
-    margin:auto;
-  }
-
-  #moviesTableColumnTwo {
-    width: 50%;
-    margin: auto;
-  }*/
-
-  table {
-    width: 80%;
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-    margin:auto;
-    text-align: justify;
-  }
-  .moviePoster {
-    width: 80%;
-    height: 10%;
-    border-radius: 8%;
-  }
-  #moviesTableColumnOne {
-    width: 50%;
-    margin:auto;
-  }
-  #moviesTableColumnTwo {
-    width: 50%;
-    margin-top: 15%;
-  }
-  #moviesTable td {
-    vertical-align: top;
-    padding: 20px;
-    text-align: center;
-  }
-  #moviesTable img {
-    height: 342px;
-    width: 250px;
-  }
-  .justify {
-    text-align: justify;
-  }
-
-  button {
+#sortMoviesByDateOldestNewest {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  display: inline-flex;
+  background-color: #3CD1EF;
+  font-family: "Jockey One", sans-serif;
+  font-size: 120%;
+}
+#sortMoviesByDateOldestNewest:hover {
+background-color: #EE9547;
+color: #fff;
+}
+#refresh {
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto;
+  display: inline-flex;
+  background-color: #3CD1EF;
+  font-family: "Jockey One", sans-serif;
+  font-size: 120%;
+}
+#refresh:hover {
+background-color: #EE9547;
+color: #fff;
+}
+label {
+  font-family: "Jockey One", sans-serif;
+  font-size: 120%;
+  color: #fff;
+}
+#directorSelect {
+  font-family: "Jockey One", sans-serif;
+  font-size: 120%;
+  background-color: #3CD1EF;
+}
+@media screen and (max-width: 768px) {
+  .block {
     display: flex;
-    width: auto;
-  }
-
-  #sortMoviesByDateNewestOldest {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    margin-left: 40%;
-    display: inline-flex;
-    background-color: #3CD1EF;
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-  }
-  #sortMoviesByDateNewestOldest:hover {
-    background-color: #ee9547;
-    color: #fff;
-    }
- 
-  #sortMoviesByDateOldestNewest {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    display: inline-flex;
-    background-color: #3CD1EF;
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-  }
-  #sortMoviesByDateOldestNewest:hover {
-  background-color: #ee9547;
-  color: #fff;
-  }
-
-  #refresh {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: auto;
-    display: inline-flex;
-    background-color: #3CD1EF;
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-  }
-  #refresh:hover {
-  background-color: #ee9547;
-  color: #fff;
-  }
-
-  label {
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-    color: #fff;
-  }
-
-  #directorSelect {
-    font-family: "Jockey One", sans-serif;
-    font-size: 120%;
-    background-color: #3CD1EF;
-  }
-  
+    flex-direction: column;
+    margin-left: -5%;
+}
+.moviePosterContainer {
+  display: flex;
+  justify-content: center;
+  max-width: 400px;
+}
+.moviePoster {
+  max-width: 100%;
+  height: auto;
+}
+tr {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0.5em 0;
+  border: 1px solid rgba(3,3,3,0.2);
+}
+}
