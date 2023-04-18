@@ -19,10 +19,10 @@
     </header>
     <main>
       <section class="container">
-        <div class="block">
-            <label for="climateSelect">Filter by climate:</label>
-    <select id="climateSelect">
-      <option value="allclimate">All</option>
+      <div class="block">
+      <label for="climateSelect">Filter by climate:</label>
+      <select id="climateSelect">
+      <option value="allClimates">All</option>
       <option value="Tropical">Tropical</option>
       <option value="Damp">Damp</option>
       <option value="Warm">Warm</option>
@@ -31,8 +31,7 @@
       <option value="TODO">TODO</option>
       <option value="Wet">Wet</option>
     </select>
-    <button id="sortMoviesByTitleID" onclick="sortMoviesByTitle">Sort by alphabetical order</button>
-    <button id="refresh">Undo sort</button>
+    <button id="refresh">Undo filter</button>
             <h1>Locations</h1>
             <table id="locationsTable">
                 <tbody id="locationsTableBody">
@@ -43,6 +42,7 @@
                 </tbody>
               </table>
             </div>
+          
             <div class="block">
                 <h1>Vehicles</h1>
             <table id="vehiclesTable">
@@ -55,7 +55,8 @@
               </table>
       </section>
     </main>
-    <script src="vehiculos.js" type="module"></script>
+
+    
     <script src="main.js" type="module"></script>
   </body>
 </html>
