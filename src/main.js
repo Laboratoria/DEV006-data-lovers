@@ -1,11 +1,10 @@
 
-import {sortBy,filtrado} from './data.js';
+import {sortBy,filtrar} from './data.js';
 
 
 //ORGANIZACION A-Z y Z-A
 
 
-let contenedor = document.getElementById('contenedor');
 
 document.addEventListener('DOMContentLoaded', () => {
   const selectSort = document.querySelector('.sort');
@@ -22,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 botonBuscar.addEventListener("click", () => {
   resultados.innerHTML = '';
-  filtrado()
+  filtrar()
 });
  
 botonLimpiar.addEventListener("click",function() {
