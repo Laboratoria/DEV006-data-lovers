@@ -1817,7 +1817,7 @@ export default {
       "name": "Patrick Delaney-Podmore",
       "birth": null,
       "death": "pre 1993",
-      "species": "Ghost",
+      "species": "Human (formerly)",
       "ancestry": null,
       "gender": "Male",
       "hair_color": "White",

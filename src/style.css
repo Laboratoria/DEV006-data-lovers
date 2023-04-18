@@ -126,7 +126,7 @@ footer {
 
 #charactersInfo {
   overflow-y: auto;
-  height: 70vh;
+  height: 50vh;
   width: 75vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

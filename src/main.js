@@ -1,19 +1,14 @@
 /*Importar data*/
-import { HP } from "./data.js";
-import dataHP from "./data/harrypotter/data.js";
+import { charactersData } from "./data.js";
 import { filterWizards } from "./data.js";
 import { filterMuggles } from "./data.js";
 import { filterGhosts } from "./data.js";
-
+import { filterCharacters } from "./data.js";
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
 const housesLogo = "./images/houses_logo.png";
 
-/* Llama a la data */
-function CallCharacters(characters) {
-  return HP(dataHP.characters, characters);
-}
 /* despliega la data */
 function displayPersonajes(personajes) {
   // console.log(personajes);
@@ -37,34 +32,26 @@ function displayPersonajes(personajes) {
   });
 }
 
-/*selectPerson.addEventListener("input", () => {
-  const characters = selectPerson.value;
-  displayPersonajes(CallCharacters(dataHP.characters, characters));
- //console.log("prueba:",CallCharacters(dataHP.characters, characters))
-  updateButtons();
-});*/
+/*llamado de botones next y back*/
+export const buttonNext = document.getElementById("next").addEventListener("click", nextPage);
+export const buttonBack = document.getElementById("back").addEventListener("click", previousPage);
+
+
 /*personajes por pagina*/
 const charactersPerPage = 42;
 let page = 0;
 
-/*llamado de botones next y back*/
-const buttonNext = document.getElementById("next");
-buttonNext.addEventListener("click", nextPage);
-
-const buttonBack = document.getElementById("back");
-buttonBack.addEventListener("click", previousPage);
-
 /*declaración de la función getScreenCharacters*/
-function getScreenCharacters() {
+let getScreenCharacters = () => {
   const initialCharacter = page * charactersPerPage;
   const finalCharacter = page * charactersPerPage + charactersPerPage;
-  const screenCharacters = dataHP.characters.slice(initialCharacter, finalCharacter);
-  return screenCharacters
+  const screenCharacters = charactersData.slice(initialCharacter, finalCharacter);
+  return screenCharacters;
 }
-
 displayPersonajes(getScreenCharacters());
 
 function nextPage() {
+
   /*Muestra 42 personajes a la vez*/
   page++;
   displayPersonajes(getScreenCharacters());
@@ -99,54 +86,32 @@ function updateButtons() {
   }
 }
 
-console.log("Page value outside function:", page);
 
 /*FIILTRAR personajes */
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
 function filterByTypeOfPerson() {
-  const selectPersonValue=selectPerson.value;
+  const selectPersonValue = selectPerson.value;
   console.log(selectPersonValue)
   switch (selectPersonValue) {
-  case "magos":
-    displayPersonajes(filterWizards);
-    console.log(filterWizards)
-    break;
+    case "1":
+      displayPersonajes(filterCharacters(charactersData, "Human"));
+      console.log(filterCharacters(charactersData, "Human"))
+      break;
 
-  case "muggles":
-    displayPersonajes(filterMuggles);
-    console.log(filterMuggles)
-    break;
+    case "2":
+      displayPersonajes(filterCharacters(charactersData, "Muggle"));
+      console.log(filterCharacters(charactersData, "Muggle"))
+      break;
 
-  case "fantasmas":
-    displayPersonajes(filterGhosts);
-    console.log(filterGhosts)
-    break;
+    case "3":
+      displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+      console.log(filterCharacters(charactersData, "Human (formerly)"))
+      break;
 
-  default:
-    CallCharacters(dataHP.characters);
+    default:
+      displayPersonajes(charactersData);
   }
 }
 
-/*const selectedGender = event.target.value
-  if (selectedGender === "male") {
-    console.log(filterMale);
-    displayPersonajes(filterMale);
-  }
-  if (selectedGender === "female") {
-    console.log(filterFemale);
-    displayPersonajes(filterFemale);
-  }
-  if (selectedGender === "all") {
-    console.log(dataHP.characters);
-    displayPersonajes(dataHP.characters);
-  }*/
-
-/*displayPersonajes(filterByCharacters(characters));*/
-
-/*btnAllTypes.addEventListener("click", function () {
- pokemonDiv.innerHTML = "";
- mostrarPokemon(data.pokemon);
- */
-/*let charactersInfo = document.getElementById("charactersInfo")
-let characterId= CharacterData.[1];*/
+/*Ordenar de A-Z*/
