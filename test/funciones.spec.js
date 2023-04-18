@@ -1,4 +1,4 @@
-import {filtrado} from '../src/funciones.js';
+import {filtrado, sortBy} from '../src/funciones.js';
 
 const entrada = ("venusaur")
 
@@ -109,16 +109,41 @@ describe('probando filtrado', () => {
   it('Debe devolver el nombre venusaur', () => {
     expect(filtrado(entrada)).toEqual(salida);
   });
-
+  
+  it('Debe devolver no se encontró cuando ingrese un string vacio o un nombre equivocado', () => {
+    expect(filtrado("hola")).toBe("No se encontró");
+  });
 });
 
+const entrada2 = [
+  {"name": "charmander"},
+  {"name": "charmeleon"},
+  {"name": "bulbasaur"},
+  {"name": "hypno"},
+  {"name": "voltorb"}
+]
+const pokemonesAZ = [
+  {"name": "bulbasaur"},
+  {"name": "charmander"},
+  {"name": "charmeleon"},
+  {"name": "hypno"},
+  {"name": "voltorb"}
+]
+const pokemonesZA = [
+  {"name": "voltorb"},
+  {"name": "hypno"},
+  {"name": "charmeleon"},
+  {"name": "charmander"},
+  {"name": "bulbasaur"}
+]
 
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
+describe('probando sort', () => {
+  it('debe organizar los pokemones de la A-Z', () => {
+    expect(sortBy(entrada2, "asc")).toStrictEqual(pokemonesAZ);
+  });
 
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
+  it('debe orgamizar los pokemones de la Z-A', () => {
+    expect(sortBy(entrada2,"desc")).toStrictEqual(pokemonesZA);
+  });
+
+});
