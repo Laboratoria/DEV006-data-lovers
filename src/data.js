@@ -1,54 +1,58 @@
 import data from "./data/pokemon/pokemon.js";
-import {
-  searchPokByName,
-  orderAz,
-  orderZa,
-  searchPokByNumber,
-  filterByType,
-} from 'data.js'
-console.log(data)
-
-// estas funciones son de ejemplo
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
+console.log(data.pokemon)
 
 
-
-
+//input SEARCH buscar por nombre 
 const btnBuscarByName = document.getElementById('search');
-btnBuscarByName.addEventListener('click', () =>{
-})
-
-
-//buscar por nombre en minuscula
-export const searchPokByName = (name, dataList) =>{
-  const searching = dataList.pokemon.find(p => p.name.toLowerCase() === name.toLowerCase());
-  return searching || null;
+btnBuscarByName.addEventListener('input', (e) =>{
+  searchPokByName(e.target.value)
+  console.log(e.target.value)
+  console.log(searchPokByName(e.target.value))
+}) 
+export const searchPokByName = (name) =>{
+//metodo startsWidth para buscar por nombre comenzando desde la primera
+  const searching = data.pokemon.filter(p => p.name.startsWith(name));
+  return searching
 };
 
-// función para ordenar alfabeticamente de la A-Z
-export const orderAz = (dataList) => {
-//creamos otra constante para guardar el resultado de la función
-  const resultado = dataList.sort((a, b) => {
-    if (a.name < b.name) return -1;
-    if(a.name > b.name) return 1;
-    else return 0;
-  });
-  return resultado;
-};
 
-//función invertir orden de la Z a la A
-export const orderZa = (dataList) => {
-const result = dataList.sort((a, b) => {
-  if (a.name < b.name) return 1;
-  if(a.name > b.name) return -1;
-  else return 0;
+//item order A-Z
+const orderAz = document.getElementById('az');
+orderAz.addEventListener('click', () => {
+  //ordenar la copia por nombre de la A hasta la Z
+  const ordenado = data.pokemon.sort((a,b)=> a.name.localeCompare(b.name));
+  //mostrar el resultado
+  console.log(ordenado);
 });
-return result;
-};
+
+//item order Z-A
+const invertirZa = document.getElementById('za');
+invertirZa.addEventListener('click', () => {
+  const invertido = data.pokemon.reverse().sort((a,b)=> a.name.localeCompare(b.name));
+  //mostrar el resultado
+  console.log(invertido);
+});
+
+//item order x NUMERO ascendente 
+const menorAmayor = document.getElementById('ascendente');
+menorAmayor.addEventListener('click', () => {
+  const ascending = data.pokemon.sort((a,b) => a.num - b.num);
+  console.log(ascending);
+});
+
+
+//item order x NUMERO descendente
+const mayorAmenor = document.getElementById('descendente');
+mayorAmenor.addEventListener('click', () => {
+  const descending = data.pokemon.sort((a,b) => b.num - a.num);
+  console.log(descending);
+});
+
+
+
+
+
+
+
+
+

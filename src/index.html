@@ -32,7 +32,6 @@
               <li><a id="type">TYPE</a></li>
               <li><a id="debilidades">WEAKNESSES</a></li>
               <li><a id="fortaleza">STRENGTH</a></li>
-              <li><a id="generacion">GENERATION</a></li>
               <li><a id="resistencia">RESISTANT</a></li>
             </ul>
           </li>
@@ -59,15 +58,40 @@
           </div>
         </div>
     </section>
+    <section class="filtrado">
+      <div id="filtrar-tipo">
+        <label for="tipos">Select by type:</label>
+         <select id="filtrar-type" name="options">
+            <option value="grass">Grass</option>
+            <option value="fire">Fire</option>
+            <option value="poison">Poison</option>
+            <option value="water">Water</option>
+            <option value="flying">Flying</option>
+            <option value="bug">Bug</option>
+            <option value="normal">Normal</option>
+            <option value="electric">Electric</option>
+            <option value="ground">Ground</option>
+            <option value="psychic">Psychic</option>
+            <option value="fighting">Fighting</option>
+            <option value="rock">Rock</option>
+            <option value="ghost">Ghost</option>
+            <option value="ice">Ice</option>
+            <option value="dragon">Dragon</option>
+          </select>
+      </div>
+    </section>
+      <div id ="filtrar-debilidad">
+        <label for="debilidad">Selecciona la debilidad Pokemon:</label>
+      </div>
+  
     <section class="inicio">
       <div class="contenedor-pokemones" id="pok"> 
          <div class="contenedor-cards">
          </div>
-      </div>
+      </div>   
     </section>
   </main>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
+    <script src="data.js" type="module"></script>
+    <script src="main.js" type="module"></script>
   </body>
 </html>

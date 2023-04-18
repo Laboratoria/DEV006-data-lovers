@@ -218,18 +218,14 @@ width: 100vw;
     flex-wrap: wrap;
 }
 
-/*-ESTE CONTENDOR ES EXCLUSIVAMENTE AL TAMÑO DE LA IMG DEL POK Y EL FONDO OSEA LA TARJETA QUE EDITARÁ RAQUEL
+/*-ESTE CONTENDOR ES PARA LA CARD, LO HICE AYER -*/
 .contenedor-pokemones img{
     height: 200px;
-    background-image: url();
-}-*/
+    background-image: url("images/cards/1.png");
+}
 
 /*- barra de menu para cel -*/
 @media (max-width:768px){
-    header{
-        
-    }
-
     header label {
       display: block !important;
       font-size: 22px;

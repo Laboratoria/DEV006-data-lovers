@@ -1,17 +1,9 @@
-import {
-  searchPokByName,
-  orderAz,
-  searchPokByNumber,
-  filterByType,
-} from 'data.js'
+// estas funciones son de ejemplo
+export const example = () => {
+  return 'example';
+};
 
-//import data from './data/pokemon/pokemon.js';
-
-console.log(example, data);
-
-//const btnBuscarPorNombre = document.getElementById('search');
-//btnBuscarPorNombre.addEventListener('click', () =>{
-
-//})
-
+export const anotherExample = () => {
+  return 'OMG';
+};
 
