@@ -31,9 +31,23 @@ nav{
     padding-top: 15%;
 }
 
-#aboutButton {
+#about {
     margin-left: 1%;
 }
+
+#aboutHeader {
+    display: none;
+}
+
+#aboutSection {
+    display: none;
+}
+
+#aboutHeaderImage {
+    width: 100%;
+}
+
+
 .homeButtons{
     font-family: 'Patrick Hand', cursive;
     font-size: xx-large;
