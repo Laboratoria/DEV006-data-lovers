@@ -270,6 +270,8 @@ nav{
 .Answer {
     width: 90%;
     margin:1%;
+    padding-top: 5%;
+    padding-bottom: 5%;
     text-align: center;
 }
 

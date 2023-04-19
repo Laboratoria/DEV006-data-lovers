@@ -23,6 +23,8 @@ movies.addEventListener("click", function () {
   document.getElementById("moreSection").style.display = "none";
   document.getElementById("buttonZone").style.display = "none";
   document.getElementById("moreHeader").style.display = "none";
+  document.getElementById("triviaSection").style.display = "none";
+  document.getElementById("triviaHeader").style.display = "none";
   document.getElementById("movieHeaderSection").style.display = "flex";
   document.getElementById("charactersZone").style.display = "none";
 })
@@ -33,6 +35,8 @@ more.addEventListener("click", function () {
   document.getElementById("home-Content").style.display = "none";
   document.getElementById("content").style.display = "none";
   document.getElementById("movieHeaderSection").style.display = "none";
+  document.getElementById("triviaSection").style.display = "none";
+  document.getElementById("triviaHeader").style.display = "none";
   document.getElementById("moreHeader").style.display = "flex";
   document.getElementById("moreSection").style.display = "flex";
   document.getElementById("charactersZone").style.display = "none";
@@ -47,6 +51,8 @@ characters.addEventListener("click", function () {
   document.getElementById("buttonZone").style.display = "none";
   document.getElementById("moreHeader").style.display = "none";
   document.getElementById("movieHeaderSection").style.display = "none";
+  document.getElementById("triviaSection").style.display = "none";
+  document.getElementById("triviaHeader").style.display = "none";
   document.getElementById("characterHeaderSection").style.display = "flex";
   document.getElementById("characterContent").style.display = "flex";
   document.getElementById("charactersZone").style.display = "flex";
