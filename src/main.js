@@ -44,7 +44,6 @@ more.addEventListener("click", function () {
   document.getElementById("moreSection").style.display = "flex";
   document.getElementById("triviaSection").style.display = "none";
   document.getElementById("triviaHeader").style.display = "none";
-
 })
 
 characters.addEventListener("click", function () {
