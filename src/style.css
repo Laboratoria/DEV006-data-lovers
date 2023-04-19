@@ -250,29 +250,31 @@ nav{
 
 #triviaSection {
     display: none;
-}
-
-#divQuestion {
-    width: 40%;
-    margin:1%;
     text-align: center;
+}
+#divQuestion {
+    width: 33%;
+    margin:1%;
 }
 
 .question {
+    padding: 2%;
+    width: 90%;
     text-align: center;
     color: #514E46;
-    font-size: large;
-    text-align: center;
-    width: 60%;
+    font-size: xx-large;
     height: auto;
+    margin: auto;
 
 }
 .Answer {
-    width: 90%;
-    margin:1%;
-    padding-top: 5%;
-    padding-bottom: 5%;
+    width: 60%;
+    height: 15%;
+    margin: auto;
+    margin-top: 5%;
+    font-size: x-large;
     text-align: center;
+    background-color: #f0f6f7;
 }
 
 footer {
