@@ -1,3 +1,4 @@
+import pokemon from "./data/pokemon/pokemon.js";
 import data from "./data/pokemon/pokemon.js";
 console.log(data.pokemon)
 
@@ -49,10 +50,38 @@ mayorAmenor.addEventListener('click', () => {
 });
 
 
+//click en el boton filtrar y que vaya a la seccion de filtrar
+// Obtener el enlace "TO FILTER"
+const toFilterLink = document.getElementById('to-filter-link');
+
+// Agregar un evento de clic al enlace
+toFilterLink.addEventListener('click', (event) => {
+  // Prevenir el comportamiento predeterminado del enlace
+  event.preventDefault();
+  
+  // Obtener la sección correspondiente
+  const filtrandoSection = document.getElementById('filtrando-section');
+  
+  // Desplazarse suavemente hacia la sección correspondiente
+  filtrandoSection.scrollIntoView({ behavior: 'smooth' });
+});
 
 
 
+//Filtro por tipo
+const typeWater = document.getElementById('water');
+typeWater.addEventListener('click', () => {
+  filtradoTipo("water");
+})
 
 
 
+function filtradoTipo(type){
+  const filtrado = data.pokemon.filter((pokemon) =>{
+    if(pokemon.type.includes(type)){
+      return pokemon;
+    }
+  });
+  console.log (filtrado);
+}
 

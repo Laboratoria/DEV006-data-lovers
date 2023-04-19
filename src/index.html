@@ -27,14 +27,7 @@
                 <li><a id="descendente">DESCENDING</a></li>                
               </ul>
           </li>
-          <li class="item-menu"><a><img src="images/iconos/filtrar.png">TO FILTER</a>
-            <ul class="sub-menu-filtrar">
-              <li><a id="type">TYPE</a></li>
-              <li><a id="debilidades">WEAKNESSES</a></li>
-              <li><a id="fortaleza">STRENGTH</a></li>
-              <li><a id="resistencia">RESISTANT</a></li>
-            </ul>
-          </li>
+         <li><a href="filtrando-section" id="to-filter-link"><img src="images/iconos/filtrar.png">FILTER</a></li>
           <li ><a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US"><img src="images/iconos/jugar.png">PLAY</a></li>
           <li><a href="cerrar.html"><img src="images/iconos/salida.png">SIGN OFF</a></li>
           </ul>
@@ -58,34 +51,81 @@
           </div>
         </div>
     </section>
-    <section class="filtrado">
-      <div id="filtrar-tipo">
-        <label for="tipos">Select by type:</label>
-         <select id="filtrar-type" name="options">
-            <option value="grass">Grass</option>
-            <option value="fire">Fire</option>
-            <option value="poison">Poison</option>
-            <option value="water">Water</option>
-            <option value="flying">Flying</option>
-            <option value="bug">Bug</option>
-            <option value="normal">Normal</option>
-            <option value="electric">Electric</option>
-            <option value="ground">Ground</option>
-            <option value="psychic">Psychic</option>
-            <option value="fighting">Fighting</option>
-            <option value="rock">Rock</option>
-            <option value="ghost">Ghost</option>
-            <option value="ice">Ice</option>
-            <option value="dragon">Dragon</option>
-          </select>
-      </div>
-    </section>
-      <div id ="filtrar-debilidad">
-        <label for="debilidad">Selecciona la debilidad Pokemon:</label>
-      </div>
-  
     <section class="inicio">
-      <div class="contenedor-pokemones" id="pok"> 
+       <section id="filtrando-section" class="filtrando">
+          <nav class="box-filter">
+            <div class="selectores">
+              <div>
+                <label for="type" id="tipo">TYPE</label>
+                <select id="element-type-filter" >
+                  <option class="type" id="all">--all--</option>
+                  <option class="type" id="bug">Bug</option>
+                  <option class="type" id="dragon"> Dragon</option>
+                  <option class="type" id="electric">Electric</option>
+                  <option class="type" id="fighting">Fighting</option>
+                  <option class="type" id="fire">Fire</option>
+                  <option class="type" id="flying">Flying</option>
+                  <option class="type" id="ghost">Ghost</option>
+                  <option class="type" id="grass">Grass</option>
+                  <option class="type" id="ground">Ground</option>
+                  <option class="type" id="ice">Ice</option>
+                  <option class="type" id="normal">Normal</option>
+                  <option class="type" id="poison">Poison</option>
+                  <option class="type" id="psychic">Psychic</option>
+                  <option class="type" id="rock">Rock</option>
+                  <option class="type" id="water"> Water</option>
+                </select>
+              </div>
+            </div>
+            <div class="selectores">
+              <div>
+                <label for="weaknesses" id="debilidades">WEAKNESSES</label>
+                  <select id="element-weaknesses-filter">
+                    <option class="weaknesses" id="all">--all--</option>
+                    <option class="weaknesses" id="bug">Bug</option>
+                    <option class="weaknesses" id="dragon"> Dragon</option>
+                    <option class="weaknesses" id="electric">Electric</option>
+                    <option class="weaknesses" id="fighting">Fighting</option>
+                    <option class="weaknesses" id="fire">Fire</option>
+                    <option class="weaknesses" id="flying">Flying</option>
+                    <option class="weaknesses" id="ghost">Ghost</option>
+                    <option class="weaknesses" id="grass">Grass</option>
+                    <option class="weaknesses" id="ground">Ground</option>
+                    <option class="weaknesses" id="ice">Ice</option>
+                    <option class="weaknesses" id="normal">Normal</option>
+                    <option class="weaknesses" id="poison">Poison</option>
+                    <option class="weaknesses" id="psychic">Psychic</option>
+                    <option class="weaknesses" id="rock">Rock</option>
+                    <option class="weaknesses" id="water"> Water</option>
+                  </select>
+              </div>
+            </div>
+            <div class="selectores">
+              <div>
+                <label for="strength" id="fortaleza">STRENGTH</label>
+                <select id="element-strength-filter">
+                  <option class="strength" id="all">--all--</option>
+                  <option class="strength" id="bug">Bug</option>
+                  <option class="strength" id="dragon"> Dragon</option>
+                  <option class="strength" id="electric">Electric</option>
+                  <option class="strength" id="fighting">Fighting</option>
+                  <option class="strength" id="fire">Fire</option>
+                  <option class="strength" id="flying">Flying</option>
+                  <option class="strength" id="ghost">Ghost</option>
+                  <option class="strength" id="grass">Grass</option>
+                  <option class="strength" id="ground">Ground</option>
+                  <option class="strength" id="ice">Ice</option>
+                  <option class="strength" id="normal">Normal</option>
+                  <option class="strength" id="poison">Poison</option>
+                  <option class="strength" id="psychic">Psychic</option>
+                  <option class="strength" id="rock">Rock</option>
+                  <option class="strength" id="water"> Water</option>
+                </select>
+              </div>
+            </div>
+          </nav>
+        </section>
+      <div class="contenedor-pokemones" id="pokemones"> 
          <div class="contenedor-cards">
          </div>
       </div>   

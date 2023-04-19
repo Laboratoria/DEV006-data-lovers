@@ -2,18 +2,19 @@
 /*-- impotar los estilos para crear efectos de volteo de tarjeta --*/
 @import url(index-cards.css);
 
+
 *{font-family: 'Changa One', cursive;
     font-family: 'Maven Pro', sans-serif;}
 
 body{
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233), #02e1ff86);
-    display: flex
+    display: flex;
 }
 
 * {
 margin: 0;
 box-sizing: border-box;
-padding: 0;   
+/*padding: 0;-*/
 }
 
 /*-- ESTILOS DE LA BARRA DE MENÚ PARA PC--*/
@@ -56,6 +57,7 @@ header img{
 }
 
 .barra-menu{
+/*-display:none-*/   
 display: flex;
 }
 
@@ -71,12 +73,25 @@ display: flex;
     float: right;
     list-style: none;
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding-left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .elements ul ul{
     display: none;
+}
+
+.elements li {
+    list-style: none;
+}
+
+.elements li a {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
 }
 
 .elements a{
@@ -109,14 +124,6 @@ display: flex;
     background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
 }
 
-.elements ul li:hover .sub-menu-filtrar{
-    display: block;
-    position: absolute;
-    width: 207px;
-    height: 305px;
-    text-shadow: -2px -2px 7px rgba(255, 255, 255, 0.83), 2px -2px 7px rgb(255, 255, 255, 0.83), -2px 2px 7px rgb(255, 255, 255, 0.83), 2px 2px 7px rgb(255, 255, 255, 0.83);
-    background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
-}
 
 .elements img{
     max-height: 45px;
@@ -201,6 +208,126 @@ width: 100vw;
     width: 50px;
 }
 
+
+/*-filtrado-*/
+.filtrando{
+    /*background: #ffffff81;-*/
+    width: 90%;
+    margin: 70px auto 0;
+    display:flex;
+    border-radius: 5px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    /*-box-shadow: 1px -1px 5px 8px rgb(169, 40, 255);-*/
+}
+
+.box-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+/*estilos para los selectores*/
+.selectores {
+    display: flex;
+    flex-direction: column;
+    margin: 0 30px;
+}
+
+.label{
+font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+#tipo{
+    font-size: 24px;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Changa One', cursive;
+    color: #430358;
+}
+
+#debilidades{
+    font-size: 24px;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Changa One', cursive;
+    color: #430358;
+}
+
+#fortaleza{
+    font-size: 24px;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Changa One', cursive;
+    color: #430358;
+}
+
+#element-type-filter{
+    background-color: hsl(0, 0%, 100%);
+    border: 6px solid transparent;
+    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
+    border-radius: 5px;
+    font-family: 'Changa One', cursive;
+    color: #430358;
+    cursor: pointer;
+    font-size: 19px;
+    padding: 12px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#element-weaknesses-filter{
+    background-color: hsl(0, 0%, 100%);
+    border: 6px solid transparent;
+    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
+    border-radius: 5px;
+    font-family: 'Changa One', cursive;
+    color: #430358;
+    cursor: pointer;
+    font-size: 19px;
+    padding: 12px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#element-strength-filter{
+    background-color: hsl(0, 0%, 100%);
+    border: 6px solid transparent;
+    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
+    border-radius: 5px;
+    font-family: 'Changa One', cursive;
+    color: #430358;
+    cursor: pointer;
+    font-size: 19px;
+    padding: 12px;
+    margin-top: 40px;
+    text-align: center;
+}
+
+#element-type-filter select,
+#element-weaknesses-filter select,
+#element-strength-filter select {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  padding: 5px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: white;
+  z-index: 1;
+}
+
+
+
+
 /*-seccion inicio empieza debajo del search-*/
 /*- vista para cel y web -*/
 .inicio{
@@ -221,7 +348,7 @@ width: 100vw;
 /*-ESTE CONTENDOR ES PARA LA CARD, LO HICE AYER -*/
 .contenedor-pokemones img{
     height: 200px;
-    background-image: url("images/cards/1.png");
+    background-image: url("images/cards/card1.png");
 }
 
 /*- barra de menu para cel -*/
@@ -234,8 +361,8 @@ width: 100vw;
   }
 
     .img-menu {
-    width: 94px;
-    height: 60px;
+    width: 190px;
+    height: 50px;
   } 
 
     .elements{
@@ -250,11 +377,12 @@ width: 100vw;
     .elements ul{
         display: block;
         background: #00ff9d55;
-        width: 100%;
-        height: 100vh;
+        width: 50%;
+        height: 50vh;
     }
 
     .elements ul li:hover ul{
         display: none;
     }
 }
+
