@@ -2,11 +2,31 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/> <!-- qué es esto-->
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <header>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="novato.html">NEWBIE</a></li>
+          <li><a href="fandom.html">FANDOM</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+        <div class="block">
+            <div class="newbie"> <button type="button" id="newbieBtn"><a href="novato.html">Newbie</a></button></div>
+            </div>
+        <div class="block">
+            <div class="fandom"> <button type="button" id="fandomBtn"><a href="fandom.html">Fandom</a></button> </div>
+            </div>
+            
+      </section>
+    </main>
     <script src="main.js" type="module"></script>
   </body>
 </html>

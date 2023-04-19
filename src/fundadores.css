@@ -1,0 +1,167 @@
+.block1 {
+  width: 50%;
+  margin-top: -20%;
+}
+.block2 {
+  width: 50%;
+  margin-top: -20%;
+}
+#hayaoBtn {
+  padding: 14px;
+  margin-left: 40%;
+  margin-top: 4%;
+  background-color: #3CD1EF;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: "Jockey One", sans-serif;
+  font-size: 20px;
+  }
+.hayao{
+      max-width:50%;
+      max-height:50%;
+      border-radius: 10px;
+      margin: center;
+      margin-left: 25%;
+      margin-right: 10%;
+      margin-top: 40%;
+      color: rgb(67, 21, 91);
+  }
+.toshio {
+      max-width:50%;
+      max-height:50%;
+      border-radius: 10px;
+      margin: center;
+      margin-left: 25%;
+      margin-right: 10%;
+      margin-top: 5%;
+      color: rgb(67, 21, 91);
+}
+#toshioBtn {
+     padding: 14px;
+     margin-left: 40%;
+     margin-top: 3%;
+     background-color: #3CD1EF;
+     border: none;
+     cursor: pointer;
+     border-radius: 10px;
+     font-family: "Jockey One", sans-serif;
+     font-size: 20px;
+  }
+.isao {
+     max-width: 50%;
+     max-height: 26%;
+     border-radius: 10px;
+     margin: center;
+     margin-left: 25%;
+     margin-right: 10%;
+     margin-top: 40%;
+     color: rgb(67, 21, 91);
+}
+#isaoBtn {
+    padding: 14px;
+    margin-left: 40%;
+    margin-top: 4%;
+    margin: center;
+    background-color: #3CD1EF;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-family: "Jockey One", sans-serif;
+    font-size: 20px;
+}
+.yasuyoshi {
+  width: 45%;
+  height: 28%;
+  border-radius: 10px;
+  margin: center;
+  margin-left: 25%;
+  margin-right: 10%;
+  margin-top: 5%;
+  color: rgb(67, 21, 91);
+}
+#yasuyoshiBtn {
+ padding: 14px;
+ margin-left: 40%;
+ margin-top: 3%;
+ background-color: #3CD1EF;
+ border: none;
+ cursor: pointer;
+ border-radius: 10px;
+ font-family: "Jockey One", sans-serif;
+ font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+.container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.hayao{
+  background-size: 100%;
+  align-items: center;
+  height: 10%;
+  width: 60%;
+}
+#hayaoBtn {
+  width: 30%;
+  height: 8%;
+  font-size: small;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 35%;
+  padding: 2%;
+}
+.toshio{
+  background-size: 100%;
+  align-items: center;
+  height: 10%;
+  width: 60%;
+  margin-top: 20%;
+}
+#toshioBtn {
+  width: 30%;
+  height: 8%;
+  font-size: small;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 35%;
+  padding: 2%;
+}
+.isao{
+  background-size: 100%;
+  align-items: center;
+  height: 10%;
+  width: 60%;
+}
+#isaoBtn {
+  width: 30%;
+  height: 8%;
+  font-size: small;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 35%;
+  padding: 2%;
+}
+.yasuyoshi{
+  background-size: 100%;
+  align-items: center;
+  height: 10%;
+  width: 45%;
+  margin-top: 20%;
+}
+#yasuyoshiBtn {
+  width: 30%;
+  height: 8%;
+  font-size: small;
+  text-align: center;
+  overflow: hidden;
+  margin-left: 35%;
+  padding: 2%;
+}
+}
+
+
+
+
+

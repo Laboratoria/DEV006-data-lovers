@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport" /> <!-- qué es esto-->
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="characters.css"/>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="novato.html">NEWBIE</a></li>
+            <li><a href="fandom.html">FANDOM</a></li>
+        </ul>
+        </div>
+    </header>
+    
+    <label for="genderSelect">Filter by gender:</label>
+      <select id="genderSelect">
+        <option value="allGenders">All</option>
+        <option value="Female">Female</option>
+        <option value="Male">Male</option>
+      </select>
+
+      <label for="charactersSpecieSelect">Filter by species:</label>
+      <select id="charactersSpecieSelect">
+        <option value="allSpecies">All</option>
+        <option value="Arch-mage/Human">Arch-mage/Human</option>
+        <option value="Bird">Bird</option>
+        <option value="Borrower">Borrower</option>
+        <option value="Cat">Cat</option>
+        <option value="Deity">Deity</option>
+        <option value="Deity, Dragon">Deity, Dragon</option>
+        <option value="Demon">Demon</option>
+        <option value="Dog">Dog</option>
+        <option value="Fish/Human">Fish/Human</option>
+        <option value="Human">Human</option>
+        <option value="Human/Scarecrow">Human/Scarecrow</option>
+        <option value="Raccoon Dog">Raccoon Dog</option>
+        <option value="Red elk">Red elk</option>
+        <option value="Spirit">Spirit</option>
+        <option value="Spirit of The White Fox">Spirit of The White Fox</option>
+        <option value="Totoro">Totoro</option>
+        <option value="unknown">Unknown</option>
+        <option value="Witch">Witch</option>
+        <option value="Witch/Human">Witch/Human</option>
+        <option value="Wizard">Wizard</option>
+        <option value="Wolf">Wolf</option>
+      </select>
+
+      <button id="sortCharactersByAge">Sort by age</button>
+
+      <table id="charactersTable">
+        <tbody id="charactersTableBody">
+          <tr>
+              <td id="charactersTableColumnOne"></td>
+              <td id="charactersTableColumnTwo"></td>
+            </tr>
+      </tbody>
+    </table>
+    
+    
+    <script src="main.js" type="module"></script>
+</body>
+</html>

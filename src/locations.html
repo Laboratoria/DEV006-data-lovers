@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1" name="viewport"/> 
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="vehiculos.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="novato.html">NEWBIE</a></li>
+          <li><a href="fandom.html">FANDOM</a></li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section class="container">
+      <div class="block">
+      <label for="climateSelect">Filter by climate:</label>
+      <select id="climateSelect">
+      <option value="allClimates">All</option>
+      <option value="Tropical">Tropical</option>
+      <option value="Damp">Damp</option>
+      <option value="Warm">Warm</option>
+      <option value="Dry">Dry</option>
+      <option value="Mild">Mild</option>
+      <option value="TODO">TODO</option>
+      <option value="Wet">Wet</option>
+    </select>
+    <button id="refresh">Undo filter</button>
+            <h1>Locations</h1>
+            <table id="locationsTable">
+                <tbody id="locationsTableBody">
+                    <tr>
+                        <td id="locationsColumnOne"></td>
+                        <td id="locationsTableColumnTwo"></td>
+                      </tr>
+                </tbody>
+              </table>
+            </div>
+          
+            <div class="block">
+                <h1>Vehicles</h1>
+            <table id="vehiclesTable">
+                <tbody id="vehiclesTableBody">
+                    <tr>
+                        <td id="vehiclesTableColumnOne"></td>
+                        <td id="vehiclesTableColumnTwo"></td>
+                      </tr>
+                </tbody>
+              </table>
+      </section>
+    </main>
+
+    
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

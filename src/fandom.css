@@ -1,0 +1,91 @@
+.frame {
+    border: 5px solid #F8D209;
+    border-radius: 10px;
+    width: 70%;
+    height: 15%;
+    margin-top: 10%;
+    margin-left: 10%;
+    }
+@media only screen and (max-width: 768px) {/*y esto*/
+        /* For mobile phones: */
+        .frame {
+        display: flex;
+        margin-top: 5%;
+        flex-flow: column wrap;
+        }
+    }
+.Characters {
+    width: 70%;
+    background-image: url("Imágenes/fandompage/fandom04.png");
+    background-size: contain;
+    background-position: right;
+    overflow: hidden;
+    }  
+.Movies {
+    width: 70%;
+    background-image: url("Imágenes/newbiepage/newbie02.png");
+    background-size: contain;
+    background-position: right;
+    overflow: hidden;
+}
+.Locations {
+    width: 70%;
+    background-image: url("Imágenes/fandompage/fandom03.png");
+    background-size: contain;
+    overflow: hidden;
+}
+.Directors {
+    width: 70%;
+    background-image: url("Imágenes/fandompage/fandom01.png");
+    background-size: contain;
+    overflow: hidden;
+}
+
+.secondBtn {
+    width: 50%;
+    cursor: pointer;
+    background-color: #3CD1EF;
+    border-radius: 10px;
+    font-family: "Jockey One", sans-serif;
+    font-size: 20px;
+    margin: center;
+    margin-left: 25%;
+    margin-right: 10%;
+    margin-top: 7%;
+    color: rgb(67, 21, 91);
+}
+.secondBtn:hover {
+    background: #ee9547;
+    color: #fff;
+  }
+
+.modal {
+    /* modals are hidden by default */
+    display: none;
+    /* modal container fixed across whole screen */
+    position: fixed;
+    inset: 0;
+    /* z-index must be higher than everything else on the page */
+    z-index: 10000;
+    padding: 40px;
+    /* enables scrolling for tall modals */
+    overflow: hidden;
+    width: 50%;
+    height: 50%;
+}
+.open {
+    display: block;
+}
+.modal-body {
+    padding: 20px;
+    background: #b7e1f4;
+    font-family: "Inconsolata", sans-serif;
+}
+.modal-open {
+    /* body overflow is hidden to hide main scrollbar when modal window is open */
+    overflow: hidden;
+}
+.close-modal {
+    margin-top: -25%;
+}    
+    
