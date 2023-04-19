@@ -138,7 +138,7 @@ display: flex;
 .pokemon{
 position: relative;
 top: 70px;
-background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233),rgba(4, 192, 255, 0.452));
+/*background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233),rgba(4, 192, 255, 0.452));-*/
 }
 
 .searcher {
@@ -211,12 +211,12 @@ width: 100vw;
 
 /*-filtrado-*/
 .filtrando{
-    /*background: #ffffff81;-*/
-    width: 90%;
-    margin: 70px auto 0;
+    background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233),rgba(4, 192, 255, 0.452));
+    padding-top: 20px;
+    padding: 15px;
+    margin: 5px;
     display:flex;
     border-radius: 5px;
-    padding: 10px;
     justify-content: center;
     align-items: center;
     /*-box-shadow: 1px -1px 5px 8px rgb(169, 40, 255);-*/
