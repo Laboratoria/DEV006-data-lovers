@@ -20,3 +20,4 @@ export const filterCharacters = (characters, specie) => {
 };
 
 
+/*Ordenar de A-Z*/

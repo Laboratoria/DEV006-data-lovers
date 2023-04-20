@@ -115,4 +115,4 @@ function filterByTypeOfPerson() {
   }
 }
 
-
+/*Ordenar personajes de la A-Z*/

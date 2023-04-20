@@ -29,7 +29,7 @@ describe("HP", () => {
     expect(typeof HP).toBe("function");
   });
   it("que me retorne la data", () => {
-    expect(HP(PersonTest)).toMatchObject([
+    expect(HP(PersonTest)).toEqual([
       {
         id: 1,
         name: "Euan Abercrombie",
