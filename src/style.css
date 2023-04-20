@@ -6,12 +6,21 @@ html {
 *::after {
   box-sizing: border-box;
 }
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 header {
   text-align: center;
   margin: 20px 20px -25px 20px;
 }
 
 body {
+  background-image: url(Images/Hogwartz\ Night.jpg);
   background-image: url(Images/Hogwartz\ Night.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -42,12 +51,6 @@ article {
 footer {
   height: 5%;
   width: 100%;
-  text-align: center;
-  font-style: oblique;
-  color: rgb(4, 5, 5);
-  font-weight: bold;
-  text-decoration: overline;
-  font-size: large;
 }
 
 .logo {
@@ -56,6 +59,7 @@ footer {
 }
 
 button {
+  background-color: #d0a63b;
   background-color: #d0a63b;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: antiquewhite;
@@ -84,6 +88,15 @@ button {
   margin: 35px;
 }
 
+footer {
+  text-align: center;
+  font-style: oblique;
+  color: rgb(4, 5, 5);
+  font-weight: bold;
+  text-decoration: overline;
+  font-size: large;
+}
+
 .imageEscoba {
   position: absolute;
   height: 60%;
@@ -109,9 +122,17 @@ button {
 }
 
 .backNext {
+.backNext {
   height: 50px;
   width: auto;
   border-radius: 0% 45% 45% 0%;
+}
+
+#back {
+  height: 50px;
+  width: auto;
+  border-radius: 0% 45% 45% 0%;
+  visibility: hidden;
 }
 
 #back {
@@ -132,6 +153,7 @@ button {
 }
 
 .iDCard {
+  background-image: url(Images/LABEL_H.png);
   background-image: url(Images/LABEL_H.png);
   background-size: cover;
   background-repeat: no-repeat;

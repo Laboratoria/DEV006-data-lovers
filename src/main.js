@@ -83,7 +83,7 @@ function updateButtons() {
   }
 
   /*Quitar y agrega boton back acorde a necesidad */
-  if (page === 0) {
+  if (page == 0) {
     backButton.style.visibility = "hidden";
   } else {
     backButton.style.visibility = "visible";
