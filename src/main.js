@@ -1,8 +1,5 @@
 /*Importar data*/
 import { charactersData } from "./data.js";
-import { filterWizards } from "./data.js";
-import { filterMuggles } from "./data.js";
-import { filterGhosts } from "./data.js";
 import { filterCharacters } from "./data.js";
 
 const selectPerson = document.getElementById("selectPerson");
@@ -33,25 +30,30 @@ function displayPersonajes(personajes) {
 }
 
 /*llamado de botones next y back*/
-export const buttonNext = document.getElementById("next").addEventListener("click", nextPage);
-export const buttonBack = document.getElementById("back").addEventListener("click", previousPage);
-
+export const buttonNext = document
+  .getElementById("next")
+  .addEventListener("click", nextPage);
+export const buttonBack = document
+  .getElementById("back")
+  .addEventListener("click", previousPage);
 
 /*personajes por pagina*/
 const charactersPerPage = 42;
 let page = 0;
 
 /*declaración de la función getScreenCharacters*/
-let getScreenCharacters = () => {
+const getScreenCharacters = () => {
   const initialCharacter = page * charactersPerPage;
   const finalCharacter = page * charactersPerPage + charactersPerPage;
-  const screenCharacters = charactersData.slice(initialCharacter, finalCharacter);
+  const screenCharacters = charactersData.slice(
+    initialCharacter,
+    finalCharacter
+  );
   return screenCharacters;
-}
+};
 displayPersonajes(getScreenCharacters());
 
 function nextPage() {
-
   /*Muestra 42 personajes a la vez*/
   page++;
   displayPersonajes(getScreenCharacters());
@@ -86,32 +88,31 @@ function updateButtons() {
   }
 }
 
-
 /*FIILTRAR personajes */
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
 function filterByTypeOfPerson() {
   const selectPersonValue = selectPerson.value;
-  console.log(selectPersonValue)
+  console.log(selectPersonValue);
   switch (selectPersonValue) {
-    case "1":
-      displayPersonajes(filterCharacters(charactersData, "Human"));
-      console.log(filterCharacters(charactersData, "Human"))
-      break;
+  case "1":
+    displayPersonajes(filterCharacters(charactersData, "Human"));
+    console.log(filterCharacters(charactersData, "Human"));
+    break;
 
-    case "2":
-      displayPersonajes(filterCharacters(charactersData, "Muggle"));
-      console.log(filterCharacters(charactersData, "Muggle"))
-      break;
+  case "2":
+    displayPersonajes(filterCharacters(charactersData, "Muggle"));
+    console.log(filterCharacters(charactersData, "Muggle"));
+    break;
 
-    case "3":
-      displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
-      console.log(filterCharacters(charactersData, "Human (formerly)"))
-      break;
+  case "3":
+    displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+    console.log(filterCharacters(charactersData, "Human (formerly)"));
+    break;
 
-    default:
-      displayPersonajes(charactersData);
+  default:
+    displayPersonajes(charactersData);
   }
 }
 
-/*Ordenar de A-Z*/
+
