@@ -6,6 +6,8 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto;
+    margin: 0%;
+
 }
 
 header {
@@ -22,21 +24,9 @@ header {
     margin: auto;
     overflow: hidden;
 }
-
-.sideleft{
-    width: 30%;
-}
-
 .subir{
     display: flex;
-    margin: 60px 40px 0px 40px;
-    
-}
-.subir{
-    display: flex;
-    padding-top: 40px;
-    padding-left: 40px;
-    
+    margin: 60px 0px 40px 0px;  
 }
 .logo {
     float:left;
@@ -74,33 +64,36 @@ main {
     width: 100%;
     align-content: flex-start;
     font-family: Tahoma;
-    color: #ffffff;
-    
+    color: #ffffff; 
+    display: flex;
+    padding-left: 80px ;
 }
-
 
 main article{   
     font-size: 20px;
 }
 
 main section{   
-    font-size: 12px;
+    font-size: 14px;
     font-weight: lighter;
 }
 
-main aside{
+aside{
     display: block;
     float: right;
     margin-top: 0%;
+    margin-right: 0%;
+
 }
 
 .container{
-    width: 60%;
+    width: 85%;
     float: right;
     display: flex;
     flex-wrap: wrap;
     padding: 15px;
-    
+    vertical-align: middle;
+    margin-top: 60px;
 } 
 .card {
     display: flex;
@@ -125,14 +118,98 @@ main aside{
     text-align: center;
 
 }
- .search{
+.search{
     width: 350px;
     height: 35px;
     text-align: center;
     border-radius: 10px;
+    margin: 0px 0px 40px 0px;
  }
- .filter{
-    width: 35px;
-    height: 35px;
-   
+.filter{
+    display: inline-block;
+    width: 30px;
+    height: 30px; 
  }
+.lineaFilter{
+    display: flex;
+}
+a {
+    display: block;
+    color: #ffffff;
+    font-weight: normal;   
+}
+.fotogrupo1{
+    width: 100%;
+    display: inline-block;
+    margin-top: 150px;
+}
+.foto1{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto2{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto4{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto3{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto5{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto6{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto8{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto7{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto9{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.foto10{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
