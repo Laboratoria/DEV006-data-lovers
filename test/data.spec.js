@@ -1,4 +1,4 @@
-import { HP, filterCharacters } from "../src/data.js";
+import { HP, filterCharacters, sortingCharactersAZ} from "../src/data.js";
 
 const PersonTest = {
   characters: [
@@ -18,6 +18,52 @@ const PersonTest = {
       id: 1,
       name: "Tamara",
       species: "Wizard",
+      house: "Gryffindor",
+    },
+  ],
+};
+
+const PersonTestSort = {
+  characters: [
+    {
+      id: 1,
+      name: "Zara",
+      species: "Human",
+      house: "Gryffindor",
+    },
+    {
+      id: 1,
+      name: "Euan Abercrombie",
+      species: "Muggles",
+      house: "Gryffindor",
+    },
+    {
+      id: 1,
+      name: "Tamara",
+      species: "Wizard",
+      house: "Gryffindor",
+    },
+  ],
+};
+
+const PersonTestSorted = {
+  characters: [
+    {
+      id: 1,
+      name: "Euan Abercrombie",
+      species: "Muggles",
+      house: "Gryffindor",
+    },
+    {
+      id: 1,
+      name: "Tamara",
+      species: "Wizard",
+      house: "Gryffindor",
+    },
+    {
+      id: 1,
+      name: "Zara",
+      species: "Human",
       house: "Gryffindor",
     },
   ],
@@ -70,6 +116,11 @@ describe("filterCharacters", () => {
   });
 });
 
+describe("sortCharactersAZ", () => {
+  it("ordenar de A a Z", () => {
+    expect(sortingCharactersAZ(PersonTestSort.characters)).toEqual(PersonTestSorted.characters)
+  })
+})
 /*it("se espera que tenga en sus propiedades,Gryffindor", () => {
     expect(HP(PersonTest)).toMatch(/Gryffindor/);
   });*/
