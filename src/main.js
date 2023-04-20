@@ -1,6 +1,8 @@
 /*Importar data*/
 import { charactersData } from "./data.js";
 import { filterCharacters } from "./data.js";
+import { sortingCharactersAZ } from "./data.js";
+import { sortingCharactersZA } from "./data.js";
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -95,22 +97,39 @@ function filterByTypeOfPerson() {
   const selectPersonValue = selectPerson.value;
   console.log(selectPersonValue);
   switch (selectPersonValue) {
-  case "1":
-    displayPersonajes(filterCharacters(charactersData, "Human"));
-    console.log(filterCharacters(charactersData, "Human"));
-    break;
+    case "1":
+      displayPersonajes(filterCharacters(charactersData, "Human"));
+      console.log(filterCharacters(charactersData, "Human"));
+      break;
 
-  case "2":
-    displayPersonajes(filterCharacters(charactersData, "Muggle"));
-    console.log(filterCharacters(charactersData, "Muggle"));
-    break;
+    case "2":
+      displayPersonajes(filterCharacters(charactersData, "Muggle"));
+      console.log(filterCharacters(charactersData, "Muggle"));
+      break;
 
-  case "3":
-    displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
-    console.log(filterCharacters(charactersData, "Human (formerly)"));
-    break;
+    case "3":
+      displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+      console.log(filterCharacters(charactersData, "Human (formerly)"));
+      break;
 
-  default:
-    displayPersonajes(charactersData);
+    default:
+      displayPersonajes(charactersData);
+  }
+}
+
+/*Ordenado de personajes de A->Z*/
+const callSelectOrder = document.getElementById("selectOrder").addEventListener("change", sortByAZ)
+function sortByAZ() {
+  const selectOrderValue = selectOrder.value;
+  console.log(selectOrderValue);
+  switch (selectOrderValue) {
+    case "1":
+      displayPersonajes(sortingCharactersAZ(charactersData, "name"));
+      break;
+    case "2":
+      displayPersonajes(sortingCharactersZA(charactersData, "name"));
+      break;
+    default:
+      displayPersonajes(CharacterData);
   }
 }

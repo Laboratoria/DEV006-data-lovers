@@ -123,7 +123,7 @@ button {
 
 #charactersInfo {
   overflow-y: auto;
-  height: 50vh;
+  height: 64vh;
   width: 75vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));

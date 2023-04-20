@@ -18,3 +18,38 @@ export const filterCharacters = (characters, specie) => {
   });
   return newFilter;
 };
+const prueba= filterCharacters(charactersData, "Muggle")
+
+/*Ordenar de A->Z*/
+export const sortingCharactersAZ = (charactersShowed, sortOrder) => {
+  const newSort = charactersShowed.sort((a, b) => {
+    if (a.name > b.name) {
+      return 1
+    }
+    if (a.name < b.name) {
+      return -1
+    } else {
+      return 0
+    }
+  })
+  return newSort;
+}
+sortingCharactersAZ(charactersData, "name")
+console.log(sortingCharactersAZ(prueba, "name"))
+
+/*Ordenar de Z->A*/
+export const sortingCharactersZA = (charactersShowed, sortOrder) => {
+  const newSort = charactersShowed.sort((a, b) => {
+    if (a.name > b.name) {
+      return -1
+    }
+    if (a.name < b.name) {
+      return 1
+    } else {
+      return 0
+    }
+  })
+  return newSort;
+}
+sortingCharactersZA(charactersData, "name")
+console.log(sortingCharactersZA(prueba, "name"))
