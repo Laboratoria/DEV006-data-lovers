@@ -40,7 +40,7 @@ const searchInput = document.getElementById("search-input");
 //Funcion anomima / Pasar data.js
 searchInput.addEventListener("input", () => {
   const query = searchInput.value.toLowerCase();
-  const filteredCharacters = characters.filter(character =>
+  const filteredCharacters = characters.faSilter(character =>
     character.name.toLowerCase().includes(query)
   );
   renderCharacters(filteredCharacters);
