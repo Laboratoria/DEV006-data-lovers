@@ -114,5 +114,3 @@ function filterByTypeOfPerson() {
     displayPersonajes(charactersData);
   }
 }
-
-

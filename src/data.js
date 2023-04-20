@@ -18,5 +18,3 @@ export const filterCharacters = (characters, specie) => {
   });
   return newFilter;
 };
-
-
