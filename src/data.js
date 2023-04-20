@@ -21,7 +21,7 @@ export const filterCharacters = (characters, specie) => {
 const prueba= filterCharacters(charactersData, "Muggle")
 
 /*Ordenar de A->Z*/
-export const sortingCharactersAZ = (charactersShowed, sortOrder) => {
+export const sortingCharactersAZ = (charactersShowed) => {
   const newSort = charactersShowed.sort((a, b) => {
     if (a.name > b.name) {
       return 1
@@ -38,7 +38,7 @@ sortingCharactersAZ(charactersData, "name")
 console.log(sortingCharactersAZ(prueba, "name"))
 
 /*Ordenar de Z->A*/
-export const sortingCharactersZA = (charactersShowed, sortOrder) => {
+export const sortingCharactersZA = (charactersShowed) => {
   const newSort = charactersShowed.sort((a, b) => {
     if (a.name > b.name) {
       return -1
