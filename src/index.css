@@ -233,7 +233,7 @@ width: 100vw;
 .selectores {
     display: flex;
     flex-direction: column;
-    margin: 0 30px;
+    margin: 0 20px;
 }
 
 .label{
@@ -242,12 +242,12 @@ font-size: 16px;
   margin-bottom: 5px;
 }
 
-#tipo{
+#type{
     font-size: 24px;
     padding: 12px;
     text-align: center;
     font-family: 'Changa One', cursive;
-    color: #430358;
+    color: #4c0264;
 }
 
 #debilidades{
@@ -255,15 +255,23 @@ font-size: 16px;
     padding: 12px;
     text-align: center;
     font-family: 'Changa One', cursive;
-    color: #430358;
+    color: #4c0264;
 }
 
-#fortaleza{
+#resistencia{
     font-size: 24px;
     padding: 12px;
     text-align: center;
     font-family: 'Changa One', cursive;
-    color: #430358;
+    color: #4c0264;
+}
+
+#fuerza{
+    font-size: 24px;
+    padding: 12px;
+    text-align: center;
+    font-family: 'Changa One', cursive;
+    color: #4c0264;
 }
 
 #element-type-filter{
@@ -272,7 +280,7 @@ font-size: 16px;
     border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
     border-radius: 5px;
     font-family: 'Changa One', cursive;
-    color: #430358;
+    color: #4c0264;
     cursor: pointer;
     font-size: 19px;
     padding: 12px;
@@ -286,7 +294,7 @@ font-size: 16px;
     border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
     border-radius: 5px;
     font-family: 'Changa One', cursive;
-    color: #430358;
+    color: #4c0264;
     cursor: pointer;
     font-size: 19px;
     padding: 12px;
@@ -294,13 +302,13 @@ font-size: 16px;
     text-align: center;
 }
 
-#element-strength-filter{
+#element-resistant-filter{
     background-color: hsl(0, 0%, 100%);
     border: 6px solid transparent;
     border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
     border-radius: 5px;
     font-family: 'Changa One', cursive;
-    color: #430358;
+    color: #4c0264;
     cursor: pointer;
     font-size: 19px;
     padding: 12px;
@@ -308,9 +316,24 @@ font-size: 16px;
     text-align: center;
 }
 
+#element-strong-filter{
+    background-color: hsl(0, 0%, 100%);
+    border: 6px solid transparent;
+    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
+    border-radius: 5px;
+    font-family: 'Changa One', cursive;
+    color: #4c0264;
+    cursor: pointer;
+    font-size: 19px;
+    padding: 12px;
+    margin-top: 40px;
+    text-align: center;  
+}
+
 #element-type-filter select,
 #element-weaknesses-filter select,
-#element-strength-filter select {
+#element-resistant-filter select,
+#element-strong-filter select{
   position: absolute;
   width: 100%;
   bottom: 0;
@@ -324,8 +347,6 @@ font-size: 16px;
   background-color: white;
   z-index: 1;
 }
-
-
 
 
 /*-seccion inicio empieza debajo del search-*/
