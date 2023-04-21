@@ -1,5 +1,5 @@
 
-import {sortBy,filtrado} from './data.js';
+import {sortBy,filtrar} from './data.js';
 
 
 //ORGANIZACION A-Z y Z-A
@@ -26,17 +26,21 @@ botonBuscar.addEventListener("click", () => {
   resultados.innerHTML = '';
   filtrar()
 });
- 
-// eslint-disable-next-line no-undef
+
 botonLimpiar.addEventListener("click",function() {
   location.reload();
   
 
 });
 
- 
+document.addEventListener('DOMContentLoaded', () => {
+  const btMenu = document.querySelector('.bt-menu');
+  const ul = document.querySelector('.contenido');
 
-
+  btMenu.addEventListener('click', () => {
+    ul.classList.toggle('contenido');
+  });
+});
 
 
 

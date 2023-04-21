@@ -1,65 +1,64 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-    <div id="root"></div>
-    <script src="data.js" type="module"></script>
-    <script src="main.js" type="module"></script>
-  </head>
-  <body>
-    <header>
-      <div>
-      <img class="logo" src="logo.png" width="1510" height="280" >
+
+<head>
+  <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <div id="root"></div>
+  <script src="data.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+</head>
+
+<body>
+  <header>
+    <div class="contImg">
+      <img class="logo" src="logo.png" width="1510" height="280" margin="0" padding="0">
+    </div>
+    <div class="logIn-signUp">
+      <button class="logIn">LOG IN</button><button class="SignUp">SIGN UP</button>
+    </div>
+    <div class="menu_bar">
+      <a href="#" class="bt-menu">☰</a>
+    </div>
+    <nav class="header">
+      <div class="listaheader">
+          <ul class="contenido">
+            <li><a href="#">PATCH NOTES</a></li>
+            <li><a href="#">CHAMPIONS</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">GAME</a></li>
+            <li><a href="#">ESPORTS</a></li>
+            <li><a href="#">UNIVERSE</a></li>
+            <li><a href="#">MORE</a></li>
+          </ul>
+        
       </div>
-      <div class="logIn-signUp">
-          <button class="logIn">LOG IN</button><button class="SignUp">SIGN UP</button>
-        </div>
-      <nav class="header">
-        <ul class="listaheader">
-          <li class="sublistaH"><a class="headerinfo" href="#">PATCH NOTES </a></li>
-          <li class="sublistaH"><a class="headerinfo" href="#">CHAMPIONS</a></li>
-          <li class="sublistaH"><a class="headerinfo" href="#">NEWS</a></li>
-          <li class="sublistaH"><a class="headerinfo" href="#">GAME</a></li>
-          <li class="sublistaH"><a class="headerinfo" href="#">ESPORTS</a></li>
-          <li class="sublistaH"><a class="headerinfo" href="#">UNIVERSE</a></li>
-          <li class="sublistaH"><a class="headerinfo" href="#">MORE</a></li>
-        </ul>
-      </nav>
-      <nav class="filtros">
-        <ul class="listafiltro">
-          <li class="sublistaF"><a class="filtro" href="#">ALL</a></li>
-          <li class="sublistaF"><a class="filtro" href="#">FIGHTERS</a></li>
-          <li class="sublistaF"><a class="filtro" href="#">MARKSMEN</a></li>
-          <li class="sublistaF"><a class="filtro" href="#">MAGES</a></li>
-          <li class="sublistaF"><a class="filtro" href="#">ASSASSINS</a></li>
-          <li class="sublistaF"><a class="filtro" href="#">TANKS</a></li>
-          <li class="sublistaF"><a class="filtro" href="#">SUPPORT</a></li>          
-        </ul>
-      </nav>
-      <select class="sort">
-        <option value= "1" id="ascendente">Sort A-Z</option> 
-        <option value= "2" id="descendente">Sort Z-A</option>
+    </nav>
+    <select class="sort">
+      <option value="1" id="ascendente">Sort A-Z</option>
+      <option value="2" id="descendente">Sort Z-A</option>
 
 
     </select>
-    </header>
-   
-    <div>
-      <input type="text" id="buscar" placeholder="Name..">
-      <button id="botonBuscar">Search</button>
-      <button id="botonLimpiar">Clear</button>
-      <h3 style="list-style: none;" id="notFound"></h3>
-      <ul>
-        <li id="resultados" ></li>
-      </ul>
-    </div>
-    
-    <main> 
-      <div class="contenedor" id="contenedor"></div>
+  </header>
 
-     
-    </main>
-  </body>
+  <div>
+    <input type="text" id="buscar" placeholder="Champion name...">
+    <button id="botonBuscar">Search</button>
+    <button id="botonLimpiar">Clear</button>
+    <h3 style="list-style: none;" id="notFound"></h3>
+    <ul>
+      <li id="resultados"></li>
+    </ul>
+  </div>
+
+  <main>
+    <div class="contenedor" id="contenedor"></div>
+
+
+  </main>
+</body>
+
 </html>

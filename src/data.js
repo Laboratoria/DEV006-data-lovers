@@ -102,47 +102,42 @@ const sortBy = (sortOrder) => {
 };
 
 
-
 //BUSQUEDA
 
 const buscar = document.querySelector('#buscar');
-const botonBuscar = document.querySelector('#botonBuscar');
-const botonLimpiar = document.querySelector('#botonLimpiar')
-//const resultados = document.querySelector('#resultados')
+//const botonBuscar = document.querySelector('#botonBuscar');
+//const botonLimpiar = document.querySelector('#botonLimpiar')
+const resultados = document.querySelector('#resultados')
 const notFound = "Champion not found"
 
-const champions = Object.keys(data.data)
-const texto = buscar.value.toLowerCase();
-console.log(texto)
-  function filtrado(texto){
-   const filtrar = champions.filter(campeon=>campeon.id===texto)
-  //for (const key in data.data){
-    
-
-    //resultados.innerHTML = '';
-return filtrar
-
-console.log(filtrar)
-
-    
-//     if(name.includes(texto)){
-//       resultados.appendChild(card.championCard);
-//       card.championCard.style.display = 'block';
-//       currentChampions.push(card.id)
-//     }  else {
-//       card.championCard.style.display = 'none';
-//     }
-  
-//   }
+const filtrar = ()=>{
+  currentChampions= [];
+  resultados.innerHTML = '';
  
-//   if(resultados.innerHTML === ''){
-//     resultados.innerHTML += `
-//       <h3>${notFound}</h3>
-//     `
-//     // eslint-disable-next-line no-undef
-//   }
-//   //buscar.value = "";
- }
+  const texto = buscar.value.toLowerCase();
+
+  for (const key in data.data){
+    const card = data.data[key];
+    const name = card.name.toLowerCase();
+    
+    if(name.includes(texto)){
+      resultados.appendChild(card.championCard);
+      card.championCard.style.display = 'block';
+      currentChampions.push(card.id)
+    }  else {
+      card.championCard.style.display = 'none';
+    }
+  
+  }
+ 
+  if(resultados.innerHTML === ''){
+    resultados.innerHTML += `
+      <h3>${notFound}</h3>
+    `
+    // eslint-disable-next-line no-undef
+  }
+  //buscar.value = "";
+}
 
   
-export {sortBy,filtrado};
+export {sortBy,filtrar};
