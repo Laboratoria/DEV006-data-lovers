@@ -11,7 +11,7 @@
   <main>
     <nav>
       <a href="index.html">
-        <img src="Images/LogoOne.png" class="logo" alt="logo que lleva a index"/>
+        <img src="Images/LogoOne.png" class="logo" alt="logo que lleva a index" />
       </a>
       <button>PERSONAJES</button>
       <button>HECHIZOS</button>
@@ -20,29 +20,32 @@
       <button>LIBROS</button>
     </nav>
     <article class="articlePerson">
-      <section>
+      <section class="principal">
         <div>
           <label for="selectPerson">
-            <select name="selectPerson" id="selectPerson">
+            <select name="selectPerson" id="selectPerson" class="selectLabel">
               <option value="0">Todos</option>
               <option value="1">Magos</option>
               <option value="2">Muggles</option>
               <option value="3">Fantasmas</option>
             </select>
-            <select name="selectOrder" id="selectOrder">
-              <option value="0">Todos</option>
-              <option value="1">A->Z</option>
-              <option value="2">Z->A</option>
-            </select>
           </label>
-          <img src="Images/reset.png" alt="imagen para resetear información señalada" class="imageReset" onclick="location.reload()">
         </div>
-           </section>
+        <div>
+          <button class="selectSort" id="selectOrder" value="1">A-Z</button>
+          <button class="selectSort" id="selectTwoOrder" value="2">Z-A</button>
+        </div>
+        <div>
+          <img src="Images/reset.png" alt="imagen para resetear información señalada" class="imageReset"
+            onclick="location.reload()">
+        </div>
+      </section>
+
       <section class="tablePerson">
         <div class="buttonsNB">
-        <button id="back" >Back</button>
-        <button id="next" >Next</button>
-      </div>
+          <button class="backNext" id="back">Back</button>
+          <button class="backNext" id="next">Next</button>
+        </div>
         <div id="charactersInfo"></div>
       </section>
     </article>

@@ -1,26 +1,19 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+
 header {
   text-align: center;
   margin: 20px 20px -25px 20px;
 }
 
 body {
-  background-image: url(Images/Hogwartz\ Night.jpg);
   background-image: url(Images/Hogwartz\ Night.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -51,6 +44,12 @@ article {
 footer {
   height: 5%;
   width: 100%;
+  text-align: center;
+  font-style: oblique;
+  color: rgb(4, 5, 5);
+  font-weight: bold;
+  text-decoration: overline;
+  font-size: large;
 }
 
 .logo {
@@ -59,7 +58,6 @@ footer {
 }
 
 button {
-  background-color: #d0a63b;
   background-color: #d0a63b;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: antiquewhite;
@@ -88,15 +86,6 @@ button {
   margin: 35px;
 }
 
-footer {
-  text-align: center;
-  font-style: oblique;
-  color: rgb(4, 5, 5);
-  font-weight: bold;
-  text-decoration: overline;
-  font-size: large;
-}
-
 .imageEscoba {
   position: absolute;
   height: 60%;
@@ -121,8 +110,7 @@ footer {
   justify-content: space-between;
 }
 
-.backNext {
-.backNext {
+#next {
   height: 50px;
   width: auto;
   border-radius: 0% 45% 45% 0%;
@@ -135,11 +123,31 @@ footer {
   visibility: hidden;
 }
 
-#back {
+.selectSort {
   height: 50px;
-  width: auto;
-  border-radius: 0% 45% 45% 0%;
-  visibility: hidden;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
 }
 
 #charactersInfo {
@@ -153,7 +161,6 @@ footer {
 }
 
 .iDCard {
-  background-image: url(Images/LABEL_H.png);
   background-image: url(Images/LABEL_H.png);
   background-size: cover;
   background-repeat: no-repeat;

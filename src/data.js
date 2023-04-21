@@ -34,7 +34,6 @@ export const sortingCharactersAZ = (charactersShowed) => {
   })
   return newSort;
 }
-sortingCharactersAZ(charactersData, "name")
 console.log(sortingCharactersAZ(prueba, "name"))
 
 /*Ordenar de Z->A*/
@@ -51,5 +50,41 @@ export const sortingCharactersZA = (charactersShowed) => {
   })
   return newSort;
 }
-sortingCharactersZA(charactersData, "name")
+
 console.log(sortingCharactersZA(prueba, "name"))
+
+/*Cálculo estudiantes por Casa*/
+/*export const studentsPerHouse = ()=>{
+let countByHouse={}  ;
+
+charactersData.forEach((character) => {
+ Verifica si la casa ya se encuentra en vble. forEach accede a la propeidad del ojeto correspondiente a la casa del estudiante actual
+if (countByHouse[character.house]){
+  countByHouse[character.house]++;
+}else{
+  si la casa no existe, comienza el contador en 1
+  countByHouse[character.house] = 1;
+}
+});
+return countByHouse;
+};*/
+
+
+export const studentsPerProperty = (data, property)=>{
+  let countByproperty={}  ;
+  
+  data.forEach((character) => {
+   /*Verifica si la casa ya se encuentra en vble. forEach accede a la propeidad del ojeto correspondiente a la casa del estudiante actual*/
+  if (countByproperty[character[property]]){
+    countByproperty[character[property]]++;
+  }else{
+    /*si la casa no existe, comienza el contador en 1*/
+    countByproperty[character[property]] = 1;
+  }
+  });
+  return countByproperty;
+  };
+
+const countByproperty = studentsPerProperty(charactersData, "house");
+console.log(countByproperty);
+  

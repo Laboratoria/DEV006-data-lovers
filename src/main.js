@@ -83,7 +83,7 @@ function updateButtons() {
   }
 
   /*Quitar y agrega boton back acorde a necesidad */
-  if (page == 0) {
+  if (page === 0) {
     backButton.style.visibility = "hidden";
   } else {
     backButton.style.visibility = "visible";
@@ -91,6 +91,7 @@ function updateButtons() {
 }
 
 /*FIILTRAR personajes */
+let filteredCharacter = [];
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
 function filterByTypeOfPerson() {
@@ -98,29 +99,47 @@ function filterByTypeOfPerson() {
   console.log(selectPersonValue);
   switch (selectPersonValue) {
     case "1":
-      displayPersonajes(filterCharacters(charactersData, "Human"));
+      /*filteredCharacter guarda la información*/
+      filteredCharacter = filterCharacters(charactersData, "Human");
       console.log(filterCharacters(charactersData, "Human"));
       break;
 
     case "2":
-      displayPersonajes(filterCharacters(charactersData, "Muggle"));
+      filteredCharacter = filterCharacters(charactersData, "Muggle");
       console.log(filterCharacters(charactersData, "Muggle"));
       break;
 
     case "3":
-      displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+      filteredCharacter = filterCharacters(charactersData, "Human (formerly)");
       console.log(filterCharacters(charactersData, "Human (formerly)"));
       break;
 
     default:
       displayPersonajes(charactersData);
   }
+  displayPersonajes(filteredCharacter);
 }
 
+
 /*Ordenado de personajes de A->Z*/
-const callSelectOrder = document.getElementById("selectOrder").addEventListener("change", sortByAZ)
+document.getElementById("selectOrder").addEventListener("click", sortByAZ);
 function sortByAZ() {
-  const selectOrderValue = selectOrder.value;
+  sortingCharactersAZ(filteredCharacter, "name")
+  displayPersonajes(sortingCharactersAZ(filteredCharacter, "name"))
+}
+
+/*Ordenado de personajes de Z->A*/
+document.getElementById("selectTwoOrder").addEventListener("click", sortByZA);
+function sortByZA() {
+  sortingCharactersZA(filteredCharacter, "name")
+  displayPersonajes(sortingCharactersZA(filteredCharacter, "name"))
+}
+
+
+/*const callSelectOrder = document.getElementById("selectOrder")
+callSelectOrder.addEventListener("change", sortByAZ)
+function sortByAZ() {
+  const selectOrderValue = callSelectOrder.value;
   console.log(selectOrderValue);
   switch (selectOrderValue) {
     case "1":
@@ -132,4 +151,4 @@ function sortByAZ() {
     default:
       displayPersonajes(CharacterData);
   }
-}
+}*/
