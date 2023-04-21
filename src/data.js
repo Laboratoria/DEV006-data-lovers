@@ -102,7 +102,6 @@ const sortBy = (sortOrder) => {
 };
 
 
-
 //BUSQUEDA
 
 const buscar = document.querySelector('#buscar');
@@ -139,4 +138,6 @@ const filtrar = ()=>{
   }
   //buscar.value = "";
 }
+
+  
 export {sortBy,filtrar};

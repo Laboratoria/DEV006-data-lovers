@@ -19,6 +19,7 @@ export function filtrado(nombrePokemon){
 const resultados = filtrado("hola");
 console.log(resultados)
 
+//Sort
 
 export function sortBy(datos, ordenPokemon){
   return datos.sort((a,b) => {
