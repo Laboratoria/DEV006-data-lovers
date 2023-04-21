@@ -138,9 +138,13 @@ display: flex;
 .pokemon{
 position: relative;
 top: 70px;
+width: 100%;
 /*background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233),rgba(4, 192, 255, 0.452));-*/
 }
 
+.portadaBox{
+    width: 100%;
+}
 .searcher {
     padding: 16px 0;
     display: flex;
@@ -164,7 +168,8 @@ top: 70px;
     width: 32px;
     min-width: 300px;
     border-radius: 50px;
-    border: solid 1px #00e078;
+    border: solid 1px #7e06a6;
+    box-shadow: 0 0 4px 3px #7e06a6;
     display: grid;
     grid-template-columns: 80% 10%;
     background-color: #fffffdf1;
@@ -176,7 +181,7 @@ top: 70px;
 
 .search-comun:hover{
     border-radius: 30px;
-    border: solid 4px #00e078;
+    border: solid 3px  #7e06a6;
 }
 
 
@@ -195,7 +200,7 @@ top: 70px;
 }
 
 .portada img{
-width: 100vw;
+width: 100%;
 }
 
 .pokebola{
@@ -214,10 +219,10 @@ width: 100vw;
 
 /*-filtrado-*/
 .filtrando{
-    background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233),rgba(4, 192, 255, 0.452));
-    padding-top: 20px;
+    background: linear-gradient(to right,  rgba(3, 255, 66, 0.6), rgba(4, 205, 255, 0.452), rgba(3, 255, 116, 0.60),rgba(4, 205, 255, 0.452),  rgba(3, 255, 66, 0.6));
     padding: 25px;
-    margin: 5px;
+    margin: 5px auto;
+    width: 100%;
     display:flex;
     border-radius: 5px;
     justify-content: center;
@@ -246,39 +251,28 @@ font-size: 16px;
   margin-bottom: 5px;
 }
 
-#type{
-    font-size: 24px;
-    padding: 12px;
-    text-align: center;
-    font-family: 'Changa One', cursive;
-    color: #4c0264;
-}
 
-#debilidades{
-    font-size: 24px;
-    padding: 12px;
-    text-align: center;
-    font-family: 'Changa One', cursive;
-    color: #4c0264;
-}
-
-#resistencia{
-    font-size: 24px;
-    padding: 12px;
-    text-align: center;
-    font-family: 'Changa One', cursive;
-    color: #4c0264;
-}
-
+#type, 
+#debilidades, 
+#resistencia, 
 #fuerza{
     font-size: 24px;
     padding: 12px;
     text-align: center;
     font-family: 'Changa One', cursive;
     color: #4c0264;
+    text-shadow: -2px -2px 3px rgb(255, 255, 255), 2px -2px 3px rgb(253, 253, 255), -2px 2px 3px rgb(255, 255, 255), 2px 2px 3px rgb(255, 255, 255);
 }
 
-#element-type-filter{
+select option:checked{
+    background-color: rgb(216, 183, 247);
+}
+
+
+#element-type-filter, 
+#element-weaknesses-filter, 
+#element-resistant-filter, 
+#element-strong-filter {
     background-color: hsl(0, 0%, 100%);
     border: 6px solid transparent;
     border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
@@ -292,47 +286,6 @@ font-size: 16px;
     text-align: center;
 }
 
-#element-weaknesses-filter{
-    background-color: hsl(0, 0%, 100%);
-    border: 6px solid transparent;
-    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
-    border-radius: 5px;
-    font-family: 'Changa One', cursive;
-    color: #4c0264;
-    cursor: pointer;
-    font-size: 19px;
-    padding: 12px;
-    margin-top: 40px;
-    text-align: center;
-}
-
-#element-resistant-filter{
-    background-color: hsl(0, 0%, 100%);
-    border: 6px solid transparent;
-    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
-    border-radius: 5px;
-    font-family: 'Changa One', cursive;
-    color: #4c0264;
-    cursor: pointer;
-    font-size: 19px;
-    padding: 12px;
-    margin-top: 40px;
-    text-align: center;
-}
-
-#element-strong-filter{
-    background-color: hsl(0, 0%, 100%);
-    border: 6px solid transparent;
-    border-image: linear-gradient(to right, rgba(1, 255, 60, 0.825), rgb(169, 40, 255), rgba(1, 255, 60, 0.825)) 1;
-    border-radius: 5px;
-    font-family: 'Changa One', cursive;
-    color: #4c0264;
-    cursor: pointer;
-    font-size: 19px;
-    padding: 12px;
-    margin-top: 40px;
-    text-align: center;  
-}
 
 #element-type-filter select,
 #element-weaknesses-filter select,
@@ -342,15 +295,26 @@ font-size: 16px;
   width: 100%;
   bottom: 0;
   left: 0;
+  text-align: center;
   opacity: 0;
   cursor: pointer;
   padding: 5px;
   font-size: 16px;
   border: none;
+  margin: 0 auto;
   outline: none;
   background-color: white;
   z-index: 1;
 }
+
+#element-type-filter option,
+#element-resistant-filter option,
+#element-resistant-filter option,
+#element-strong-filter option{
+    text-align: center; 
+    margin: 0 auto;
+    color: #4c0264;
+  }
 
 
 /*-seccion inicio empieza debajo del search-*/
@@ -361,7 +325,8 @@ font-size: 16px;
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    min-height: 100vh;
+    height: 100%;
+    width: 100%;
 }
 
 .inicio .contenedor-pokemones{

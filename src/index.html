@@ -23,8 +23,8 @@
               <ul class="sub-menu-order">
                 <li><a id="az"> A-Z </a></li>
                 <li><a id="za"> Z-A </a></li>
-                <li><a id="ascendente">ASCENDING</a></li>
-                <li><a id="descendente">DESCENDING</a></li>                
+                <li><a id="ascendente">NUMBER 🢁</a></li>
+                <li><a id="descendente">NUMBER 🢃</a></li>                
               </ul>
           </li>
          <li><a href="filtrando-section" id="to-filter-link"><img src="images/iconos/filtrar.png">FILTER</a></li>
@@ -44,7 +44,7 @@
         <div class="searcher">
           <div>
             <input type="search" id="search" class="search-comun" placeholder= "search by name" autocomplete="off" spellcheck="false">
-            <img src="images/icon-search.png" alt="buscar">
+            <img src="images/iconos/icon-lupa.png" alt="buscar">
             <div class="pokebola">
               <img src="images/barra-menu.png" alt="pokebola">
             </div>
@@ -58,7 +58,7 @@
               <div>
                 <label for="type" id="type">TYPE</label>
                 <select id="element-type-filter" >
-                  <option class="all">--all--</option>
+                  <option value="all">--all--</option>
                   <option value="bug">Bug</option>
                   <option value="dragon"> Dragon</option>
                   <option value="electric">Electric</option>
@@ -81,7 +81,7 @@
               <div>
                 <label for="weaknesses" id="debilidades">WEAKNESSES</label>
                   <select id="element-weaknesses-filter">
-                  <option class="all">--all--</option>
+                  <option value="all">--all--</option>
                   <option value="bug">Bug</option>
                   <option value="dragon"> Dragon</option>
                   <option value="electric">Electric</option>
@@ -104,7 +104,7 @@
               <div>
                 <label for="resistant" id="resistencia">RESISTANT</label>
                 <select id="element-resistant-filter">
-                  <option class="all">--all--</option>
+                  <option value="all">--all--</option>
                   <option value="bug">Bug</option>
                   <option value="dragon"> Dragon</option>
                   <option value="electric">Electric</option>
@@ -127,9 +127,9 @@
               <div>
                 <label for="strong" id="fuerza">STRONG</label>
                 <select id="element-strong-filter">
-                  <option class="all">--all--</option>
-                  <option value="strongest">TOP 10</option>
-                  <option value="weaknest">BOTTOM 10</option>
+                  <option value="all">--all--</option>
+                  <option value="strongest">Top 10</option>
+                  <option value="weaknest">Last 10</option>
                 </select>
               </div>
             </div>
