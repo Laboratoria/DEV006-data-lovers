@@ -1,4 +1,4 @@
-import { example, anotherExample } from '../src/data.js';
+import { searchPokByName, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenarPorNombreAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza } from '../src/data.js';
 
 
 describe('example', () => {

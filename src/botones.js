@@ -1,4 +1,4 @@
-//crear la funcion validarFormulario() para validar los inputs y reemplazarlos con los va.lolres del placeholder
+//crear la funcion validarFormulario() para validar los inputs y reemplazarlos con los valores del placeholder
 function validarFormulario(event){
   event.preventDefault();
   const formulario = document.getElementById('contenedor-login');
@@ -25,3 +25,8 @@ btnEnter.addEventListener('click', () => {
 });
 
 
+//de pagina intro a login
+const pasarPag = document.getElementById('boton-next');
+pasarPag.addEventListener('click', () => {
+  window.location.href ="login.html";
+});

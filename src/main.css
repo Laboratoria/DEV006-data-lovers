@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
 /*-- impotar los estilos para crear efectos de volteo de tarjeta --*/
-@import url(index-cards.css);
+@import url(main-cards.css);
 
 
 *{font-family: 'Changa One', cursive;
@@ -68,7 +68,7 @@ display: flex;
 
 /*-barra de menu-*/
 .elements ul{
-    background: #ffffffae;
+    background: #fffffff6;
     height: 70px;
     float: right;
     list-style: none;
@@ -97,6 +97,8 @@ display: flex;
 .elements a{
     display: block;
     padding: 18px 32px;
+    width: 180px;
+
     font-weight: 700;
     font-size: 19px;
     color:rgba(0, 0, 0, 0.999);
@@ -105,23 +107,24 @@ display: flex;
 
 .elements a:hover{
    color: rgb(255, 225, 0);
-   text-shadow: -2px -2px 7px blue, 2px -2px 7px blue, -2px 2px 7px blue, 2px 2px 7px blue;
+   text-shadow: -2px -2px 9px blue, 2px -2px 9px blue, -2px 2px 9px blue, 2px 2px 9px blue;
    font-size: 24px;
    padding: 18px 32px;
    height: 70px;
    font-family: 'Changa One', cursive;
    top: 0%;
    text-decoration: none;
-   background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
+   background: linear-gradient(to right, rgba(28, 3, 255, 0.921), rgba(187, 255, 252, 0.761),  rgba(187, 255, 252, 0.761), rgba(187, 255, 252, 0.761), rgba(28, 3, 255, 0.921));
 }
+
 
 .elements ul li:hover .sub-menu-order{
     display: block;
     position: absolute;
-    width: 182px;
+    width: 180px;
     height: 240px;
-    text-shadow: -2px -2px 7px rgba(255, 255, 255, 0.83), 2px -2px 7px rgb(255, 255, 255, 0.83), -2px 2px 7px rgb(255, 255, 255, 0.83), 2px 2px 7px rgb(255, 255, 255, 0.83);
-    background: linear-gradient(to right, rgba(0, 17, 255, 0.63), rgba(168, 248, 255, 0.454), rgba(131, 253, 255, 0.397),  rgba(0, 17, 255, 0.63));
+    text-shadow: -2px -2px 7px rgb(255, 255, 255), 2px -2px 7px rgb(255, 255, 255), -2px 2px 7px rgb(254, 255, 255), 2px 2px 7px rgb(255, 255, 255);
+    background: linear-gradient(to right, rgba(28, 3, 255, 0.921), rgba(187, 255, 252, 0.761), rgba(187, 255, 252, 0.761), rgba(187, 255, 252, 0.761), rgba(28, 3, 255, 0.921));
 }
 
 
@@ -129,9 +132,9 @@ display: flex;
     max-height: 45px;
 }
 
-/*-.glyphicon{
+.glyphicon{
     font-size: 20px;
-}-*/
+}
 
 /*-pantalla movil y pc sin @media query-*/
 /*-seccion busqueda-*/
@@ -145,6 +148,7 @@ width: 100%;
 .portadaBox{
     width: 100%;
 }
+
 .searcher {
     padding: 16px 0;
     display: flex;
@@ -162,7 +166,7 @@ width: 100%;
 }
 
 .search-comun{
-    font-size: 20px;
+    font-size: 19px;
     margin: 15px auto 0;
     height: 42px;
     width: 32px;
@@ -187,7 +191,7 @@ width: 100%;
 
 .searcher img{
     width: 30px;
-    margin: 20px 10px 10px 10px;
+    margin: 20px 10px 12px 20px;
 }
 
 .search{
@@ -216,10 +220,68 @@ width: 100%;
     right: 145px;
 }
 
+.container{
+    display: flex;
+    background-color: rgba(255, 126, 212, 0.699);
+    align-items:center;
+    justify-content: center;
+    position: fixed;
+    pointer-events: none;
+    opacity: 0;
+    top:0;
+    left: 0;
+    height: 101vh;
+    width: 101vw;
+    transition: opacity 0.3s ease;
+}
+  
+.modal{
+    background-color: #fff;
+    width: 620px;
+    max-width: 100%;
+    padding: 28px 48px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+  
+.modal h1{
+    margin: 0;
+}
+  
+.modal p{
+    opacity: 0.6;
+    font-size: 15px;
+    font-family: cursive;
+}
+  
+  
+#cerrar{
+    font-weight: 700;
+    font-size: 18px;
+    font-family: cursive;
+    color:rgba(255, 0, 106, 0.966);
+    background: rgba(255, 179, 232, 0.979);
+    border:rgba(255, 0, 106, 0.966);
+    border-radius: 50px;
+    cursor:pointer;
+}
+    
+#cerrar:hover{
+      background-color: #a20bb6d7;
+      color: antiquewhite;
+      transform: scale(1.1);
+}
+    
+.show{
+      pointer-events: auto;
+      opacity: 1;
+}
+
 
 /*-filtrado-*/
 .filtrando{
-    background: linear-gradient(to right,  rgba(3, 255, 66, 0.6), rgba(4, 205, 255, 0.452), rgba(3, 255, 116, 0.60),rgba(4, 205, 255, 0.452),  rgba(3, 255, 66, 0.6));
+    background: linear-gradient(to right,  rgba(3, 255, 66, 0.65), rgba(4, 205, 255, 0.452), rgba(3, 255, 116, 0.60),rgba(4, 205, 255, 0.452),  rgba(3, 255, 66, 0.6));
     padding: 25px;
     margin: 5px auto;
     width: 100%;
