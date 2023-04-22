@@ -5,7 +5,8 @@ import {sortBy,filtrar} from './data.js';
 //ORGANIZACION A-Z y Z-A
 
 
-let contenedor = document.getElementById('contenedor');
+// eslint-disable-next-line no-unused-vars
+const contenedor = document.getElementById('contenedor');
 
 document.addEventListener('DOMContentLoaded', () => {
   const selectSort = document.querySelector('.sort');
@@ -27,10 +28,9 @@ botonBuscar.addEventListener("click", () => {
   filtrar()
 });
 
+// eslint-disable-next-line no-undef
 botonLimpiar.addEventListener("click",function() {
   location.reload();
-  
-
 });
 
 document.addEventListener('DOMContentLoaded', () => {

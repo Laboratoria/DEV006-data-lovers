@@ -99,6 +99,7 @@ const sortBy = (sortOrder) => {
     championCard.style.display = 'block';
     contenedor.appendChild(championCard); 
   });
+  console.log(champion)
 };
 
 
@@ -139,5 +140,34 @@ const filtrar = ()=>{
   //buscar.value = "";
 }
 
+const tagsChampion = Object.keys(data.data);
+console.log(tagsChampion)
+
+for (const championtags in tagsChampion) {
+  const champion2 = data[championtags];
+  console.log(champion2);
   
+  const tags = tagsChampion[championtags].tags;
+  console.log(`${championtags} ${tags}`);
+} 
+
+// function contarRol(tags, rol) {
+//   let count = 0;
+//   for (let i = 0; i < tags.length; i++) {
+//     if (tags[i].tags.includes(rol)) {
+//       count++;
+//     }
+//   }
+//   return ((count*100)/134);
+// }
+
+// const resultado = contarRol(,"Fighter");
+// console.log(resultado); 
+
+//chat
+ // Your data with 134 champions
+
+
+
+
 export {sortBy,filtrar};
