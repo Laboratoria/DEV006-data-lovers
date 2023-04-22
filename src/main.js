@@ -1,6 +1,7 @@
+//main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
 import data from "./data/pokemon/pokemon.js";
 import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenarPorNombreAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
-//main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
+
 //buscar por nombre
 const btnBuscarByName = document.getElementById("search");
 btnBuscarByName.addEventListener("input", (e) => {
@@ -9,21 +10,33 @@ btnBuscarByName.addEventListener("input", (e) => {
   console.log(searchingResult);
 });
 
+//ventana del modal para cerrar
 const cerrar = document.getElementById('cerrar');
 //para cerrar la ventana emergente
 cerrar.addEventListener('click', () =>  {
   const msj = document.getElementById('msj');
   msj.classList.remove('show');
+  console.log(msj)
 });
 
 
-//
+//buscar por numero
 const buscarByNumber = document.getElementById("search");
 buscarByNumber.addEventListener("input", (e)=> {
   const searchNumResult = searchPokByNumber(e.target.value);
   console.log(e.target.value);
   console.log(searchNumResult);
 })
+
+//ventana del modal para cerrar
+const cerrarN = document.getElementById('cerrar');
+//para cerrar la ventana emergente
+cerrarN.addEventListener('click', () =>  {
+  const msj = document.getElementById('msj');
+  msj.classList.remove('show');
+});
+
+
 
 //para que al hacer click se baje a la seccion filtrando
 const toFilterLink = document.getElementById("to-filter-link");
@@ -40,6 +53,7 @@ selectType.addEventListener("change", () => {
   console.log(filtrado);
 });
 
+
 //filtrar por debilidad
 const selectWeaknesses = document.getElementById("element-weaknesses-filter");
 selectWeaknesses.addEventListener("change", () => {
@@ -55,6 +69,7 @@ selectResistant.addEventListener("change", () => {
   console.log(filtradoR)
 });
 
+
 //ordenar de la A-Z
 const orderAz = document.getElementById("az");
 orderAz.addEventListener("click", () => {
@@ -62,6 +77,7 @@ orderAz.addEventListener("click", () => {
   // Manipulación del DOM para mostrar los datos ordenados
   console.log(datosOrdenados);
 });
+
 
 //ordenar de la Z-A
 const invertirZa = document.getElementById("za");
@@ -71,6 +87,7 @@ invertirZa.addEventListener("click", () => {
   console.log(datosInvertidos);
 });
 
+
 //ordenar ascendentemente
 const menorAmayor = document.getElementById("ascendente");
 menorAmayor.addEventListener("click", () => {
@@ -79,6 +96,7 @@ menorAmayor.addEventListener("click", () => {
   console.log(datosOrdenados);
 });
 
+
 //ordenar descendentemente
 const mayorAmenor = document.getElementById("descendente");
 mayorAmenor.addEventListener("click", () => {
@@ -86,6 +104,7 @@ mayorAmenor.addEventListener("click", () => {
   // Manipulación del DOM para mostrar los datos ordenados por número descendente
   console.log(datosOrdenados);
 });
+
 
 //calcular fuerza
 const select = document.getElementById('element-strong-filter');

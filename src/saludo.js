@@ -6,13 +6,16 @@ function transicion() {
   document.getElementById("dialogo1").style.display="none";
   document.getElementById("dialogo2").style.display="flex";
 }
-
+  
 setTimeout(transicion, 4000);
-
-
+  
+  
+  
+  
 //de pagina saludo al index
 const siguiente = document.getElementById('boton-next-instrucc');
 siguiente.addEventListener('click', () => {
-  window.location.href ="index.html";
+  window.location.href ="main.html";
 });
-
+  
+  

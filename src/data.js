@@ -7,7 +7,7 @@ console.log(data.pokemon)
 export function searchPokByName(name) {
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
   if(searching.length === 0){
-    const modal =document.querySelector('.modal');
+    const modal = document.querySelector('.modal');
     const msj= document.querySelector('#msj');
     msj.textContent = `No se encontró ningún Pokémon con el nombre '${name}'`;
     modal.style.display ='block';
@@ -23,6 +23,12 @@ export function searchPokByName(name) {
 export function searchPokByNumber(num){
   const searchingNumber = Number(num);
   const searching = data.pokemon.filter(p => searchingNumber === Number(p.num));
+  if(searching.length===0){
+    const modal = document.querySelector('.modal');
+    const msj = document.querySelector('#msj');
+    msj.textContent = `No se encontró ningún Pokémon con el numero '${Number}'`;
+    modal.style.display = 'block';
+  }
   return searching;
 }
 
