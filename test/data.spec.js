@@ -138,11 +138,7 @@ describe("filterCharacters", () => {
   });
 });
 
-<<<<<<< HEAD
-/*Test de sort, organiza de AZ */
-=======
 /*Test sort AZ*/
->>>>>>> a6cb5654276621f4fbdd1f1c8addd9f81980a807
 describe("sortCharactersAZ", () => {
   it("es una función", () => {
     expect(typeof sortingCharactersAZ).toBe("function");
