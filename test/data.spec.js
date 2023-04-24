@@ -1,4 +1,4 @@
-import { HP, filterCharacters, sortingCharactersAZ} from "../src/data.js";
+import { HP, filterCharacters, sortingCharactersAZ, sortingCharactersZA } from "../src/data.js";
 
 const PersonTest = {
   characters: [
@@ -46,7 +46,7 @@ const PersonTestSort = {
   ],
 };
 
-const PersonTestSorted = {
+const PersonTestSortedAZ = {
   characters: [
     {
       id: 1,
@@ -69,6 +69,28 @@ const PersonTestSorted = {
   ],
 };
 
+const PersonTestSortedZA = {
+  characters: [
+    {
+      id: 1,
+      name: "Zara",
+      species: "Human",
+      house: "Gryffindor",
+    },
+    {
+      id: 1,
+      name: "Tamara",
+      species: "Wizard",
+      house: "Gryffindor",
+    },
+    {
+      id: 1,
+      name: "Euan Abercrombie",
+      species: "Muggles",
+      house: "Gryffindor",
+    },
+  ],
+};
 /*Test función HP()*/
 describe("HP", () => {
   it("que sea una función", () => {
@@ -116,10 +138,27 @@ describe("filterCharacters", () => {
   });
 });
 
+<<<<<<< HEAD
 /*Test de sort, organiza de AZ */
+=======
+/*Test sort AZ*/
+>>>>>>> a6cb5654276621f4fbdd1f1c8addd9f81980a807
 describe("sortCharactersAZ", () => {
+  it("es una función", () => {
+    expect(typeof sortingCharactersAZ).toBe("function");
+  });
   it("ordenar de A a Z", () => {
-    expect(sortingCharactersAZ(PersonTestSort.characters)).toEqual(PersonTestSorted.characters)
+    expect(sortingCharactersAZ(PersonTestSort.characters)).toEqual(PersonTestSortedAZ.characters)
+  })
+})
+
+/*Test sort ZA*/
+describe("sortCharactersZA", () => {
+  it("es una función", () => {
+    expect(typeof sortingCharactersZA).toBe("function");
+  });
+  it("ordenar de Z a A", () => {
+    expect(sortingCharactersZA(PersonTestSort.characters)).toEqual(PersonTestSortedZA.characters)
   })
 })
 

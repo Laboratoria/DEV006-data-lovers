@@ -3,7 +3,8 @@ import { charactersData } from "./data.js";
 import { filterCharacters } from "./data.js";
 import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
-/*import { studentsPerProperty } from "./data.js";*/
+import { studentsPerProperty } from "./data.js";
+
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -88,6 +89,7 @@ function updateButtons() {
 }
 
 /*FIILTRAR personajes */
+let filteredCharacter = [];
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
 let filteredCharacter = [];
@@ -95,12 +97,16 @@ function filterByTypeOfPerson() {
   const selectPersonValue = selectPerson.value;
   switch (selectPersonValue) {
     case "1":
+      /*filteredCharacter guarda la información*/
+      filteredCharacter = filterCharacters(charactersData, "Human");
       // displayPersonajes(filterCharacters(charactersData, "Human"));
       filteredCharacter = filterCharacters(charactersData, "Human");
       console.log(filterCharacters(charactersData, "Human"));
       break;
 
     case "2":
+      filteredCharacter = filterCharacters(charactersData, "Muggle");
+      console.log(filterCharacters(charactersData, "Muggle"));
       //displayPersonajes(filterCharacters(charactersData, "Muggle"));
       filteredCharacter = filterCharacters(charactersData, "Muggle");
       console.log(
@@ -110,7 +116,6 @@ function filterByTypeOfPerson() {
       break;
 
     case "3":
-      //displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
       filteredCharacter = filterCharacters(charactersData, "Human (formerly)");
       console.log(filterCharacters(charactersData, "Human (formerly)"));
       break;
@@ -123,29 +128,38 @@ function filterByTypeOfPerson() {
   displayPersonajes(filteredCharacter);
 }
 
-/*Ordenado de personajes de A-Z*/
+
+/*Ordenado de personajes de A->Z*/
 document.getElementById("selectOrder").addEventListener("click", sortByAZ);
 function sortByAZ() {
-  sortingCharactersAZ(filteredCharacter, "name");
-  displayPersonajes(sortingCharactersAZ(filteredCharacter, "name"));
-  console.log(sortingCharactersAZ(filteredCharacter, "name"));
+  sortingCharactersAZ(filteredCharacter, "name")
+  displayPersonajes(sortingCharactersAZ(filteredCharacter, "name"))
 }
 
-/*Ordenado de Personajes de Z-A*/
+/*Ordenado de personajes de Z->A*/
 document.getElementById("selectTwoOrder").addEventListener("click", sortByZA);
 function sortByZA() {
-  sortingCharactersZA(filteredCharacter, "name");
-  displayPersonajes(sortingCharactersZA(filteredCharacter, "name"));
-  console.log(sortingCharactersZA(filteredCharacter, "name"));
+  sortingCharactersZA(filteredCharacter, "name")
+  displayPersonajes(sortingCharactersZA(filteredCharacter, "name"))
 }
 
-/*contar
-document.getElementById("houseOne").addEventListener("click", resultado);
-function resultado(charactersData,house) {
-  if (house === "Gryffindor") {
-    studentsPerProperty(charactersData, "house");
-    displayPersonajes(studentsPerProperty(charactersData, "house"));
+/*const callSelectOrder = document.getElementById("selectOrder")
+callSelectOrder.addEventListener("change", sortByAZ)
+function sortByAZ() {
+  const selectOrderValue = callSelectOrder.value;
+  console.log(selectOrderValue);
+  switch (selectOrderValue) {
+    case "1":
+      displayPersonajes(sortingCharactersAZ(charactersData, "name"));
+      break;
+    case "2":
+      displayPersonajes(sortingCharactersZA(charactersData, "name"));
+      break;
+    default:
+      displayPersonajes(CharacterData);
   }
-  console.log(studentsPerProperty(charactersData, "house"));
 }*/
 
+
+/*Contador*/
+const countByproperty = studentsPerProperty(charactersData, "house");
