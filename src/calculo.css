@@ -85,21 +85,28 @@ ul li {
 
 .roles div:hover{
     transform: scale(1.3);
-    transform-origin: right;
-    height: 350px;
-    width: 250px;
+    transform-origin: center;
+    height: 150px;
+    width: 700px;
     border-radius: 12px;
     /* offset-x | offset-y | blur-radius | color */
     transition: all .3s ease-in-out;
     background-color: #ffff;
   }
 
+
   p{
     line-height: 15px;
     text-align: justify;
-      margin-inline: 15px;
-      font-size: 15px;
-  }
+    margin-inline: 15px;
+    font-size: 15px;
+    left: 238px;
+    position: relative;
+    top: -74px;
+    display: grid;
+    grid-template-columns: 10cm;
+    grid-template-rows: 8cm;
+}
 
 h2 {
     color: #3E2C41;
