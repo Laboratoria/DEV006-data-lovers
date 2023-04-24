@@ -3,6 +3,8 @@ import { charactersData } from "./data.js";
 import { filterCharacters } from "./data.js";
 import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
+import { studentsPerProperty } from "./data.js";
+
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -135,7 +137,6 @@ function sortByZA() {
   displayPersonajes(sortingCharactersZA(filteredCharacter, "name"))
 }
 
-
 /*const callSelectOrder = document.getElementById("selectOrder")
 callSelectOrder.addEventListener("change", sortByAZ)
 function sortByAZ() {
@@ -152,3 +153,7 @@ function sortByAZ() {
       displayPersonajes(CharacterData);
   }
 }*/
+
+
+/*Contador*/
+const countByproperty = studentsPerProperty(charactersData, "house");
