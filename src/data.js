@@ -140,32 +140,31 @@ const filtrar = ()=>{
   //buscar.value = "";
 }
 
-const tagsChampion = Object.keys(data.data);
+//CALCULO AGREGADO
+
+const tagsChampion = Object.values(data.data);
 console.log(tagsChampion)
 
 for (const championtags in tagsChampion) {
-  const champion2 = data[championtags];
-  console.log(champion2);
-  
+
   const tags = tagsChampion[championtags].tags;
-  console.log(`${championtags} ${tags}`);
+  console.log(tags);
 } 
 
-// function contarRol(tags, rol) {
-//   let count = 0;
-//   for (let i = 0; i < tags.length; i++) {
-//     if (tags[i].tags.includes(rol)) {
-//       count++;
-//     }
-//   }
-//   return ((count*100)/134);
-// }
+function contarRol(tagsChampion, rol) {
+  let count = 0;
+  for (let i = 0; i < tagsChampion.length; i++) {
+    if (tagsChampion[i].tags.includes(rol)) {
+      count++;
+    }
+  }
+  return ((count*100)/tagsChampion.length);
+}
 
-// const resultado = contarRol(,"Fighter");
-// console.log(resultado); 
+const resultado = contarRol(tagsChampion,"Tank");
+console.log(resultado); 
 
-//chat
- // Your data with 134 champions
+
 
 
 
