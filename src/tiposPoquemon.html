@@ -45,6 +45,25 @@
           </li>
         </ul>
       </nav>
+      <nav class="navegacion2">
+        <span class="menu">Menu</span>
+        <button class="nav-burger"><i class="fa-solid fa-bars"></i></i></button>
+        <ul class="menu-nav2">
+          <li class="lista-menu">
+            <a href="tiposPoquemon.html" class="link-menu">Tipos de pokemon</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Otros jugadores</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Tu equipo</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Noticias y curiosidades</a>
+          </li>
+        </ul>
+      </nav>
+
     </header>
    <main>
    <article id="principal">
@@ -52,13 +71,13 @@
         <h1>Tipos de Pókemon</h1>
       <div id="campoBusqueda">
         <label for="busqueda">Búsqueda</label>
-        <input type="search" value="Type here" id="busqueda">
-        <i class="fa-brands fa-searchengin fa-3x"></i>
+        <input id="busqueda" type="search"  placeholder="Buscar..." >
+        <i class="fa-brands fa-searchengin fa-3x" id="icono-busqueda"></i>
       </div>
 
       </section>
   
-      <section id="seccion2">
+      <section id="seccion2" class="filtro-pokemon">
      <div class="imagenes">
       <img src="./img/bicho.png"  class="filtro-tipo"  id="bug"  alt="bug">
       <img src="./img/dragon.png" class="filtro-tipo" id="dragon" alt="dragon">
@@ -79,7 +98,8 @@
       <img src="./img/agua.png" class="filtro-tipo" id="water" alt="water">
      </div>
      <button class="filtro-tipo" id="ver-todos">Mostrar Todos</button>
-     <button id="filtrarAz">Filtrar de la A a la Z</button>
+     <button id="filtrarAz" class="filtrar1">Filtrar de la A a la Z</button>
+     <button id="filtrarZa" >Filtrar de la Z a la A</button>
       </section>
 
       <section id="seccion3">
@@ -105,7 +125,7 @@
                   </div> -->
                 </div>
             </div>  
-        </div>
+        
       </section>
    
       <div class="contenedorModal" id="contentModal" >
