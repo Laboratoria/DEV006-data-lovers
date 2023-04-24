@@ -51,15 +51,16 @@ export  function mostrarPokemon(data) {
  abrir.forEach( (btn,index)=>btn.addEventListener("click", (e)=>{
    e.preventDefault();
    
+
    modalC.style.opacity="1";
    modalC.style.visibility="visible";
     const divDos = document.createElement("div");
    
     divDos.classList.add(".modal");
-    const modalHtml=`
+   const modalHtml=`
    
    <div class="modal modal-close" >
-     <p class="close">X<p>
+     <p class="close"><i class="fa-solid fa-circle-xmark"></i><p>
      <div class="caja1">
      <div class="imagen-pokemon">
        <img src="${filterByType[index].img}">
@@ -126,9 +127,6 @@ export  function mostrarPokemon(data) {
   
    }));
 
-   
-   
-   
   };
 
 
@@ -138,14 +136,16 @@ export function filtrarTipo(event) {
  console.log(botonId);
 listaPokemon.innerHTML = " ";
  const tipos = Objetos.pokemon.filter(pokemon => pokemon.type.includes(botonId))
- mostrarPokemon(tipos);
- 
-} 
+mostrarPokemon(tipos)
+return tipos
+}
 
 
-export function ordenar(){
+export function ordenar(data){
+  console.log(data)
   listaPokemon.innerHTML = " ";
- var mapped = Objetos.pokemon.map(function(el, i) {
+  const filterByType = data.length > 0 ? data: Objetos.pokemon
+ var mapped = filterByType.map(function(el, i) {
     return { index: i, value: el.name };
   })
 
@@ -160,9 +160,48 @@ export function ordenar(){
   })
 
 var result = mapped.map(function(el){
-  return Objetos.pokemon[el.index];
+  return filterByType[el.index];
 });
 
  mostrarPokemon(result)
 
 }
+
+
+export function ordenarZa(data){
+  listaPokemon.innerHTML = " ";
+  const filterByType = data.length > 0 ? data: Objetos.pokemon
+ var mapped = filterByType.map(function(el, i) {
+    return { index: i, value: el.name };
+  })
+
+   mapped.sort(function(a, b) {
+    if (a.value < b.value) {
+      return 1;
+    }
+    if (a.value > b.value) {
+      return -1;
+    }
+    return 0;
+  })
+
+var result = mapped.map(function(el){
+  return filterByType[el.index];
+});
+
+ mostrarPokemon(result)
+
+}
+
+
+export function busquedaName(){
+  listaPokemon.innerHTML = " ";
+
+ let input=document.getElementById("busqueda");
+ console.log(input.value)
+ const searchName=Objetos.pokemon.filter(pokemon=>pokemon.name.toLowerCase().match((input.value.toLowerCase())))
+ mostrarPokemon(searchName);
+  return searchName
+ }
+ 
+  
