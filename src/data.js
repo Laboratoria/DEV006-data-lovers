@@ -69,6 +69,7 @@ for(let i = 0; i < champion.length; i++){
 
 
 
+ 
   championImgContainer.appendChild(championImg);
   championCard.appendChild(championName);
   championCard.appendChild(championImgContainer);
@@ -76,7 +77,7 @@ for(let i = 0; i < champion.length; i++){
   championCard.appendChild(championTitle)
   championCard.appendChild(championBlurb);
  
- 
+
   card.championCard=championCard;
   
   card.championCard.style.display = 'block';

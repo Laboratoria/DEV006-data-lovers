@@ -5,8 +5,6 @@ import {sortBy,filtrar} from './data.js';
 //ORGANIZACION A-Z y Z-A
 
 
-// eslint-disable-next-line no-unused-vars
-const contenedor = document.getElementById('contenedor');
 
 document.addEventListener('DOMContentLoaded', () => {
   const selectSort = document.querySelector('.sort');
@@ -39,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   btMenu.addEventListener('click', () => {
     ul.classList.toggle('contenido');
+    console.log('Hace click')
   });
 });
 
