@@ -116,11 +116,23 @@ describe("filterCharacters", () => {
   });
 });
 
+/*Test de sort, organiza de AZ */
 describe("sortCharactersAZ", () => {
   it("ordenar de A a Z", () => {
     expect(sortingCharactersAZ(PersonTestSort.characters)).toEqual(PersonTestSorted.characters)
   })
 })
+
+/*Test de sort,organiza de ZA*/
+
+
+
+
+
+
+
+
+
 /*it("se espera que tenga en sus propiedades,Gryffindor", () => {
     expect(HP(PersonTest)).toMatch(/Gryffindor/);
   });*/

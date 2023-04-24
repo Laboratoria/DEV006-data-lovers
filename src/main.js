@@ -3,6 +3,7 @@ import { charactersData } from "./data.js";
 import { filterCharacters } from "./data.js";
 import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
+/*import { studentsPerProperty } from "./data.js";*/
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -32,12 +33,8 @@ function displayPersonajes(personajes) {
 }
 
 /*llamado de botones next y back*/
-export const buttonNext = document
-  .getElementById("next")
-  .addEventListener("click", nextPage);
-export const buttonBack = document
-  .getElementById("back")
-  .addEventListener("click", previousPage);
+export const buttonNext = document.getElementById("next").addEventListener("click", nextPage);
+export const buttonBack = document.getElementById("back").addEventListener("click", previousPage);
 
 /*personajes por pagina*/
 const charactersPerPage = 42;
@@ -93,45 +90,62 @@ function updateButtons() {
 /*FIILTRAR personajes */
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
+let filteredCharacter = [];
 function filterByTypeOfPerson() {
   const selectPersonValue = selectPerson.value;
-  console.log(selectPersonValue);
   switch (selectPersonValue) {
     case "1":
-      displayPersonajes(filterCharacters(charactersData, "Human"));
+      // displayPersonajes(filterCharacters(charactersData, "Human"));
+      filteredCharacter = filterCharacters(charactersData, "Human");
       console.log(filterCharacters(charactersData, "Human"));
       break;
 
     case "2":
-      displayPersonajes(filterCharacters(charactersData, "Muggle"));
-      console.log(filterCharacters(charactersData, "Muggle"));
+      //displayPersonajes(filterCharacters(charactersData, "Muggle"));
+      filteredCharacter = filterCharacters(charactersData, "Muggle");
+      console.log(
+        (filteredCharacter = filterCharacters(charactersData, "Muggle"))
+      );
+      //console.log(filteredCharacter)
       break;
 
     case "3":
-      displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+      //displayPersonajes(filterCharacters(charactersData, "Human (formerly)"));
+      filteredCharacter = filterCharacters(charactersData, "Human (formerly)");
       console.log(filterCharacters(charactersData, "Human (formerly)"));
       break;
 
     default:
+      filteredCharacter=(charactersData.characters);
+      console.log ((charactersData.characters);)
       displayPersonajes(charactersData);
   }
+  displayPersonajes(filteredCharacter);
 }
 
-/*Ordenado de personajes de A->Z*/
-const callSelectOrder = document
-  .getElementById("selectOrder")
-  .addEventListener("change", sortByAZ);
+/*Ordenado de personajes de A-Z*/
+document.getElementById("selectOrder").addEventListener("click", sortByAZ);
 function sortByAZ() {
-  const selectOrderValue = selectOrder.value;
-  console.log(selectOrderValue);
-  switch (selectOrderValue) {
-    case "1":
-      displayPersonajes(sortingCharactersAZ(charactersData, "name"));
-      break;
-    case "2":
-      displayPersonajes(sortingCharactersZA(charactersData, "name"));
-      break;
-    default:
-      displayPersonajes(CharacterData);
-  }
+  sortingCharactersAZ(filteredCharacter, "name");
+  displayPersonajes(sortingCharactersAZ(filteredCharacter, "name"));
+  console.log(sortingCharactersAZ(filteredCharacter, "name"));
 }
+
+/*Ordenado de Personajes de Z-A*/
+document.getElementById("selectTwoOrder").addEventListener("click", sortByZA);
+function sortByZA() {
+  sortingCharactersZA(filteredCharacter, "name");
+  displayPersonajes(sortingCharactersZA(filteredCharacter, "name"));
+  console.log(sortingCharactersZA(filteredCharacter, "name"));
+}
+
+/*contar
+document.getElementById("houseOne").addEventListener("click", resultado);
+function resultado(charactersData,house) {
+  if (house === "Gryffindor") {
+    studentsPerProperty(charactersData, "house");
+    displayPersonajes(studentsPerProperty(charactersData, "house"));
+  }
+  console.log(studentsPerProperty(charactersData, "house"));
+}*/
+

@@ -151,3 +151,30 @@ button {
   height: 10rem;
   width: auto;
 }
+
+.selectSort {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
