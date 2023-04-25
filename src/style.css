@@ -222,6 +222,12 @@ button {
 }
 
 .modal{
+  background-image: url(images/BGG.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 90%;
+  filter:saturate(80%) blur(1.5px);
   display: none; 
   position: fixed;
   top: 5%;
