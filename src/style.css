@@ -1,0 +1,41 @@
+body{
+    background-image: ;
+}
+
+header{
+    display: flex;
+
+}
+
+.information{
+    display: flex;
+    color: white;
+    background-color: black;
+    margin-top: 50px;
+    width: 100%;
+}
+
+.words_head{
+    margin-top: 80px;
+}
+
+
+.logoRio{
+   width: 120px;
+   height: 100px;
+   top: 111px;
+   left: 69px;
+}
+
+.link_menu{
+    background-color: #CEF506;
+}
+
+.colors{
+    margin-left: 350px;
+}
+
+.explora{
+    width: 100%;
+    height: 550px;
+}
