@@ -18,7 +18,6 @@ export const filterCharacters = (characters, specie) => {
   });
   return newFilter;
 };
-const prueba = filterCharacters(charactersData, "Muggle");
 
 /*Ordenar de A->Z*/
 export const sortingCharactersAZ = (charactersShowed) => {
@@ -52,7 +51,7 @@ export const sortingCharactersZA = (charactersShowed) => {
 
 /*Contador*/
 export const studentsPerProperty = (data, property, propertyValue) => {
-  let countByproperty = {};
+  const countByproperty = {};
 
   data.forEach((character) => {
     /* se comprueba que el valor de la propiedad del personaje actual sea igual que propertyValue buscado*/

@@ -222,6 +222,7 @@ button {
 }
 
 #modal {
+  display: none;
   background: rgba(0, 0, 0, 0.9);
   color: #fff;
   position: fixed;
@@ -243,4 +244,8 @@ button {
   margin: auto;
   font-size: 1.5em;
   text-align: center;
+}
+
+#close {
+  display: block;
 }
