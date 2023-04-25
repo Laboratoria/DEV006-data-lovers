@@ -51,18 +51,15 @@ const countSlytherin = studentsPerProperty(
   "Slytherin"
 );
 const totalStudentsS = countSlytherin.Slytherin;
-console.log(totalStudentsS);
-
-/*Contador*/
-const phouses = document.getElementById("housesInfo");
-phouses.innerHTML += `${countGryffindor}`;
+console.log(totalStudentsS)
 
 /*Porcentajes*/
 const totalStudents = charactersData.length;
 console.log(totalStudents);
 /*Gryffindor*/
-const porcentajeG = ((totalStudentsG / totalStudents) * 100).toFixed(2);
-console.log(parseFloat(porcentajeG) + "%");
+const porcentajeG = ((totalStudentsG/totalStudents)*100).toFixed(2);
+const resultadoG = parseFloat(porcentajeG)+ "%"
+console.log(resultadoG)
 /*Hufflepuff*/
 const porcentajeH = ((totalStudentsH / totalStudents) * 100).toFixed(2);
 console.log(parseFloat(porcentajeH) + "%");
@@ -70,5 +67,10 @@ console.log(parseFloat(porcentajeH) + "%");
 const porcentajeR = ((totalStudentsR / totalStudents) * 100).toFixed(2);
 console.log(parseFloat(porcentajeR) + "%");
 /*Slytherin*/
-const porcentajeS = ((totalStudentsS / totalStudents) * 100).toFixed(2);
-console.log(parseFloat(porcentajeS) + "%");
+const porcentajeS = ((totalStudentsS/totalStudents)*100).toFixed(2);
+console.log(parseFloat(porcentajeS)+ "%")
+
+/*Contador*/
+const phouses = document.getElementById("housesInfo")
+console.log(countGryffindor)
+phouses.innerHTML += `${resultadoG} ${totalStudentsG}`
