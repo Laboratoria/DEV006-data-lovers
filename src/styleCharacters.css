@@ -1,15 +1,12 @@
 *{box-sizing: border-box; padding: 0;}
 
 body{
-
     background-image: url('../images/imgluna.jpeg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: auto;
     margin: 0%;
-
 }
-
 header {
     width: 100%;
     height: 150px;
@@ -36,13 +33,11 @@ header {
     height: 200px;
     padding: 0px 65px 35px 3px;
 }
-
 header nav {
     font: 1em sans-serif;;
     float: right;
     line-height: 150px;
 }
-
 header nav a {
     display: inline-block;
     color: #ffffff;
@@ -54,12 +49,10 @@ header nav a {
     -o-transition: all 500ms ease;
     transition: all 500ms ease;
 }
-
 header nav a:hover {
     background: #48F143;
     border-radius: 10px ;
 }
-
 main {
     width: 100%;
     align-content: flex-start;
@@ -68,24 +61,19 @@ main {
     display: flex;
     padding-left: 80px ;
 }
-
 main article{   
     font-size: 20px;
 }
-
 main section{   
     font-size: 14px;
     font-weight: lighter;
 }
-
 aside{
     display: block;
     float: right;
     margin-top: 0%;
     margin-right: 0%;
-
 }
-
 .container{
     width: 85%;
     float: right;
@@ -123,7 +111,16 @@ aside{
     height: 35px;
     text-align: center;
     border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+ }
+.buttons{
+    width: 170px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
     margin: 0px 0px 40px 0px;
+    cursor: pointer;
+    
  }
 .filter{
     display: inline-block;
@@ -133,80 +130,80 @@ aside{
 .lineaFilter{
     display: flex;
 }
-a {
+a{
     display: block;
     color: #ffffff;
     font-weight: normal;   
 }
-.fotogrupo1{
+.group1{
     width: 100%;
     display: inline-block;
     margin-top: 150px;
 }
-.foto1{
+.photo1{
     width: 210px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto2{
+.photo2{
     width: 710px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto4{
+.photo4{
     width: 210px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto3{
+.photo3{
     width: 710px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto5{
+.photo5{
     width: 210px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto6{
+.photo6{
     width: 710px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto8{
+.photo8{
     width: 210px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto7{
+.photo7{
     width: 710px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto9{
+.photo9{
     width: 210px;
     height: 410px;
     margin-right: 10px;
     margin-bottom: 10px;
     cursor: pointer;
 }
-.foto10{
+.photo10{
     width: 710px;
     height: 410px;
     margin-right: 10px;
