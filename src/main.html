@@ -3,12 +3,17 @@
   <head>
     <meta charset="utf-8">
     <link rel="icon" type="images.png" href="images/barra-menu.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap" rel="stylesheet">
     <title>Pokemon Go</title>
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <header class ="barra-menu" id="barra-menu">
+      <audio src="" autoplay volume="0.5"></audio>
       <div class="contenedor-barra">
         <div class="contenedor-logo">
           <img class="img-menu" src="images/iconos/menu.png">
@@ -23,7 +28,7 @@
                 <li><a id="az"> A-Z </a></li>
                 <li><a id="za"> Z-A </a></li>
                 <li><a id="ascendente">NUMBER 🢁</a></li>
-                <li><a id="descendente">NUMBER 🢃</a></li>                
+                <li><a id="descendente">NUMBER 🢃</a></li>
               </ul>
           </li>
          <li><a href="filtrando-section" id="to-filter-link"><img src="images/iconos/filtrar.png">FILTER</a></li>
@@ -36,9 +41,17 @@
   <main>
     <section class="pokemon">
         <div class="portadaBox">
-          <picture class="portada">
+          <div class="portada-slider">
             <img src="images/portadaBox/principal.jpeg">
-          </picture>
+            <img src="images/portadaBox/poke.jpg">
+            <img src="images/portadaBox/portada4.jpg">
+            <img src="images/portadaBox/ash1fondo.jpg">
+            <img src="images/portadaBox/portada5.png">
+            <img src="images/portadaBox/portada3.jpg">
+            <img src="images/portadaBox/poke3.jpg">
+            <img src="images/portadaBox/principal.jpeg">
+            <img src="images/portadaBox/pokebb.webp">
+          </div>
         </div>
         <div class="searcher">
           <div>
@@ -142,13 +155,31 @@
             </div>
           </nav>
         </section>
-      <div class="contenedor-pokemones" id="pokemones"> 
-         <div class="contenedor-cards">
-         </div>
-      </div>   
+    <article class="contenedor-pokemones">
+        <div id="pokemones">
+          <div class="contenedor-cards">
+          </div>
+      </div>
+    </article>
     </section>
   </main>
-  <footer></footer>
+  <footer class="footer-main">
+    <div class="logo">
+      <a href="main.html"><img src="images/login.png" alt="logo"></a>
+    </div>
+    <div class="app">
+        <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US" class="apps"><img src="images/iconos/playstore.png"></a>
+        <a href="https://apps.apple.com/es/app/pok%C3%A9mon-go/id1094591345" class="apps"><img src="images/iconos/appstore.png"></a>
+    </div>
+    <div class="redes">
+        <a href="https://web.facebook.com/PokemonGO/?locale=es_LA&_rdc=1&_rdr" class="social-icono"><img src="images/iconos/facebook.png" alt="facebook"></a>
+        <a href="https://www.instagram.com/pokemongoapp/" class="social-icono"><img src="images/iconos/insta.png" alt="instagram"></a>
+        <a href="https://twitter.com/PokemonGoApp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icono"><img src="images/iconos/twitter.png" alt="twitter"></a>
+    </div>
+    <div class="Copyright">
+        <h5>Copyright © 2023 Laboratoria-Dev006 from Nacdul Ramirez & Raquel Fernández. All rights reserved.</h5>
+    </div>
+  </footer>
     <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
   </body>

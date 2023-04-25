@@ -1,14 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patua+One&display=swap');
 /*-- impotar los estilos para crear efectos de volteo de tarjeta --*/
 @import url(main-cards.css);
 
 
 *{font-family: 'Changa One', cursive;
-    font-family: 'Maven Pro', sans-serif;}
+    font-family: 'Maven Pro', sans-serif;
+    font-family: 'Patua One', cursive;}
 
 body{
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233), #02e1ff86);
-    display: flex;
+    min-height: 100vh;
 }
 
 * {
@@ -29,10 +31,13 @@ header{
     top: 0;
     left: 0;
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233), #02e1ff86);
-} 
+}
 
 .contenedor-barra{
     width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .contenedor-logo{
@@ -57,8 +62,9 @@ header img{
 }
 
 .barra-menu{
-/*-display:none-*/   
+/*-display:none-*/
 display: flex;
+flex-wrap: wrap;
 }
 
 #btn-menu{
@@ -132,10 +138,6 @@ display: flex;
     max-height: 45px;
 }
 
-.glyphicon{
-    font-size: 20px;
-}
-
 /*-pantalla movil y pc sin @media query-*/
 /*-seccion busqueda-*/
 .pokemon{
@@ -145,9 +147,52 @@ width: 100%;
 /*background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233),rgba(4, 192, 255, 0.452));-*/
 }
 
-.portadaBox{
+.portadaBox {
     width: 100%;
+   overflow: hidden;
+  }
+
+.portada-slider {
+  display: flex;
+  width: 400%;
+  animation: slide 150s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
+
+.portada-slider img.last {
+    animation-fill-mode: forwards !important;
+  }
+
+
+.portada-slider img {
+    flex: 1 0 25%;
+    max-height: 30em;
+  }
+
+ @keyframes slide {
+    0% {
+      transform: translateX(0%);
+    }
+    16.666% {
+      transform: translateX(-100%);
+    }
+    33.333% {
+      transform: translateX(-200%);
+    }
+    50% {
+      transform: translateX(-300%);
+    }
+    66.666% {
+      transform: translateX(-400%);
+    }
+    83.333% {
+      transform: translateX(-500%);
+    }
+    100% {
+      transform: translateX(-500%);
+    }
+  }
 
 .searcher {
     padding: 16px 0;
@@ -234,28 +279,29 @@ width: 100%;
     width: 101vw;
     transition: opacity 0.3s ease;
 }
-  
+
 .modal{
     background-color: #fff;
     width: 620px;
     max-width: 100%;
+    height: 80%;
     padding: 28px 48px;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     text-align: center;
 }
-  
+
 .modal h1{
     margin: 0;
 }
-  
+
 .modal p{
     opacity: 0.6;
     font-size: 15px;
     font-family: cursive;
 }
-  
-  
+
+
 #cerrar{
     font-weight: 700;
     font-size: 18px;
@@ -266,18 +312,74 @@ width: 100%;
     border-radius: 50px;
     cursor:pointer;
 }
-    
+
 #cerrar:hover{
       background-color: #a20bb6d7;
       color: antiquewhite;
       transform: scale(1.1);
 }
-    
+
 .show{
       pointer-events: auto;
       opacity: 1;
 }
 
+.footer-main{
+    display: flex;
+    flex-wrap: wrap;
+    background-image: url(images/fondouniverso.gif);
+    width: 100%;
+    height: 18em;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-main > div {
+    flex-basis: calc(100% / 3);
+    text-align: center;
+  }
+
+.logo,
+.app,
+.redes {
+  flex-basis: calc(100% / 3);
+  text-align: center;
+}
+
+.footer-main .logo img{
+    height: 100%;
+    width: 90%;
+}
+
+.app img{
+width: 40%;
+height: 60%;
+}
+
+.apps {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px auto;
+  }
+
+.redes img{
+    width: 15%;
+    height: 45%;
+}
+
+.social-icono {
+    margin: auto 10px;
+  }
+
+.Copyright h5{
+    margin-top: auto;
+    color: #fff;
+    font-size: 20px;
+    white-space: nowrap;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
 
 /*-filtrado-*/
 .filtrando{
@@ -314,9 +416,9 @@ font-size: 16px;
 }
 
 
-#type, 
-#debilidades, 
-#resistencia, 
+#type,
+#debilidades,
+#resistencia,
 #fuerza{
     font-size: 24px;
     padding: 12px;
@@ -331,9 +433,9 @@ select option:checked{
 }
 
 
-#element-type-filter, 
-#element-weaknesses-filter, 
-#element-resistant-filter, 
+#element-type-filter,
+#element-weaknesses-filter,
+#element-resistant-filter,
 #element-strong-filter {
     background-color: hsl(0, 0%, 100%);
     border: 6px solid transparent;
@@ -373,7 +475,7 @@ select option:checked{
 #element-resistant-filter option,
 #element-resistant-filter option,
 #element-strong-filter option{
-    text-align: center; 
+    text-align: center;
     margin: 0 auto;
     color: #4c0264;
   }
@@ -391,10 +493,13 @@ select option:checked{
     width: 100%;
 }
 
-.inicio .contenedor-pokemones{
+.contenedor-pokemones{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    padding: 5%;
 }
 
 /*-ESTE CONTENDOR ES PARA LA CARD, LO HICE AYER -*/
@@ -415,7 +520,7 @@ select option:checked{
     .img-menu {
     width: 190px;
     height: 50px;
-  } 
+  }
 
     .elements{
         position: absolute;
@@ -425,10 +530,10 @@ select option:checked{
         transition: all 0.4s;
         transform: translateX(-100);
     }
-    
+
     .elements ul{
         display: block;
-        background: #00ff9d55;
+        background: #00ff9d5b;
         width: 50%;
         height: 50vh;
     }
