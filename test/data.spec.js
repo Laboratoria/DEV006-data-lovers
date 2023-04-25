@@ -157,6 +157,17 @@ describe("sortCharactersZA", () => {
     expect(sortingCharactersZA(PersonTestSort.characters)).toEqual(PersonTestSortedZA.characters)
   })
 })
+
+/*Test de sort,organiza de ZA*/
+
+
+
+
+
+
+
+
+
 /*it("se espera que tenga en sus propiedades,Gryffindor", () => {
     expect(HP(PersonTest)).toMatch(/Gryffindor/);
   });*/

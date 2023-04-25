@@ -3,12 +3,12 @@ import { charactersData } from "./data.js";
 import { filterCharacters } from "./data.js";
 import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
-import { studentsPerProperty } from "./data.js";
+/*import { characterPerProperty  } from "./data.js";*/
 
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
-const housesLogo = "./images/houses_logo.png";
+const hogwartzlogo = "./images/hogwartzlogo.png";
 
 /* despliega la data */
 function displayPersonajes(personajes) {
@@ -22,7 +22,7 @@ function displayPersonajes(personajes) {
    de cada objeto "characters" */
     /* las comillas inversas `` se utilizan para insertar valores de vbles dentro de una cadena de txto*/
     divCharacters.innerHTML += `<div class="iDCard">
-     <img id="housesLogos" src="${housesLogo}" alt="housesLogo">
+     <img id="hogwartzlogo" src="${hogwartzlogo}" alt="hogwartzlogo">
      <ul>
      <li><strong> ID: </strong> ${characters.id}</li>
      <li><strong>NAME:</strong> ${characters.name}</li>
@@ -34,13 +34,10 @@ function displayPersonajes(personajes) {
 }
 
 /*llamado de botones next y back*/
-export const buttonNext = document
-  .getElementById("next")
-  .addEventListener("click", nextPage);
-export const buttonBack = document
-  .getElementById("back")
-  .addEventListener("click", previousPage);
-
+export  const buttonNext = document.getElementById("next")
+buttonNext&& buttonNext.addEventListener("click", nextPage)
+export const buttonBack = document.getElementById("back")
+buttonBack&& buttonBack.addEventListener("click", previousPage);
 /*personajes por pagina*/
 const charactersPerPage = 42;
 let page = 0;
@@ -93,7 +90,7 @@ function updateButtons() {
 }
 
 /*FIILTRAR personajes */
-let filteredCharacter = [];
+let filteredCharacter = charactersData;
 const callFilterForCharacters = document.getElementById("selectPerson");
 callFilterForCharacters.addEventListener("change", filterByTypeOfPerson);
 function filterByTypeOfPerson() {
@@ -117,12 +114,12 @@ function filterByTypeOfPerson() {
       break;
 
     default:
-      displayPersonajes(charactersData);
+       displayPersonajes(charactersData);
   }
   displayPersonajes(filteredCharacter);
 }
 
-
+console.log(filteredCharacter)
 /*Ordenado de personajes de A->Z*/
 document.getElementById("selectOrder").addEventListener("click", sortByAZ);
 function sortByAZ() {
@@ -137,23 +134,3 @@ function sortByZA() {
   displayPersonajes(sortingCharactersZA(filteredCharacter, "name"))
 }
 
-/*const callSelectOrder = document.getElementById("selectOrder")
-callSelectOrder.addEventListener("change", sortByAZ)
-function sortByAZ() {
-  const selectOrderValue = callSelectOrder.value;
-  console.log(selectOrderValue);
-  switch (selectOrderValue) {
-    case "1":
-      displayPersonajes(sortingCharactersAZ(charactersData, "name"));
-      break;
-    case "2":
-      displayPersonajes(sortingCharactersZA(charactersData, "name"));
-      break;
-    default:
-      displayPersonajes(CharacterData);
-  }
-}*/
-
-
-/*Contador*/
-const countByproperty = studentsPerProperty(charactersData, "house");

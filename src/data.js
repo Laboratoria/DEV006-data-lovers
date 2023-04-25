@@ -3,7 +3,7 @@ import dataHP from "./data/harrypotter/data.js";
 
 /*mostrar data*/
 export const HP = (datos) => {
-  console.log('datosp', datos)
+  console.log("datosp", datos);
   const callByCharacters = datos.characters;
   return callByCharacters;
 };
@@ -18,56 +18,37 @@ export const filterCharacters = (characters, specie) => {
   });
   return newFilter;
 };
-const prueba = filterCharacters(charactersData, "Muggle")
+const prueba = filterCharacters(charactersData, "Muggle");
 
 /*Ordenar de A->Z*/
 export const sortingCharactersAZ = (charactersShowed) => {
   const newSort = charactersShowed.sort((a, b) => {
     if (a.name > b.name) {
-      return 1
+      return 1;
     }
     if (a.name < b.name) {
-      return -1
+      return -1;
     } else {
-      return 0
+      return 0;
     }
-  })
+  });
   return newSort;
-}
-console.log(sortingCharactersAZ(prueba, "name"))
+};
 
 /*Ordenar de Z->A*/
 export const sortingCharactersZA = (charactersShowed) => {
   const newSort = charactersShowed.sort((a, b) => {
     if (a.name > b.name) {
-      return -1
+      return -1;
     }
     if (a.name < b.name) {
-      return 1
+      return 1;
     } else {
-      return 0
+      return 0;
     }
-  })
+  });
   return newSort;
-}
-
-console.log(sortingCharactersZA(prueba, "name"))
-
-/*Cálculo estudiantes por Casa*/
-/*export const studentsPerHouse = ()=>{
-let countByHouse={}  ;
-
-charactersData.forEach((character) => {
- Verifica si la casa ya se encuentra en vble. forEach accede a la propeidad del ojeto correspondiente a la casa del estudiante actual
-if (countByHouse[character.house]){
-  countByHouse[character.house]++;
-}else{
-  si la casa no existe, comienza el contador en 1
-  countByHouse[character.house] = 1;
-}
-});
-return countByHouse;
-};*/
+};
 
 /*Contador*/
 export const studentsPerProperty = (data, property, propertyValue) => {
@@ -88,19 +69,18 @@ export const studentsPerProperty = (data, property, propertyValue) => {
   return countByproperty;
 };
 
-const countByproperty = studentsPerProperty(charactersData, "house","Gryffindor");
-console.log(countByproperty);
 
 /*export const characterPerProperty = (data, property) => {
-  let countByproperty = data.reduce((counter, character) => {
-      si no existe, se agrega propiedad y se inicializa con 0
-      if (!counter[character[property]]) {
-        counter[character[property]] = 0;
-      }
-      counter[character[property]]++;
-      return counter;
-    el counter inicializa como objeto vacío
+  let countByproperty = data.reduce((accumulator, currentValue) => {
+    /*si no existe, se agrega propiedad y se inicializa con 0
+    /*if (!accumulator[currentValue[property]]) {
+      accumulator[currentValue[property]] = 0;
+    }
+    accumulator[currentValue[property]]++;
+    return accumulator;
+    /*el counter inicializa como objeto vacío
+    console.log({accu})
   }, {});
-}
-const countByproperty = characterPerProperty(charactersData, "house");
-console.log(countByproperty)*/
+};
+const resultad = characterPerProperty(charactersData, "house");
+console.log(resultad);*/
