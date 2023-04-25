@@ -161,13 +161,24 @@ function contarRol(tagsChampion, rol) {
   }
   return ((count*100)/tagsChampion.length);
 }
-
-const resultado = contarRol(tagsChampion,"Tank");
+const resultado = contarRol(tagsChampion,"Fighter");
 console.log(resultado); 
+const resultado2 = contarRol(tagsChampion,"Assassin");
+console.log(resultado2); 
+const resultado3 = contarRol(tagsChampion,"Tank");
+console.log(resultado3); 
+const resultado4 = contarRol(tagsChampion,"Mage");
+console.log(resultado4); 
+const resultado5 = contarRol(tagsChampion,"Support");
+console.log(resultado5); 
+const resultado6 = contarRol(tagsChampion,"Marksman");
+console.log(resultado6); 
 
 
 
 
 
 
-export {sortBy,filtrar};
+
+
+export {sortBy,filtrar,contarRol};

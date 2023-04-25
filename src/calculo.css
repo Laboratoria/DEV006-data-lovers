@@ -209,23 +209,38 @@ height: 70px;
 border-radius: 15px;
 }
 
-.roles{
+.roles {
    top: 276px;
    position: relative;
    text-align: center;
    left: 170px;
    line-height: 70px;
+  
+}
+
+
+.roles div p{
+  margin-left: -62px;
+  margin-right: 79px;
+  
+  margin-bottom: -6px;
+  justify-content: space-evenly;
+  display: flex;
+  height: 17px;
 }
 
 .roles div:hover{
     transform: scale(1.3);
     transform-origin: center;
-    height: 350px;
+    height: 400px;
     width: 250px;
     border-radius: 12px;
     /* offset-x | offset-y | blur-radius | color */
     transition: all .3s ease-in-out;
     background-color: #ffff;
+    opacity: 1;
+   
+    
   }
 
 
@@ -236,13 +251,24 @@ border-radius: 15px;
   color: black;
 }
 
-p{
+div p{
   line-height: 15px;
   text-align: justify;
-    margin-inline: 15px;
-    font-size: 15px;
+    margin-inline: 30px;
+    font-size: 12px;
+    left: 70px;
+  margin-left: -40px;
+    top: 30px;
+    grid-template-columns: 5cm;
+    grid-template-rows: 5cm;
+    display: block;
+   
 }
-
+ p:hover{
+ display: block;
+ 
+  
+}
 
 }
 
