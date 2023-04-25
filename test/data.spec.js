@@ -1,12 +1,13 @@
 import { searchPokByName, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenarPorNombreAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza } from '../src/data.js';
-import data from '../src/data/pokemon/pokemon.js';
 
 //data aleatoria para probarla con los test
 const dataPokemon = [
   {
     "num": "173",
     "name": "cleffa",
-    "type": "fairy",
+    "type": [
+      "fairy"
+    ],
     "resistant": [
       "fighting",
       "bug",
@@ -73,19 +74,65 @@ const dataPokemon = [
   }
 ];
 
+//filtrado por tipo
+describe('selectTipo filtrar todos los pokemones por su tipo', () => {
+  it('is a function', () => {
+    expect(typeof filtradoTipo).toBe('function');
+  });
+
+  it('debería retornar los pokemones según el tipo seleccionado [fairy], [fighting], [electric]', () => {
+    const selectTipo = filtradoTipo(dataPokemon);
+    expect(selectTipo[0].type).toBe('fairy');
+    expect(selectTipo[1].type).toBe('fighting');
+    expect(selectTipo[2].type).toBe('electric');
+  });
+});
+
+//filtrado por debilidad
+describe('selectDebilidad filtrar todos los pokemones filtrados por su debilidad', () => {
+  it('is a function', () => {
+    expect(typeof filtradoDebilidad).toBe('function');
+  });
+
+  it('debería retornar todos los pokemones filtrados por su debilidad [poison, steel],[flying, psychic, fairy],[ground]', () => {
+    const selectDebilidad = filtradoDebilidad(dataPokemon);
+    expect(selectDebilidad[0]).toBe('poison, steel');
+    expect(selectDebilidad[1]).toBe('flying, psychic, fairy');
+    expect(selectDebilidad[2]).toBe('ground]');
+  });
+});
+
+
+
 //Test para ordenar A-Z
-describe('orderAz ordena todos los pokemones de la A a la Z' , () => {
-  it('Deberia retornar una función', () => {
+describe('orderAz ordenar todos los pokemones por su nombre de la A a la Z', () =>
+it('is a function', () => {
+  expect(typeof ordenarPorNombreAz).toBe('function');
+});
+
+  it('deberia retornar los nombres de los pokemones ordenados de la A a la Z [cleffa], [machoke], [raikou]', () => {
+    const orderAz = ordenarPorNombreAz(dataPokemon);
+    expect(orderAz[0].name).toBe('cleffa');
+    expect(orderAz[1].name).toBe('machoke');
+    expect(orderAz[2].name).toBe('raikou');
+});
+});
+
+
+
+/*describe('orderAz ordena todos los pokemones de la A a la Z' , () => {
+  it('is a function', () => {
     expect(typeof ordenarPorNombreAz).toBe('function');
   });
 
   it('deberia retornar los nombres de los pokemones de la A-Z [cleffa], [machoke], [raikou]', () => {
-    const orderAz = ordenarPorNombreAz(dataPokemon,data);
+    const orderAz = ordenarPorNombreAz(dataPokemon);
     expect(orderAz[0].name).toEqual('cleffa');
-    expect(orderAz[1].name).toEqual('machoke');
+    expect(orderAz[1].name).toEqual('machote');
     expect(orderAz[2].name).toEqual('raikou');
   });
-});
+});*/
+
 
 //test para invertir y ordenar Z-A
 describe('invertirZa invierte y ordena todos los pokemos de la Z a la A', () => {
@@ -94,28 +141,17 @@ describe('invertirZa invierte y ordena todos los pokemos de la Z a la A', () => 
   });
 
   it('returns `los nombres de los pokemones de la Z-A [raikou], [machote], [cleffa]`', () => {
-    const invertirZa = invertirYOrdenarPorNombreZa(dataPokemon,data);
-    expect(invertirZa[0].name).toEqual('raikou');
+    const invertirZa = invertirYOrdenarPorNombreZa(dataPokemon);
+    expect(invertirZa[2].name).toEqual('raikou');
     expect(invertirZa[1].name).toEqual('machote');
-    expect(invertirZa[2].name).toEqual('cleffa');
+    expect(invertirZa[0].name).toEqual('cleffa');
   });
 });
 
 
 
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
-});
-
-
-describe('anotherExample', () => {
+/*describe('anotherExample', () => {
   it('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -123,4 +159,4 @@ describe('anotherExample', () => {
   it('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/

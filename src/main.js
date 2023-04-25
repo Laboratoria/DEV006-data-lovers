@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 //main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
 import data from "./data/pokemon/pokemon.js";
 import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenarPorNombreAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
@@ -121,3 +122,6 @@ select.addEventListener('change', () => {
   console.log(pokemonsOrdenados);
 });
 
+//reproductor
+const reproductor = document.getElementById('reproductor');
+reproductor.volume = 0.05;

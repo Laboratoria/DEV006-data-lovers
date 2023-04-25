@@ -21,7 +21,7 @@ box-sizing: border-box;
 
 /*-- ESTILOS DE LA BARRA DE MENÚ PARA PC--*/
 header{
-    width: 100vw;
+    width: 100%;
     height: 70px;
     z-index: 100;
     display: flex;
@@ -148,24 +148,42 @@ width: 100%;
 }
 
 .portadaBox {
-    width: 100%;
-   overflow: hidden;
+    /*width: 100%;
+   overflow: hidden;*/
+   display: flex;
+   width: 1200%;
+   animation: slide 50s linear infinite;
   }
 
-.portada-slider {
-  display: flex;
-  width: 400%;
-  animation: slide 150s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
+.portada-slider{
+  flex-basis: 100%;
+}
+.portada-slider img{
+  display: block;
+  width: 100%;
+  height: 500px;
 }
 
-.portada-slider img.last {
-    animation-fill-mode: forwards !important;
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }   100% {
+    transform: translateX(-100%);
   }
+ }
+
+/*.portada-slider {
+  display: flex;
+  width: 400%;
+  animation: slide 150s infinite;
+}
+
+/*.portada-slider img.last {
+    animation-fill-mode: forwards !important;
+  }*/
 
 
-.portada-slider img {
+/*.portada-slider img {
     flex: 1 0 25%;
     max-height: 30em;
   }
@@ -192,7 +210,7 @@ width: 100%;
     100% {
       transform: translateX(-500%);
     }
-  }
+  }*/
 
 .searcher {
     padding: 16px 0;
@@ -324,6 +342,64 @@ width: 100%;
       opacity: 1;
 }
 
+/* para tablet en posición horizontal */
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .footer-main {
+    height: auto;
+    padding: 30px 0;
+  }
+  .footer-main > div {
+    flex-basis: 100%;
+  }
+  .apps {
+    margin-top: 30px;
+  }
+  .redes img {
+    width: 10%;
+    height: auto;
+  }
+  .social-icono {
+    cursor: pointer;
+  }
+}
+
+/* para tablet en posición vertical y móviles */
+@media only screen and (max-width: 768px) {
+  .footer-main {
+    height: auto;
+    padding: 30px 0;
+  }
+  .footer-main > div {
+    flex-basis: 100%;
+  }
+  .footer-main .logo img{
+    height: 100%;
+    width: 90%;
+    cursor: pointer;
+}
+  .apps {
+    margin-top: 30px;
+  }
+  .app img{
+    width: 35%;
+    height: 55%;
+    cursor: pointer;
+    }
+
+  .redes img {
+    width: 30%;
+    height: auto;
+  }
+  .social-icono {
+    cursor: pointer;
+  }
+  .Copyright h5 {
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+  }
+}
+
+/*para pc*/
 .footer-main{
     display: flex;
     flex-wrap: wrap;
@@ -404,13 +480,16 @@ height: 60%;
 
 /*estilos para los selectores*/
 .selectores {
-    display: flex;
-    flex-direction: column;
-    margin: 0 16px;
+    margin: 10px;
+   /*display: flex;*/
+    /*flex-direction: column;*/
+    text-align: center;
+    /*margin: 0 16px;*/
 }
 
 .label{
-font-size: 16px;
+  display: block;
+  font-size: 16px;
   font-weight: bold;
   margin-bottom: 5px;
 }
@@ -508,6 +587,7 @@ select option:checked{
     background-image: url("images/cards/card1.png");
 }
 
+
 /*- barra de menu para cel -*/
 @media (max-width:768px){
     header label {
@@ -533,13 +613,16 @@ select option:checked{
 
     .elements ul{
         display: block;
-        background: #00ff9d5b;
-        width: 50%;
-        height: 50vh;
+        background: #34ffaa71;
+        width: 35%;
+        height: 100%;
     }
 
     .elements ul li:hover ul{
         display: none;
     }
+
+
 }
+
 

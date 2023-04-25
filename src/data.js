@@ -1,9 +1,10 @@
+/* eslint-disable no-console */
 //import pokemon from "./data/pokemon/pokemon.js";
 import data from "./data/pokemon/pokemon.js";
 console.log(data.pokemon)
 //En el archivo data.js, exporta las funciones de búsqueda y filtrado.
 
-//input SEARCH buscar por nombre 
+//input SEARCH buscar por nombre
 export function searchPokByName(name) {
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
   if(searching.length === 0){
