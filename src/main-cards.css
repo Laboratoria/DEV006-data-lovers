@@ -1,15 +1,20 @@
-.contenedor-pokemones{
-    background: #ffffffae;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
+#pokemones{
+  background: #ffff0040;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 7% 0;
+  margin: auto;
+  align-content: center;
 }
 
 .contenedor-cards{
-    justify-self: auto;
-    gap: 10px;
+  justify-self: auto;
+  gap: 10px;
 }
 
 .cards{
-    
+
 }
