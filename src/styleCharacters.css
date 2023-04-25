@@ -1,0 +1,212 @@
+*{box-sizing: border-box; padding: 0;}
+
+body{
+    background-image: url('../images/imgluna.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: auto;
+    margin: 0%;
+}
+header {
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+    background: #514F4F;
+    opacity: 80%;
+    margin-top: 20px;
+}
+.wrapper {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+}
+.subir{
+    display: flex;
+    margin: 60px 0px 40px 0px;  
+}
+.logo {
+    float:left;
+    line-height: 150px;
+    cursor: pointer;
+    width: 380px;
+    height: 200px;
+    padding: 0px 65px 35px 3px;
+}
+header nav {
+    font: 1em sans-serif;;
+    float: right;
+    line-height: 150px;
+}
+header nav a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 15px;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+}
+header nav a:hover {
+    background: #48F143;
+    border-radius: 10px ;
+}
+main {
+    width: 100%;
+    align-content: flex-start;
+    font-family: Tahoma;
+    color: #ffffff; 
+    display: flex;
+    padding-left: 80px ;
+}
+main article{   
+    font-size: 20px;
+}
+main section{   
+    font-size: 14px;
+    font-weight: lighter;
+}
+aside{
+    display: block;
+    float: right;
+    margin-top: 0%;
+    margin-right: 0%;
+}
+.container{
+    width: 85%;
+    float: right;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    vertical-align: middle;
+    margin-top: 60px;
+} 
+.card {
+    display: flex;
+    background-color: #514F4F;
+    border-radius: 40px;
+    border-style: solid;
+    border-color: #48F143;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 16px;
+    margin-right: 16px;
+}
+.card img {
+    width: 87%;
+    height: 75%;
+    border-radius: 25px;
+    margin: 20px 20px  ;
+}
+.card-title {
+    font-size: 20px;
+    margin-top: auto;
+    text-align: center;
+
+}
+.search{
+    width: 350px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0px 0px 10px 0px;
+ }
+.buttons{
+    width: 170px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    margin: 0px 0px 40px 0px;
+    cursor: pointer;
+    
+ }
+.filter{
+    display: inline-block;
+    width: 30px;
+    height: 30px; 
+ }
+.lineaFilter{
+    display: flex;
+}
+a{
+    display: block;
+    color: #ffffff;
+    font-weight: normal;   
+}
+.group1{
+    width: 100%;
+    display: inline-block;
+    margin-top: 150px;
+}
+.photo1{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo2{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo4{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo3{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo5{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo6{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo8{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo7{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo9{
+    width: 210px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+.photo10{
+    width: 710px;
+    height: 410px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
