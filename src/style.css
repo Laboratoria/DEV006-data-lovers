@@ -34,6 +34,8 @@ nav {
   width: 25%;
 }
 
+
+
 article {
   display: flex;
   flex-direction: column;
@@ -221,32 +223,42 @@ button {
   width: 75%;
 }
 
-.modal{
+.modal {
   background-image: url(images/BGG.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   opacity: 90%;
-  filter:saturate(80%) blur(1.5px);
-  display: none; 
+  /*filter:saturate(80%) blur(1.5px) brightness(70%);*/
+  display: none;
   position: fixed;
   top: 5%;
   left: 5%;
   height: 90vh;
   width: 90vw;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
- }
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
 
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  .close:hover{
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover {
   color: black;
   text-decoration: none;
   font-size: 30px;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 769px) {
+  h2 {
+    color: red;
+  }
 }
