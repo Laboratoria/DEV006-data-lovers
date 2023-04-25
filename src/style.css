@@ -221,26 +221,32 @@ button {
   width: 75%;
 }
 
-#modal {
-  background: rgba(0, 0, 0, 0.9);
-  color: #fff;
+.modal{
+  background-image: url(images/BGG.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 90%;
+  filter:saturate(80%) blur(1.5px);
+  display: none; 
   position: fixed;
   top: 5%;
   left: 5%;
   height: 90vh;
   width: 90vw;
-  transition: all 0.5s;
-}
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+ }
 
-#modal p {
-  width: 60%;
-  height: 40%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  font-size: 1.5em;
-  text-align: center;
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .close:hover{
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
 }
