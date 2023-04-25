@@ -176,7 +176,71 @@ button {
   overflow-y: auto;
 }
 
-#housesLogos {
+#hogwartzlogo {
   height: 10rem;
   width: auto;
+}
+
+.selectSort {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+
+.housesIndex {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: 70%;
+}
+
+.ImageHouses {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+}
+
+#modal {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 90vh;
+  width: 90vw;
+  transition: all 0.5s;
+}
+
+#modal p {
+  width: 60%;
+  height: 40%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  font-size: 1.5em;
+  text-align: center;
 }
