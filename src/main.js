@@ -5,7 +5,6 @@ import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
 /*import { characterPerProperty  } from "./data.js";*/
 
-
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
 const hogwartzlogo = "./images/hogwartzlogo.png";
@@ -34,10 +33,10 @@ function displayPersonajes(personajes) {
 }
 
 /*llamado de botones next y back*/
-export  const buttonNext = document.getElementById("next")
-buttonNext&& buttonNext.addEventListener("click", nextPage)
-export const buttonBack = document.getElementById("back")
-buttonBack&& buttonBack.addEventListener("click", previousPage);
+export const buttonNext = document.getElementById("next");
+buttonNext && buttonNext.addEventListener("click", nextPage);
+export const buttonBack = document.getElementById("back");
+buttonBack && buttonBack.addEventListener("click", previousPage);
 /*personajes por pagina*/
 const charactersPerPage = 42;
 let page = 0;
@@ -114,23 +113,22 @@ function filterByTypeOfPerson() {
       break;
 
     default:
-       displayPersonajes(charactersData);
+      displayPersonajes(charactersData);
   }
   displayPersonajes(filteredCharacter);
 }
 
-console.log(filteredCharacter)
+console.log(filteredCharacter);
 /*Ordenado de personajes de A->Z*/
 document.getElementById("selectOrder").addEventListener("click", sortByAZ);
 function sortByAZ() {
-  sortingCharactersAZ(filteredCharacter, "name")
-  displayPersonajes(sortingCharactersAZ(filteredCharacter, "name"))
+  sortingCharactersAZ(filteredCharacter, "name");
+  displayPersonajes(sortingCharactersAZ(filteredCharacter, "name"));
 }
 
 /*Ordenado de personajes de Z->A*/
 document.getElementById("selectTwoOrder").addEventListener("click", sortByZA);
 function sortByZA() {
-  sortingCharactersZA(filteredCharacter, "name")
-  displayPersonajes(sortingCharactersZA(filteredCharacter, "name"))
+  sortingCharactersZA(filteredCharacter, "name");
+  displayPersonajes(sortingCharactersZA(filteredCharacter, "name"));
 }
-

@@ -3,12 +3,12 @@ import dataHP from "./data/harrypotter/data.js";
 
 /*mostrar data*/
 export const HP = (datos) => {
-  console.log("datosp", datos);
+ 
   const callByCharacters = datos.characters;
   return callByCharacters;
 };
 export const charactersData = HP(dataHP);
-console.log(charactersData);
+
 
 /*Filtrar por specie */
 export const filterCharacters = (characters, specie) => {

@@ -219,17 +219,19 @@ button {
   display: flex;
   justify-content: center;
   width: 75%;
+  background-size: contain;
+  background-color: #15130e7b;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 90px;
 }
 
 .modal {
-  background-image: url(images/BGG.jpg);
+  background-image: url(images/fondoResul.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  opacity: 90%;
-  filter: saturate(80%) blur(1.5px);
-  display: none;
-  /*filter:saturate(80%) blur(1.5px) brightness(70%);*/
+  align-items: center;
+
   display: none;
   position: fixed;
   top: 5%;
@@ -239,12 +241,6 @@ button {
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
 }
-  background-color: rgb(0, 0, 0);
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Black w/ opacity */
-}
-
 
 .close {
   color: #aaa;
@@ -253,11 +249,12 @@ button {
   font-weight: bold;
 }
 .close:hover {
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
 }
 
 .close:hover {
@@ -267,6 +264,20 @@ button {
   cursor: pointer;
 }
 
+#modalText {
+  background-color: white;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  font-size: x-large;
+  opacity: 90%;
+}
+
+.imagenFond {
+  width: 400px;
+  border-radius: 10px;
+  padding: 60px;
+}
 
 @media only screen and (max-width: 769px) {
   h2 {
