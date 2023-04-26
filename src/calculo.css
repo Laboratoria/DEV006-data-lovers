@@ -1,16 +1,22 @@
-body {
-    background-color: black;
-    padding: 0;
-    margin: 0;
+html {
+  width: 100%;
+  height: 100%;
 }
 
-    
+body {
+  background-color: black;
+  padding: 0;
+  margin: 0;
+}
+
+
 .fondocalculo {
-  width: 1518px;
-  height: 778px;
+  width: 100%;
+  height:500px;
   top: 43px;
   position: relative;
 }
+
 .headercalculo {
   width: 100%;
   font-family: Arial, Helvetica, sans-serif;
@@ -26,11 +32,13 @@ body {
   z-index: -3;
 }
 
+
+
 .listaheadercalculo {
   list-style-type: none;
   margin: 0;
   padding: 0;
- 
+
   position: sticky;
   top: 5px;
   margin-top: 20px;
@@ -75,78 +83,194 @@ ul li {
   display: none;
 }
 
-.roles{
-    top: 723px;
-    position: relative;
-    text-align: center;
-    left: 598px;
-    line-height: 70px;
+.roles {
+  top: 723px;
+  position: relative;
+  text-align: center;
+  left: 598px;
+  line-height: 70px;
+
 }
 
-.roles div:hover{
-    transform: scale(1.3);
-    transform-origin: center;
-    height: 150px;
-    width: 700px;
-    border-radius: 12px;
-    /* offset-x | offset-y | blur-radius | color */
-    transition: all .3s ease-in-out;
-    background-color: #ffff;
-  }
+.roles div:hover {
+  transform: scale(1.1);
+  transform-origin: right;
+  height: 150px;
+  width: 750px;
+  border-radius: 12px;
+  /* offset-x | offset-y | blur-radius | color */
+  transition: all .3s ease-in-out;
+  background-color: #ffff;
+  
+}
 
+.roles div p {
+  margin-left: 15px;
+  margin-right: 79px;
+  margin-bottom: -6px;
+  justify-content: space-evenly;
+  height: 17px;
 
-  p{
-    line-height: 15px;
-    text-align: justify;
-    margin-inline: 15px;
-    font-size: 15px;
-    left: 238px;
-    position: relative;
-    top: -74px;
-    display: grid;
-    grid-template-columns: 10cm;
-    grid-template-rows: 8cm;
+}
+
+p {
+  line-height: 15px;
+  text-align: justify;
+  margin-inline: 15px;
+  font-size: 15px;
+  left: 105px;
+  position: relative;
+  top: -65px;
+  display: grid;
+  grid-template-columns: 10cm;
+  grid-template-rows: 8cm;
+
 }
 
 h2 {
-    color: #3E2C41;
-background-color: #ffff;
-width: 250px;
-height: 70px;
-border-radius: 15px;
-font-family: Arial, Helvetica, sans-serif;
+  color: #3E2C41;
+  background-color: #ffff;
+  width: 250px;
+  height: 70px;
+  border-radius: 15px;
+  font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   position: relative;
+
+}
+
+.FighterImage {
+  position: absolute;
+  right: 514px;
+  top: 5px;
+  width: 50px;
+  height: 48px;
+}
+
+
+
+.AssassinImage {
+  position: relative;
+  right: 159px;
+  top: -90px;
+  width: 50px;
+  height: 48px;
+}
+
+.TankImage {
+  position: relative;
+  right: 191px;
+  top: -90px;
+  width: 50px;
+  height: 48px;
+}
+
+.MageImage {
+  position: relative;
+  right: 187px;
+  top: -97px;
+  width: 50px;
+  height: 48px;
+}
+
+.SupportImage {
+  position: relative;
+  right: 165px;
+  top: -90px;
+  width: 50px;
+  height: 48px;
+}
+
+.MarksmenImage {
+  position: relative;
+  right: 157px;
+    top: -94px;
+  width: 50px;
+  height: 48px;
+}
+
+
+h6 {
+
+  color: aqua;
+  position: relative;
+  top: -7px;
+  z-index: -4;
+}
+
+#resultFighters div{
+ 
+    width: 750px;
+}
+#resultAssassins{
+  
+    width: 750px;
+}
+#resultTanks{
+  
+    width: 750px;
+}
+#resultMages{
+ 
+    width: 750px;
+}
+#resultSupports{
+  
+    width: 750px;
+}
+#resultMarksmen{
+
+    width: 750px;
+}
+
+
+.roles{
+  width: 750px;
+
+}
+h6 {
+
+  color: black;
+  position: relative;
+  top: -120px;
+  left: -236px;;
+  font-size: 30px;
 }
 
 @media screen and (min-width:480px) and (max-width:760px) {
-    
-.fondocalculo {
+  html {
     width: 100%;
-    height: 350px;
-    object-fit:cover;
-    object-position: bottom;
-}
+    height: 100%;
+  }
 
-.headercalculo {
-  width: 125%;
-  background-color: black;
-  /*position: relative;
+  .fondocalculo {
+
+    height: 350px;
+    object-fit: cover;
+    object-position: bottom;
+    width:100%;
+    z-index: 3;
+  }
+
+  .headercalculo {
+    width: 100%;
+    background-color: black;
+    /*position: relative;
   width: 1518px;*/
-  height: 50px;
- 
-  top: -83px;
-  /*z-index: -3;*/
-  
-}
-  
+    height: 50px;
+
+    top: -83px;
+    /*z-index: -3;*/
+
+  }
+
 
   nav ul {
     width: 60%;
     height: 271px;
     margin: 0;
     position: sticky;
-    background-color:black;
+    background-color: black;
     top: 330px;
     padding: 0px;
     border: 0px;
@@ -154,7 +278,9 @@ font-family: Arial, Helvetica, sans-serif;
     border-radius: 20px;
     color: white;
 
-  } /*menu hamburguesa*/
+  }
+
+  /*menu hamburguesa*/
 
   nav ul li {
     display: block;
@@ -163,25 +289,28 @@ font-family: Arial, Helvetica, sans-serif;
     border: 0px;
     line-height: 18px;
     margin-bottom: 0;
-    z-index: -7;
+    z-index: -9;
     top: 49px;
     color: white;
   }
+
   .listaheadercalculo {
     top: 5px;
     margin-top: 20px;
     text-align: left;
     margin-left: 1%;
   }
+
   .menu_barc {
     display: block;
     width: 100%;
     top: 30px;
   }
-  
+
   .menu_barc .bt-menuc {
-    display: block;}
-    
+    display: block;
+  }
+
   .menu_barc .bt-menuc {
     display: block;
     padding: 20px;
@@ -190,46 +319,46 @@ font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     text-align: left;
     color: white;
-   
+
   }
 
-  .contenidoc{
+  .contenidoc {
     display: none;
-    
+    z-index: -9;
   }
-li a{
-  color: white;
-}
 
-h2 {
-color: aliceblue;
-background-color: #ffff;
-width: 250px;
-height: 70px;
-border-radius: 15px;
-}
+  li a {
+    color: white;
+  }
 
-.roles {
-   top: 276px;
-   position: relative;
-   text-align: center;
-   left: 170px;
-   line-height: 70px;
-  
-}
+  h2 {
+    color: aliceblue;
+    background-color: #ffff;
+    width: 250px;
+    height: 70px;
+    border-radius: 15px;
+  }
+
+  .roles {
+    top: 276px;
+    position: relative;
+    text-align: center;
+    left: 170px;
+    line-height: 70px;
+    left: 120px;
+
+  }
 
 
-.roles div p{
-  margin-left: -62px;
-  margin-right: 79px;
-  
-  margin-bottom: -6px;
-  justify-content: space-evenly;
-  display: flex;
-  height: 17px;
-}
+  .roles div p {
+    margin-left: -62px;
+    margin-right: 79px;
+    margin-bottom: -6px;
+    justify-content: space-evenly;
+    height: 17px;
+  }
 
-.roles div:hover{
+  .roles div:hover {
     transform: scale(1.3);
     transform-origin: center;
     height: 400px;
@@ -239,40 +368,145 @@ border-radius: 15px;
     transition: all .3s ease-in-out;
     background-color: #ffff;
     opacity: 1;
-   
-    
+
+
   }
 
 
-.fighters, .assassin, .tank,
-.mage, .support, .marksmen {
+  .fighters,
+  .assassin,
+  .tank,
+  .mage,
+  .support,
+  .marksmen {
     font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  color: black;
-}
+    font-style: normal;
+    color: black;
+  }
 
-div p{
-  line-height: 15px;
-  text-align: justify;
+  div p {
+    line-height: 15px;
+    text-align: justify;
     margin-inline: 30px;
-    font-size: 12px;
+    font-size: 15px;
     left: 70px;
-  margin-left: -40px;
+    margin-left: -40px;
     top: 30px;
     grid-template-columns: 5cm;
-    grid-template-rows: 5cm;
+    grid-template-rows: 10cm;
+    display: grid;
+
+  }
+
+  p:hover {
     display: block;
-   
+
+
+  }
+
+  .FighterImage,
+  .AssassinImage,
+  .TankImage,
+  .MageImage,
+  .SupportImage,
+  .MarksmenImage {
+
+    display: block;
+    position: sticky;
+    float: left;
+    margin-top: -93px;
+    margin-left: 189px;
+  }
+
+  .TankImage {
+    position: relative;
+    left: -30px;
+    top: 1px;
+  }
+
+  .MageImage {
+    position: relative;
+    left: -23px;
+    top: 3px;
+  }
+
+
+  .MarksmenImage {
+    position: relative;
+    left: 6px;
+    top: -2px;
+  }
+
+  h6 {
+
+    color: black;
+    position: relative;
+    top: -120px;
+    left: 10px;
+    font-size: 30px;
+  }
+
+  #resultFighters {
+
+    height: 420px;
+    width: 301px;
+  }
+
+  #resultAssasins {
+
+    height: 420px;
+    width: 301px;
+  }
+
+  #resultTanks {
+
+    height: 420px;
+    width: 301px;
+  }
+
+  #resultMages {
+
+    height: 420px;
+    width: 301px;
+  }
+
+  #resultSupports {
+
+    height: 420px;
+    width: 301px;
+  }
+
+  #resultMarksmen {
+
+    height: 420px;
+    width: 301px;
+  }
+
+  .roles {
+    height: 420px;
+    width: 301px;
+    
+
+  }
+
+  .listaheadercalculo {
+    height: 50px;
+    width: 301px;
+
+
+
+  }
+
+  ul {
+
+    z-index: -6;
+  }
+
+  .contImg{
+    width: 482px;
+  }
+
+  nav .headercalculo{
+
+  }
 }
- p:hover{
- display: block;
- 
-  
-}
-
-}
-
-
-
-
-
