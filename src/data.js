@@ -15,6 +15,20 @@ export function searchPokByName(name) {
   }
   return searching;
 }
+//input SEARCH buscar por nombre ANTIGUO
+/*const btnBuscarByName = document.getElementById('search');
+btnBuscarByName.addEventListener('input', (e) =>{
+  searchPokByName(e.target.value)
+  console.log(e.target.value)
+  console.log(searchPokByName(e.target.value))
+})
+export const searchPokByName = (name) =>{
+//metodo startsWidth para buscar por nombre comenzando desde la primera
+  const searching = data.pokemon.filter(p => p.name.startsWith(name));
+  return searching
+};*/
+
+
 
 
 //input search by number
@@ -32,6 +46,45 @@ export function searchPokByNumber(num){
   }
   return searching;
 }
+
+//para ordenar AZ CORREGIDO
+export function ordenadoAz(name) {
+  const ordenado = data.pokemon.sort((pokemon) => {
+    if(pokemon.name.localeCompare(name)){
+      return pokemon;
+    }
+  });
+  return ordenado;
+}
+//item order A-Z ANTIGUO
+/*const orderAz = document.getElementById('az');
+orderAz.addEventListener('click', () => {
+  //ordenar la copia por nombre de la A hasta la Z
+  const ordenado = data.pokemon.sort((a,b)=> a.name.localeCompare(b.name));
+  //mostrar el resultado
+  console.log(ordenado);
+});*/
+
+
+
+//para invertir el orden ZA CORREGIDO
+export function ordenInvertidoZa(name) {
+  const invertido = data.pokemon.reverse().sort((pokemon) => {
+    if(pokemon.name.LocaleCompare(name)){
+      return pokemon;
+    }
+  });
+  return invertido;
+}
+//item order Z-A ANTIGUO
+/*const invertirZa = document.getElementById('za');
+invertirZa.addEventListener('click', () => {
+  const invertido = data.pokemon.reverse().sort((a,b)=> a.name.localeCompare(b.name));
+  //mostrar el resultado
+  console.log(invertido);
+});*/
+
+
 
 //filtrado por tipo
 export function filtradoTipo(type) {
@@ -65,35 +118,16 @@ export function filtradoResistencia(resistant){
   return filtradoResistant;
 }
 
-//ordenar de la A-Z
-export function ordenarPorNombreAz(data) {
-  return data.pokemon.sort((a, b) => a.name.localeCompare(b.name));
-}
-/*const orderAz = document.getElementById("az");
-orderAz.addEventListener("click", () => {
-  const ordenado = data.pokemon.sort((a, b) => a.name.localeCompare(b.name));
-  console.log(ordenado);
-});*/
 
-//ordenar de la Z-A
-export function invertirYOrdenarPorNombreZa(data) {
-  return data.pokemon.reverse().sort((a, b) => b.name.localeCompare(a.name));
-}
-/*const invertirZa = document.getElementById("za");
-invertirZa.addEventListener("click", () => {
-  const invertido = data.pokemon
-    .reverse()
-    .sort((a, b) => a.name.localeCompare(b.name));
-  console.log(invertido);
-});*/
 
 //ordenar ascendentemente
 export function ordenarPorNumeroAscendente(data) {
   return data.pokemon.sort((a, b) => a.num - b.num);
 }
-/*const menorAmayor = document.getElementById("ascendente");
-menorAmayor.addEventListener("click", () => {
-  const ascending = data.pokemon.sort((a, b) => a.num - b.num);
+//item order x NUMERO ascendente ANTIGUO
+/*const menorAmayor = document.getElementById('ascendente');
+menorAmayor.addEventListener('click', () => {
+  const ascending = data.pokemon.sort((a,b) => a.num - b.num);
   console.log(ascending);
 });*/
 
@@ -101,11 +135,13 @@ menorAmayor.addEventListener("click", () => {
 export function ordenarPorNumeroDescendente(data) {
   return data.pokemon.sort((a, b) => b.num - a.num);
 }
-/*const mayorAmenor = document.getElementById("descendente");
-mayorAmenor.addEventListener("click", () => {
-  const descending = data.pokemon.sort((a, b) => b.num - a.num);
+//item order x NUMERO descendente ANTIGUO
+/*const mayorAmenor = document.getElementById('descendente');
+mayorAmenor.addEventListener('click', () => {
+  const descending = data.pokemon.sort((a,b) => b.num - a.num);
   console.log(descending);
 });*/
+
 
 //calcular la fuerza
 export function calcularFuerza(data) {

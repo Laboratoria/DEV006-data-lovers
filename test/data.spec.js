@@ -1,4 +1,4 @@
-import { searchPokByName, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenarPorNombreAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza } from '../src/data.js';
+import { searchPokByName, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenInvertidoZa, ordenadoAz, ordenarPorNumeroDescendente, calcularFuerza } from '../src/data.js';
 
 //data aleatoria para probarla con los test
 const dataPokemon = [
@@ -74,6 +74,39 @@ const dataPokemon = [
   }
 ];
 
+
+//Test para ordenar A-Z
+describe('orderAz ordenar todos los pokemones por su nombre de la A a la Z', () =>{
+  it('is a function', () => {
+    expect(typeof ordenadoAz).toBe('function');
+  })
+
+  it('deberia retornar los nombres de los pokemones de la A-Z [cleffa], [machoke], [raikou]', () => {
+    const orderAz = ordenadoAz(dataPokemon);
+    expect(orderAz[0].name).toEqual('cleffa');
+    expect(orderAz[1].name).toEqual('machote');
+    expect(orderAz[2].name).toEqual('raikou');
+  });
+});
+
+
+
+//test para invertir y ordenar Z-A
+describe('invertirZa invierte y ordena todos los pokemos de la Z a la A', () => {
+  it('is a function', () => {
+    expect(typeof ordenInvertidoZa).toBe('function');
+  });
+
+  it('returns `los nombres de los pokemones de la Z-A [raikou], [machote], [cleffa]`', () => {
+    const invertirZa = ordenInvertidoZa(dataPokemon);
+    expect(invertirZa[2].name).toEqual('raikou');
+    expect(invertirZa[1].name).toEqual('machote');
+    expect(invertirZa[0].name).toEqual('cleffa');
+  });
+});
+
+
+
 //filtrado por tipo
 describe('selectTipo filtrar todos los pokemones por su tipo', () => {
   it('is a function', () => {
@@ -96,58 +129,26 @@ describe('selectDebilidad filtrar todos los pokemones filtrados por su debilidad
 
   it('debería retornar todos los pokemones filtrados por su debilidad [poison, steel],[flying, psychic, fairy],[ground]', () => {
     const selectDebilidad = filtradoDebilidad(dataPokemon);
-    expect(selectDebilidad[0]).toBe('poison, steel');
-    expect(selectDebilidad[1]).toBe('flying, psychic, fairy');
-    expect(selectDebilidad[2]).toBe('ground]');
+    expect(selectDebilidad[0].weaknesses).toBe('poison, steel');
+    expect(selectDebilidad[1].weaknesses).toBe('flying, psychic, fairy');
+    expect(selectDebilidad[2].weaknesses).toBe('ground');
   });
 });
 
 
-
-//Test para ordenar A-Z
-describe('orderAz ordenar todos los pokemones por su nombre de la A a la Z', () =>
-it('is a function', () => {
-  expect(typeof ordenarPorNombreAz).toBe('function');
-});
-
-  it('deberia retornar los nombres de los pokemones ordenados de la A a la Z [cleffa], [machoke], [raikou]', () => {
-    const orderAz = ordenarPorNombreAz(dataPokemon);
-    expect(orderAz[0].name).toBe('cleffa');
-    expect(orderAz[1].name).toBe('machoke');
-    expect(orderAz[2].name).toBe('raikou');
-});
-});
-
-
-
-/*describe('orderAz ordena todos los pokemones de la A a la Z' , () => {
+//filtrado por resistencia
+describe('selectResistant filtrar a todos los pokemones por su resistencia', () => {
   it('is a function', () => {
-    expect(typeof ordenarPorNombreAz).toBe('function');
+    expect(typeof filtradoResistencia).toBe('function');
   });
 
-  it('deberia retornar los nombres de los pokemones de la A-Z [cleffa], [machoke], [raikou]', () => {
-    const orderAz = ordenarPorNombreAz(dataPokemon);
-    expect(orderAz[0].name).toEqual('cleffa');
-    expect(orderAz[1].name).toEqual('machote');
-    expect(orderAz[2].name).toEqual('raikou');
-  });
-});*/
-
-
-//test para invertir y ordenar Z-A
-describe('invertirZa invierte y ordena todos los pokemos de la Z a la A', () => {
-  it('is a function', () => {
-    expect(typeof invertirYOrdenarPorNombreZa).toBe('function');
-  });
-
-  it('returns `los nombres de los pokemones de la Z-A [raikou], [machote], [cleffa]`', () => {
-    const invertirZa = invertirYOrdenarPorNombreZa(dataPokemon);
-    expect(invertirZa[2].name).toEqual('raikou');
-    expect(invertirZa[1].name).toEqual('machote');
-    expect(invertirZa[0].name).toEqual('cleffa');
+  it('returns todos los pokemones filtrados por su resistencia [fighting, bug, dragon, dark], [bug, rock, dark], [electric, flying, steel]', () => {
+    const selectResistant = filtradoResistencia(dataPokemon);
+    expect(selectResistant[0].resistant).toBe('fighting, bug, dragon, dark');
+    expect(selectResistant[1].resistant).toBe('bug, rock, dark');
+    expect(selectResistant[2].resistant).toBe('electric,flying,steel');
   });
 });
-
 
 
 

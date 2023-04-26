@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 //main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
 import data from "./data/pokemon/pokemon.js";
-import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenarPorNombreAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
+import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, ordenInvertidoZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
 
 //buscar por nombre
 const btnBuscarByName = document.getElementById("search");
@@ -39,6 +39,25 @@ cerrarN.addEventListener('click', () =>  {
 
 
 
+//para ordenar AZ CORREGIDO
+const orderAz = document.getElementById('az');
+orderAz.addEventListener('click', () => {
+  const ordenado = ordenadoAz(orderAz.name);
+  console.log(ordenado);
+})
+
+
+
+//ordenar de la Z-A CORREGIDO
+const invertirZa = document.getElementById('za');
+invertirZa.addEventListener("click", () => {
+  const invertido = ordenInvertidoZa(invertirZa.name);
+  // Manipulación del DOM para mostrar los datos invertidos y ordenados
+  console.log(invertido);
+});
+
+
+
 //para que al hacer click se baje a la seccion filtrando
 const toFilterLink = document.getElementById("to-filter-link");
 toFilterLink.addEventListener("click", (event) => {
@@ -46,6 +65,7 @@ toFilterLink.addEventListener("click", (event) => {
   const filtrandoSection = document.getElementById("filtrando-section");
   filtrandoSection.scrollIntoView({ behavior: "smooth" });
 });
+
 
 //filtrar por tipo
 const selectType = document.getElementById("element-type-filter");
@@ -70,23 +90,6 @@ selectResistant.addEventListener("change", () => {
   console.log(filtradoR)
 });
 
-
-//ordenar de la A-Z
-const orderAz = document.getElementById("az");
-orderAz.addEventListener("click", () => {
-  const datosOrdenados = ordenarPorNombreAz(data);
-  // Manipulación del DOM para mostrar los datos ordenados
-  console.log(datosOrdenados);
-});
-
-
-//ordenar de la Z-A
-const invertirZa = document.getElementById("za");
-invertirZa.addEventListener("click", () => {
-  const datosInvertidos = invertirYOrdenarPorNombreZa(data);
-  // Manipulación del DOM para mostrar los datos invertidos y ordenados
-  console.log(datosInvertidos);
-});
 
 
 //ordenar ascendentemente
