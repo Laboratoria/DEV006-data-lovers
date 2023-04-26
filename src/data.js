@@ -30,7 +30,6 @@ export const searchPokByName = (name) =>{
 
 
 
-
 //input search by number
 //CONVERTIR EL STRING DEL INPUT EN NUMERO
 //filtrar toda la data por el numero que se convirtio
@@ -46,6 +45,7 @@ export function searchPokByNumber(num){
   }
   return searching;
 }
+
 
 //para ordenar AZ CORREGIDO
 export function ordenadoAz(name) {

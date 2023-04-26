@@ -1,4 +1,4 @@
-import { searchPokByName, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenInvertidoZa, ordenadoAz, ordenarPorNumeroDescendente, calcularFuerza } from '../src/data.js';
+import { searchPokByName, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenInvertidoZa, ordenadoAz, ordenarPorNumeroDescendente, calcularFuerza, searchPokByNumber } from '../src/data.js';
 
 //data aleatoria para probarla con los test
 const dataPokemon = [
@@ -74,6 +74,30 @@ const dataPokemon = [
   }
 ];
 
+//buscar pokemon por name
+describe('searchByName busca a todos los pokemones por su nombre', () => {
+  it('is a function', () => {
+    expect(typeof searchPokByName).toBe('function');
+  })
+
+  it('deberia retornar el nombre del pokemon buscado cleffa para [cleffa]', () => {
+    const searchByName = searchPokByName(dataPokemon, ["clefa"]);
+    expect(searchByName[0].name).toBe('cleffa');
+  });
+});
+
+
+describe('searchByNumber busca al pokemón por su numero', () => {
+  it('is a function', () => {
+    expect(typeof searchPokByNumber).toEqual('function');
+  })
+
+  it('debería retornar el numero del pokemon buscado 173 para [173]', () => {
+    const searchByNumber = searchPokByNumber(dataPokemon, ["173"]);
+    expect(typeof searchByNumber[0].num).toEqual('173');
+  });
+});
+
 
 //Test para ordenar A-Z
 describe('orderAz ordenar todos los pokemones por su nombre de la A a la Z', () =>{
@@ -121,6 +145,8 @@ describe('selectTipo filtrar todos los pokemones por su tipo', () => {
   });
 });
 
+
+
 //filtrado por debilidad
 describe('selectDebilidad filtrar todos los pokemones filtrados por su debilidad', () => {
   it('is a function', () => {
@@ -134,6 +160,7 @@ describe('selectDebilidad filtrar todos los pokemones filtrados por su debilidad
     expect(selectDebilidad[2].weaknesses).toBe('ground');
   });
 });
+
 
 
 //filtrado por resistencia
