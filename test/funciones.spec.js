@@ -1,10 +1,13 @@
-import {filtrado, sortBy} from '../src/funciones.js';
+import { filtrado, sortBy, contarRol } from '../src/funciones.js';
 
+
+//TEST FILTRADO
 const entrada = ("venusaur")
 
 
 const salida = [
-  {"num": "003",
+  {
+    "num": "003",
     "name": "venusaur",
     "generation": {
       "num": "generation i",
@@ -109,32 +112,34 @@ describe('probando filtrado', () => {
   it('Debe devolver el nombre venusaur', () => {
     expect(filtrado(entrada)).toEqual(salida);
   });
-  
+
   it('Debe devolver no se encontró cuando ingrese un string vacio o un nombre equivocado', () => {
     expect(filtrado("hola")).toBe("No se encontró");
   });
 });
 
+//TEST ORDENADO
+
 const entrada2 = [
-  {"name": "charmander"},
-  {"name": "charmeleon"},
-  {"name": "bulbasaur"},
-  {"name": "hypno"},
-  {"name": "voltorb"}
+  { "name": "charmander" },
+  { "name": "charmeleon" },
+  { "name": "bulbasaur" },
+  { "name": "hypno" },
+  { "name": "voltorb" }
 ]
 const pokemonesAZ = [
-  {"name": "bulbasaur"},
-  {"name": "charmander"},
-  {"name": "charmeleon"},
-  {"name": "hypno"},
-  {"name": "voltorb"}
+  { "name": "bulbasaur" },
+  { "name": "charmander" },
+  { "name": "charmeleon" },
+  { "name": "hypno" },
+  { "name": "voltorb" }
 ]
 const pokemonesZA = [
-  {"name": "voltorb"},
-  {"name": "hypno"},
-  {"name": "charmeleon"},
-  {"name": "charmander"},
-  {"name": "bulbasaur"}
+  { "name": "voltorb" },
+  { "name": "hypno" },
+  { "name": "charmeleon" },
+  { "name": "charmander" },
+  { "name": "bulbasaur" }
 ]
 
 describe('probando sort', () => {
@@ -143,7 +148,24 @@ describe('probando sort', () => {
   });
 
   it('debe orgamizar los pokemones de la Z-A', () => {
-    expect(sortBy(entrada2,"desc")).toStrictEqual(pokemonesZA);
+    expect(sortBy(entrada2, "desc")).toStrictEqual(pokemonesZA);
   });
 
 });
+//TEST CALCULO AGREGADO
+
+
+const entrada3 = [  ["Assassin"],
+  ["Assassin", "Mage"],
+  ["Tank", "Mage"],
+  ["Support", "Mage"]
+];
+
+const salida3 = "75.00%";
+
+describe('probando calculo agregado', () => {
+  it('Debe traer el porcentaje de los roles', () => {
+    expect(contarRol(entrada3, "Mage")).toBe(salida3);
+  });
+});
+

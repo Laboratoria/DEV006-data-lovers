@@ -1,5 +1,6 @@
+/* eslint-disable no-console */
 
-import {sortBy,filtrar} from './data.js';
+import { sortBy, filtrar } from './data.js';
 
 
 //ORGANIZACION A-Z y Z-A
@@ -27,7 +28,7 @@ botonBuscar.addEventListener("click", () => {
 });
 
 // eslint-disable-next-line no-undef
-botonLimpiar.addEventListener("click",function() {
+botonLimpiar.addEventListener("click", function () {
   location.reload();
 });
 

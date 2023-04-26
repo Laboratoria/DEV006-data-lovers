@@ -1,31 +1,32 @@
+/* eslint-disable no-console */
 import data from './data/lol/lol.js';
 
 
 //VISUALIZADOR
 
-const contenedor = document.querySelector('.contenedor'); 
+const contenedor = document.querySelector('.contenedor');
 
 const champion = Object.keys(data.data)
 
- 
- 
 
-for(let i = 0; i < champion.length; i++){
+
+
+for (let i = 0; i < champion.length; i++) {
   const key = champion[i]
-  const card=data.data[key];
+  const card = data.data[key];
 
 
   const name = card.name;
-  const img  = card.img;
+  const img = card.img;
   const blurb = card.blurb;
   const title = card.title;
   const infoObject = card.info;
 
   const championCard = document.createElement("div");
   championCard.classList.add("champion-card");
- 
-  
-  
+
+
+
   for (const subKey in infoObject) {
     // eslint-disable-next-line no-prototype-builtins
     if (infoObject.hasOwnProperty(subKey)) {
@@ -36,7 +37,7 @@ for(let i = 0; i < champion.length; i++){
       statElement.classList.add("info")
     }
 
-  
+
 
   }
 
@@ -57,48 +58,48 @@ for(let i = 0; i < champion.length; i++){
 
   const championBlurb = document.createElement("p");
   championBlurb.textContent = blurb.charAt(0).toUpperCase() + blurb.slice(1);
-  championBlurb.textContent= blurb.replace('<br><br>','   ')
+  championBlurb.textContent = blurb.replace('<br><br>', '   ')
   championBlurb.classList.add("blurb");
-  
-  
+
+
   const championTitle = document.createElement("h4");
   championTitle.textContent = title.charAt(0).toUpperCase() + title.slice(1);
   championTitle.classList.add("title")
- 
 
 
 
 
- 
+
+
   championImgContainer.appendChild(championImg);
   championCard.appendChild(championName);
   championCard.appendChild(championImgContainer);
   contenedor.appendChild(championCard);
   championCard.appendChild(championTitle)
   championCard.appendChild(championBlurb);
- 
 
-  card.championCard=championCard;
-  
+
+  card.championCard = championCard;
+
   card.championCard.style.display = 'block';
 
 
 }
- 
+
 //ORGANIZADOR
 
-  
+
 const allChampions = Object.keys(data.data);
-let currentChampions= allChampions
+let currentChampions = allChampions
 
 const sortBy = (sortOrder) => {
   currentChampions.sort((a, b) => sortOrder === 'asc' ? a.localeCompare(b) : b.localeCompare(a));
   contenedor.innerHTML = '';
   currentChampions.forEach(key => {
     const champion = data.data[key];
-    const championCard = champion.championCard; 
+    const championCard = champion.championCard;
     championCard.style.display = 'block';
-    contenedor.appendChild(championCard); 
+    contenedor.appendChild(championCard);
   });
   console.log(champion)
 };
@@ -112,27 +113,27 @@ const buscar = document.querySelector('#buscar');
 const resultados = document.querySelector('#resultados')
 const notFound = "Champion not found"
 
-const filtrar = ()=>{
-  currentChampions= [];
+const filtrar = () => {
+  currentChampions = [];
   resultados.innerHTML = '';
- 
+
   const texto = buscar.value.toLowerCase();
 
-  for (const key in data.data){
+  for (const key in data.data) {
     const card = data.data[key];
     const name = card.name.toLowerCase();
-    
-    if(name.includes(texto)){
+
+    if (name.includes(texto)) {
       resultados.appendChild(card.championCard);
       card.championCard.style.display = 'block';
       currentChampions.push(card.id)
-    }  else {
+    } else {
       card.championCard.style.display = 'none';
     }
-  
+
   }
- 
-  if(resultados.innerHTML === ''){
+
+  if (resultados.innerHTML === '') {
     resultados.innerHTML += `
       <h3>${notFound}</h3>
     `
@@ -141,44 +142,6 @@ const filtrar = ()=>{
   //buscar.value = "";
 }
 
-//CALCULO AGREGADO
-
-const tagsChampion = Object.values(data.data);
-console.log(tagsChampion)
-
-for (const championtags in tagsChampion) {
-
-  const tags = tagsChampion[championtags].tags;
-  console.log(tags);
-} 
-
-function contarRol(tagsChampion, rol) {
-  let count = 0;
-  for (let i = 0; i < tagsChampion.length; i++) {
-    if (tagsChampion[i].tags.includes(rol)) {
-      count++;
-    }
-  }
-  return ((count*100)/tagsChampion.length);
-}
-const resultado = contarRol(tagsChampion,"Fighter");
-console.log(resultado); 
-const resultado2 = contarRol(tagsChampion,"Assassin");
-console.log(resultado2); 
-const resultado3 = contarRol(tagsChampion,"Tank");
-console.log(resultado3); 
-const resultado4 = contarRol(tagsChampion,"Mage");
-console.log(resultado4); 
-const resultado5 = contarRol(tagsChampion,"Support");
-console.log(resultado5); 
-const resultado6 = contarRol(tagsChampion,"Marksman");
-console.log(resultado6); 
 
 
-
-
-
-
-
-
-export {sortBy,filtrar,contarRol};
+export { sortBy, filtrar };
