@@ -135,9 +135,9 @@ input[type="text"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: -198px;
-  margin-left: 25px;
-  gap: 5%;
+  margin-top: -160px;
+  margin-left: 61px;
+  gap: 50px;
   animation: fade-out 0.5s ease;
 }
 
@@ -190,10 +190,10 @@ input[type="text"] {
   /* offset-x | offset-y | blur-radius | color */
   box-shadow: 9px 10px 9px black;
 }
-.contImg {
+/*.contImg {
   background-color: #5c527f;
   width: 1508px;
-}
+}*/
 .blurb {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -295,9 +295,10 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: -30px;
+  margin-left: 61px;
+  margin-top: -160px;
   left: 50px;
-  gap: 5%;
+  gap: 50px;
   align-content: center;
   position: sticky;
 }
@@ -340,9 +341,9 @@ ul li {
   display: none;
 }
 
-.contImg {
+/*.contImg {
   background-color: #5C527F;
-}
+}*/
 
 #calculo{
   margin-top: 0px;
@@ -350,8 +351,8 @@ ul li {
   border-radius: 5px;
   width: 211px;
   height: 41px;
-  position: relative;
-  top: -232px;
+  position: absolute;
+  top: 441px;
   left: 236px;
 }
 .textCalculo{
@@ -368,6 +369,11 @@ ul li {
 
 
 @media screen and (min-width:480px) and (max-width:760px) {
+  
+  html{
+    width: 80%;
+  }
+
   body {
     margin: 0;
   }
@@ -378,6 +384,7 @@ ul li {
     height: 201px;
     object-fit: cover;
     object-position: bottom;
+    z-index: -10;
   }
 
   /* .menu-container {
@@ -392,7 +399,7 @@ ul li {
   width: 1518px;*/
     height: 50px;
     left: -69px;
-    top: -83px;
+    top: -86px;
     /*z-index: -3;*/
 
   }
@@ -402,9 +409,10 @@ ul li {
     width: 60%;
     height: 271px;
     margin: 0;
-    position: sticky;
+    position: relative;
     background-color: #5C527F;
-    top: 330px;
+    top: -208px;
+    left: -81px;
     padding: 0px;
     border: 0px;
     margin-top: 21px;
@@ -425,12 +433,7 @@ ul li {
     top: 49px;
   }
 
-  .listaheader {
-    top: 5px;
-    margin-top: 20px;
-    text-align: left;
-    margin-left: 1%;
-  }
+  
 
   .menu_bar {
     display: block;
@@ -445,7 +448,8 @@ ul li {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     text-align: left;
-
+    top: -210px;
+    position: relative;
   }
 
   .contenido {
@@ -454,9 +458,8 @@ ul li {
   }
 
   .logIn-signUp {
-    margin-top: 10px;
-    margin-right: 5px;
-
+    margin-top: 6px;
+    margin-right: 18px;
     float: right;
   }
 
@@ -497,18 +500,18 @@ ul li {
   }
 
   .sort {
-    top: -134px;
+    top: -151px;
     right: -26px;
     position: relative;
-    z-index: -7;
+    z-index: 10;
     height: 25px;
   }
 
   input[type="text"] {
 
     left: -325px;
-    top: 224px;
-    z-index: -7;
+    top: 202px;
+    z-index: 10;
     height: 35px;
   }
 
@@ -516,15 +519,15 @@ ul li {
     margin-top: 0px;
     left: -638px;
     position: relative;
-    top: -200px;
-    z-index: -7;
+    top: -217px;
+    z-index: 10;
   }
 
   #botonLimpiar {
-    top: -229px;
-    right: -122px;
+    top: -247px;
+    left: 116px;
     position: relative;
-    z-index: -7;
+    z-index: 10;
 
   }
 
@@ -534,8 +537,8 @@ ul li {
     border-radius: 5px;
     width: 179px;
     height: 35px;
-    position: relative;
-    top: -329px;
+    position: absolute;
+    top: 306px;
     left: -390px;
   }
   .textCalculo{
@@ -557,6 +560,16 @@ ul li {
     margin-left: 25px;
     gap: 5%;
     animation: fade-out 0.5s ease;
+  }
+
+  #resultados{
+    top: 400px;
+    margin-top: -90px;
+  }
+
+  h3{
+    top: -120px;
+    left: 50px;
   }
 
 }

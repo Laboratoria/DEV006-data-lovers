@@ -12,7 +12,7 @@ body {
 
 .fondocalculo {
   width: 100%;
-  height:500px;
+  height:539px;
   top: 43px;
   position: relative;
 }
@@ -237,6 +237,26 @@ h6 {
   font-size: 30px;
 }
 
+.Percentage2{
+  top: -198px;
+}
+
+.Percentage3{
+  top: -198px;
+}
+
+.Percentage4{
+  top: -198px;
+}
+
+.Percentage5{
+  top: -198px;
+}
+
+.Percentage6{
+  top: -198px;
+}
+
 @media screen and (min-width:480px) and (max-width:760px) {
   html {
     width: 100%;
@@ -250,6 +270,7 @@ h6 {
     object-position: bottom;
     width:100%;
     z-index: 3;
+    top: -50px
   }
 
   .headercalculo {
@@ -359,15 +380,16 @@ h6 {
   }
 
   .roles div:hover {
-    transform: scale(1.3);
-    transform-origin: center;
+    transform: scale(1.1);
+    transform-origin:center;
     height: 400px;
-    width: 250px;
+    width: 150px;
     border-radius: 12px;
     /* offset-x | offset-y | blur-radius | color */
     transition: all .3s ease-in-out;
     background-color: #ffff;
-    opacity: 1;
+    position: relative;
+    left: -21px;
 
 
   }
@@ -418,6 +440,13 @@ h6 {
     margin-left: 189px;
   }
 
+
+  .FighterImage{
+    position: relative;
+    top: -1px;
+    left: -3px;
+  }
+
   .TankImage {
     position: relative;
     left: -30px;
@@ -442,7 +471,7 @@ h6 {
     color: black;
     position: relative;
     top: -120px;
-    left: 10px;
+    left: -11px;
     font-size: 30px;
   }
 
@@ -492,6 +521,7 @@ h6 {
   .listaheadercalculo {
     height: 50px;
     width: 301px;
+    z-index: 5;
 
 
 
@@ -506,7 +536,30 @@ h6 {
     width: 482px;
   }
 
-  nav .headercalculo{
-
+  .Percentage2{
+    top: -123px;
+    left: -6px;
   }
+  
+  .Percentage3{
+    top: -123px;
+    left: -6px;
+  }
+  
+  .Percentage4{
+    top: -123px;
+    left: -6px;
+  }
+  
+  .Percentage5{
+    top: -123px;
+    left: -6px;
+  }
+  
+  .Percentage6{
+    top: -123px;
+    left: -6px;
+  }
+  
+
 }
