@@ -7,6 +7,7 @@
 body{
     
     font-family: 'Limelight';
+    
    
 }
 
@@ -484,10 +485,12 @@ article > section:nth-child(1){
 
 
 #seccion1 h1{
-    font-size: 80px;
+    font-size: 60px;
     text-align: center;
-    color: #023E73;
+    color: #41414a;
     padding-top: 70px;
+    padding-bottom: 10px;
+    background-color: #8BD9D1;
  
 }
 
@@ -495,7 +498,9 @@ article > section:nth-child(1){
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 0px;
+  background-color: #8BD9D1;
+  color: #41414a;
   
     
 }
@@ -506,7 +511,7 @@ article > section:nth-child(1){
     margin: 15px 20px;
     padding: 15px 12px ;
     border-radius: 10px 10px;
-    border-color:#8BD9D1
+    border-color:#8BD9D1;
    
 }
 
@@ -537,15 +542,18 @@ article > section:nth-child(2){
 }
 
 #seccion2 button {
-    width: 90px;
-    height: 45px;
+    width: 80px;
+    height: 50px;
     border-radius: 20px;
-    border: 2px solid #fff;
+    border: 2px solid #292929;
     text-align: center;
-    background-color: #023E73;
+    background-color: #292929;
     color: #fff;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
+    font-family: Limelight;
+    font-weight: lighter;
+    margin-top: 15px;
 }
 
 #seccion2 button:hover {
@@ -568,8 +576,9 @@ article > section:nth-child(3){
 
 .pokemon {
     border-radius: 1rem;
-    background-color: rgba(4, 25, 216, .17);
-    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);
+    /*background-color: rgba(4, 25, 216, .17);
+    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);*/
+    background-color: #9ae5f3;
     padding-block: 1rem;
     text-transform: uppercase;
 }
@@ -598,7 +607,8 @@ article > section:nth-child(3){
 }
 
 .pokemon-id {
-    background-color: #023E73;
+    
+    background-color: #8BD9D1;
     padding: .25rem .5rem;
     border-radius: 1rem;
     font-size: .75rem;
@@ -612,14 +622,18 @@ article > section:nth-child(3){
 .pokemon button{
     width: 70px;
     height: 35px;
-    background-color: rgba(4,25,216,.17);
-    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);
+    background-color: #41414a;
+    /*background-color: rgba(4,25,216,.17);
+    box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);*/
     border-radius: 20px;
     border:white;
     color:white;
     font: size 12px;
     font-weight: bold;
     margin-top: 10px;
+    font-family: Limelight;
+    font-size: 12px;
+    font-weight: lighter;
 }
 
 .pokemon button:hover{

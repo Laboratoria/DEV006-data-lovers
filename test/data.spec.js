@@ -1,3 +1,4 @@
+
 import { filtradoPorTipo, ordenar, ordenarZa} from '../src/data.js';
 
 describe('filtradoPorTipo', () => {
@@ -45,6 +46,7 @@ describe('filtradoPorTipo', () => {
     //Comprobar que el resultado es un array vacio
     expect(resultado).toEqual([]);
   })  
+
 });
 
  
@@ -106,6 +108,7 @@ const entrada = [{
   ]
 },
 ]
+
 
 const salida = [{
   "num": "001",
@@ -235,6 +238,7 @@ describe("ordenar", () => {
     expect(ordenar(entrada)).toEqual(salida)
   })
 });
+
 describe("ordenar de la Z a la A", () => {
   it("is a array", () => {
     expect(typeof ordenarZa()).toBe("array");

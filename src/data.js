@@ -3,8 +3,8 @@ import {Objetos} from './data/pokemon/pokemon.js';
 export  function mostrarPokemon(data) {
   const filterByType = data.length > 0 ? data: Objetos.pokemon
 
-  const listaPokemon = document.getElementById("listaPokemon");
-
+  const listaPokemon = document.getElementById('listaPokemon');
+  
   filterByType.forEach(pokemon => {
     const div = document.createElement('div');
     div.classList.add('pokemon');
@@ -13,9 +13,9 @@ export  function mostrarPokemon(data) {
 <img src="${pokemon.img}" alt="${pokemon.name}">
 </div>
 <div class="pokemon-info">
-<div class="nombre-contenedor">
-   <p class="pokemon-id">${pokemon.num}</p>
-   <h2 class="pokemon-nombre">${pokemon.name}</h2>
+  <div class="nombre-contenedor">
+     <p class="pokemon-id">${pokemon.num}</p>
+     <h2 class="pokemon-nombre">${pokemon.name}</h2>
 </div>
 <div class="pokemon-tipos">
    <p class="tipo">${pokemon.type}</p>
@@ -111,6 +111,7 @@ export  function mostrarPokemon(data) {
       modalC.style.opacity="0";
       modalC.style.visibility="hidden";
     
+      
   
     });
 
@@ -123,61 +124,49 @@ export  function mostrarPokemon(data) {
 export function filtradoPorTipo(data,type) {
   const datosFiltrados = data.filter(elemento => elemento.type.includes(type))
   return datosFiltrados
-
 }
 
-export function ordenar(data) {
-  const result = data.sort ((a,b) => a.name.localeCompare(b.name)
- );
- return result
-};
 
-/*function ordenar(data){
-  const mapped = data.map(function(el, i) {
-    return { index: i, value: el.name };
-  })
 
-  mapped.sort(function(a, b) {
-    if (a.value > b.value) {
+
+export function ordenar(data){
+  const filterByType = data.length > 0 ? data: Objetos.pokemon
+  
+  const result=filterByType.sort(function(a, b) {
+    if (a.name > b.name) {
       return 1;
     }
-    if (a.value < b.value) {
+    if (a.name < b.name) {
       return -1;
     }
     return 0;
-  })
-
-  const result = mapped.map(function(el){
-    return data[el.index];
   });
 
   return result
+}
 
-}*/
+
+
 
 
 export function ordenarZa(data){
-  const mapped = data.map(function(el, i) {
-    return { index: i, value: el.name };
-  })
+  
+  const filterByType = data.length > 0 ? data: Objetos.pokemon
 
-  mapped.sort(function(a, b) {
-    if (a.value < b.value) {
+  const result=filterByType.sort(function(a, b) {
+    if (a.name < b.name) {
+
       return 1;
     }
-    if (a.value > b.value) {
+    if (a.name > b.name) {
       return -1;
     }
     return 0;
-  })
-
-  const result = mapped.map(function(el){
-    return data[el.index];
   });
-
+ 
   return result
-
 }
+ 
 
 
 export function busquedaName(){
