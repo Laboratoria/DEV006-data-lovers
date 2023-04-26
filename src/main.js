@@ -12,12 +12,6 @@ const pageTemplate = `
       <button class="navbar-toggler">
         <span class="navbar-toggler-icon">Menu</span>
       </button>
-      <ul class="navbar-nav">
-        <li class="nav-item"><a href="#">Inicio</a></li>
-        <li class="nav-item"><a href="#">Acerca de</a></li>
-        <li class="nav-item"><a href="#">Productos</a></li>
-        <li class="nav-item"><a href="#">Contacto</a></li>
-      </ul>
     </nav>
     <div class="content">
       <h1>Bienvenido a mi página</h1>
