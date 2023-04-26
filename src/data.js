@@ -1,19 +1,8 @@
 import {Objetos} from './data/pokemon/pokemon.js';
 
-// estas funciones son de ejemplo
-
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-
 export  function mostrarPokemon(data) {
   const filterByType = data.length > 0 ? data: Objetos.pokemon
+
   const listaPokemon = document.getElementById('listaPokemon');
   
   filterByType.forEach(pokemon => {
@@ -132,12 +121,12 @@ export  function mostrarPokemon(data) {
 }
 
 
-
-
-export function filtradoPorTipo(data,type){
-  const datosFiltrados=data.filter(elemento=>elemento.type.includes(type))
+export function filtradoPorTipo(data,type) {
+  const datosFiltrados = data.filter(elemento => elemento.type.includes(type))
   return datosFiltrados
 }
+
+
 
 
 export function ordenar(data){
@@ -157,12 +146,16 @@ export function ordenar(data){
 }
 
 
+
+
+
 export function ordenarZa(data){
   
   const filterByType = data.length > 0 ? data: Objetos.pokemon
 
   const result=filterByType.sort(function(a, b) {
     if (a.name < b.name) {
+
       return 1;
     }
     if (a.name > b.name) {
@@ -170,7 +163,7 @@ export function ordenarZa(data){
     }
     return 0;
   });
-
+ 
   return result
 }
  
