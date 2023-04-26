@@ -1,24 +1,14 @@
 import {Objetos} from './data/pokemon/pokemon.js';
 
-// estas funciones son de ejemplo
-
-
-export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};
-
-
 export  function mostrarPokemon(data) {
   const filterByType = data.length > 0 ? data: Objetos.pokemon
 
+  const listaPokemon = document.getElementById("listaPokemon");
+
   filterByType.forEach(pokemon => {
- const div = document.createElement('div');
- div.classList.add('pokemon');
- div.innerHTML = `
+    const div = document.createElement('div');
+    div.classList.add('pokemon');
+    div.innerHTML = `
  <div class="pokemonImagen">
 <img src="${pokemon.img}" alt="${pokemon.name}">
 </div>
@@ -38,26 +28,26 @@ export  function mostrarPokemon(data) {
 </div>
   
  `
- listaPokemon.append(div);
+    listaPokemon.append(div);
 
  
 
- });
+  });
 
- const abrir=document.querySelectorAll(".btn-modal");
+  const abrir=document.querySelectorAll(".btn-modal");
   const modalC=document.querySelector("#contentModal");
  
 
- abrir.forEach( (btn,index)=>btn.addEventListener("click", (e)=>{
-   e.preventDefault();
+  abrir.forEach( (btn,index)=>btn.addEventListener("click", (e)=>{
+    e.preventDefault();
    
 
-   modalC.style.opacity="1";
-   modalC.style.visibility="visible";
+    modalC.style.opacity="1";
+    modalC.style.visibility="visible";
     const divDos = document.createElement("div");
    
     divDos.classList.add(".modal");
-   const modalHtml=`
+    const modalHtml=`
    
    <div class="modal modal-close" >
      <p class="close"><i class="fa-solid fa-circle-xmark"></i><p>
@@ -105,51 +95,49 @@ export  function mostrarPokemon(data) {
  </div>
    `
    
-   divDos.innerHTML = modalHtml
-   contentModal.append(divDos);
+    divDos.innerHTML = modalHtml
+    modalC.append(divDos);
 
 
-   const modal=document.querySelectorAll(".modal")[0];
-   const cerrarModal=document.querySelector(".close");
-   modal.classList.toggle("modal-close");
-   
-   cerrarModal.addEventListener("click", (e)=>{
-    divDos.innerHTML="";
-
+    const modal=document.querySelectorAll(".modal")[0];
+    const cerrarModal=document.querySelector(".close");
     modal.classList.toggle("modal-close");
+   
+    cerrarModal.addEventListener("click", ()=>{
+      divDos.innerHTML="";
+
+      modal.classList.toggle("modal-close");
     
-    modalC.style.opacity="0";
-    modalC.style.visibility="hidden";
+      modalC.style.opacity="0";
+      modalC.style.visibility="hidden";
     
   
-  });
+    });
 
   
-   }));
+  }));
 
-  };
-
-
-
-export function filtrarTipo(event) {
- const botonId = event.currentTarget.id;
- console.log(botonId);
-listaPokemon.innerHTML = " ";
- const tipos = Objetos.pokemon.filter(pokemon => pokemon.type.includes(botonId))
-mostrarPokemon(tipos)
-return tipos
 }
 
 
-export function ordenar(data){
-  console.log(data)
-  listaPokemon.innerHTML = " ";
-  const filterByType = data.length > 0 ? data: Objetos.pokemon
- var mapped = filterByType.map(function(el, i) {
+export function filtradoPorTipo(data,type) {
+  const datosFiltrados = data.filter(elemento => elemento.type.includes(type))
+  return datosFiltrados
+
+}
+
+export function ordenar(data) {
+  const result = data.sort ((a,b) => a.name.localeCompare(b.name)
+ );
+ return result
+};
+
+/*function ordenar(data){
+  const mapped = data.map(function(el, i) {
     return { index: i, value: el.name };
   })
 
-   mapped.sort(function(a, b) {
+  mapped.sort(function(a, b) {
     if (a.value > b.value) {
       return 1;
     }
@@ -159,23 +147,21 @@ export function ordenar(data){
     return 0;
   })
 
-var result = mapped.map(function(el){
-  return filterByType[el.index];
-});
+  const result = mapped.map(function(el){
+    return data[el.index];
+  });
 
- mostrarPokemon(result)
+  return result
 
-}
+}*/
 
 
 export function ordenarZa(data){
-  listaPokemon.innerHTML = " ";
-  const filterByType = data.length > 0 ? data: Objetos.pokemon
- var mapped = filterByType.map(function(el, i) {
+  const mapped = data.map(function(el, i) {
     return { index: i, value: el.name };
   })
 
-   mapped.sort(function(a, b) {
+  mapped.sort(function(a, b) {
     if (a.value < b.value) {
       return 1;
     }
@@ -185,23 +171,20 @@ export function ordenarZa(data){
     return 0;
   })
 
-var result = mapped.map(function(el){
-  return filterByType[el.index];
-});
+  const result = mapped.map(function(el){
+    return data[el.index];
+  });
 
- mostrarPokemon(result)
+  return result
 
 }
 
 
 export function busquedaName(){
-  listaPokemon.innerHTML = " ";
 
- let input=document.getElementById("busqueda");
- console.log(input.value)
- const searchName=Objetos.pokemon.filter(pokemon=>pokemon.name.toLowerCase().match((input.value.toLowerCase())))
- mostrarPokemon(searchName);
+  const input=document.getElementById("busqueda");
+  const searchName=Objetos.pokemon.filter(pokemon=>pokemon.name.toLowerCase().match((input.value.toLowerCase())))
   return searchName
- }
+}
  
   
