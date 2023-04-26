@@ -135,8 +135,9 @@ input[type="text"] {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: -198px;
+  margin-top: -150px;
   margin-left: 25px;
+  margin-right: 25px;
   gap: 5%;
   animation: fade-out 0.5s ease;
 }
@@ -295,8 +296,10 @@ h3 {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: -30px;
-  left: 50px;
+  margin-top: -136px;
+  margin-left: 25px;
+  margin-right: 25px;
+  /*left: 50px;*/
   gap: 5%;
   align-content: center;
   position: sticky;
@@ -350,8 +353,8 @@ ul li {
   border-radius: 5px;
   width: 211px;
   height: 41px;
-  position: relative;
-  top: -232px;
+  position: absolute;
+  top: 441px;
   left: 236px;
 }
 .textCalculo{
