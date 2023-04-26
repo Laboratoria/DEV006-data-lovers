@@ -7,56 +7,40 @@ console.log(example, data);
 
 // Plantilla para la página
 const pageTemplate = `
+  <div class="menuContainer">  
+    <select id="menuCasas">
+      <option value="">CASAS</option>
+      <option value="casaGryffindor">Gryffindor</option>
+      <option value="casaSlytherin">Slytherin</option>
+      <option value="casaRavenclaw">Ravenclaw</option>
+      <option value="casaHufflepuff">Hufflepuff</option>
+    </select>
+  </div>
   <div class="page">
-    <nav class="navbar">
-      <button class="navbar-toggler">
-        <span class="navbar-toggler-icon">Menu</span>
-      </button>
-      <ul class="navbar-nav">
-        <li class="nav-item"><a href="#">Inicio</a></li>
-        <li class="nav-item"><a href="#">Acerca de</a></li>
-        <li class="nav-item"><a href="#">Productos</a></li>
-        <li class="nav-item"><a href="#">Contacto</a></li>
-      </ul>
-    </nav>
+    <h1>Bienvenido a mi página</h1>
     <div class="content">
-      <h1>Bienvenido a mi página</h1>
       <p>Este es el contenido de mi página</p>
     </div>
   </div>
 `;
 function buildPage() {
     // Crear los elementos HTML necesarios
+    const menuContainer =document.createElement('div')
     const page = document.createElement('div');
-    const navbarToggler = document.createElement('button');
-    const navbarNav = document.createElement('ul');
+    const menuCasas = document.createElement('select');
     const content = document.createElement('div');
     
-
-    
-    // Agregar las clases CSS a los elementos HTML
-    // page.classList.add('page'); como agregar clases
-    
-  
     // Agregar los elementos HTML al documento
-    /*navbar.appendChild(navbarToggler);
-    navbarToggler.appendChild(navbarTogglerIcon);
-    navbar.appendChild(navbarNav);*/
-    //page.appendChild(navbar);
-  
-
     page.appendChild(content);
     document.body.appendChild(page);
+    content.prepend(menuCasas);
+    
     
   
     // Agregar el contenido a la página
     content.innerHTML = pageTemplate;
   
     // Agregar un evento al botón de menú desplegable revisar si es necesario
-    navbarToggler.addEventListener('click', () => {
-      navbarNav.classList.toggle('show');
-    });
-    
-  }
+    }
   console.log(buildPage)
   buildPage()
