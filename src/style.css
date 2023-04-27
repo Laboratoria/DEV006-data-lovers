@@ -1,0 +1,311 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin: 20px 20px -25px 20px;
+}
+
+body {
+  background-image: url(Images/Hogwartz\ Night.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin bottom: ;
+  : 10px;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 95%;
+}
+
+nav {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 50px;
+}
+
+footer {
+  height: 5%;
+  width: 100%;
+  text-align: center;
+  font-style: oblique;
+  color: rgb(255, 255, 255); 
+  font-weight: bold;
+  text-decoration: overline;
+  font-size: large;
+}
+
+.logo {
+  width: calc(100% - 5px);
+  padding: 5px;
+}
+
+button {
+  background-color: #d0a63b;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: antiquewhite;
+  font-size: medium;
+  border-radius: 0px 25px 25px 0px;
+  width: 70%;
+  height: 116px;
+  margin: 20px 0px;
+  border: none;
+  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.584);
+  text-align: center;
+}
+
+.titleMain {
+  width: 65%;
+}
+
+.welcome {
+  background-color: rgba(240, 248, 255, 0.628);
+  border-radius: 15px;
+  font-style: italic;
+  font-size: xx-large;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  margin: 35px;
+  height: 691px;
+  width: 90%;
+}
+
+.imageEscoba {
+  position: absolute;
+  height: 60%;
+  bottom: -57px;
+  right: -156px;
+}
+
+.imageReset {
+  width: 25%;
+}
+
+.tablePerson {
+  display: grid;
+}
+
+.buttonsNB {
+  height: 80px;
+  width: auto;
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+#next {
+  height: 50px;
+  width: auto;
+  border-radius: 0% 45% 45% 0%;
+}
+
+#back {
+  height: 50px;
+  width: auto;
+  border-radius: 0% 45% 45% 0%;
+  visibility: hidden;
+}
+
+.selectSort {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+
+#charactersInfo {
+  overflow-y: auto;
+  height: 64vh;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 15px;
+  scroll-snap-type: y proximity;
+}
+
+.iDCard {
+  background-image: url(Images/LABEL_H.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 25px;
+  padding: 6%;
+  overflow-y: auto;
+}
+
+#hogwartzlogo {
+  height: 10rem;
+  width: auto;
+}
+
+.selectSort {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+
+.housesIndex {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: 70%;
+}
+
+.ImageHouses {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  background-size: contain;
+  background-color: #15130e7b;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 90px;
+}
+
+.modal {
+  background-image: url(images/fondoResul.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+
+  display: none;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 90vh;
+  width: 90vw;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#modalText {
+  background-color: white;
+  justify-content: center;
+  width: 90%;
+  height: 90%;
+  font-size: x-large;
+  opacity: 90%;
+}
+
+.imagenFond {
+  width: 400px;
+  border-radius: 10px;
+  padding: 60px;
+}
+
+@media only screen and (max-width: 769px) {
+
+  button {
+    height: 62px;
+    margin:-9px;
+  }
+
+  audio {
+    height: 26px;
+    width: 169px;
+  }
+
+  article {
+    margin: 10px;
+  }
+
+  .imageEscoba {
+    height: 50%;
+    bottom: -114px;
+    right: -128px;
+  }
+
+  .titleMain {
+    width: 95%;
+  }
+  .welcome {
+    font-size: 20px;
+    width: 85%;
+    height: 60%;
+  }
+
+}

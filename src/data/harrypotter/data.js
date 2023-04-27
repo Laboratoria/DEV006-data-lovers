@@ -1145,7 +1145,7 @@ export default {
       "name": "Frank Bryce",
       "birth": "August 1917",
       "death": "16 August, 1994 (aged 76)",
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": null,
@@ -1817,7 +1817,7 @@ export default {
       "name": "Patrick Delaney-Podmore",
       "birth": null,
       "death": "pre 1993",
-      "species": "Ghost",
+      "species": "Human (formerly)",
       "ancestry": null,
       "gender": "Male",
       "hair_color": "White",
@@ -1833,7 +1833,7 @@ export default {
       "name": "Dennis",
       "birth": "c. 1980",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": "Black",
@@ -2148,7 +2148,7 @@ export default {
       "name": "Dudley",
       "birth": null,
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Half-blood or pure-blood (possibly)",
       "gender": "Male",
       "hair_color": null,
@@ -2217,7 +2217,7 @@ export default {
       "name": "Dudley Dursley",
       "birth": "23 June 1980",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": "Blond",
@@ -2233,7 +2233,7 @@ export default {
       "name": "Vernon Dursley",
       "birth": "Pre 1954",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": "Black",
@@ -2988,7 +2988,7 @@ export default {
       "name": "Gordon",
       "birth": "c. 1979 or 1980",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": null,
@@ -3093,7 +3093,7 @@ export default {
       "name": "Hermione Granger's father",
       "birth": null,
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": "Brown",
@@ -4434,7 +4434,7 @@ export default {
       "name": "Malcolm",
       "birth": "c. 1980s",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": null,
@@ -5395,7 +5395,7 @@ export default {
       "name": "Piers Polkiss",
       "birth": "c. 1980",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": "Black",
@@ -5615,7 +5615,7 @@ export default {
       "name": "Prime Minister's political opponent",
       "birth": null,
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": null,
       "hair_color": null,
@@ -5631,7 +5631,7 @@ export default {
       "name": "Prime Minister's predecessor",
       "birth": null,
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": null,
@@ -5894,7 +5894,7 @@ export default {
       "name": "Tom Riddle Senior",
       "birth": "1905",
       "death": "August, 1943 (aged 37/38)",
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Male",
       "hair_color": "Dark",
@@ -8748,7 +8748,7 @@ export default {
       "name": "Vernon Dursley's secretary",
       "birth": null,
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Female",
       "hair_color": null,
@@ -8764,7 +8764,7 @@ export default {
       "name": "Marjorie Dursley",
       "birth": "Pre 1954",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Female",
       "hair_color": "Grey",
@@ -8780,7 +8780,7 @@ export default {
       "name": "Petunia Dursley",
       "birth": "Pre 1960",
       "death": "Between 1999 and 2020 (aged at least 38)",
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Female",
       "hair_color": "Blonde",
@@ -9215,7 +9215,7 @@ export default {
       "name": "Hermione Granger's mother",
       "birth": null,
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": "Muggle",
       "gender": "Female",
       "hair_color": "Brown",
@@ -9828,7 +9828,7 @@ export default {
       "associated_groups": [
         "Lovegood family",
         "Scamander family",
-        "Hogwarts School of Witchcraft and Wizardry ",
+        "Hogwarts School of Witchcraft and Wizardry ",
         "Ravenclaw",
         "Dumbledore's Army",
         "Order of the Phoenix",
@@ -10780,7 +10780,7 @@ export default {
       "name": "Prime Minister's niece",
       "birth": "Pre-1990",
       "death": null,
-      "species": "Human",
+      "species": "Muggle",
       "ancestry": null,
       "gender": "Female",
       "hair_color": null,
@@ -12407,7 +12407,7 @@ export default {
       "pronunciation": null,
       "spell_type": "Charm",
       "description": "Causes snowballs to pelt themselves at the target.",
-      "mention": "Twice used by Fred and George Weasley; firstly on Professor Quirrell's head, unwittingly striking Lord Voldemort in the face, and then again four years later to attack the windows of Gryffindor Tower.",
+      "mention": "Twice used by Fred and George Weasley; firstly on Professor Quirrell's head, unwittingly striking Lord Voldemort in the face, and then again four years later to attack the windows of Gryffindor Tower.",
       "etymology": null,
       "note": null
     },
@@ -12704,7 +12704,7 @@ export default {
       "pronunciation": "con-FUN-doh",
       "spell_type": "Charm",
       "description": "Causes the victim to become confused and befuddled.",
-      "mention": "In 1994, Severus Snape asserted that Harry, Ron and Hermione had this charm cast on them so that they would believe Sirius Black's claim of innocence; used two years later by Hermione to allow Ron to join the Gryffindor Quidditch team. It was used multiple times in 1997 and 1998.",
+      "mention": "In 1994, Severus Snape asserted that Harry, Ron and Hermione had this charm cast on them so that they would believe Sirius Black's claim of innocence; used two years later by Hermione to allow Ron to join the Gryffindor Quidditch team. It was used multiple times in 1997 and 1998.",
       "etymology": "The incantation, when non-capitalised, means \"I confuse\"; the title may derive from the Latin confundere, meaning \"to confuse\" or \"to perplex.\"",
       "note": null
     },
@@ -12769,7 +12769,7 @@ export default {
       "other_name": "Cruciatus Curse",
       "pronunciation": "KROO-see-oh",
       "spell_type": "Curse",
-      "description": "Inflicts intense pain on the recipient of the curse. This curse does not physically harm the victim, but may in extreme cases drive them insane. The pain is described as having hot knives being driven into the victim. It cannot be cast successfully by a person who is doing so out of pure spite or anger; one must feel a true desire to cause the victim pain. If one casts this spell, he or she will receive a life sentence in Azkaban prison for it, as with the other two Unforgivable Curses.",
+      "description": "Inflicts intense pain on the recipient of the curse. This curse does not physically harm the victim, but may in extreme cases drive them insane. The pain is described as having hot knives being driven into the victim. It cannot be cast successfully by a person who is doing so out of pure spite or anger; one must feel a true desire to cause the victim pain. If one casts this spell, he or she will receive a life sentence in Azkaban prison for it, as with the other two Unforgivable Curses.",
       "mention": "Infamously used by Death Eaters Bellatrix Lestrange, Rabastan Lestrange, Rodolphus Lestrange and Bartemius Crouch Junior to torture the Aurors Frank and Alice Longbottom into insanity.",
       "etymology": "Latin crucio means \"I torture\".",
       "note": null
@@ -12825,7 +12825,7 @@ export default {
       "pronunciation": "deh-PUL-soh",
       "spell_type": "Charm",
       "description": "Sends the target away from the caster. It is the counter-charm to the Summoning Charm.",
-      "mention": "Although it is learned in the fourth-year charms class at Hogwarts, it is used multiple times in 1993, as well as in 1995.",
+      "mention": "Although it is learned in the fourth-year charms class at Hogwarts, it is used multiple times in 1993, as well as in 1995.",
       "etymology": "From the Latin depulsio, meaning \"drive away\".",
       "note": null
     },
@@ -15579,7 +15579,7 @@ export default {
     {
       "id": 33,
       "name": "Cure for Boils",
-      "description": "A potion that cures boils. Seen/Mentioned: Taught to first years in Potions class."
+      "description": "A potion that cures boils. Seen/Mentioned: Taught to first years in Potions class."
     },
     {
       "id": 34,
@@ -15674,7 +15674,7 @@ export default {
     {
       "id": 52,
       "name": "Elixir of Life",
-      "description": "A potion created from the Philosopher's Stone that extend the taker's life. Seen/Mentioned: Hermione Granger told Harry and Ron about this in 1991. Nicolas Flamel and his wife are known to be using it and they lived upto more that 600 years."
+      "description": "A potion created from the Philosopher's Stone that extend the taker's life. Seen/Mentioned: Hermione Granger told Harry and Ron about this in 1991. Nicolas Flamel and his wife are known to be using it and they lived upto more that 600 years."
     },
     {
       "id": 53,
@@ -15694,7 +15694,7 @@ export default {
     {
       "id": 56,
       "name": "Essence of Insanity",
-      "description": "A potion which presumably causes irrational behaviour, possibly inflicting the condition of insanity. Seen/Mentioned: Ronald Weasley and Hermione Granger thought Harry had accidentally consumed it, due to his strange behaviour after consuming the Felix Felicis."
+      "description": "A potion which presumably causes irrational behaviour, possibly inflicting the condition of insanity. Seen/Mentioned: Ronald Weasley and Hermione Granger thought Harry had accidentally consumed it, due to his strange behaviour after consuming the Felix Felicis."
     },
     {
       "id": 57,
@@ -15799,7 +15799,7 @@ export default {
     {
       "id": 77,
       "name": "Herbicide Potion",
-      "description": "A potion that either kills or damages plants. Contains Flobberworm mucus, Horclump juice, and Spines of lionfish. Seen/Mentioned: Magical Drafts and Potions  by Arsenius Jiggles."
+      "description": "A potion that either kills or damages plants. Contains Flobberworm mucus, Horclump juice, and Spines of lionfish. Seen/Mentioned: Magical Drafts and Potions  by Arsenius Jiggles."
     },
     {
       "id": 78,
