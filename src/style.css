@@ -19,8 +19,8 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  margin: 0%;
-  height: 100%;
+  margin: 0;
+  height: 100vh;
 }
 
 main {
@@ -94,7 +94,7 @@ button {
   background-color: rgba(240, 248, 255, 0.628);
   border-radius: 15px;
   font-style: italic;
-  font-size: 20px;
+  font-size: 40px;
   padding: 20px;
   text-align: center;
   position: relative;
@@ -167,14 +167,14 @@ button {
 }
 
 #charactersInfo {
-  overflow-y: scroll;
-  scrollbar-width: thin;
+  overflow-y: auto;
+  overflow-x: hidden;
   height: 64vh;
   width: 75vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 15px;
-  overflow-x: hidden;
+  scroll-snap-type: y proximity;
 }
 
 .iDCard {
@@ -190,8 +190,7 @@ button {
   border-radius: 25px;
   padding-top: 8%;
   overflow-y: auto;
-  overflow-x: hidden;
-  padding-inline-start: 10%;
+  overflow-x: auto;
 }
 
 .iDCard ul {
@@ -274,7 +273,7 @@ button {
   font-weight: bold;
 }
 
-.close:hover {
+close:hover {
   color: black;
   text-decoration: none;
   font-size: 30px;
