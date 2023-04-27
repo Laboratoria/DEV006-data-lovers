@@ -41,6 +41,7 @@ const totalStudentsS = countSlytherin.Slytherin;
 
 
 /*Porcentajes*/
+/*convierte string en número*/
 const totalStudents = charactersData.length;
 
 /*Gryffindor*/
@@ -77,33 +78,33 @@ function openModal(house) {
   const housesInfor = document.getElementById("housesInfo");
   housesInfor.innerHTML = "";
   switch (house) {
-    case "Gryffindor":
-      imagenFon="./images/Gryffindorfond.jpg";
-      housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Gryffindor"><br>
+  case "Gryffindor":
+    imagenFon = "./images/Gryffindorfond.jpg";
+    housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Gryffindor"><br>
       El total de estudiantes de Gryffindor es de <strong>${totalStudentsG}</strong>
       con un porcentaje de <strong>${resultadoG}<strong>`;
-      break;
-    case "Hufflepuff":
-      imagenFon="./images/hufflepuffFondo.jpg";
-      housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Hufflepuff"><br>
+    break;
+  case "Hufflepuff":
+    imagenFon = "./images/hufflepuffFondo.jpg";
+    housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Hufflepuff"><br>
       El total de estudiantes de Hufflepuff es de <strong>${totalStudentsH}</strong>
       con un porcentaje de <strong>${resultadoH}<strong>`;
-      break;
-    case "Ravenclaw":
-      imagenFon="./images/ravenclawfond.png";
-      housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Ravenclaw"><br>
+    break;
+  case "Ravenclaw":
+    imagenFon = "./images/ravenclawfond.png";
+    housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Ravenclaw"><br>
       El total de estudiantes de Ravenclaw es de <strong>${totalStudentsR}</strong>
       con un porcentaje de <strong>${resultadoR}<strong>`;
-      break;
-    case "Slytherin":
-      imagenFon="./images/slytherinfon.jpg";
-      housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Slytherin"><br>
+    break;
+  case "Slytherin":
+    imagenFon = "./images/slytherinfon.jpg";
+    housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Slytherin"><br>
       El total de estudiantes de Slytherin es de <strong>${totalStudentsS}</strong> con un porcentaje de
        <strong>${resultadoS}<strong>`;
-      break;
-    default:
-      housesInfor.innerHTML = "No se encontró la casa seleccionada";
-      break;
+    break;
+  default:
+    housesInfor.innerHTML = "No se encontró la casa seleccionada";
+    break;
   }
   modal.style.display = "block";
 }

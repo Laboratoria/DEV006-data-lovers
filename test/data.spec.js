@@ -1,4 +1,4 @@
-import { HP, filterCharacters, sortingCharactersAZ, sortingCharactersZA } from "../src/data.js";
+import { HP, filterCharacters, sortingCharactersAZ, sortingCharactersZA, studentsPerProperty } from "../src/data.js";
 
 const PersonTest = {
   characters: [
@@ -158,25 +158,9 @@ describe("sortCharactersZA", () => {
   })
 })
 
-/*Test de sort,organiza de ZA*/
-
-
-
-
-
-
-
-
-
-/*it("se espera que tenga en sus propiedades,Gryffindor", () => {
-    expect(HP(PersonTest)).toMatch(/Gryffindor/);
-  });*/
-
-/*describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
-});*/
+/*Test studentsPerProperty*/
+describe("studentsPerProperty", () => {
+  it("es una función", () => {
+    expect(typeof studentsPerProperty).toBe("function");
+  })
+})
