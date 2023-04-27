@@ -19,9 +19,8 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  margin bottom: ;
-  : 10px;
-  height: 100vh;
+  margin: 0%;
+  height: 100%;
 }
 
 main {
@@ -34,7 +33,6 @@ nav {
   display: flex;
   width: 25%;
   flex-direction: column;
-
 }
 
 article {
@@ -49,7 +47,7 @@ footer {
   width: 100%;
   text-align: center;
   font-style: oblique;
-  color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255);
   font-weight: bold;
   text-decoration: overline;
   font-size: large;
@@ -60,15 +58,29 @@ footer {
   padding: 5px;
 }
 
+.button {
+  display: flex;
+  background-color: #d0a63b;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: antiquewhite;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 0px 25px 25px 0px;
+  width: 70%;
+  height: 50%;
+  margin: 20px 0px;
+  border: none;
+  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
 button {
   background-color: #d0a63b;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: antiquewhite;
   font-size: medium;
-  border-radius: 0px 25px 25px 0px;
-  width: 70%;
-  height: 116px;
-  margin: 20px 0px;
   border: none;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
   text-align: center;
@@ -82,20 +94,20 @@ button {
   background-color: rgba(240, 248, 255, 0.628);
   border-radius: 15px;
   font-style: italic;
-  font-size: xx-large;
+  font-size: 20px;
   padding: 20px;
   text-align: center;
   position: relative;
   margin: 35px;
-  height: 691px;
-  width: 90%;
+  height: 60%;
+  width: 85%;
 }
 
 .imageEscoba {
   position: absolute;
   height: 60%;
   bottom: -57px;
-  right: -156px;
+  right: -56px;
 }
 
 .imageReset {
@@ -123,7 +135,7 @@ button {
 #back {
   height: 50px;
   width: auto;
-  border-radius: 0% 45% 45% 0%;
+  border-radius: 45% 0% 0% 45%;
   visibility: hidden;
 }
 
@@ -155,13 +167,14 @@ button {
 }
 
 #charactersInfo {
-  overflow-y: auto;
+  overflow-y: scroll;
+  scrollbar-width: thin;
   height: 64vh;
   width: 75vw;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 15px;
-  scroll-snap-type: y proximity;
+  overflow-x: hidden;
 }
 
 .iDCard {
@@ -173,15 +186,21 @@ button {
   width: 170px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   border-radius: 25px;
-  padding: 6%;
+  padding-top: 8%;
   overflow-y: auto;
+  overflow-x: hidden;
+  padding-inline-start: 10%;
+}
+
+.iDCard ul {
+  list-style-type: none;
+  padding-inline-start: 0%;
 }
 
 #hogwartzlogo {
-  height: 10rem;
+  height: 7rem;
   width: auto;
 }
 
@@ -216,7 +235,7 @@ button {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  width: 60%;
+  width: 70%;
 }
 
 .ImageHouses {
@@ -277,20 +296,17 @@ button {
   padding: 60px;
 }
 
-@media only screen and (max-width: 769px) {
-
-  button {
+@media only screen and (max-width: 768px) {
+  .button {
     height: 62px;
-    margin:-9px;
+    margin: 0px, 0px, 5px, -5px;
+    font-size: 10px;
+    width: 65px;
   }
 
   audio {
     height: 26px;
     width: 169px;
-  }
-
-  article {
-    margin: 10px;
   }
 
   .imageEscoba {
@@ -302,27 +318,36 @@ button {
   .titleMain {
     width: 95%;
   }
-  button {
-    background-color: aqua;
-  }
-}
 
-.buttIndexHouse {
-  background-color: #d0a63b;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  color: antiquewhite;
-  font-size: medium;
-  border-radius: 0px 25px 25px 0px;
-  width: 80%;
-  height: 50%;
-  margin: 20px 0px;
-  border: none;
-  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
-  text-align: center;
-  .welcome {
-    font-size: 20px;
-    width: 85%;
-    height: 60%;
+  .articlePerson {
+    margin: 10px;
+  }
+  .selectSort {
+    width: 30px;
+    font-size: 10px;
+    height: 15px;
   }
 
+  #selectPerson {
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .principal {
+    display: flex;
+  }
+  .imageReset {
+    width: 50px;
+  }
+  .buttonsNB {
+    height: 60px;
+  }
+  #back,
+  #next {
+    height: 25px;
+    font-size: 10px;
+  }
+  .iDCard {
+    margin-left: 18%;
+  }
 }
