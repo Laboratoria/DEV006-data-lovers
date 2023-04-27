@@ -7,23 +7,12 @@ console.log(example, data);
 
 // Plantilla para la página
 const pageTemplate = `
-  <div class="page">
-    <nav class="navbar">
-      <button class="navbar-toggler">
-        <span class="navbar-toggler-icon">Menu</span>
-      </button>
-    </nav>
-    <div class="content">
-      <h1>Bienvenido a mi página</h1>
-      <p>Este es el contenido de mi página</p>
-    </div>
-  </div>
+
 `;
 function buildPage() {
     // Crear los elementos HTML necesarios
     const page = document.createElement('div');
-    const navbarToggler = document.createElement('button');
-    const navbarNav = document.createElement('ul');
+    const navbarToggler = document.createElement('button');    
     const content = document.createElement('div');
     
 
@@ -40,7 +29,8 @@ function buildPage() {
   
 
     page.appendChild(content);
-    document.body.appendChild(page);
+    document.body.appendChild(page);}
+    //Ubica u ordena donde se encuentra cada seccion 
     
   
     // Agregar el contenido a la página
@@ -51,6 +41,7 @@ function buildPage() {
       navbarNav.classList.toggle('show');
     });
     
-  }
   console.log(buildPage)
   buildPage()
+
+  
