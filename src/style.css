@@ -53,8 +53,8 @@ footer {
 }
 
 .logo {
-  width: 70%;
-  padding: 20px;
+  width: calc(100% - 5px);
+  padding: 5px;
 }
 
 button {
@@ -67,7 +67,7 @@ button {
   height: 80px;
   margin: 20px 0px;
   border: none;
-  box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.584);
+  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
   text-align: center;
 }
 
@@ -212,7 +212,7 @@ button {
   display: grid;
   grid-template-columns: auto auto;
   align-items: center;
-  width: 70%;
+  width: 60%;
 }
 
 .ImageHouses {
@@ -283,4 +283,21 @@ button {
   h2 {
     color: red;
   }
+  button {
+    background-color: aqua;
+  }
+}
+
+.buttIndexHouse {
+  background-color: #d0a63b;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: antiquewhite;
+  font-size: medium;
+  border-radius: 0px 25px 25px 0px;
+  width: 80%;
+  height: 50%;
+  margin: 20px 0px;
+  border: none;
+  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
+  text-align: center;
 }

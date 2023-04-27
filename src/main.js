@@ -3,7 +3,6 @@ import { charactersData } from "./data.js";
 import { filterCharacters } from "./data.js";
 import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
-/*import { characterPerProperty  } from "./data.js";*/
 
 const selectPerson = document.getElementById("selectPerson");
 const divCharacters = document.getElementById("charactersInfo");
@@ -23,8 +22,8 @@ function displayPersonajes(personajes) {
     divCharacters.innerHTML += `<div class="iDCard">
      <img id="hogwartzlogo" src="${hogwartzlogo}" alt="hogwartzlogo">
      <ul>
-     <li><strong> ID: </strong> ${characters.id}</li>
      <li><strong>NAME:</strong> ${characters.name}</li>
+     <li><strong> ESPECIE: </strong> ${characters.species}</li>
      <li><strong>BIRTH:</strong> ${characters.birth}</li>
      <li><strong>HOUSE</strong> ${characters.house}</li>
      </ul>

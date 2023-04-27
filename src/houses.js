@@ -11,7 +11,6 @@ const countGryffindor = studentsPerProperty(
 );
 const totalStudentsG = countGryffindor.Gryffindor;
 
-
 /*Hufflepuff*/
 const countHufflepuff = studentsPerProperty(
   charactersData,
@@ -19,7 +18,6 @@ const countHufflepuff = studentsPerProperty(
   "Hufflepuff"
 );
 const totalStudentsH = countHufflepuff.Hufflepuff;
-
 
 /*Ravenclaw*/
 const countRavenclaw = studentsPerProperty(
@@ -29,7 +27,6 @@ const countRavenclaw = studentsPerProperty(
 );
 const totalStudentsR = countRavenclaw.Ravenclaw;
 
-
 /*Slytherin*/
 const countSlytherin = studentsPerProperty(
   charactersData,
@@ -37,8 +34,6 @@ const countSlytherin = studentsPerProperty(
   "Slytherin"
 );
 const totalStudentsS = countSlytherin.Slytherin;
-
-
 
 /*Porcentajes*/
 const totalStudents = charactersData.length;
@@ -60,9 +55,6 @@ const resultadoR = porcentajeR + "%";
 const porcentajeS = ((totalStudentsS / totalStudents) * 100).toFixed(2);
 const resultadoS = porcentajeS + "%";
 
-
-
-
 /*Modal*/
 const modal = document.getElementById("myModal");
 const gryffindorBttn = document.getElementById("imageG");
@@ -78,25 +70,25 @@ function openModal(house) {
   housesInfor.innerHTML = "";
   switch (house) {
     case "Gryffindor":
-      imagenFon="./images/Gryffindorfond.jpg";
+      imagenFon = "./images/Gryffindorfond.jpg";
       housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Gryffindor"><br>
       El total de estudiantes de Gryffindor es de <strong>${totalStudentsG}</strong>
       con un porcentaje de <strong>${resultadoG}<strong>`;
       break;
     case "Hufflepuff":
-      imagenFon="./images/hufflepuffFondo.jpg";
+      imagenFon = "./images/hufflepuffFondo.jpg";
       housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Hufflepuff"><br>
       El total de estudiantes de Hufflepuff es de <strong>${totalStudentsH}</strong>
       con un porcentaje de <strong>${resultadoH}<strong>`;
       break;
     case "Ravenclaw":
-      imagenFon="./images/ravenclawfond.png";
+      imagenFon = "./images/ravenclawfond.png";
       housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Ravenclaw"><br>
       El total de estudiantes de Ravenclaw es de <strong>${totalStudentsR}</strong>
       con un porcentaje de <strong>${resultadoR}<strong>`;
       break;
     case "Slytherin":
-      imagenFon="./images/slytherinfon.jpg";
+      imagenFon = "./images/slytherinfon.jpg";
       housesInfor.innerHTML += `<img class="imagenFond" src="${imagenFon}" alt="imagen fondo Slytherin"><br>
       El total de estudiantes de Slytherin es de <strong>${totalStudentsS}</strong> con un porcentaje de
        <strong>${resultadoS}<strong>`;
@@ -133,4 +125,3 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
-
