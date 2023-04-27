@@ -10,11 +10,17 @@
   align-content: center;
 }
 
-.contenedor-cards{
-  justify-self: auto;
-  gap: 10px;
+.contenedor-card1{
+
+}
+#card1{
+/*justify-self: auto;
+gap: 10px;*/
+display: flex;
+flex-wrap: wrap;
+  background-image: url("images/cards/card1.png");
 }
 
-.cards{
-
+#card{
+  background-image: url("images/cards/card2.png");
 }

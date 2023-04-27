@@ -3,8 +3,17 @@
 import data from "./data/pokemon/pokemon.js";
 import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, ordenInvertidoZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
 
+//para mostrar data
+/*export const pokemonCardUno = mostrarData()
+const contenedorPokemones =
+*/
+
+
+
+
+
 //buscar por nombre
-const btnBuscarByName = document.getElementById("search");
+/*const btnBuscarByName = document.getElementById("search");
 btnBuscarByName.addEventListener("input", (e) => {
   const searchingResult = searchPokByName(e.target.value);
   console.log(e.target.value);
@@ -18,7 +27,15 @@ cerrar.addEventListener('click', () =>  {
   const msj = document.getElementById('msj');
   msj.classList.remove('show');
   console.log(msj)
-});
+});*/
+
+//buscar por nonbre ANTIGUO sin MODAL
+const btnBuscarByName = document.getElementById('search');
+btnBuscarByName.addEventListener('input', (e) =>{
+  searchPokByName(e.target.value)
+  console.log(e.target.value)
+  console.log(searchPokByName(e.target.value))
+})
 
 
 //buscar por numero

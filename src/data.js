@@ -1,11 +1,10 @@
 /* eslint-disable no-console */
 //import pokemon from "./data/pokemon/pokemon.js";
-import data from "./data/pokemon/pokemon.js";
-console.log(data.pokemon)
-//En el archivo data.js, exporta las funciones de búsqueda y filtrado.
+//import data from "./data/pokemon/pokemon.js";
 
+//En el archivo data.js, exporta las funciones de búsqueda y filtrado.
 //input SEARCH buscar por nombre
-export function searchPokByName(name) {
+/*export function searchPokByName(name) {
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
   if(searching.length === 0){
     const modal = document.querySelector('.modal');
@@ -14,8 +13,15 @@ export function searchPokByName(name) {
     modal.style.display ='block';
   }
   return searching;
-}
+}*/
+
 //input SEARCH buscar por nombre ANTIGUO
+export const searchPokByName = (name, data) =>{
+  //metodo startsWidth para buscar por nombre comenzando desde la primera
+  const searching = data.pokemon.filter(p => p.name.startsWith(name));
+  return searching
+};
+
 /*const btnBuscarByName = document.getElementById('search');
 btnBuscarByName.addEventListener('input', (e) =>{
   searchPokByName(e.target.value)
@@ -34,7 +40,7 @@ export const searchPokByName = (name) =>{
 //CONVERTIR EL STRING DEL INPUT EN NUMERO
 //filtrar toda la data por el numero que se convirtio
 //    durante el filtrado comparar el numero convertido con la propiedad num del pokemon convertida en numero tbn
-export function searchPokByNumber(num){
+export function searchPokByNumber(num,data){
   const searchingNumber = Number(num);
   const searching = data.pokemon.filter(p => searchingNumber === Number(p.num));
   if(searching.length===0){
@@ -48,7 +54,7 @@ export function searchPokByNumber(num){
 
 
 //para ordenar AZ CORREGIDO
-export function ordenadoAz(name) {
+export function ordenadoAz(name,data) {
   const ordenado = data.pokemon.sort((pokemon) => {
     if(pokemon.name.localeCompare(name)){
       return pokemon;
@@ -68,7 +74,7 @@ orderAz.addEventListener('click', () => {
 
 
 //para invertir el orden ZA CORREGIDO
-export function ordenInvertidoZa(name) {
+export function ordenInvertidoZa(name, data) {
   const invertido = data.pokemon.reverse().sort((pokemon) => {
     if(pokemon.name.LocaleCompare(name)){
       return pokemon;
@@ -87,7 +93,7 @@ invertirZa.addEventListener('click', () => {
 
 
 //filtrado por tipo
-export function filtradoTipo(type) {
+export function filtradoTipo(type, data) {
   const filtrado = data.pokemon.filter((pokemon) =>{
     if(pokemon.type.includes(type)){
       return pokemon;
@@ -98,7 +104,7 @@ export function filtradoTipo(type) {
 
 
 //filtar por debilidad
-export function filtradoDebilidad(weaknesses) {
+export function filtradoDebilidad(weaknesses, data) {
   const filtradoWeaknesses = data.pokemon.filter((pokemon) => {
     if(pokemon.weaknesses.includes(weaknesses)){
       return pokemon;
@@ -109,7 +115,7 @@ export function filtradoDebilidad(weaknesses) {
 
 
 //filtrar por fortaleza
-export function filtradoResistencia(resistant){
+export function filtradoResistencia(resistant, data){
   const filtradoResistant = data.pokemon.filter((pokemon)=> {
     if(pokemon.resistant.includes(resistant)){
       return pokemon;
