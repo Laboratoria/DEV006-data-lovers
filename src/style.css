@@ -1,14 +1,23 @@
 
    
 body {
-        margin: 0%;
-        width: 100%;
-        width: 100%;
-        padding: 0%;
-        text-align: center;
-        justify-content: center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    }
+    margin: 0%;
+    width: 100%;        
+    padding: 0%;
+    text-align: center;
+    justify-content: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.logoRio {
+    width: 120px;
+    height: 100px;
+    top: 111px;
+    left: 69px;
+    padding: 40px;
+}
+
+
 
 
 header{
