@@ -1,5 +1,5 @@
 body{
-   width: 100%;
+   min-width: 100vh;
 }
 
 header{
@@ -48,4 +48,11 @@ header{
     background-size: 1100px 500px;
 
 
+}
+
+.deporte{
+    width: 1100px;
+    height: 1100px;
+    
+    
 }
