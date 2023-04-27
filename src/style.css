@@ -1,43 +1,66 @@
 body{
-   min-width: 100vh;
+   width: 100%;
 }
 
 header{
+    text-align: right;
     display: flex;
-    
+}
 
+.menu{
+    list-style: none;
+    padding-right: 5%;
+    margin: auto;  
+}
+
+.menu li a{
+    font-size: 22px;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 13px;
+    display: block; 
+    background-color:#fd4f04; 
+    border-radius: 5px;
+}
+
+.menu li{
+    display: inline-block;
+    padding: 40px;
+}
+
+.menu li a:hover{
+    background-color:#CEF506;
 }
 
 .information{
     display: flex;
     color: white;
     background-color: black;
-    margin-top: 50px;
+    margin-top: 20px;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+
+article section{
+    padding: 70px;    
+}
+
+article section .s1{
+    padding: 50px; 
 }
 
 .words_head{
     margin-top: 80px;
+    margin-left: 50px;
 }
 
-
-.logoRio{
-   width: 120px;
-   height: 100px;
-   top: 111px;
-   left: 69px;
-}
-
-.link_menu{
-    background-color: #CEF506;
+.words_head #wh1{
+    font-size: 50px;
 }
 
 .colors{
-    margin-left: 350px;
+    margin-left: 150px;
 }
-
-
 
 .img_explora{
     background-image: url(explora.png);
@@ -46,13 +69,20 @@ header{
     
     background-repeat: no-repeat;
     background-size: 1100px 500px;
-
-
 }
 
-.deporte{
-    width: 1100px;
-    height: 1100px;
-    
-    
+button{
+    background-color: #fd4f04;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+footer{
+    background-color: #fd4f04;
+    color: #ffffff;
+    font-style:italic;
+    font-size: 15px;
+    padding: 10px;
 }
