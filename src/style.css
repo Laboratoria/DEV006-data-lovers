@@ -19,7 +19,8 @@ body {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  margin: 0px;
+  margin bottom: ;
+  : 10px;
   height: 100vh;
 }
 
@@ -30,8 +31,10 @@ main {
 }
 
 nav {
-  display: grid;
+  display: flex;
   width: 25%;
+  flex-direction: column;
+
 }
 
 article {
@@ -46,7 +49,7 @@ footer {
   width: 100%;
   text-align: center;
   font-style: oblique;
-  color: rgb(4, 5, 5);
+  color: rgb(255, 255, 255); 
   font-weight: bold;
   text-decoration: overline;
   font-size: large;
@@ -64,7 +67,7 @@ button {
   font-size: medium;
   border-radius: 0px 25px 25px 0px;
   width: 70%;
-  height: 80px;
+  height: 116px;
   margin: 20px 0px;
   border: none;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
@@ -84,18 +87,19 @@ button {
   text-align: center;
   position: relative;
   margin: 35px;
+  height: 691px;
+  width: 90%;
 }
 
 .imageEscoba {
   position: absolute;
   height: 60%;
-  bottom: -60px;
-  right: -38px;
+  bottom: -57px;
+  right: -156px;
 }
 
 .imageReset {
-  width: 10%;
-  height: 10%;
+  width: 25%;
 }
 
 .tablePerson {
@@ -238,8 +242,10 @@ button {
   left: 5%;
   height: 90vh;
   width: 90vw;
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
 }
 
 .close {
@@ -247,14 +253,6 @@ button {
   float: right;
   font-size: 28px;
   font-weight: bold;
-}
-.close:hover {
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
 }
 
 .close:hover {
@@ -280,8 +278,29 @@ button {
 }
 
 @media only screen and (max-width: 769px) {
-  h2 {
-    color: red;
+
+  button {
+    height: 62px;
+    margin:-9px;
+  }
+
+  audio {
+    height: 26px;
+    width: 169px;
+  }
+
+  article {
+    margin: 10px;
+  }
+
+  .imageEscoba {
+    height: 50%;
+    bottom: -114px;
+    right: -128px;
+  }
+
+  .titleMain {
+    width: 95%;
   }
   button {
     background-color: aqua;
@@ -300,4 +319,10 @@ button {
   border: none;
   box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
   text-align: center;
+  .welcome {
+    font-size: 20px;
+    width: 85%;
+    height: 60%;
+  }
+
 }

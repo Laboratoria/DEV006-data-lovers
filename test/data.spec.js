@@ -1,4 +1,4 @@
-import { HP, filterCharacters, sortingCharactersAZ, sortingCharactersZA,studentsPerProperty } from "../src/data.js";
+import { HP, filterCharacters, sortingCharactersAZ, sortingCharactersZA, studentsPerProperty } from "../src/data.js";
 
 const PersonTest = {
   characters: [
@@ -163,13 +163,4 @@ describe("studentsPerProperty", () => {
   it("es una función", () => {
     expect(typeof studentsPerProperty).toBe("function");
   })
-  
 })
-
-
-
-
-
-
-
- 

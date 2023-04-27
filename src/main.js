@@ -23,7 +23,7 @@ function displayPersonajes(personajes) {
      <img id="hogwartzlogo" src="${hogwartzlogo}" alt="hogwartzlogo">
      <ul>
      <li><strong>NAME:</strong> ${characters.name}</li>
-     <li><strong> ESPECIE: </strong> ${characters.species}</li>
+     <li><strong> SPECIE: </strong> ${characters.species}</li>
      <li><strong>BIRTH:</strong> ${characters.birth}</li>
      <li><strong>HOUSE</strong> ${characters.house}</li>
      </ul>
@@ -95,24 +95,24 @@ function filterByTypeOfPerson() {
   const selectPersonValue = selectPerson.value;
   console.log(selectPersonValue);
   switch (selectPersonValue) {
-    case "1":
-      /*filteredCharacter guarda la información*/
-      filteredCharacter = filterCharacters(charactersData, "Human");
-      console.log(filterCharacters(charactersData, "Human"));
-      break;
+  case "1":
+    /*filteredCharacter guarda la información*/
+    filteredCharacter = filterCharacters(charactersData, "Human");
+    console.log(filterCharacters(charactersData, "Human"));
+    break;
 
-    case "2":
-      filteredCharacter = filterCharacters(charactersData, "Muggle");
-      console.log(filterCharacters(charactersData, "Muggle"));
-      break;
+  case "2":
+    filteredCharacter = filterCharacters(charactersData, "Muggle");
+    console.log(filterCharacters(charactersData, "Muggle"));
+    break;
 
-    case "3":
-      filteredCharacter = filterCharacters(charactersData, "Human (formerly)");
-      console.log(filterCharacters(charactersData, "Human (formerly)"));
-      break;
+  case "3":
+    filteredCharacter = filterCharacters(charactersData, "Human (formerly)");
+    console.log(filterCharacters(charactersData, "Human (formerly)"));
+    break;
 
-    default:
-      displayPersonajes(charactersData);
+  default:
+    displayPersonajes(charactersData);
   }
   displayPersonajes(filteredCharacter);
 }
