@@ -1,0 +1,414 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+header {
+  text-align: center;
+  margin: 5px 20px -25px 20px;
+}
+
+body {
+  background-image: url(Images/Hogwartz\ Night.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  height: 95%;
+}
+
+nav {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  margin: 50px;
+}
+
+footer {
+  height: 5%;
+  width: 100%;
+  text-align: center;
+  font-style: oblique;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  text-decoration: overline;
+  font-size: large;
+}
+
+.logo {
+  width: calc(80% - 5px);
+  padding: 5px;
+}
+
+.button {
+  display: flex;
+  background-color: #d0a63b;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: antiquewhite;
+  font-size: medium;
+  font-weight: bold;
+  border-radius: 0px 25px 25px 0px;
+  width: 70%;
+  height: 50%;
+  margin: 20px 0px;
+  border: none;
+  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+button {
+  background-color: #d0a63b;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: antiquewhite;
+  font-size: medium;
+  border: none;
+  box-shadow: 10px 15px 15px 10px rgba(0, 0, 0, 0.671);
+  text-align: center;
+}
+
+.titleMain {
+  width: 60%;
+}
+
+.welcome {
+  background-color: rgba(240, 248, 255, 0.628);
+  border-radius: 15px;
+  font-style: italic;
+  font-size: 35px;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  margin: 0px;
+  height: 60%;
+  width: 85%;
+}
+
+.imageEscoba {
+  position: absolute;
+  height: 60%;
+  bottom: -27px;
+  right: -122px;
+}
+
+.imageReset {
+  width: 25%;
+}
+
+.tablePerson {
+  display: grid;
+}
+
+.buttonsNB {
+  height: 80px;
+  width: auto;
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+#next {
+  height: 50px;
+  width: auto;
+  border-radius: 0% 45% 45% 0%;
+}
+
+#back {
+  height: 50px;
+  width: auto;
+  border-radius: 45% 0% 0% 45%;
+  visibility: hidden;
+}
+
+.selectSort {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+
+#charactersInfo {
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 64vh;
+  width: 75vw;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 15px;
+  scroll-snap-type: y proximity;
+}
+
+.iDCard {
+  background-image: url(Images/LABEL_H.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 300px;
+  width: 170px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  padding-top: 8%;
+  overflow-y: auto;
+  overflow-x: auto;
+}
+
+.iDCard ul {
+  list-style-type: none;
+  padding-inline-start: 0%;
+}
+
+#hogwartzlogo {
+  height: 7rem;
+  width: auto;
+}
+
+.selectSort {
+  height: 50px;
+  width: 50px;
+  background-color: rgba(243, 239, 247, 0.521);
+  border-radius: 10px 20px 15px 10px;
+
+  text-align: center;
+  color: rgba(0, 0, 0, 0.726);
+  font-family: "Courier New", Courier, monospace;
+  font-size: medium;
+}
+
+.principal {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selectLabel {
+  background-color: #d0a73eb6;
+  border-radius: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: medium;
+  text-align: center;
+}
+
+.housesIndex {
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  width: 70%;
+}
+
+.ImageHouses {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  background-size: contain;
+  background-color: #15130e7b;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 90px;
+}
+
+.modal {
+  background-image: url(images/fondoResul.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  align-items: center;
+
+  display: none;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 90vh;
+  width: 90vw;
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover {
+  color: black;
+  text-decoration: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#modalText {
+  background-color: white;
+  justify-content: center;
+  font-size: x-large;
+  opacity: 90%;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 90vh;
+  width: 90vw;
+}
+
+.imagenFond {
+  width: 400px;
+  border: 5px solid black;
+  padding: 0px;
+}
+
+#housesInfo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-style: italic;
+  bottom: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .button {
+    height: 62px;
+    margin: 0px, 0px, 5px, -5px;
+    font-size: 10px;
+    width: 65px;
+  }
+
+  audio {
+    height: 26px;
+    width: 145px;
+  }
+
+  .imageEscoba {
+    height: 50%;
+    bottom: -114px;
+    right: -128px;
+  }
+
+  .titleMain {
+    width: 90%;
+    margin: auto;
+  }
+
+  article {
+    margin: 10px;
+  }
+
+  .welcome {
+    font-size: 20px;
+  }
+
+  .principalOne {
+    margin: 25px 20px 25px 20px;
+  }
+  .logo {
+    width: calc(100% - 5px);
+  }
+  .imageEscoba {
+    height: 40%;
+    right: -50px;
+    bottom: -70px;
+  }
+  .articlePerson {
+    margin: 10px;
+  }
+  .selectSort {
+    width: 30px;
+    font-size: 10px;
+    height: 15px;
+  }
+
+  #selectPerson {
+    width: 50px;
+    font-size: 10px;
+  }
+
+  .principal {
+    display: flex;
+  }
+  .imageReset {
+    width: 50px;
+  }
+  .buttonsNB {
+    height: 60px;
+  }
+  #back,
+  #next {
+    height: 25px;
+    font-size: 10px;
+  }
+  .iDCard {
+    margin-left: 18%;
+  }
+  .housesIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 50%;
+    align-items: center;
+    margin-left: auto;
+  }
+  #modalText {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .imagenFond {
+    width: 227px;
+    border: 5px solid black;
+    padding: 0px;
+  }
+  #housesInfo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    font-style: italic;
+    bottom: 20px;
+  }
+}
