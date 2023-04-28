@@ -11,7 +11,6 @@ const countGryffindor = studentsPerProperty(
 );
 const totalStudentsG = countGryffindor.Gryffindor;
 
-
 /*Hufflepuff*/
 const countHufflepuff = studentsPerProperty(
   charactersData,
@@ -19,7 +18,6 @@ const countHufflepuff = studentsPerProperty(
   "Hufflepuff"
 );
 const totalStudentsH = countHufflepuff.Hufflepuff;
-
 
 /*Ravenclaw*/
 const countRavenclaw = studentsPerProperty(
@@ -29,7 +27,6 @@ const countRavenclaw = studentsPerProperty(
 );
 const totalStudentsR = countRavenclaw.Ravenclaw;
 
-
 /*Slytherin*/
 const countSlytherin = studentsPerProperty(
   charactersData,
@@ -37,8 +34,6 @@ const countSlytherin = studentsPerProperty(
   "Slytherin"
 );
 const totalStudentsS = countSlytherin.Slytherin;
-
-
 
 /*Porcentajes*/
 /*convierte string en número*/
@@ -60,9 +55,6 @@ const resultadoR = porcentajeR + "%";
 /*Slytherin*/
 const porcentajeS = ((totalStudentsS / totalStudents) * 100).toFixed(2);
 const resultadoS = porcentajeS + "%";
-
-
-
 
 /*Modal*/
 const modal = document.getElementById("myModal");
@@ -134,4 +126,3 @@ window.addEventListener("click", function (event) {
     modal.style.display = "none";
   }
 });
-
