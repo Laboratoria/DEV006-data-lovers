@@ -5,7 +5,7 @@ import data from './data/athletes/athletes.js';
 
 console.log(main, data);
 
-const btnView=document.getElementById("explora").addEventListener("click");
+const btnView = document.getElementById("explora").addEventListener("click");
 
 
 
