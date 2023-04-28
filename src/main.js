@@ -1,47 +1,8 @@
 import { example } from './data.js';
-// import data from './data/lol/lol.js';
+ import data from './data/lol/lol.js';
 import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+ import data from './data/rickandmorty/rickandmorty.js';
 
 console.log(example, data);
 
 // Plantilla para la página
-const pageTemplate = `
-
-`;
-function buildPage() {
-    // Crear los elementos HTML necesarios
-    const page = document.createElement('div');
-    const navbarToggler = document.createElement('button');    
-    const content = document.createElement('div');
-    
-
-    
-    // Agregar las clases CSS a los elementos HTML
-    // page.classList.add('page'); como agregar clases
-    
-  
-    // Agregar los elementos HTML al documento
-    /*navbar.appendChild(navbarToggler);
-    navbarToggler.appendChild(navbarTogglerIcon);
-    navbar.appendChild(navbarNav);*/
-    //page.appendChild(navbar);
-  
-
-    page.appendChild(content);
-    document.body.appendChild(page);}
-    //Ubica u ordena donde se encuentra cada seccion 
-    
-  
-    // Agregar el contenido a la página
-    content.innerHTML = pageTemplate;
-  
-    // Agregar un evento al botón de menú desplegable revisar si es necesario
-    navbarToggler.addEventListener('click', () => {
-      navbarNav.classList.toggle('show');
-    });
-    
-  console.log(buildPage)
-  buildPage()
-
-  

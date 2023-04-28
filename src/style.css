@@ -1,20 +1,88 @@
+#menuContainer {
+  margin: auto;
+  width: 100%;
+  padding: 60px 60px; /* Modificar este valor para hacer que el fondo del nav sea más ancho */
+  font-family: sofia pro;
+  background: #000000;
+  text-align: center;
+}
+
+ul.nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.nav > li {
+  position: relative;
+}
+
+.nav > li > a {
+  display: block;
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 10px 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav > li:hover > a {
+  background-color: #011328;
+}
+
+.nav li ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+}
+
+.nav li:hover > ul {
+  display: block;
+}
+
+.nav li ul li {
+  position: relative;
+}
+
+.nav li ul li a {
+  display: block;
+  color: #FFFFFF;
+  background-color: #000000;
+  padding: 10px 15px;
+  text-decoration: none;
+  transform: translate(-50%, 0); /* Traslada el submenu hacia la izquierda en la mitad de su ancho */
+}
+
+.nav li ul li:hover > a {
+  background-color: #011328;
+}
+
+.subMenu {
+  display: none;
+}
+
+.has-submenu:hover .subMenu {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0); /* Traslada el submenu hacia la izquierda en la mitad de su ancho */
+  top: 100%;
+}
+/* //////FIN MENU NAVEGACION PRINCIPAL //// */
+/* CSS Luisa */
 *{
   margin: 0;
   padding: 0;
 }
 
 .page {
-  background-color: #f2f2f2;
+  background-color: #F2F2F2;
   height: 100%;
-}
-
-.navbar {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
 }
 
 .Links a{
@@ -25,10 +93,9 @@
 }
 
 .Links {
-  background-color: #f9f9f9;
+  background-color: #F9F9F9;
   width: 185px;
   display: none;
-  
 }
 
 .desplegable:hover .Links{
@@ -40,32 +107,7 @@
 }
 
 .Links a:hover{
-  background-color: #f1f1f1;
-}
-
-.navbar-nav {
-
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.navbar-nav.show {
-  display: flex;
-}
-
-.nav-item {
-  margin: 5px 0;
-}
-
-.nav-item a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.content {
-  padding: 50px;
+  background-color: #F1F1F1;
 }
 
 .button {
@@ -82,11 +124,10 @@ body {
   background-color: #E4C0A4;
 }
 
-
-.content { 
+.content {
   background-image: url(https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/04/ciencia-detras-sombrero-seleccionador-harry-potter-distintas-personalidades-cada-casa-2684193.jpg);
   background-position: right center;
-  padding: 100px;  
+  padding: 100px;
 }
 
 .logo {
@@ -100,18 +141,18 @@ header {
 }
 
 p {
-  color: #f9f9f9;
+  color: #F9F9F9;
 }
 
 h1 {
-  color: #f9f9f9;
+  color: #F9F9F9;
   font-style: oblique;
   text-transform: inherit;
 }
 
-.ancho{
+.menuLogo{
   width: 12%;
-  height: 60px; 
+  height: 60px;
   margin: auto;
   background-image: url(https://bl6pap004files.storage.live.com/y4mF0jIlqLybJF2te7CfOV-aI8e-brmMbBYVfHQUOt2CurYmubqkK3bzGY3KSQo4RfngCWJxMbpM09a5dW0jilBAqK37YiZ_QjUcy25689PfqGmg-9Q-gr3ZUspN-RDjK3MeqSy7REO-X-idpWRZU4DvzpwyUbzboijfJdQY1Lo9lDLHcNN6Nui5GsqlhNIIT22?width=243&height=72&cropmode=none);
   background-size:cover;
