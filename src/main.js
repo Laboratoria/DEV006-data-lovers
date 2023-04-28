@@ -5,7 +5,11 @@ import data from './data/athletes/athletes.js';
 
 console.log(main, data);
 
-const btnView = document.getElementById("explora").addEventListener("click");
+const btnView = document.getElementById("btnExplorar");
+btnView.addEventListener("click", function(e){ //e => event
+  e.preventDefault();//Evitar que se recargue la página al tiro
+
+});
 
 
 
