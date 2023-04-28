@@ -63,7 +63,7 @@ article section .s1{
 }
 
 #s1{
-    font-size: 50px;
+    font-size: 60px;
 }
 
 #s2{
@@ -73,14 +73,14 @@ article section .s1{
 .colors{
     margin-left: 100px;
 }
-
+/*
 .img_explora{
     background-image: url(explora.png);
     height: 500px;
     
     background-repeat: no-repeat;
     background-size: 1100px 500px;
-}
+}*/
 
 button{
     background-color:#CEF506;
