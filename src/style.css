@@ -69,12 +69,10 @@
 }
 
 .button {
-  background: #603711;
-  border: 1px solid #000000;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  border-radius: 50px;
-  top: 73.14%;
-  bottom: 16.11%;
+  background-color:  #603711;
+  border-radius: 20px;
+  top: 75%;
+  bottom: 15%;
   position: absolute;
   left: 38.96%;
   right: 35.83%;
@@ -84,10 +82,11 @@ body {
   background-color: #E4C0A4;
 }
 
+
 .content { 
   background-image: url(https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/04/ciencia-detras-sombrero-seleccionador-harry-potter-distintas-personalidades-cada-casa-2684193.jpg);
   background-position: right center;
-  padding: 90px;  
+  padding: 100px;  
 }
 
 .logo {
@@ -98,6 +97,7 @@ header {
   width: 100%;
   background:#011328;
   height: 70px;
+  image-rendering: ;
 }
 
 p {
@@ -110,7 +110,11 @@ h1 {
   text-transform: inherit;
 }
 
-title {
-  color: #fff;
-  font-style: unset;
+.ancho{
+  width: 12%;
+  height: 60px; 
+  margin: auto;
+  background-image: url(https://bl6pap004files.storage.live.com/y4mF0jIlqLybJF2te7CfOV-aI8e-brmMbBYVfHQUOt2CurYmubqkK3bzGY3KSQo4RfngCWJxMbpM09a5dW0jilBAqK37YiZ_QjUcy25689PfqGmg-9Q-gr3ZUspN-RDjK3MeqSy7REO-X-idpWRZU4DvzpwyUbzboijfJdQY1Lo9lDLHcNN6Nui5GsqlhNIIT22?width=243&height=72&cropmode=none);
+  background-size:cover;
+  background-position: center;
 }
