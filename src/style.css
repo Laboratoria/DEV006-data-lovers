@@ -10,7 +10,7 @@ html {
 
 header {
   text-align: center;
-  margin: 20px 20px -25px 20px;
+  margin: 5px 20px -25px 20px;
 }
 
 body {
@@ -21,6 +21,8 @@ body {
   flex-direction: column;
   margin: 0;
   height: 100vh;
+  background-position: center center;
+  background-attachment: fixed;
 }
 
 main {
@@ -54,7 +56,7 @@ footer {
 }
 
 .logo {
-  width: calc(100% - 5px);
+  width: calc(80% - 5px);
   padding: 5px;
 }
 
@@ -87,18 +89,18 @@ button {
 }
 
 .titleMain {
-  width: 65%;
+  width: 60%;
 }
 
 .welcome {
   background-color: rgba(240, 248, 255, 0.628);
   border-radius: 15px;
   font-style: italic;
-  font-size: 40px;
-  padding: 20px;
+  font-size: 35px;
+  padding: 5px;
   text-align: center;
   position: relative;
-  margin: 35px;
+  margin: 0px;
   height: 60%;
   width: 85%;
 }
@@ -106,8 +108,8 @@ button {
 .imageEscoba {
   position: absolute;
   height: 60%;
-  bottom: -57px;
-  right: -56px;
+  bottom: -27px;
+  right: -122px;
 }
 
 .imageReset {
@@ -273,7 +275,7 @@ button {
   font-weight: bold;
 }
 
-close:hover {
+.close:hover {
   color: black;
   text-decoration: none;
   font-size: 30px;
@@ -283,16 +285,28 @@ close:hover {
 #modalText {
   background-color: white;
   justify-content: center;
-  width: 90%;
-  height: 90%;
   font-size: x-large;
   opacity: 90%;
+  position: fixed;
+  top: 5%;
+  left: 5%;
+  height: 90vh;
+  width: 90vw;
 }
 
 .imagenFond {
   width: 400px;
-  border-radius: 10px;
-  padding: 60px;
+  border: 5px solid black;
+  padding: 0px;
+}
+
+#housesInfo {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-style: italic;
+  bottom: 20px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -305,7 +319,7 @@ close:hover {
 
   audio {
     height: 26px;
-    width: 169px;
+    width: 145px;
   }
 
   .imageEscoba {
@@ -315,9 +329,29 @@ close:hover {
   }
 
   .titleMain {
-    width: 95%;
+    width: 90%;
+    margin: auto;
   }
 
+  article {
+    margin: 10px;
+  }
+
+  .welcome {
+    font-size: 20px;
+  }
+
+  .principalOne {
+    margin: 25px 20px 25px 20px;
+  }
+  .logo {
+    width: calc(100% - 5px);
+  }
+  .imageEscoba {
+    height: 40%;
+    right: -50px;
+    bottom: -70px;
+  }
   .articlePerson {
     margin: 10px;
   }
@@ -348,5 +382,33 @@ close:hover {
   }
   .iDCard {
     margin-left: 18%;
+  }
+  .housesIndex {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 50%;
+    align-items: center;
+    margin-left: auto;
+  }
+  #modalText {
+    position: fixed;
+    top: 5%;
+    left: 5%;
+    height: 90vh;
+    width: 90vw;
+  }
+
+  .imagenFond {
+    width: 227px;
+    border: 5px solid black;
+    padding: 0px;
+  }
+  #housesInfo {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    text-align: center;
+    font-style: italic;
+    bottom: 20px;
   }
 }
