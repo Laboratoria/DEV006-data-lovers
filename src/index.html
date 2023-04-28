@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset=“utf-8”>
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+    <link rel=“stylesheet” href=“style.css” />
+    </head>
   <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <header>
+      <div class=“menuLogo”>
+      </div>
+    </header>
+    <nav>
+        <div id=“menuContainer”>
+          <ul class=“nav”>
+            <li><a href=“”>Home</a></li>
+            <li class=“has-submenu”><a href=“”>Casas</a>
+              <ul>
+                <li><a href=“”>Gryffindor</a></li>
+                <li><a href=“”>Slytherin</a></li>
+                <li><a href=“”>Ravenclaw</a></li>
+                <li><a href=“”>Hufflepuff</a></li>
+              </ul>
+            </li>
+            <li><a href=“”>Personajes Principales</a></li>
+            <li><a href=“”>Libros</a></li>
+            <li><a href=“”>Hechizos</a></li>
+            <li><a href=“”>Pociones</a></li>
+            <li><a href=“”>Extras</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class=“content”>
+      <h1>Bienvenido a mi página</h1>
+      <p>Este es el contenido de mi página</p>
+    </div>
+    </div>
+    <div class = “desplegable”>
+         <button class=“button”>Selecciona tu casa</button>
+            <div class=“Links”>
+                <a href=“#”>Gryffindor</a>
+                <a href=“#”>Ravenclaw</a>
+                <a href=“#”>Huffelpuff</a>
+                <a href=“#”>Slytherin</a>
+            </div>
+    </div>
+    <div id=“root”></div>
+    <script src=“main.js” type=“module”></script>
   </body>
 </html>
