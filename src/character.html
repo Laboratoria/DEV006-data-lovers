@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>PERSONAJES</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <nav>
+      <a href="index.html">
+        <img src="Images/LogoOne.png" class="logo" alt="logo que lleva a index" />
+      </a>
+      <a href = "houseIndex.html" class="button">CASAS</a>
+      <a class="button">HECHIZOS</a> 
+        <a class="button">POCIONES</a>
+          <a class="button">LIBROS</a>
+    </nav>
+    <article class="articlePerson">
+      <section class="principal">
+        <div >
+          <label for="selectPerson" >
+            <select name="selectPerson" id="selectPerson" class="selectLabel">
+              <option value="0">Todos</option>
+              <option value="1">Magos</option>
+              <option value="2">Muggles</option>
+              <option value="3">Fantasmas</option>
+            </select>
+          </label>
+        </div>
+         <div>
+          <button class="selectSort" id="selectOrder" value="1">A-Z</button>
+         <button class="selectSort" id="selectTwoOrder" value="2">Z-A</button>    
+        </div>
+        <div class="imageInt">
+          <img src="Images/reset.png" alt="imagen para resetear información señalada" class="imageReset" onclick="location.reload()">
+         </div>
+           </section>
+
+      <section class="tablePerson">
+        <div class="buttonsNB">
+          <button class="backNext" id="back">Back</button>
+          <button class="backNext" id="next">Next</button>
+        </div>
+        <div id="charactersInfo"></div>
+      </section>
+    </article>
+  </main>
+  <footer>Copyright Tamara Aviles, Andrea Roa.</footer>
+
+  <script src="main.js" type="module"></script>
+</body>
+
+</html>
