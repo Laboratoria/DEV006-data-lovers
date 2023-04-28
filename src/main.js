@@ -4,7 +4,7 @@ import { filterCharacters } from "./data.js";
 import { sortingCharactersAZ } from "./data.js";
 import { sortingCharactersZA } from "./data.js";
 
-const selectPerson = document.getElementById("selectPerson");
+
 const divCharacters = document.getElementById("charactersInfo");
 const hogwartzlogo = "./images/hogwartzlogo.png";
 

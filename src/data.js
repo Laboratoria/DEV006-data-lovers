@@ -68,17 +68,3 @@ export const studentsPerProperty = (data, property, propertyValue) => {
   return countByproperty;
 };
 
-/*export const characterPerProperty = (data, property) => {
-  let countByproperty = data.reduce((accumulator, currentValue) => {
-    /*si no existe, se agrega propiedad y se inicializa con 0
-    /*if (!accumulator[currentValue[property]]) {
-      accumulator[currentValue[property]] = 0;
-    }
-    accumulator[currentValue[property]]++;
-    return accumulator;
-    /*el counter inicializa como objeto vacío
-    console.log({accu})
-  }, {});
-};
-const resultad = characterPerProperty(charactersData, "house");
-console.log(resultad);*/
