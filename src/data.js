@@ -2,15 +2,17 @@ import {Objetos} from './data/pokemon/pokemon.js';
 
 export  function mostrarPokemon(data) {
   const filterByType = data.length > 0 ? data: Objetos.pokemon
-
+  let pokemonAgregado=[];
   const listaPokemon = document.getElementById('listaPokemon');
+  
   
   filterByType.forEach(pokemon => {
     const div = document.createElement('div');
     div.classList.add('pokemon');
     div.innerHTML = `
  <div class="pokemonImagen">
-<img src="${pokemon.img}" alt="${pokemon.name}">
+ <img  src="./img/pokebola.png" id="${pokemon.name}" class="pokebola" alt="imagen pokebola" width="25px" height="25px">
+<img src="${pokemon.img}" alt="${pokemon.name}" class="pokemonImg">
 </div>
 <div class="pokemon-info">
   <div class="nombre-contenedor">
@@ -20,19 +22,15 @@ export  function mostrarPokemon(data) {
 <div class="pokemon-tipos">
    <p class="tipo">${pokemon.type}</p>
 </div>
-<div class="pokemon-medidas">
-   <p class="medida">${pokemon.size.height}</p>
-   <p class="medida">${pokemon.size.weight}</p>
-</div>
 <button type="button" class="btn-modal" id="${pokemon.num}">Ver mas</button>
 </div>
   
  `
     listaPokemon.append(div);
 
- 
-
   });
+
+  
 
   const abrir=document.querySelectorAll(".btn-modal");
   const modalC=document.querySelector("#contentModal");
@@ -118,7 +116,35 @@ export  function mostrarPokemon(data) {
   
   }));
 
+  /*
+  const poke=document.querySelectorAll(".pokebola")
+  poke.forEach(pokebola=>pokebola.addEventListener("click", (e)=>{
+    const pokeId=e.currentTarget.id
+    const item=filterByType.find(pokemon=>pokemon.name.includes(pokeId))
+    pokemonAgregado.push(item)
+   console.log(pokemonAgregado)
+
+  
+  }));*/
+
+
+
+  
+
 }
+
+
+export function datosTarjeta(pokeboTarjeta){
+  const pokebolaInfo={
+    
+    imagen:pokeboTarjeta.querySelector(".pokemonImg").src,
+    nombre: pokeboTarjeta.querySelector("h2").textContent,
+    numero: pokeboTarjeta.querySelector("p").textContent,
+    tipo: pokeboTarjeta.querySelector(".tipo").textContent,
+  }
+  return pokebolaInfo
+}
+
 
 
 export function filtradoPorTipo(data,type) {
@@ -130,7 +156,7 @@ export function filtradoPorTipo(data,type) {
 
 
 export function ordenar(data){
-  const filterByType = data.length > 0 ? data: Objetos.pokemon
+  const filterByType = data.length > 0 ? [...data] : [...Objetos.pokemon]
   
   const result=filterByType.sort(function(a, b) {
     if (a.name > b.name) {
@@ -151,7 +177,7 @@ export function ordenar(data){
 
 export function ordenarZa(data){
   
-  const filterByType = data.length > 0 ? data: Objetos.pokemon
+  const filterByType = data.length > 0 ? [...data]: [...Objetos.pokemon]
 
   const result=filterByType.sort(function(a, b) {
     if (a.name < b.name) {
@@ -175,5 +201,5 @@ export function busquedaName(){
   const searchName=Objetos.pokemon.filter(pokemon=>pokemon.name.toLowerCase().match((input.value.toLowerCase())))
   return searchName
 }
- 
-  
+
+
