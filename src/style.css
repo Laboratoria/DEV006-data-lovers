@@ -1,3 +1,4 @@
+/* CSS Menu Principal */
 #menuContainer {
   margin: auto;
   width: 100%;
@@ -79,25 +80,21 @@ ul.nav {
   margin: 0;
   padding: 0;
 }
-
 .page {
   background-color: #F2F2F2;
   height: 100%;
 }
-
 .Links a{
   text-decoration: none;
   color: black;
   display: block;
   padding: 13px;
 }
-
 .Links {
   background-color: #F9F9F9;
   width: 185px;
   display: none;
 }
-
 .desplegable:hover .Links{
   display: block;
   position: absolute;
@@ -149,7 +146,6 @@ h1 {
   font-style: oblique;
   text-transform: inherit;
 }
-
 .menuLogo{
   width: 12%;
   height: 60px;
