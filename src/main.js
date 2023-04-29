@@ -1,26 +1,10 @@
 /* eslint-disable no-console */
 //main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
 import data from "./data/pokemon/pokemon.js";
-import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, ordenInvertidoZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
-
-//para mostrar data
-/*export const pokemonCardUno = mostrarData()
-const contenedorPokemones =
-*/
+import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
 
 
-
-
-
-//buscar por nombre
-/*const btnBuscarByName = document.getElementById("search");
-btnBuscarByName.addEventListener("input", (e) => {
-  const searchingResult = searchPokByName(e.target.value);
-  console.log(e.target.value);
-  console.log(searchingResult);
-});
-
-//ventana del modal para cerrar
+/*ventana del modal para cerrar
 const cerrar = document.getElementById('cerrar');
 //para cerrar la ventana emergente
 cerrar.addEventListener('click', () =>  {
@@ -29,7 +13,7 @@ cerrar.addEventListener('click', () =>  {
   console.log(msj)
 });*/
 
-//buscar por nonbre ANTIGUO sin MODAL
+//buscar por nonbre ANTIGUO sin MODAL FINAL
 const btnBuscarByName = document.getElementById('search');
 btnBuscarByName.addEventListener('input', (e) =>{
   searchPokByName(e.target.value)
@@ -38,13 +22,14 @@ btnBuscarByName.addEventListener('input', (e) =>{
 })
 
 
-//buscar por numero
+//buscar por numero FINAL
 const buscarByNumber = document.getElementById("search");
 buscarByNumber.addEventListener("input", (e)=> {
   const searchNumResult = searchPokByNumber(e.target.value);
   console.log(e.target.value);
   console.log(searchNumResult);
 })
+
 
 //ventana del modal para cerrar
 const cerrarN = document.getElementById('cerrar');
@@ -55,24 +40,22 @@ cerrarN.addEventListener('click', () =>  {
 });
 
 
-
-//para ordenar AZ CORREGIDO
+//para ordenar A-Z FINAL
 const orderAz = document.getElementById('az');
 orderAz.addEventListener('click', () => {
-  const ordenado = ordenadoAz(orderAz.name);
+  //ordenar la copia por nombre de la A hasta la Z
+  const ordenado = ordenadoAz();
   console.log(ordenado);
 })
 
 
-
-//ordenar de la Z-A CORREGIDO
-const invertirZa = document.getElementById('za');
+//ordenar de la Z-A FINAL
+const invertirZa = document.getElementById("za");
 invertirZa.addEventListener("click", () => {
-  const invertido = ordenInvertidoZa(invertirZa.name);
+  const datosInvertidos = invertirYOrdenarPorNombreZa();
   // Manipulación del DOM para mostrar los datos invertidos y ordenados
-  console.log(invertido);
+  console.log(datosInvertidos);
 });
-
 
 
 //para que al hacer click se baje a la seccion filtrando
@@ -108,11 +91,10 @@ selectResistant.addEventListener("change", () => {
 });
 
 
-
 //ordenar ascendentemente
 const menorAmayor = document.getElementById("ascendente");
 menorAmayor.addEventListener("click", () => {
-  const datosOrdenados = ordenarPorNumeroAscendente(data);
+  const datosOrdenados = ordenarPorNumeroAscendente();
   // Manipulación del DOM para mostrar los datos ordenados por número ascendente
   console.log(datosOrdenados);
 });
@@ -121,7 +103,7 @@ menorAmayor.addEventListener("click", () => {
 //ordenar descendentemente
 const mayorAmenor = document.getElementById("descendente");
 mayorAmenor.addEventListener("click", () => {
-  const datosOrdenados = ordenarPorNumeroDescendente(data);
+  const datosOrdenados = ordenarPorNumeroDescendente();
   // Manipulación del DOM para mostrar los datos ordenados por número descendente
   console.log(datosOrdenados);
 });
@@ -144,4 +126,4 @@ select.addEventListener('change', () => {
 
 //reproductor
 const reproductor = document.getElementById('reproductor');
-reproductor.volume = 0.05;
+reproductor.volume = 0.03;

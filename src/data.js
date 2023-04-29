@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
 //import pokemon from "./data/pokemon/pokemon.js";
-//import data from "./data/pokemon/pokemon.js";
-
+import data from "./data/pokemon/pokemon.js";
+//console.log(data.pokemon)
 //En el archivo data.js, exporta las funciones de búsqueda y filtrado.
+
 //input SEARCH buscar por nombre
 /*export function searchPokByName(name) {
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
@@ -16,84 +17,40 @@
 }*/
 
 //input SEARCH buscar por nombre ANTIGUO
-export const searchPokByName = (name, data) =>{
+export const searchPokByName = (name) =>{
   //metodo startsWidth para buscar por nombre comenzando desde la primera
+  //console.log(data)
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
   return searching
 };
-
-/*const btnBuscarByName = document.getElementById('search');
-btnBuscarByName.addEventListener('input', (e) =>{
-  searchPokByName(e.target.value)
-  console.log(e.target.value)
-  console.log(searchPokByName(e.target.value))
-})
-export const searchPokByName = (name) =>{
-//metodo startsWidth para buscar por nombre comenzando desde la primera
-  const searching = data.pokemon.filter(p => p.name.startsWith(name));
-  return searching
-};*/
-
-
 
 //input search by number
 //CONVERTIR EL STRING DEL INPUT EN NUMERO
 //filtrar toda la data por el numero que se convirtio
 //    durante el filtrado comparar el numero convertido con la propiedad num del pokemon convertida en numero tbn
-export function searchPokByNumber(num,data){
+export function searchPokByNumber(num){
   const searchingNumber = Number(num);
   const searching = data.pokemon.filter(p => searchingNumber === Number(p.num));
-  if(searching.length===0){
-    const modal = document.querySelector('.modal');
-    const msj = document.querySelector('#msj');
-    msj.textContent = `No se encontró ningún Pokémon con el numero '${Number}'`;
-    modal.style.display = 'block';
-  }
   return searching;
 }
 
 
 //para ordenar AZ CORREGIDO
-export function ordenadoAz(name,data) {
-  const ordenado = data.pokemon.sort((pokemon) => {
-    if(pokemon.name.localeCompare(name)){
-      return pokemon;
-    }
-  });
+export function ordenadoAz() {
+  const ordenado = data.pokemon.sort((a,b)=> a.name.localeCompare(b.name));
   return ordenado;
 }
-//item order A-Z ANTIGUO
-/*const orderAz = document.getElementById('az');
-orderAz.addEventListener('click', () => {
-  //ordenar la copia por nombre de la A hasta la Z
-  const ordenado = data.pokemon.sort((a,b)=> a.name.localeCompare(b.name));
-  //mostrar el resultado
-  console.log(ordenado);
-});*/
 
 
-
-//para invertir el orden ZA CORREGIDO
-export function ordenInvertidoZa(name, data) {
-  const invertido = data.pokemon.reverse().sort((pokemon) => {
-    if(pokemon.name.LocaleCompare(name)){
-      return pokemon;
-    }
-  });
-  return invertido;
+//para invertir el orden ZA FINAL
+export function invertirYOrdenarPorNombreZa() {
+  const invertirYOrdenarPorNombreZa = data.pokemon.reverse().sort((a, b) => b.name.localeCompare(a.name));
+  return invertirYOrdenarPorNombreZa
 }
-//item order Z-A ANTIGUO
-/*const invertirZa = document.getElementById('za');
-invertirZa.addEventListener('click', () => {
-  const invertido = data.pokemon.reverse().sort((a,b)=> a.name.localeCompare(b.name));
-  //mostrar el resultado
-  console.log(invertido);
-});*/
-
 
 
 //filtrado por tipo
-export function filtradoTipo(type, data) {
+export function filtradoTipo(type) {
   const filtrado = data.pokemon.filter((pokemon) =>{
     if(pokemon.type.includes(type)){
       return pokemon;
@@ -104,7 +61,7 @@ export function filtradoTipo(type, data) {
 
 
 //filtar por debilidad
-export function filtradoDebilidad(weaknesses, data) {
+export function filtradoDebilidad(weaknesses) {
   const filtradoWeaknesses = data.pokemon.filter((pokemon) => {
     if(pokemon.weaknesses.includes(weaknesses)){
       return pokemon;
@@ -115,7 +72,7 @@ export function filtradoDebilidad(weaknesses, data) {
 
 
 //filtrar por fortaleza
-export function filtradoResistencia(resistant, data){
+export function filtradoResistencia(resistant){
   const filtradoResistant = data.pokemon.filter((pokemon)=> {
     if(pokemon.resistant.includes(resistant)){
       return pokemon;
@@ -125,9 +82,8 @@ export function filtradoResistencia(resistant, data){
 }
 
 
-
 //ordenar ascendentemente
-export function ordenarPorNumeroAscendente(data) {
+export function ordenarPorNumeroAscendente() {
   return data.pokemon.sort((a, b) => a.num - b.num);
 }
 //item order x NUMERO ascendente ANTIGUO
@@ -138,7 +94,7 @@ menorAmayor.addEventListener('click', () => {
 });*/
 
 //ordenar descendente
-export function ordenarPorNumeroDescendente(data) {
+export function ordenarPorNumeroDescendente() {
   return data.pokemon.sort((a, b) => b.num - a.num);
 }
 //item order x NUMERO descendente ANTIGUO

@@ -10,7 +10,7 @@
 
 body{
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233), #02e1ff86);
-    min-height: 100vh;
+    min-height: 100%;
 }
 
 * {
@@ -22,7 +22,7 @@ box-sizing: border-box;
 /*-- ESTILOS DE LA BARRA DE MENÚ PARA PC--*/
 header{
     width: 100%;
-    height: 70px;
+    height: 4.375em;
     z-index: 100;
     display: flex;
     align-items: center;
@@ -33,20 +33,36 @@ header{
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233), #02e1ff86);
 }
 
+.icon-menu{
+  width: 3em;
+  height: auto;
+}
+
+#btn-menu{
+  display: none;
+}
+
+header label{
+  display: none;
+  width: 40px;
+  height: 4.375em;
+  padding: auto;
+}
+
 .contenedor-barra{
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .contenedor-logo{
-    margin-left: 13px;
+    margin-left: 0.813em;
 }
 
 .img-menu{
-    width: 250px;
-    height: 68px;
+    width: 15.625em;
+    height: 4.25em;
     float: left;
     margin-top: 2px;
 }
@@ -138,35 +154,34 @@ flex-wrap: wrap;
     max-height: 45px;
 }
 
+
 /*-pantalla movil y pc sin @media query-*/
 /*-seccion busqueda-*/
 .pokemon{
 position: relative;
-top: 70px;
+top: 4.375em;
 width: 100%;
 }
 
+
 .portadaBox {
-   display: flex;
-   width: 100%;
-   max-width: 2000px;
-   margin: 0 auto;
-   height: 500px;
-   /*width: 1200%;*/
-   animation: slide 50s linear infinite;
-  }
+display: flex;
+width: 1000%;
+animation: slide 50s linear infinite;
+}
+
 
 .portada-slider{
-  flex-basis: 100%;
+flex-basis: 100%;
 }
+
+
 .portada-slider img{
-  /*display: block;
-  width: 100%;
-  height: 500px;*/
-  max-width: 100%;
-   height: 500px;
-   object-fit: cover;
+display: flex;
+width: 100%;
+height: 500px;
 }
+
 
 @keyframes slide {
   0% {
@@ -489,31 +504,30 @@ select option:checked{
     padding: 5%;
 }
 
-/*-ESTE CONTENDOR ES PARA LA CARD, LO HICE AYER -*/
+/*-ESTE CONTENDOR ES PARA LA CARD-*/
 .contenedor-pokemones img{
     height: 200px;
     background-image: url("images/cards/card1.png");
 }
 
 
-/*- barra de menu para cel -*/
+/*- barra de menu para cel y tablet vertical -*/
 @media (max-width:768px){
     header label {
       display: block !important;
-      font-size: 22px;
+      font-size: 18px;
       margin: 10px 10px;
-      margin-top: 16px;
+     margin-top: 20px;
   }
 
     .img-menu {
-    width: 190px;
-    height: 50px;
+    width: 11.875em;
+    height: 3.125em;
   }
 
     .elements{
         position: absolute;
-        top: 65px;
-        left: 0;
+        top: 4.063em;
         width: 100%;
         transition: all 0.4s;
         transform: translateX(-100);
@@ -522,19 +536,84 @@ select option:checked{
     .elements ul{
         display: block;
         background: #34ffaa71;
-        width: 35%;
-        height: 50vh;
+        width: 30%;
+        height: 100%;
     }
 
     .elements ul li:hover ul{
         display: none;
     }
 
+    #btn-menu:checked ~ .elements-nav{
+      margin:0;
+  }
+    /*.portadaBox {
+      display: flex;
+      width: 800%;
+      }
 
+
+      .portada-slider{
+      flex-basis: 100%;
+      }
+
+
+      .portada-slider img{
+      display: flex;
+      width: 100%;
+      height: 250px;
+      }
+
+
+      @keyframes slide {
+        0% {
+          transform: translateX(0);
+        }   100% {
+          transform: translateX(-100%);
+        }
+       }*/
+
+
+    .footer-main {
+      height: auto;
+      padding: 30px 0;
+    }
+
+    .footer-main > div {
+    flex-basis: 100%;
+    }
+
+  .footer-main .logo img{
+    height: 50%;
+    width: 40%;
+    cursor: pointer;
+}
+  .apps {
+    margin-top: 1.875em;
+  }
+  .app img{
+    width: 20%;
+    height: 30%;
+    cursor: pointer;
+    }
+
+  .redes img {
+    width: 7%;
+    height: auto;
+  }
+  .social-icono {
+    cursor: pointer;
+  }
+  .Copyright h5 {
+    padding-top: 1.25em;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
+  }
 }
 
+
 /* para tablet en posición horizontal */
-/*@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   .footer-main {
     height: auto;
     padding: 30px 0;
@@ -552,40 +631,11 @@ select option:checked{
   .social-icono {
     cursor: pointer;
   }
-}*/
 
-/* para tablet en posición vertical y móviles */
-/*@media only screen and (max-width: 768px) {
-  .footer-main {
-    height: auto;
-    padding: 30px 0;
-  }
-  .footer-main > div {
-    flex-basis: 100%;
-  }
-  .footer-main .logo img{
-    height: 100%;
-    width: 90%;
-    cursor: pointer;
-}
-  .apps {
-    margin-top: 30px;
-  }
-  .app img{
-    width: 35%;
-    height: 55%;
-    cursor: pointer;
-    }
-
-  .redes img {
-    width: 30%;
-    height: auto;
-  }
-  .social-icono {
-    cursor: pointer;
-  }
   .Copyright h5 {
-    font-size: 14px;
+    padding-top: 1.25em;
+    font-size: 15px;
     font-family: 'Times New Roman', Times, serif;
   }
+
 }
