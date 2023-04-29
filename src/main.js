@@ -18,7 +18,7 @@ const navburger=document.querySelector(".nav-burger");
 const navMenu2=document.querySelector(".menu-nav2");
 navburger.addEventListener("click", ()=>
   navMenu2.classList.toggle("nav-menu_visible"));
-const contenedorPokebola=document.querySelector("#lista-pokebola")
+const contenedorPoke=document.querySelector("#lista-pokebola")
 const vaciarPokebola=document.querySelector("#vaciar-pokebola")
 
   
@@ -62,35 +62,69 @@ iconobusqueda.addEventListener("click", ()=>{
 })
 
 
-listaPokemon.addEventListener("click",agregarCurso)
-let agregandoTipo=[];
-
-function agregarCurso(e){
+listaPokemon.addEventListener("click",agregarPokemon)
+let articulosCarrito=[];
+let tipos2=[];
+function agregarPokemon(e){
   
   if(e.target.classList.contains("pokebola")){
-    const pokeboTarjeta=e.target.parentElement.parentElement;
-    const datitos=datosTarjeta(pokeboTarjeta);
-    agregandoTipo=[...agregandoTipo,datitos]
-   console.log(agregandoTipo)
-   console.log(carritoHTML(agregandoTipo))
+    const ident=e.target.id
+    tipos2=[...tipos2,ident]
+    console.log(tipos2)
+    const pokebo=e.target.parentElement.parentElement;
+    const datitos=datosTarjeta(pokebo);
+    
+    const existeEnCarrito=articulosCarrito.some(elemento=>elemento.nombre===datitos.nombre)
+    if(existeEnCarrito){
+      const pokemones=articulosCarrito.map(elemento=>{
+       
+        if(elemento.nombre===datitos.nombre){
+             elemento.cantidad++;
+          return elemento
+        }else{
+          return elemento;
+        }
+      });
+       articulosCarrito=[...pokemones]
+    }else{
+      articulosCarrito=[...articulosCarrito,datitos]
+      
+    }
+    
+    carritoHTML()
+    
+
+  }
+ 
+}
+
+
+function carritoHTML() {
+  contenedorPoke.innerHTML = " ";
+  
+    articulosCarrito.forEach(pokebo => {
+  const row = document.createElement('tr');
+  row.innerHTML = `
+     <td>
+     <img src = "${pokebo.imagen}" width = "80">
+     </td>
+  
+     <td>${pokebo.nombre}</td>
+     <td>${pokebo.cantidad}</td>
+     <td>${pokebo.tipo} </td>
+  `;
+   
+   contenedorPoke.appendChild(row);
+    });
+  
   }
 
-  
-}
+  vaciarPokebola.addEventListener("click",()=>{
 
-function carritoHTML(articulos){
-  contenedorPokebola.innerHTML=" ";
-  articulos.forEach(elemento=>{
-    const filas=document.createElement("tr");
-    filas.innerHTML= `
-    <td>
-    $elemento.name
-    </td>
-    `
-
-    contenedorPokebola.appendChild(filas)
+    articulosCarrito.filter
   })
-}
+
+
 
 
 

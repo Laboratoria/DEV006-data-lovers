@@ -165,6 +165,22 @@ th {
     border-bottom: 1px solid #E1E1E1;
 }
 
+#carrito a {
+    border-radius: 20px;
+    border: 2px solid #292929;
+    text-align: center;
+    background-color: #292929;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: Limelight;
+    font-weight: lighter;   
+}
+
+#carrito a:hover {
+box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);   
+}
+
 .navegacion2{
     display: none;
 }

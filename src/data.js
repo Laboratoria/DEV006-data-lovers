@@ -11,7 +11,7 @@ export  function mostrarPokemon(data) {
     div.classList.add('pokemon');
     div.innerHTML = `
  <div class="pokemonImagen">
- <img  src="./img/pokebola.png" id="${pokemon.name}" class="pokebola" alt="imagen pokebola" width="25px" height="25px">
+ <img  src="./img/pokebola.png" id="${pokemon.type}" class="pokebola" alt="imagen pokebola" width="25px" height="25px">
 <img src="${pokemon.img}" alt="${pokemon.name}" class="pokemonImg">
 </div>
 <div class="pokemon-info">
@@ -39,7 +39,7 @@ export  function mostrarPokemon(data) {
   abrir.forEach( (btn,index)=>btn.addEventListener("click", (e)=>{
     e.preventDefault();
    
-
+      
     modalC.style.opacity="1";
     modalC.style.visibility="visible";
     const divDos = document.createElement("div");
@@ -115,32 +115,18 @@ export  function mostrarPokemon(data) {
 
   
   }));
-
-  /*
-  const poke=document.querySelectorAll(".pokebola")
-  poke.forEach(pokebola=>pokebola.addEventListener("click", (e)=>{
-    const pokeId=e.currentTarget.id
-    const item=filterByType.find(pokemon=>pokemon.name.includes(pokeId))
-    pokemonAgregado.push(item)
-   console.log(pokemonAgregado)
-
-  
-  }));*/
-
-
-
-  
-
 }
 
 
-export function datosTarjeta(pokeboTarjeta){
+export function datosTarjeta(pokebo){
   const pokebolaInfo={
     
-    imagen:pokeboTarjeta.querySelector(".pokemonImg").src,
-    nombre: pokeboTarjeta.querySelector("h2").textContent,
-    numero: pokeboTarjeta.querySelector("p").textContent,
-    tipo: pokeboTarjeta.querySelector(".tipo").textContent,
+    imagen:pokebo.querySelector(".pokemonImg").src,
+    nombre: pokebo.querySelector("h2").textContent,
+    numero: pokebo.querySelector("p").textContent,
+    tipo: pokebo.querySelector(".tipo").textContent,
+    cantidad: 1
+    
   }
   return pokebolaInfo
 }
