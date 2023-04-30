@@ -16,7 +16,7 @@ import data from "./data/pokemon/pokemon.js";
   return searching;
 }*/
 
-//input SEARCH buscar por nombre ANTIGUO
+//input SEARCH buscar por nombre FINAL
 export const searchPokByName = (name) =>{
   //metodo startsWidth para buscar por nombre comenzando desde la primera
   //console.log(data)
@@ -24,7 +24,7 @@ export const searchPokByName = (name) =>{
   return searching
 };
 
-//input search by number
+//input search by number FINAL
 //CONVERTIR EL STRING DEL INPUT EN NUMERO
 //filtrar toda la data por el numero que se convirtio
 //    durante el filtrado comparar el numero convertido con la propiedad num del pokemon convertida en numero tbn
@@ -35,7 +35,7 @@ export function searchPokByNumber(num){
 }
 
 
-//para ordenar AZ CORREGIDO
+//para ordenar AZ FINAL
 export function ordenadoAz() {
   const ordenado = data.pokemon.sort((a,b)=> a.name.localeCompare(b.name));
   return ordenado;
@@ -82,7 +82,7 @@ export function filtradoResistencia(resistant){
 }
 
 
-//ordenar ascendentemente
+//ordenar ascendentemente FINAL
 export function ordenarPorNumeroAscendente() {
   return data.pokemon.sort((a, b) => a.num - b.num);
 }
@@ -93,7 +93,7 @@ menorAmayor.addEventListener('click', () => {
   console.log(ascending);
 });*/
 
-//ordenar descendente
+//ordenar descendente FINAL
 export function ordenarPorNumeroDescendente() {
   return data.pokemon.sort((a, b) => b.num - a.num);
 }

@@ -1,4 +1,4 @@
-import {searchPokByName, searchPokByNumber, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente} from "../src/data.js";
+import {searchPokByName, searchPokByNumber, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, filtradoTipo} from "../src/data.js";
 jest.mock("../src/data/pokemon/pokemon.js", () => {
   return {
     pokemon: [
@@ -177,20 +177,17 @@ describe('ordenarPorNumeroDescendente del 251 al 1', () => {
 
 
 
-/*filtrado por tipo
+//filtrado por tipo
 describe("filtradoTipo filtrar todos los pokemones por su tipo", () => {
   it("is a function", () => {
     expect(typeof filtradoTipo).toBe("function");
   });
 
-  it("debería retornar el pokemón según el tipo seleccionado [fighting], [electric], [fairy]", () => {
-    const resultadoFiltradoTipo = filtradoTipo();
-    const primerPokemonFiltradoTipo = resultadoFiltradoTipo[0];
-    const segundoPokemonFiltradoTipo = resultadoFiltradoTipo[1];
-    const tercerPokemonFiltradoTipo = resultadoFiltradoTipo[2];
-    expect(primerPokemonFiltradoTipo.type).toBe("fighting");
-    expect(segundoPokemonFiltradoTipo.type).toBe("electic");
-    expect(tercerPokemonFiltradoTipo.type).toBe("fairy");
+  it("debería retornar todos los pokemones según el tipo seleccionado fighting para [fighting]", () => {
+    const type = 'fighting';
+    const pokemonFiltrado = filtradoTipo(type);
+    const esperado = pokemonFiltrado.filter(pokemon => pokemon.type.includes(type));
+    expect(pokemonFiltrado).toEqual(esperado);
   });
 });
 
