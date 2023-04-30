@@ -1,4 +1,14 @@
-import {searchPokByName, searchPokByNumber, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, filtradoTipo} from "../src/data.js";
+import {
+  searchPokByName,
+  searchPokByNumber,
+  ordenadoAz,
+  invertirYOrdenarPorNombreZa,
+  ordenarPorNumeroAscendente,
+  ordenarPorNumeroDescendente,
+  filtradoTipo,
+  filtradoDebilidad,
+  filtradoResistencia,
+} from "../src/data.js";
 jest.mock("../src/data/pokemon/pokemon.js", () => {
   return {
     pokemon: [
@@ -112,7 +122,7 @@ describe("ordenadoAz ordena todos los pokemones por orden alfabético", () => {
   });
 
   it("returns una matriz de pokemon ordenada alfabeticamente ascendente [cleffa], [machoke], [raikou]", () => {
-    const resultadoOrdenadoAz = ordenadoAz();//arreglo de pokemon ordenado
+    const resultadoOrdenadoAz = ordenadoAz(); //arreglo de pokemon ordenado
     const primerPokemonDespuesdeOrdenar = resultadoOrdenadoAz[0];
     const segundoPokemonDespuesdeOrdenar = resultadoOrdenadoAz[1];
     const tercerPokemonDespuesdeOrdenar = resultadoOrdenadoAz[2];
@@ -129,9 +139,10 @@ describe("invertirZa invierte y ordena todos los pokemos de la Z a la A", () => 
   });
 
   it("returns los nombres de los pokemones de la Z-A [raikou], [machote], [cleffa]", () => {
-    const resultadoinvertirYOrdenarPorNombreZa = invertirYOrdenarPorNombreZa();//arreglo de pokemon ordenado de Z a A
+    const resultadoinvertirYOrdenarPorNombreZa = invertirYOrdenarPorNombreZa(); //arreglo de pokemon ordenado de Z a A
     const primerPokemonOrdenInvertido = resultadoinvertirYOrdenarPorNombreZa[0];
-    const segundoPokemonOrdenInvertido = resultadoinvertirYOrdenarPorNombreZa[1];
+    const segundoPokemonOrdenInvertido =
+      resultadoinvertirYOrdenarPorNombreZa[1];
     const tercerPokemonOrdenInvertido = resultadoinvertirYOrdenarPorNombreZa[2];
     expect(primerPokemonOrdenInvertido.name).toBe("raikou");
     expect(segundoPokemonOrdenInvertido.name).toBe("machoke");
@@ -139,43 +150,39 @@ describe("invertirZa invierte y ordena todos los pokemos de la Z a la A", () => 
   });
 });
 
-
 //test para ordenar ascendentemente por numero
-describe('ordenarPorNumeroAscendente del 1 al 251', () => {
-  it('is a function', () => {
-    expect(typeof ordenarPorNumeroAscendente).toBe('function');
+describe("ordenarPorNumeroAscendente del 1 al 251", () => {
+  it("is a function", () => {
+    expect(typeof ordenarPorNumeroAscendente).toBe("function");
   });
 
-  it('returns los numeros de los pokemones ordenados del 1 al 251 para [067], [173] [243]', () => {
+  it("returns los numeros de los pokemones ordenados del 1 al 251 para [067], [173] [243]", () => {
     const resultadoOrdenadoPorNumero = ordenarPorNumeroAscendente();
     const primerNumeroDePokemonOrdenado = resultadoOrdenadoPorNumero[0];
     const segundoNumeroDePokemonOrdenado = resultadoOrdenadoPorNumero[1];
     const tercerNumeroPokemonOrdenado = resultadoOrdenadoPorNumero[2];
-    expect(primerNumeroDePokemonOrdenado.num).toBe('067');
-    expect(segundoNumeroDePokemonOrdenado.num).toBe('173');
-    expect(tercerNumeroPokemonOrdenado.num).toBe('243');
+    expect(primerNumeroDePokemonOrdenado.num).toBe("067");
+    expect(segundoNumeroDePokemonOrdenado.num).toBe("173");
+    expect(tercerNumeroPokemonOrdenado.num).toBe("243");
   });
 });
 
-
 //test para ordenar descendentemente por numero
-describe('ordenarPorNumeroDescendente del 251 al 1', () => {
-  it('is a function',() => {
-    expect(typeof ordenarPorNumeroDescendente).toBe('function');
+describe("ordenarPorNumeroDescendente del 251 al 1", () => {
+  it("is a function", () => {
+    expect(typeof ordenarPorNumeroDescendente).toBe("function");
   });
 
-  it('returns los numeros de pokemones ordenados del 251 al 1 para [243], [173], [067]', () => {
-    const resultadoOrdenadoDescendente= ordenarPorNumeroDescendente();
+  it("returns los numeros de pokemones ordenados del 251 al 1 para [243], [173], [067]", () => {
+    const resultadoOrdenadoDescendente = ordenarPorNumeroDescendente();
     const primerPokemonOrdenDescentente = resultadoOrdenadoDescendente[0];
     const segundoPokemonOrdenDescentente = resultadoOrdenadoDescendente[1];
     const tercerPokemonOrdenDescentente = resultadoOrdenadoDescendente[2];
-    expect(primerPokemonOrdenDescentente.num).toBe('243');
-    expect(segundoPokemonOrdenDescentente.num).toBe('173');
-    expect(tercerPokemonOrdenDescentente.num).toBe('067');
-  })
+    expect(primerPokemonOrdenDescentente.num).toBe("243");
+    expect(segundoPokemonOrdenDescentente.num).toBe("173");
+    expect(tercerPokemonOrdenDescentente.num).toBe("067");
+  });
 });
-
-
 
 //filtrado por tipo
 describe("filtradoTipo filtrar todos los pokemones por su tipo", () => {
@@ -184,50 +191,57 @@ describe("filtradoTipo filtrar todos los pokemones por su tipo", () => {
   });
 
   it("debería retornar todos los pokemones según el tipo seleccionado fighting para [fighting]", () => {
-    const type = 'fighting';
+    const type = "fighting";
     const pokemonFiltrado = filtradoTipo(type);
-    const esperado = pokemonFiltrado.filter(pokemon => pokemon.type.includes(type));
+    const esperado = pokemonFiltrado.filter((pokemon) =>
+      pokemon.type.includes(type)
+    );
     expect(pokemonFiltrado).toEqual(esperado);
   });
 });
 
 //filtrado por debilidad
-/*describe("selectDebilidad filtrar todos los pokemones filtrados por su debilidad", () => {
+describe("filtradoDebilidad filtrar todos los pokemones filtrados por su debilidad", () => {
   it("is a function", () => {
     expect(typeof filtradoDebilidad).toBe("function");
   });
 
-  it("debería retornar todos los pokemones filtrados por su debilidad [flying, psychic, fairy], [poison, steel],[ground]", () => {
-    const selectDebilidad = filtradoDebilidad(dataPokemon);
-    expect(selectDebilidad[0].weaknesses).toBe("flying, psychic, fairy");
-    expect(selectDebilidad[1].weaknesses).toBe("poison, steel");
-    expect(selectDebilidad[2].weaknesses).toBe("ground");
+  it("debería retornar todos los pokemones filtrados por su debilidad ground para [ground]", () => {
+    const weaknesses = "ground";
+    const debilidadPokemon = filtradoDebilidad(weaknesses);
+    const resultado = debilidadPokemon.filter((pokemon) =>
+      pokemon.weaknesses.includes(weaknesses)
+    );
+    expect(debilidadPokemon).toEqual(resultado);
   });
-});/*
+});
 
 //filtrado por resistencia
-/*describe("selectResistant filtrar a todos los pokemones por su resistencia", () => {
+describe("filtradoResistencia filtrar a todos los pokemones por su resistencia", () => {
   it("is a function", () => {
     expect(typeof filtradoResistencia).toBe("function");
   });
 
-  it("returns todos los pokemones filtrados por su resistencia  [bug, rock, dark], [fighting, bug, dragon, dark], [electric, flying, steel]", () => {
-    //const selectResistant = filtradoResistencia(data,pokemon);
-    expect(filtradoResistencia("bug", "rock", "dark").resistant).toBe(
-      "bug",
-      "rock",
-      "dark"
+  it("returns todos los pokemones filtrados por su resistencia [bug, rock, dark]", () => {
+    const resistant = "bug , rock , dark";
+    const resistenciaPokemon = filtradoResistencia(resistant);
+    const resultadoEsperado = resistenciaPokemon.filter((pokemon) =>
+      pokemon.resistant.includes(resistant)
     );
-    expect(
-      filtradoResistencia("fighting", "bug", "dragon", "dark").resistant
-    ).toBe("fighting", "bug", "dragon", "dark");
-    expect(filtradoResistencia("electric", "flying", "steel").resistant).toBe(
-      "electric",
-      "flying",
-      "steel"
-    );
+    expect(resistenciaPokemon).toEqual(resultadoEsperado);
   });
-});*/
+});
+
+//calcular fuerza
+/*describe("calcularFuerza filtrar el top10 y last10 de todos los pokemones calculando su fuerza", () => {
+  it("is a function", () => {
+    expect(typeof calcularFuerza).toBe("function");
+  });
+
+  it("returns debe calcular la fuerza correctamente de los pokemones del top y last", () => {
+    expect(calcularFuerza).toBe();
+  });
+});
 
 /*describe('anotherExample', () => {
   it('is a function', () => {
