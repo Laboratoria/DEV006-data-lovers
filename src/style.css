@@ -74,7 +74,7 @@ html{
     justify-content: center;
     align-items: center;
     text-align: center;
-    color:#FFD700;
+    color:#fff;
     position: absolute;
     z-index: 1;
     transition: .4s ease-out;
@@ -85,7 +85,7 @@ html{
     position: absolute;
     top: 0%;
     width: 100%;
-height:auto;
+    height:auto;
     box-shadow: 0 0 3rem -1rem rgba(4, 25, 216, 0.4);
     transition: .3s ease-in;
 }
@@ -213,14 +213,14 @@ box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);
    .menu{
     font-size: 12px;
     padding: 10px 10px;
-    color: #FFD700;
+    color:#fff;
     line-height: 40px;
    }
 
    .nav-burger{
     border: none;
     background: none;
-    color:#FFD700;
+    color:#fff;
     font-size: 30px;
     padding: 10px 20px;
     display: flex;
@@ -230,7 +230,7 @@ box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);
 
    a{
     text-decoration: none;
-    color: #FFD700;
+    color: #fff;
     
    }
 
@@ -300,14 +300,14 @@ box-shadow: 0 10px 10px 0 rgba(4, 25, 216, 0.5);
        .menu{
         font-size: 12px;
         padding: 10px 10px;
-        color: #FFD700;
+        color: #fff;
         line-height: 25px;
        }
     
        .nav-burger{
         border: none;
         background: none;
-        color:#FFD700;
+        color:#fff;
         font-size: 20px;
         padding: 10px 20px;
         display: flex;
@@ -598,9 +598,20 @@ article > section:nth-child(1){
     border-color:#8BD9D1;
     font-family: "Limelight";
     font-size: 12px;
+    border:none
    
    
 }
+
+#icono-busqueda{
+    cursor: pointer;
+}
+
+
+.filtro{
+    display:none;
+}
+
 
 article > section:nth-child(2){
     margin: 0 0;
@@ -670,6 +681,7 @@ article > section:nth-child(3){
     grid-template-columns: 0.18fr 0.18fr 0.18fr 0.18fr;
     gap: 1rem;
     justify-content: center;
+
 }
 
 .pokemon {
@@ -679,6 +691,9 @@ article > section:nth-child(3){
     background-color: #9ae5f3;
     padding-block: 1rem;
     text-transform: uppercase;
+   
+
+    
 }
 
 .pokemonImagen{
@@ -691,9 +706,10 @@ article > section:nth-child(3){
     display: flex;
     flex-direction: column;
     gap: .5rem;
-    padding-inline: 1rem;
+    padding-inline: 1.5rem;
     align-items: center;
     text-align: center;
+    
 }
 
 .nombre-contenedor {
@@ -711,10 +727,11 @@ article > section:nth-child(3){
     border-radius: 1rem;
     font-size: .75rem;
     font-weight: bold;
+    width: 30%;
 }
 
 .pokemon-nombre {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
 }
 
 .pokemon button{
@@ -746,7 +763,7 @@ article > section:nth-child(3){
     position:fixed;
     z-index:1;
     width: 100%;
-    height: auto;
+    height: 100%;
     top:0;
     left:0;
     background-color: rgba(0,0,0,0.5);
@@ -757,20 +774,18 @@ article > section:nth-child(3){
 }
 
 .modal{
-    min-width: 10%;
-    min-height: 10%;
+    width: 60%;
+    height: 60%;
     background-color:#9ae5f3;
     border-radius:30px;
     text-align: center;
-    display: flex;
-    flex-direction: column;
+    display:grid;
+    grid-template-columns: 250px auto;
+    left: 20%;
     position:relative;
     transition:transform 0.8s;
     transform:translateY(0%);
-    margin-top: 1%;
-    margin-bottom: 0%;
-    margin-right: 10%;
-    /*overflow: hidden;*/
+    
 }
 
 .modal-close{
@@ -778,7 +793,7 @@ article > section:nth-child(3){
 }
 
 .close{
-    border: 1px solid red;
+    
     width: 25px;
     height: 25px;
    /* margin-top: 10px;*/
@@ -790,42 +805,56 @@ article > section:nth-child(3){
     
 }
 
-.modal .caja1{
+/*.modal .caja1{
     display:flex;
     justify-content: space-between;
     margin: top 20px; 
     padding: 40px 10px; 
     border: 1px solid red;
    
-}
+}*/
 
 .modal .imagen-pokemon{
-    display: flex;
-    flex-direction: column;
-    justify-content:center;
-    align-items: center;
-    max-width: 20%;
-    height: auto;
-    object-fit: cover;
+    
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;  
 
 }
 
-.modal .imagen-pokemon p{
+.modal img{
+    width: 70%;
+    height:auto;
+    object-fit: cover;  
+}
+
+.modal .imagen-pokemon .num-size{
+
     font-size:15px;
     color:#41414a;
     font-weight: bold;  
+    text-transform: capitalize;
+    max-width: 100%;
+    max-height: auto; 
 }
 
+.caja1 h3{
+    font-size: 18px;
+    text-align:left;
+    padding-top: 5px;
+    padding-left: 10px;
+    color: #41414a;
+    
+}
 
-
-.modal img{
-    width: 100%;
-    height:auto;
-    object-fit: cover;
+.caja1 p{
+   color:#293462;
    
 }
 
-.modal .infoGeneral {
+
+
+/*.modal .infoGeneral {
     display:flex;
     justify-content: center;
     align-items: center;
@@ -834,39 +863,41 @@ article > section:nth-child(3){
     border: 1px solid salmon;
     overflow: hidden;
     
-}
+}*/
+/*
 
 .modal .infoGeneral p{
     font-size: 15px;
     color:#292929;
     text-align: center;
-}
+}*/
 
-.modal .infoGeneral .fa-solid{
+/*.modal .infoGeneral .fa-solid{
     color:#FFD700
 }
 
-.modal .caja-alineada{
+/*.modal .caja-alineada{
 display: flex;
 justify-content: space-around;
 margin-top:20px;
 border: 1px solid green;
-}
+}*/
 
-.caja-alineada .baseDefensa .fa-solid{
+/*.caja-alineada .baseDefensa .fa-solid{
     color:#FFD700
 }
 
 .caja-alineada .baseDefensa{
     margin-top: 22px;
     padding-top: 30px;
-}
+}*/
 
-.modal .resistant{
+/*.modal .resistant{
     border:4px solid #19e938;
     border-radius: 30px;
-    width: 180px;
-    height: 200px;
+    width: 50%;
+    height: auto;
+    border:#19e938
 
 }
 
@@ -878,18 +909,110 @@ border: 1px solid green;
     
 }
 
-.modal .caja-alineada2{
+/*.modal .caja-alineada2{
     display: flex;
     justify-content: space-around;
 
+}*/
+.baseDefensa{
+    width: 100%;
+    grid-column: 2 / 3;
+    grid-row: 1 / 3;
 }
 
-#icono-busqueda{
-    cursor: pointer;
+.baseDefensa p.about{
+        padding-top: 25px;
+        font-size: 15px;
+        color: #293462;
+        text-align: left;
+        padding-bottom: 5px;
+        margin-bottom: 0px;
+}
+
+.contenedorResistencia{
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100px;
+    
+}
+
+.resistencia,.weakness,.stats,.specialAtack{
+    padding-top: 10px;
+    text-align: center;
+    
+}
+
+.resistencia h3,.weakness h3{
+    font-size: 18px;
+    padding-top: 15px;
+    color: #41414a;
+    text-align: center;
+
+}
+
+.resistencia p,.weakness p{
+    font-size: 15px;
+    color: #293462;
 }
 
 
-.filtro{
-    display:none;
+.weakness p{
+    
+    padding-top: 10px;
 }
 
+.contenedorStats{
+    display: grid;
+    grid-template-columns: auto auto;
+   
+    
+}
+
+.stats h3{
+    text-align: left;
+    font-size: 18px;
+    padding-left: 25px;
+    color: #41414a;
+    
+}
+
+.specialAtack h3{
+    text-align: center;
+    font-size: 18px;
+    padding-right: 5px;
+    color: #41414a;
+   
+}
+
+.stats p{
+    font-size: 15px;
+    text-align: left;
+    color: #293462;
+}
+
+
+.specialAtack li{
+    font-size: 15px;
+    text-align: left;
+    margin-left: 50px;
+    color: #293462;
+    list-style: none;
+}
+
+.stats .fa-solid,.specialAtack .fa-solid{
+    color: #f2b90f;
+    font-size: 10px;
+}
+
+
+.evolution h3{
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+    color: #41414a;
+}
+
+p.evolucion{
+    font-size: 13px;
+    color: #293462;
+}

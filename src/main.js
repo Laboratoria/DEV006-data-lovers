@@ -90,6 +90,8 @@ function agregarPokemon(e){
       articulosCarrito=[...articulosCarrito,datitos]
       
     }
+
+    console.log(articulosCarrito)
     
     carritoHTML()
     
