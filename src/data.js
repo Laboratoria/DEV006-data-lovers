@@ -100,7 +100,7 @@ export  function mostrarPokemon(data) {
    </div>
     <div class="evolution">
    <h3>Nex Evolution</h3>
-   <p class="evolucion"> ${filterByType[index].evolution["next-evolution"].values(name)}</p>
+   <p class="evolucion"> ${filterByType[index].evolution["next-evolution"]}</p>
    <p class="evolucion">${filterByType[index].evolution}</p> 
     </div>
 </div>

@@ -37,7 +37,7 @@ El prototipo se baso principalmente en las compatibilidades de los usuarios entr
 Este proyecto se realizo en cinco etapas tomando en consideración cinco HU, los prototipos de alta fidelidad se realizaron para varias screen, los resultados se muestran a continuación:
 
 1. HU1 Carrusel de imagenes informativas
-![HU1!](/src/img/HU1.png)
+![HU1!](/src/img/HU1SINERROR.png)
 1. HU2 Despliegue de la data y filtrado por tipo de pokemon
 ![HU2!](/src/img/HU2.png)
 1. HU3 Al hacer click en la card del pokemon aparece una ventana modal con la información detallada.
@@ -49,6 +49,8 @@ Este proyecto se realizo en cinco etapas tomando en consideración cinco HU, los
 
 ## Link a Zeplin
 
+https://scene.zeplin.io/project/644fe2890586d025f6fdee45
+
 ## Problemas detectados en los test de usabilidad
 
 1. En los test de usuabilidad los usuarios que no conocen pokémon no ubicaban para que servia la información presentada en las secciones, por lo que se toma la decisión de colocar un carrusel informativo.
@@ -56,6 +58,7 @@ Este proyecto se realizo en cinco etapas tomando en consideración cinco HU, los
 1. El usuario menciona que los botones de filtrado y ordenado no se ven, además de que el color en los mismo hace que se pierdan entre tantas tarjetitas.
 
 ## Autores del proyecto
+
 Este proyecto fue elaborado por Valentina Paraguatey y Montserrat Poblano
 
 
