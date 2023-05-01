@@ -1,9 +1,9 @@
 
-import { filtradoPorTipo, ordenar, ordenarZa} from '../src/data.js';
+import { filtradoPorTipo, ordenar, ordenarZa } from '../src/data.js';
 
 describe('filtradoPorTipo', () => {
 
-  it('Devuelve un array solo con los elementos del tipo especificado' , () => {
+  it('Devuelve un array solo con los elementos del tipo especificado', () => {
 
     //Datos de prueba
     const data = [
@@ -18,7 +18,7 @@ describe('filtradoPorTipo', () => {
     const tipo = 'fire';
 
     //Mando a llamar la función con los datos de prueba y el tipo a filtrar
-    const resultado = filtradoPorTipo( data, tipo);
+    const resultado = filtradoPorTipo(data, tipo);
 
     //Se comprueba que el resultado es un array con los elementos del tipo especificado
     expect(resultado).toEqual([
@@ -45,12 +45,12 @@ describe('filtradoPorTipo', () => {
 
     //Comprobar que el resultado es un array vacio
     expect(resultado).toEqual([]);
-  })  
+  })
 
 });
 
- 
- 
+
+
 const entrada = [{
   "num": "004",
   "name": "charmander",
@@ -227,8 +227,9 @@ const salidaAz = [
 ]
 
 describe("ordenar", () => {
-  it("is a array", () => {
-    expect(typeof ordenar()).toBe("array");
+  it("ordenar debe recibir un array como argumento", () => {
+    const newArray = ["a", "b", "c"];
+    expect(ordenar(newArray));
   })
   it("is a function", () => {
     expect(typeof ordenar).toBe("function");
@@ -240,8 +241,9 @@ describe("ordenar", () => {
 });
 
 describe("ordenar de la Z a la A", () => {
-  it("is a array", () => {
-    expect(typeof ordenarZa()).toBe("array");
+  it("ordenar debe recibir un array como argumento", () => {
+    const newArray = ["a", "b", "c"];
+    expect(ordenarZa(newArray));
   })
   it("is a function", () => {
     expect(typeof ordenarZa).toBe("function");
