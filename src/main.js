@@ -1,7 +1,35 @@
 /* eslint-disable no-console */
 //main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
 import data from "./data/pokemon/pokemon.js";
-import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, calcularFuerza} from "./data.js";
+import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente/*, strongest, weaknest*/} from "./data.js";
+
+const containerPokemons = document.getElementById("pokemones")
+
+const templateCard = datapokemon => {
+  containerPokemons.innerHTML = "";
+  datapokemon.forEach(pokemon => {
+    const containerCard = document.createElement("div");
+    containerCard.classList.add("contenedor-card1");
+    containerCard.setAttribute("id", "contenedor-card1");
+    containerCard.innerHTML +=
+    `<div class="card1" id="card1">
+      <h2 class="pokemon-name">${pokemon.name}</h2>
+      <div class="pokemon-img-container" id="pokemon-img-container">
+        <img class="pokemon-img" src="${pokemon.img}" alt="${pokemon.name}">
+      </div>
+      <p class="pokemon-num">${pokemon.num}</p>
+    </div>`;
+    containerPokemons.appendChild(containerCard);
+  });
+};
+
+templateCard(data.pokemon);
+
+const actualizarResultados = (searchQuery) => {
+  const searchResult = searchPokByName(searchQuery);
+  containerPokemons.innerHTML = "";
+  templateCard(searchResult);
+};
 
 
 /*ventana del modal para cerrar
@@ -16,9 +44,7 @@ cerrar.addEventListener('click', () =>  {
 //buscar por nonbre ANTIGUO sin MODAL FINAL
 const btnBuscarByName = document.getElementById('search');
 btnBuscarByName.addEventListener('input', (e) =>{
-  searchPokByName(e.target.value)
-  console.log(e.target.value)
-  console.log(searchPokByName(e.target.value))
+  actualizarResultados(e.target.value)
 })
 
 
@@ -26,8 +52,8 @@ btnBuscarByName.addEventListener('input', (e) =>{
 const buscarByNumber = document.getElementById("search");
 buscarByNumber.addEventListener("input", (e)=> {
   const searchNumResult = searchPokByNumber(e.target.value);
-  console.log(e.target.value);
-  console.log(searchNumResult);
+  containerPokemons.innerHTML = "";
+  templateCard(searchNumResult);
 })
 
 
@@ -37,6 +63,7 @@ const cerrarN = document.getElementById('cerrar');
 cerrarN.addEventListener('click', () =>  {
   const msj = document.getElementById('msj');
   msj.classList.remove('show');
+  console.log(msj)
 });
 
 
@@ -108,8 +135,20 @@ mayorAmenor.addEventListener("click", () => {
   console.log(datosOrdenados);
 });
 
+/*Calcular fuerza
+const strongestOption = document.getElementById('pokemonStrongest');
+strongestOption.addEventListener('click', () => {
+  const pokemonsOrdenados = strongest(data);
+  console.log(pokemonsOrdenados);
+});
 
-//calcular fuerza
+const weakestOption = document.getElementById('pokemonWeaknest');
+weakestOption.addEventListener('click', () => {
+  const pokemonsOrdenados = weaknest(data);
+  console.log(pokemonsOrdenados);
+});
+
+calcular fuerza
 const select = document.getElementById('element-strong-filter');
 select.addEventListener('change', () => {
   const option = select.value;
@@ -122,7 +161,7 @@ select.addEventListener('change', () => {
     pokemonsOrdenados = data;
   }
   console.log(pokemonsOrdenados);
-});
+});*/
 
 //reproductor
 const reproductor = document.getElementById('reproductor');

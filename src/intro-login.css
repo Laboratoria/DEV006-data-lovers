@@ -1,49 +1,98 @@
 /*--css para intro e inicio de sesion de web y movil--*/
 @import url('https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap');
+html, body{
+  height: 100%;
+}
+
+main{
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .contenedor-fondoIntro{
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
+  flex: 1;
+  background-image: url("images/fondo-intro1.jpg");
+  background-size: cover;
+  background-position: center;
+  animation: cambio-fondo 9s ease-in-out infinite;
+}
+
+@keyframes cambio-fondo{
+  0% {
     background-image: url("images/fondo-intro1.jpg");
-    background-size: cover;
-    transition: background-image 0.6s ease-in-out;  /* Ajusta la duración y la animación de la transición */
-    animation: cambiarFondo 7s forwards; /* Establece la animación para cambiar el fondo */
-}
-
-
-@media screen and (max-width: 767px) {
-    .contenedor-fondoIntro {
-      height: 100%;
-    }
   }
-
-    @keyframes cambiarFondo{
-        0%{
-            background-image: url("images/fondo-intro1.jpg");
-        }
-        50%{
-            background-image: url("images/pokemon.png");
-
-        }
-        100%{
-            background-image: url("images/portada\ 4.jpg");
-        }
-    }
-
-.next-login #boton-next{
-    position: absolute;
-    width: 6vw;
-    height: 6vw;
-    z-index: 2;
-    bottom: 3vh;
-    right: 4vw;
+  33% {
+    background-image: url("images/pokemon.png");
+  }
+  66% {
+    background-image: url("images/portada\ 4.jpg");
+  }
+  100% {
+    background-image: url("images/fondo-intro1.jpg");
+  }
+}
+.next-login{
+  position: absolute;
+  bottom: 20px;
+  right: 55px;
 }
 
-.next-login #boton-next:hover{
+#boton-next{
+  width: 75px;
+  height: 75px;
+}
+
+#boton-next:hover{
+  transform: scale(1.3);
+  background-color: rgba(255, 197, 238, 0.836);
+  border-radius: 50%;
+}
+
+/*Estilos para tablet*/
+@media screen and (max-width: 768px){
+  .next-login{
+    bottom: 12px;
+    right: 35px;
+  }
+  #boton-next{
+    width: 35px;
+    height: 35px;
+  }
+  #boton-next:hover{
     transform: scale(1.3);
     background-color: rgba(255, 197, 238, 0.836);
     border-radius: 50%;
+  }
+  .contenedor-fondoIntro{
+    background-size: contain;
+    animation: cambio-fondo 9s linear infinite;
+    background-attachment: fixed;
+  }
 }
+
+/*estilospara cel*/
+@media screen and (max-width: 480px){
+  .next-login{
+    bottom: 10px;
+    right: 15px;
+  }
+  #boton-next{
+    width: 30px;
+    height: 30px;
+  }
+  #boton-next:hover{
+    transform: scale(1.3);
+    background-color: rgba(255, 197, 238, 0.836);
+    border-radius: 50%;
+  }
+  .contenedor-fondoIntro{
+    background-size: contain;
+    animation: cambio-fondo 8s linear infinite;
+    background-attachment: fixed;
+  }
+}
+
 
 #login{
     display: flex;
@@ -65,8 +114,13 @@
     left: 10px;
 }
 
+audio{
+  width: 300px;
+  height: 35px;
+}
+
 audio::-webkit-media-controls-panel {
-    background-color: #ff09ca86; 
+    background-color: #ff09ca86;
     filter: invert(100%) hue-rotate(180deg);
   }
 
@@ -166,4 +220,66 @@ transform: scale(0.5s);
     color: #030303;
     text-align: center;
     margin-top: -25px;
+}
+
+/*estilos para cel*/
+@media screen and (max-width: 767px){
+  #login{
+    height: auto;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .logo-pokemon{
+    width: 220px;
+    height: 100px;
+    margin-top: 8px;
+  }
+  #contenedor-login{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  #contenedor-login input{
+    inline-size: 90%;
+    margin-bottom: 10px;
+  }
+  #contenedor-login #btn-enter{
+    inline-size: 40%;
+    margin-top: 25px;
+  }
+  .footer-login{
+    margin-top: -50px;
+  }
+}
+
+/*estilos para tablet*/
+@media screen and (min-width: 768px) and (max-width: 1023px){
+  #login {
+    height: 100vh;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .logo-pokemon {
+    width: 250px;
+    height: 113px;
+  }
+
+  #contenedor-login {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  #contenedor-login input {
+    inline-size: 100%;
+    margin-bottom: 20px;
+  }
+
+  #contenedor-login #btn-enter {
+    inline-size: 100%;
+    margin-top: 30px;
+  }
 }

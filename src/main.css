@@ -504,13 +504,6 @@ select option:checked{
     padding: 5%;
 }
 
-/*-ESTE CONTENDOR ES PARA LA CARD-*/
-.contenedor-pokemones img{
-    height: 200px;
-    background-image: url("images/cards/card1.png");
-}
-
-
 /*- barra de menu para cel y tablet vertical -*/
 @media (max-width:768px){
     header label {
@@ -536,7 +529,7 @@ select option:checked{
     .elements ul{
         display: block;
         background: #34ffaa71;
-        width: 30%;
+        width: 24%;
         height: 100%;
     }
 

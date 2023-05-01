@@ -97,6 +97,7 @@ menorAmayor.addEventListener('click', () => {
 export function ordenarPorNumeroDescendente() {
   return data.pokemon.sort((a, b) => b.num - a.num);
 }
+
 //item order x NUMERO descendente ANTIGUO
 /*const mayorAmenor = document.getElementById('descendente');
 mayorAmenor.addEventListener('click', () => {
@@ -106,7 +107,7 @@ mayorAmenor.addEventListener('click', () => {
 
 
 //calcular la fuerza
-export function calcularFuerza(data) {
+/*export function calcularFuerza(data) {
   const baseAttack = parseInt(data.stats['base-attack']);
   const baseDefense = parseInt(data.stats['base-defense']);
   const baseStamina = parseInt(data.stats['base-stamina']);
@@ -114,3 +115,14 @@ export function calcularFuerza(data) {
   const fuerza = (baseAttack * baseDefense * Math.sqrt(baseStamina) * maxCp**2 / 10**8);
   return fuerza;
 }
+
+
+//Los 10 pokemons más fuertes
+export function strongest(data) {
+  return data.pokemon.sort((a, b) => calcularFuerza(b) - calcularFuerza(a)).slice(0, 10);
+}
+
+//Los 10 pokemons más débiles
+export function weaknest(data) {
+  return data.pokemon.sort((a, b) => calcularFuerza(a) - calcularFuerza(b)).slice(0, 10);
+}*/
