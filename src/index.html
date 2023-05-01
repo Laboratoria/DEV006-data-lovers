@@ -2,11 +2,147 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link href="https://fonts.google.com/specimen/Limelight?query=limel" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <div id="root"></div>
+  <body >
+    
+    <header>
+      <nav class="navegacion">
+        <ul class="menu-nav">
+          <li class="primerItem">
+            <a href="tiposPoquemon.html">
+              <img src="./img/pikachu.png" alt="pikachu"  class="itemImagen" >
+              <span class="texto-item">Tipos de pokemon</span>
+              <span class="down-item"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/entrenador-pokemon.png" alt="jugador" class="itemImagen" >
+              <span class="texto-item">Otros jugadores</span >
+              <span class="down-item"></span >
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/insignias.png" alt="equipo" class="itemImagen">
+              <span class="texto-item">Tu equipo</span>
+              <span class="down-item"></span>
+            </a>
+          </li>
+          <li>
+            <a href="noticiasycuriosidades.html">
+              <img src="./img/snorlax.png" alt="curiosidades" class="itemImagen">
+              <span class="texto-item">Noticias y curiosidades</span>
+              <span class="down-item"></span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="navegacion2">
+        <span class="menu">Menu</span>
+        <button class="nav-burger"><i class="fa-solid fa-bars"></i></button>
+        <ul class="menu-nav2">
+          <li class="lista-menu">
+            <a href="tiposPoquemon.html" class="link-menu">Tipos de pokemon</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Otros jugadores</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Tu equipo</a>
+          </li>
+          <li class="lista-menu">
+            <a href="noticiasycuriosidades.html" class="link-menu">Noticias y curiosidades</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+   
+   <main>
+      <section id="Titulo">
+        <div class="titulo-principal">
+          <img src="./img/BIENVENIDO-A-MUNDO-POK-MON-22-4-2023 (3).png" alt="imagen-titulo" >
+        </div>
+
+      </section>
+      <section id="CarruselImagenes">
+     <div id="conteItemsCarrusel">
+       <div class="itemCarrusel" id="itemCarrusel-1">
+        <div class="tarjetaCarrusel" id="tarjetaCarrusel-1">
+         <img src="./img/tipos-de-pokemon.png" alt="tipos-pokemon">
+        <div class="texto-Foto">
+          <h3>Descubre tu pokemon favorito en nuestra sección tipos de pokemon</h3>
+         </div>
+        </div>
+        <div class="flechasCarrusel">
+          <a href="#itemCarrusel-4"><i class="fa-solid fa-chevron-left fa-3x" style="color:#0000CD;"></i></a>
+          <a href="#itemCarrusel-2"><i class="fa-solid fa-chevron-right fa-3x" style="color:#0000CD;"></i></a>
+      
+        </div>
+      </div>
+        
+
+        <div class="itemCarrusel" id="itemCarrusel-2">
+          <div class="tarjetaCarrusel" id="tarjetaCarrusel-2">
+           <img src="./img/pokemon-master-journeys-2.jpg" alt="equipo">
+           <div class="texto-Foto">
+            <h3>Intercambia pokemones y experiencias con otros maestros pokemon</h3>
+           </div>
+          </div>
+          <div class="flechasCarrusel">
+           <a href="#itemCarrusel-1"><i class="fa-solid fa-chevron-left fa-3x" style="color:#0000CD;"></i></a>
+           <a href="#itemCarrusel-3"><i class="fa-solid fa-chevron-right fa-3x" style="color:#0000CD;"></i></a>
+          </div>
+
+          <div class="itemCarrusel" id="itemCarrusel-3">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-3">
+             <img src="./img/pokemon.jpg" alt="equipo">
+             <div class="texto-Foto">
+              <h3>Completa tu equipo y asegurate de estar listo para la batalla!</h3>
+             </div>
+            </div>
+            <div class="flechasCarrusel">
+             <a href="#itemCarrusel-3"><i class="fa-solid fa-chevron-left fa-3x" style="color:#0000CD;"></i></a>
+             <a href="#itemCarrusel-4"><i class="fa-solid fa-chevron-right fa-3x" style="color:#0000CD;"></i></a>
+            </div>
+          </div>
+
+          <div class="itemCarrusel" id="itemCarrusel-4">
+            <div class="tarjetaCarrusel" id="tarjetaCarrusel-4">
+             <img src="./img/curiosidades.jpg" alt="equipo">
+             <div class="texto-Foto">
+              <h3>Conoce todo sobre las nuevas generaciones</h3>
+             </div>
+            </div>
+            <div class="flechasCarrusel">
+             <a href="#itemCarrusel-3"><i class="fa-solid fa-chevron-left fa-3x" style="color:#0000CD;"></i></a>
+             <a href="#itemCarrusel-1"><i class="fa-solid fa-chevron-right fa-3x" style="color:#0000CD;"></i></a>
+            </div>
+          </div>
+     </div>
+     </div>
+      </section>
+
+    </main>
+
+    <footer>
+      Elaborado por: 
+      -Christian Montserrat - Valentina Paraguatey
+    </footer>
+
+  <div id="root">
+  </div>
     <script src="main.js" type="module"></script>
+    <script src="pokemon.js"></script>
+  
   </body>
 </html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Data Lovers</title>
+    <link rel="stylesheet" href="style.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> 
+    <link href="https://fonts.google.com/specimen/Limelight?query=limel" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Limelight&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <nav class="navegacion">
+        <ul class="menu-nav">
+          <li class="primerItem">
+            <a href="#">
+              <img src="./img/pikachu.png" alt="pikachu"  class="itemImagen" >
+              <span class="texto-item">Tipos de pokemon</span>
+              <span class="down-item"></span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/entrenador-pokemon.png" alt="jugador" class="itemImagen" >
+              <span class="texto-item">Otros jugadores</span >
+              <span class="down-item"></span >
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./img/insignias.png" alt="equipo" class="itemImagen">
+              <span class="texto-item">Tu equipo</span>
+              <span class="down-item"></span>
+            </a>
+          </li>
+          <li>
+            <a href="noticiasycuriosidades.html">
+              <img src="./img/snorlax.png" alt="curiosidades" class="itemImagen">
+              <span class="texto-item">Noticias y curiosidades</span>
+              <span class="down-item"></span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="two columns u-pull-right">
+          <ul>
+            <li class="submenu">
+              <img src="./img/pokebola.png" id="img-carrito" alt="imagen carrito">
+                 <div id="carrito">
+                                
+                  <table id="lista-pokebola" class="u-full-width">
+                     <thead>
+                        <tr>
+                        <th>Imagen</th>
+                         <th>Nombre</th>
+                         <th>Número</th>
+                         <th>Tipo</th>
+                         <th></th>
+                         </tr>
+                     </thead>
+                      <tbody></tbody>
+                  </table>
+    
+                   <a href="#" id="vaciar-pokebola" class="button u-full-width">Confirmar equipo</a>
+                </div>
+            </li>
+           </ul>
+        </div>
+          
+      </nav>
+      <nav class="navegacion2">
+        <span class="menu">Menu</span>
+        <button class="nav-burger"><i class="fa-solid fa-bars"></i></button>
+        <ul class="menu-nav2">
+          <li class="lista-menu">
+            <a href="tiposPoquemon.html" class="link-menu">Tipos de pokemon</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Otros jugadores</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Tu equipo</a>
+          </li>
+          <li class="lista-menu">
+            <a href="#" class="link-menu">Noticias y curiosidades</a>
+          </li>
+        </ul>
+      </nav>
+
+    </header>
+   <main>
+   <article id="principal">
+    <section id="seccion1">
+        <h1>TIPOS DE POKÉMON</h1>
+      <div id="campoBusqueda">
+        <label for="busqueda">Búsqueda</label>
+        <input id="busqueda" type="search"  placeholder="Buscar..." >
+        <i class="fa-brands fa-searchengin fa-3x" id="icono-busqueda"></i>
+      </div>
+
+      </section>
+  
+      <section id="seccion2" class="filtro-pokemon">
+     <div class="imagenes">
+      <img src="./img/bicho.png"  class="filtro-tipo"  id="bug"  alt="bug">
+      <img src="./img/dragon.png" class="filtro-tipo" id="dragon" alt="dragon">
+      <img src="./img/electricco.png" class="filtro-tipo" id="electric" alt="electric">
+      <img src="./img/hada.png"  class="filtro-tipo" id="fairy" alt="fairy">
+      <img src="./img/lucha.png"  class="filtro-tipo" id="fighting" alt="fighting">
+      <img src="./img/fuego.png"  class="filtro-tipo" id="fire" alt="fire">
+      <img src="./img/volar.png"  class="filtro-tipo" id="flying" alt="flying">
+      <img src="./img/fantasma.png"  class="filtro-tipo" id="ghost" alt="ghost">
+      <img src="./img/planta.png"  class="filtro-tipo" id="grass" alt="grass">
+      <img src="./img/tierra.png" class="filtro-tipo" id="ground"  alt="ground">
+      <img src="./img/hielo.png" class="filtro-tipo" id="ice" alt="ice">
+      <img src="./img/Normal.png"  class="filtro-tipo" id="normal" alt="normal">
+      <img src="./img/Veneno.png"  class="filtro-tipo" id="poison" alt="poison">
+      <img src="./img/psiquico.png"  class="filtro-tipo" id="psychic" alt="psychic">
+      <img src="./img/roca.png"  class="filtro-tipo" id="rock" alt="rock">
+      <img src="./img/acero.jpg"  class="filtro-tipo" id="steel" alt="steel">
+      <img src="./img/agua.png" class="filtro-tipo" id="water" alt="water">
+     </div>
+     <div>
+     <button class="filtro-tipo" id="ver-todos"><i class="fa-solid fa-reply-all"></i></button>
+     <button id="filtrarAz" class="filtrar1"><i class="fa-solid fa-arrow-up-a-z"></i></button>
+     <button id="filtrarZa" ><i class="fa-solid fa-arrow-down-z-a"></i></button>
+     </div>
+      </section>
+
+      <section id="seccion3">
+        <div id="todos">
+            <div class="pokemon-todos" id="listaPokemon">
+              <!-- <div class="pokemon">
+                <div class="pokemonImagen">
+                    <img src="https://www.serebii.net/pokemongo/pokemon/001.png" alt="bulbasaur">
+                  </div>
+                  <div class="pokemon-info">
+                    <div class="nombre-contenedor">
+                        <p class="pokemon-id">#001</p>
+                        <h2 class="pokemon-nombre">Bulbasaur</h2>
+                    </div>
+                    <div class="pokemon-tipos">
+                        <p class="tipo">Grass</p>
+                    </div>
+                    <div class="pokemon-medidas">
+                        <p class="medida">3m</p>
+                        <p class="medida">60kg</p>
+                    </div>
+                    <button type=button class="btn-modal" id="#">Ver mas<button>
+                  </div> -->
+                </div>
+            </div>  
+        
+      </section>
+   
+      <div class="contenedorModal" id="contentModal" >
+      <!-- <div class="modal modal-close">
+         <p class="close" ><i class="fa-solid fa-circle-xmark"></i></p>
+          <div class="caja1">
+          <div class="imagen-pokemon">
+            <img src="https://www.serebii.net/pokemongo/pokemon/001.png">
+            <p class="nombrePokemon">Bulbasaur</p>
+            <p class="numeroPokemon">001</p>
+          </div>
+          <div class="infoGeneral">
+            <p><i class="fa-solid fa-circle"></i>Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger.</p>
+          </div>
+        </div>
+        <div class="caja-alineada">
+          <div class="baseDefensa">
+            <p class="ataque"><i class="fa-solid fa-circle"></i>Base attack: 334</p>
+            <p class="defensa"><i class="fa-solid fa-circle"></i>Base defense: 119</p>
+          </div>
+          <div class="resistant">
+          <h3>resistant</h3>
+          <p class="resistencia">Resistencia</p>
+        </div>
+        <div class="weaknesses">
+        <h3>weaknesses</h3>
+        <p class="debilidad">Debilidad</p>
+      </div>
+    </div>
+    <div class="caja-alineada2">
+        <div class="special-attack">
+      <h3>Special special-attack</h3>
+      <p class="ataque especial">Ataque especial</p>
+    </div>
+      <div class="evolution">
+        <h3>Evolucion</h3>
+        <p class="evolucion">Evoluci.</p>
+      </div>
+    </div>
+      </div>-->
+      </div>
+
+   </article>
+   </main>
+
+
+
+    <footer>
+      hecho por: 
+      -Christian Montserrat - Valentina Paraguatey
+    </footer>
+
+    <script src="main.js" type="module"></script>
+  
+  </body>
+</html>
