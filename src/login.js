@@ -1,6 +1,5 @@
 //crear la funcion validarFormulario() para validar los inputs y reemplazarlos con los va.lolres del placeholder
-function validarFormulario(event){
-  event.preventDefault();
+function validarFormulario(){
   const formulario = document.getElementById('contenedor-login');
   //obtener los valores de los inputs
   const username = document.getElementById('user');

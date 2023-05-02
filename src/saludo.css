@@ -39,15 +39,15 @@
     height: 95%;
   }
 
- /* #pc2{
-    width: 10%;
-    height: 20%;
+  /*#pc2{
+    width: ;
+    height: 90%;
   }*/
 
   .next-instrucc #boton-next-instrucc{
     width: 50px;
     height: 50px;
-    top: 45px; /*por definir si es top o bottom*/
+    top: 45px;
     right: 28px;
   }
 
