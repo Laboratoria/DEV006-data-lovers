@@ -224,18 +224,13 @@ transform: scale(0.5s);
 
 /*estilos para cel*/
 @media screen and (max-width: 767px){
-  #login{
-    height: auto;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
   .logo-pokemon{
     width: 220px;
     height: 100px;
     margin-top: 8px;
   }
   #contenedor-login{
-    width: 80%;
+    width: 70%;
     height: auto;
     margin: 0 auto;
     margin-top: 40px;
@@ -249,37 +244,64 @@ transform: scale(0.5s);
     inline-size: 40%;
     margin-top: 25px;
   }
+
+  .forgot-password{
+    font-size: 16px;
+}
+
+.sign-up{
+  font-size: 12px;
+}
+
   .footer-login{
     margin-top: -50px;
   }
 }
 
-/*estilos para tablet*/
+/*estilos para tablet */
 @media screen and (min-width: 768px) and (max-width: 1023px){
-  #login {
-    height: 100vh;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-
   .logo-pokemon {
-    width: 250px;
-    height: 113px;
+    width: 400px;
+    height: 210px;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
 
   #contenedor-login {
-    width: 70%;
-    height: auto;
+    width: 60%;
+    height: 75%;
+    justify-content: center;
     margin: 0 auto;
   }
 
   #contenedor-login input {
-    inline-size: 100%;
-    margin-bottom: 20px;
+    inline-size: 90%;
+    margin-bottom: 15px;
+    height: 40px;
   }
 
   #contenedor-login #btn-enter {
-    inline-size: 100%;
-    margin-top: 30px;
+    inline-size: 45%;
+    margin: 15px 0 15px 0;
+    height: 60px;
+    font-size: 22px;
+  }
+
+  #contenedor-login label{
+    font-size: 22px;
+    padding: 10px 0;
+}
+
+#wrongPassword strong{
+  font-size: 18px;
+}
+  audio{
+    padding-top: 10px;
+    margin-left: 10px;
+  }
+
+  .footer-login{
+    margin-top: -50px;
+    font-size: 15px;
   }
 }

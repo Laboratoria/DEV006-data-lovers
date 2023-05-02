@@ -4,11 +4,26 @@
   background:linear-gradient(to left, rgba(4, 146, 255, 0.452) 0%, rgba(3, 255, 66, 0.511)35%, rgba(4, 171, 255, 0.452)45%, rgba(3, 255, 66, 0.511)70%, rgba(4, 146, 255, 0.452)100%); /* rgba(7, 238, 100, 0.603); #2f02fa81; rgba(2, 153, 240, 0.603)*/
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
   justify-content: center;
   grid-gap: 35px;
   /*checkar barra de menu*/
-  padding: 7%;
+  padding: 7% 2% 7% 5%;
+}
+
+@media screen and (max-width:768px){
+#pokemones{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 60px -1px 60px 0;
+}
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+#pokemones{
+  display: flex;
+  flex-wrap: wrap;
+}
 }
 
 .contenedor-card1{

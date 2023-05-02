@@ -33,20 +33,9 @@ header{
     background: linear-gradient(to right, rgba(4, 192, 255, 0.452), rgba(0, 255, 0, 0.233), rgba(92, 222, 255, 0.466),  rgba(0, 255, 0, 0.233), #02e1ff86);
 }
 
-.icon-menu{
-  width: 3em;
-  height: auto;
-}
 
 #btn-menu{
   display: none;
-}
-
-header label{
-  display: none;
-  width: 40px;
-  height: 4.375em;
-  padding: auto;
 }
 
 .contenedor-barra{
@@ -78,7 +67,6 @@ header img{
 }
 
 .barra-menu{
-/*-display:none-*/
 display: flex;
 flex-wrap: wrap;
 }
@@ -92,7 +80,7 @@ flex-wrap: wrap;
 .elements ul{
     background: #fffffff6;
     height: 70px;
-    float: right;
+    float: left;
     list-style: none;
     display: flex;
     justify-content: center;
@@ -537,9 +525,27 @@ select option:checked{
         display: none;
     }
 
-    #btn-menu:checked ~ .elements-nav{
+    .img-menu:checked ~ .elements-nav{
       margin:0;
   }
+  .box-filter {
+    display: flex;
+    width: 55%;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+#element-type-filter,
+#element-weaknesses-filter,
+#element-resistant-filter,
+#element-strong-filter {
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+}
     /*.portadaBox {
       display: flex;
       width: 800%;
@@ -564,7 +570,7 @@ select option:checked{
         }   100% {
           transform: translateX(-100%);
         }
-       }*/
+       }
 
 
     .footer-main {
@@ -606,7 +612,24 @@ select option:checked{
 
 
 /* para tablet en posición horizontal */
-@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+
+.box-filter {
+  justify-content: right;
+  margin-top: 50px;
+}
+
+#element-type-filter,
+#element-weaknesses-filter,
+#element-resistant-filter,
+#element-strong-filter {
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+
   .footer-main {
     height: auto;
     padding: 30px 0;
