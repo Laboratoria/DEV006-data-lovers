@@ -90,6 +90,8 @@ main{
     background-size: contain;
     animation: cambio-fondo 8s linear infinite;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color:rgba(0, 247, 255, 0.384)
   }
 }
 

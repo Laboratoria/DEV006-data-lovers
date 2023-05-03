@@ -107,15 +107,14 @@ mayorAmenor.addEventListener('click', () => {
 
 
 //calcular la fuerza
-/*export function calcularFuerza(data) {
-  const baseAttack = parseInt(data.stats['base-attack']);
-  const baseDefense = parseInt(data.stats['base-defense']);
-  const baseStamina = parseInt(data.stats['base-stamina']);
-  const maxCp = parseInt(data.stats['max-cp']);
+export function calcularFuerza(pokemon) {
+  const baseAttack = parseInt(pokemon.stats['base-attack']);
+  const baseDefense = parseInt(pokemon.stats['base-defense']);
+  const baseStamina = parseInt(pokemon.stats['base-stamina']);
+  const maxCp = parseInt(pokemon.stats['max-cp']);
   const fuerza = (baseAttack * baseDefense * Math.sqrt(baseStamina) * maxCp**2 / 10**8);
-  return fuerza;
+  return fuerza.toFixed(1);
 }
-
 
 //Los 10 pokemons más fuertes
 export function strongest(data) {
@@ -125,4 +124,4 @@ export function strongest(data) {
 //Los 10 pokemons más débiles
 export function weaknest(data) {
   return data.pokemon.sort((a, b) => calcularFuerza(a) - calcularFuerza(b)).slice(0, 10);
-}*/
+}

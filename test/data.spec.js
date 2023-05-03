@@ -8,6 +8,8 @@ import {
   filtradoTipo,
   filtradoDebilidad,
   filtradoResistencia,
+  calcularFuerza,
+  strongest,
 } from "../src/data.js";
 jest.mock("../src/data/pokemon/pokemon.js", () => {
   return {
@@ -15,7 +17,6 @@ jest.mock("../src/data/pokemon/pokemon.js", () => {
       {
         num: "067",
         name: "machoke",
-        img: "https://www.serebii.net/pokemongo/pokemon/067.png",
         type: ["fighting"],
         resistant: ["bug", "rock", "dark"],
         weaknesses: ["flying", "psychic", "fairy"],
@@ -30,7 +31,6 @@ jest.mock("../src/data/pokemon/pokemon.js", () => {
       {
         num: "243",
         name: "raikou",
-        img: "https://www.serebii.net/pokemongo/pokemon/243.png",
         type: ["electric"],
         resistant: ["electric", "flying", "steel"],
         weaknesses: ["ground"],
@@ -45,7 +45,6 @@ jest.mock("../src/data/pokemon/pokemon.js", () => {
       {
         num: "173",
         name: "cleffa",
-        img: "https://www.serebii.net/pokemongo/pokemon/173.png",
         type: ["fairy"],
         resistant: ["fighting", "bug", "dragon", "dark"],
         weaknesses: ["poison", "steel"],
@@ -72,7 +71,6 @@ describe("searchPokByName busca a todos los pokemones por su nombre", () => {
       {
         num: "173",
         name: "cleffa",
-        img: "https://www.serebii.net/pokemongo/pokemon/173.png",
         type: ["fairy"],
         resistant: ["fighting", "bug", "dragon", "dark"],
         weaknesses: ["poison", "steel"],
@@ -99,7 +97,6 @@ describe("searchByNumber busca al pokemón por su numero", () => {
       {
         num: "067",
         name: "machoke",
-        img: "https://www.serebii.net/pokemongo/pokemon/067.png",
         type: ["fighting"],
         resistant: ["bug", "rock", "dark"],
         weaknesses: ["flying", "psychic", "fairy"],
@@ -191,12 +188,21 @@ describe("filtradoTipo filtrar todos los pokemones por su tipo", () => {
   });
 
   it("debería retornar todos los pokemones según el tipo seleccionado fighting para [fighting]", () => {
-    const type = "fighting";
-    const pokemonFiltrado = filtradoTipo(type);
-    const esperado = pokemonFiltrado.filter((pokemon) =>
-      pokemon.type.includes(type)
-    );
-    expect(pokemonFiltrado).toEqual(esperado);
+    expect(filtradoTipo("fighting")).toEqual([
+      {
+        num: "067",
+        name: "machoke",
+        type: ["fighting"],
+        resistant: ["bug", "rock", "dark"],
+        weaknesses: ["flying", "psychic", "fairy"],
+        stats: {
+          "base-attack": "177",
+          "base-defense": "125",
+          "base-stamina": "190",
+          "max-cp": "2031",
+          "max-hp": "162",
+        },
+      }]);
   });
 });
 
@@ -207,12 +213,20 @@ describe("filtradoDebilidad filtrar todos los pokemones filtrados por su debilid
   });
 
   it("debería retornar todos los pokemones filtrados por su debilidad ground para [ground]", () => {
-    const weaknesses = "ground";
-    const debilidadPokemon = filtradoDebilidad(weaknesses);
-    const resultado = debilidadPokemon.filter((pokemon) =>
-      pokemon.weaknesses.includes(weaknesses)
-    );
-    expect(debilidadPokemon).toEqual(resultado);
+    expect(filtradoDebilidad("ground")).toEqual([ {
+      num: "243",
+      name: "raikou",
+      type: ["electric"],
+      resistant: ["electric", "flying", "steel"],
+      weaknesses: ["ground"],
+      stats: {
+        "base-attack": "241",
+        "base-defense": "195",
+        "base-stamina": "207",
+        "max-cp": "3452",
+        "max-hp": "175",
+      },
+    }]);
   });
 });
 
@@ -222,24 +236,64 @@ describe("filtradoResistencia filtrar a todos los pokemones por su resistencia",
     expect(typeof filtradoResistencia).toBe("function");
   });
 
-  it("returns todos los pokemones filtrados por su resistencia [bug, rock, dark]", () => {
-    const resistant = "bug , rock , dark";
-    const resistenciaPokemon = filtradoResistencia(resistant);
-    const resultadoEsperado = resistenciaPokemon.filter((pokemon) =>
-      pokemon.resistant.includes(resistant)
-    );
-    expect(resistenciaPokemon).toEqual(resultadoEsperado);
+  it("returns todos los pokemones filtrados por su resistencia [electric, flying, steel]", () => {
+    expect(filtradoResistencia("electric","flying","steel")).toEqual([
+      {
+        num: "243",
+        name: "raikou",
+        type: ["electric"],
+        resistant: ["electric", "flying", "steel"],
+        weaknesses: ["ground"],
+        stats: {
+          "base-attack": "241",
+          "base-defense": "195",
+          "base-stamina": "207",
+          "max-cp": "3452",
+          "max-hp": "175",
+        },
+      },
+    ]);
   });
 });
 
 //calcular fuerza
-/*describe("calcularFuerza filtrar el top10 y last10 de todos los pokemones calculando su fuerza", () => {
+describe("calcularFuerza filtrar el top10 y last10 de todos los pokemones calculando su fuerza", () => {
   it("is a function", () => {
     expect(typeof calcularFuerza).toBe("function");
   });
 
   it("returns debe calcular la fuerza correctamente de los pokemones del top y last", () => {
-    expect(calcularFuerza).toBe();
+    const miniData = {
+      num: "173",
+      name: "cleffa",
+      type: ["fairy"],
+      resistant: ["fighting", "bug", "dragon", "dark"],
+      weaknesses: ["poison", "steel"],
+      stats: {
+        "base-attack": "75",
+        "base-defense": "79",
+        "base-stamina": "137",
+        "max-cp": "671",
+        "max-hp": "120",
+      },
+    };
+    expect(calcularFuerza(miniData)).toEqual("312.2");
+  });
+});
+
+describe("strongest ordenar a los 10 más fuertes", () => {
+  it("is a function", () => {
+    expect(typeof strongest).toBe("function");
+  });
+
+  it("returns debe ordenar al top 10 más fuertes de los pokemones", () => {
+    const pokemonTop10 = strongest();
+    const primerTop10 = pokemonTop10[0];
+    const segundoTop10 = pokemonTop10[1];
+    const tercerTop10 = pokemonTop10[2];
+    expect(primerTop10.pokemon).toBe("80570.9");
+    expect(segundoTop10.name).toBe("12580.0");
+    expect(tercerTop10.name).toBe("312.2");
   });
 });
 

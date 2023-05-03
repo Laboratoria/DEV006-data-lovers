@@ -1,7 +1,7 @@
 /* eslint-disable no-console */
 //main.js, importa las funciones exportadas de data.js y las usa para realizar la manipulación de dato
 import data from "./data/pokemon/pokemon.js";
-import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente/*, strongest, weaknest*/} from "./data.js";
+import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, strongest, weaknest} from "./data.js";
 
 const containerPokemons = document.getElementById("pokemones")
 
@@ -63,7 +63,7 @@ const cerrarN = document.getElementById('cerrar');
 cerrarN.addEventListener('click', () =>  {
   const msj = document.getElementById('msj');
   msj.classList.remove('show');
-  console.log(msj)
+  templateCard(msj)
 });
 
 
@@ -72,7 +72,7 @@ const orderAz = document.getElementById('az');
 orderAz.addEventListener('click', () => {
   //ordenar la copia por nombre de la A hasta la Z
   const ordenado = ordenadoAz();
-  console.log(ordenado);
+  templateCard(ordenado);
 })
 
 
@@ -81,7 +81,7 @@ const invertirZa = document.getElementById("za");
 invertirZa.addEventListener("click", () => {
   const datosInvertidos = invertirYOrdenarPorNombreZa();
   // Manipulación del DOM para mostrar los datos invertidos y ordenados
-  console.log(datosInvertidos);
+  templateCard(datosInvertidos);
 });
 
 
@@ -98,7 +98,7 @@ toFilterLink.addEventListener("click", (event) => {
 const selectType = document.getElementById("element-type-filter");
 selectType.addEventListener("change", () => {
   const filtrado = filtradoTipo(selectType.value);
-  console.log(filtrado);
+  templateCard(filtrado);
 });
 
 
@@ -106,7 +106,7 @@ selectType.addEventListener("change", () => {
 const selectWeaknesses = document.getElementById("element-weaknesses-filter");
 selectWeaknesses.addEventListener("change", () => {
   const filtradoD = filtradoDebilidad(selectWeaknesses.value);
-  console.log(filtradoD);
+  templateCard(filtradoD);
 });
 
 
@@ -114,7 +114,7 @@ selectWeaknesses.addEventListener("change", () => {
 const selectResistant = document.getElementById('element-resistant-filter');
 selectResistant.addEventListener("change", () => {
   const filtradoR = filtradoResistencia(selectResistant.value);
-  console.log(filtradoR)
+  templateCard(filtradoR)
 });
 
 
@@ -123,7 +123,7 @@ const menorAmayor = document.getElementById("ascendente");
 menorAmayor.addEventListener("click", () => {
   const datosOrdenados = ordenarPorNumeroAscendente();
   // Manipulación del DOM para mostrar los datos ordenados por número ascendente
-  console.log(datosOrdenados);
+  templateCard(datosOrdenados);
 });
 
 
@@ -132,36 +132,24 @@ const mayorAmenor = document.getElementById("descendente");
 mayorAmenor.addEventListener("click", () => {
   const datosOrdenados = ordenarPorNumeroDescendente();
   // Manipulación del DOM para mostrar los datos ordenados por número descendente
-  console.log(datosOrdenados);
+  templateCard(datosOrdenados);
 });
 
-/*Calcular fuerza
-const strongestOption = document.getElementById('pokemonStrongest');
-strongestOption.addEventListener('click', () => {
-  const pokemonsOrdenados = strongest(data);
-  console.log(pokemonsOrdenados);
-});
 
-const weakestOption = document.getElementById('pokemonWeaknest');
-weakestOption.addEventListener('click', () => {
-  const pokemonsOrdenados = weaknest(data);
-  console.log(pokemonsOrdenados);
-});
-
-calcular fuerza
+/*calcular fuerza*/
 const select = document.getElementById('element-strong-filter');
 select.addEventListener('change', () => {
   const option = select.value;
   let pokemonsOrdenados;
   if (option === 'strongest') {
-    pokemonsOrdenados = data.pokemon.sort((a, b) => calcularFuerza(b) - calcularFuerza(a)).slice(0, 10);
+    pokemonsOrdenados = strongest(data);
   } else if (option === 'weaknest') {
-    pokemonsOrdenados = data.pokemon.sort((a, b) => calcularFuerza(a) - calcularFuerza(b)).slice(0, 10);
+    pokemonsOrdenados = weaknest(data);
   } else {
-    pokemonsOrdenados = data;
+    pokemonsOrdenados = data.pokemon;
   }
-  console.log(pokemonsOrdenados);
-});*/
+  templateCard(pokemonsOrdenados);
+});
 
 //reproductor
 const reproductor = document.getElementById('reproductor');
