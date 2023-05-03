@@ -1,7 +1,13 @@
+
+
 import data from "./data/pokemon/pokemon.js";
+import {pokemonFilter, pokemonSort} from "./data.js"
+
+
+
+let filterText = "";  //utilizamos para traer form 
 
 const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
-
   return `<div class="card">
     <img
       src="${urlPokemon}"
@@ -17,11 +23,20 @@ const printCard = (urlPokemon, namePokemon, numberPokemon, typePokemon) => {
   </div>`;
 };
 
-data.pokemon.forEach((pokemon) => {
-  document.getElementById("cards").innerHTML += printCard(
-    pokemon.img,
-    pokemon.name,
-    pokemon.num,
-    pokemon.type
-  );
+
+const renderPokemon = () => {
+  const result = pokemonFilter(data.pokemon, filterText).map((pokemon) => {
+    return printCard (pokemon.img, pokemon.name,pokemon.num, pokemon.type);
+  });
+  document.getElementById ("cards").innerHTML= result.join ("");  //join convierte de arreglo a string
+};
+
+
+const filterForm = document.getElementById("formSearch");
+filterForm.addEventListener ("submit", (event) => {
+  event.preventDefault();
+  filterText = document.getElementById ("searchInput").value;
+  renderPokemon();  
 });
+renderPokemon ()
+
