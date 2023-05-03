@@ -10,6 +10,7 @@ import {
   filtradoResistencia,
   calcularFuerza,
   strongest,
+  weaknest,
 } from "../src/data.js";
 const data = {
   pokemon: [
@@ -282,18 +283,34 @@ describe("calcularFuerza filtrar el top10 y last10 de todos los pokemones calcul
   });
 });
 
+//top10
 describe("strongest ordenar a los 10 más fuertes", () => {
   it("is a function", () => {
     expect(typeof strongest).toBe("function");
   });
 
-  it("returns debe ordenar al top 10 más fuertes de los pokemones", () => {
+  it("returns debe ordenar al top 10 más fuertes de todos los pokemones", () => {
     const pokemonTop10 = strongest(data);
     expect(pokemonTop10[0].name).toEqual("raikou");
     expect(pokemonTop10[1].name).toEqual("machoke");
     expect(pokemonTop10[2].name).toEqual("cleffa");
   });
 });
+
+//last10
+describe("weaknest ordena a los 10 más débiles", () => {
+  it("is a function", () => {
+    expect(typeof weaknest).toBe("function");
+  });
+
+  it("returns debe ordenar al last 10 más débiles de todos los pokemones", () =>{
+    const pokemonLast10 = weaknest(data);
+    expect(pokemonLast10[0].name).toEqual("cleffa");
+    expect(pokemonLast10[1].name).toEqual("machoke");
+    expect(pokemonLast10[2].name).toEqual("raikou");
+  })
+})
+
 
 /*describe('anotherExample', () => {
   it('is a function', () => {

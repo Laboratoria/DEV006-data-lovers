@@ -1,4 +1,5 @@
 //En el archivo data.js, exporta las funciones de búsqueda y filtrado.
+//MORALEJA:no se importa nada a este archivo
 
 //input SEARCH buscar por nombre FINAL
 export const searchPokByName = (data,name) =>{

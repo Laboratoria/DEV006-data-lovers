@@ -3,8 +3,9 @@
 import data from "./data/pokemon/pokemon.js";
 import {searchPokByName, searchPokByNumber, filtradoTipo, filtradoDebilidad, filtradoResistencia, ordenadoAz, invertirYOrdenarPorNombreZa, ordenarPorNumeroAscendente, ordenarPorNumeroDescendente, strongest, weaknest} from "./data.js";
 
+//crear const para el contenedor de los pokemones (fondo degradado)
 const containerPokemons = document.getElementById("pokemones")
-
+//crear las card
 const templateCard = datapokemon => {
   containerPokemons.innerHTML = "";
   datapokemon.forEach(pokemon => {
@@ -23,11 +24,12 @@ const templateCard = datapokemon => {
   });
 };
 
+//llamamos a la funcion template card para que se muestre la data (las cards en pantalla)
 templateCard(data.pokemon);
 
-
+//llamando al boton para que cuando escribas salgan coincidencias solo en caso de letras
+//y en caso de numero solo encuentra el que se recibe en el input
 const searchInput = document.getElementById('search');
-
 searchInput.addEventListener('input', () => {
   const searchValue = searchInput.value.trim();
   if (isNaN(searchValue)) {
@@ -39,6 +41,7 @@ searchInput.addEventListener('input', () => {
   }
 });
 
+//para el modal
 const formulario = document.getElementById('searcher');
 const modal = document.getElementById('msjVal');
 const btnCerrar = document.getElementById('cerrar');
@@ -54,47 +57,6 @@ formulario.addEventListener('input', (event) => {
 
 btnCerrar.addEventListener("click", () => {
   modal.style.display = "none";
-});
-
-/*const actualizarResultados = (searchQuery) => {
-  const searchResult = searchPokByName(searchQuery);
-  containerPokemons.innerHTML = "";
-  templateCard(searchResult);
-};*/
-
-
-/*ventana del modal para cerrar
-const cerrar = document.getElementById('cerrar');
-//para cerrar la ventana emergente
-cerrar.addEventListener('click', () =>  {
-  const msj = document.getElementById('msj');
-  msj.classList.remove('show');
-  console.log(msj)
-});*/
-
-/*buscar por nonbre ANTIGUO sin MODAL FINAL
-const btnBuscarByName = document.getElementById('search');
-btnBuscarByName.addEventListener('input', (e) =>{
-  actualizarResultados(e.target.value)
-})*/
-
-
-/*buscar por numero FINAL
-const buscarByNumber = document.getElementById("search");
-buscarByNumber.addEventListener("input", (e)=> {
-  const searchNumResult = searchPokByNumber(e.target.value);
-  containerPokemons.innerHTML = "";
-  templateCard(searchNumResult);
-})*/
-
-
-//ventana del modal para cerrar
-const cerrarN = document.getElementById('cerrar');
-//para cerrar la ventana emergente
-cerrarN.addEventListener('click', () =>  {
-  const msj = document.getElementById('msj');
-  msj.classList.remove('show');
-  templateCard(msj)
 });
 
 
@@ -116,7 +78,7 @@ invertirZa.addEventListener("click", () => {
 });
 
 
-//para que al hacer click se baje a la seccion filtrando
+//para que al hacer click haga un scroll a la seccion filtrando
 const toFilterLink = document.getElementById("to-filter-link");
 toFilterLink.addEventListener("click", (event) => {
   event.preventDefault();
