@@ -11,54 +11,52 @@ import {
   calcularFuerza,
   strongest,
 } from "../src/data.js";
-jest.mock("../src/data/pokemon/pokemon.js", () => {
-  return {
-    pokemon: [
-      {
-        num: "067",
-        name: "machoke",
-        type: ["fighting"],
-        resistant: ["bug", "rock", "dark"],
-        weaknesses: ["flying", "psychic", "fairy"],
-        stats: {
-          "base-attack": "177",
-          "base-defense": "125",
-          "base-stamina": "190",
-          "max-cp": "2031",
-          "max-hp": "162",
-        },
+const data = {
+  pokemon: [
+    {
+      num: "067",
+      name: "machoke",
+      type: ["fighting"],
+      resistant: ["bug", "rock", "dark"],
+      weaknesses: ["flying", "psychic", "fairy"],
+      stats: {
+        "base-attack": "177",
+        "base-defense": "125",
+        "base-stamina": "190",
+        "max-cp": "2031",
+        "max-hp": "162",
       },
-      {
-        num: "243",
-        name: "raikou",
-        type: ["electric"],
-        resistant: ["electric", "flying", "steel"],
-        weaknesses: ["ground"],
-        stats: {
-          "base-attack": "241",
-          "base-defense": "195",
-          "base-stamina": "207",
-          "max-cp": "3452",
-          "max-hp": "175",
-        },
+    },
+    {
+      num: "243",
+      name: "raikou",
+      type: ["electric"],
+      resistant: ["electric", "flying", "steel"],
+      weaknesses: ["ground"],
+      stats: {
+        "base-attack": "241",
+        "base-defense": "195",
+        "base-stamina": "207",
+        "max-cp": "3452",
+        "max-hp": "175",
       },
-      {
-        num: "173",
-        name: "cleffa",
-        type: ["fairy"],
-        resistant: ["fighting", "bug", "dragon", "dark"],
-        weaknesses: ["poison", "steel"],
-        stats: {
-          "base-attack": "75",
-          "base-defense": "79",
-          "base-stamina": "137",
-          "max-cp": "671",
-          "max-hp": "120",
-        },
+    },
+    {
+      num: "173",
+      name: "cleffa",
+      type: ["fairy"],
+      resistant: ["fighting", "bug", "dragon", "dark"],
+      weaknesses: ["poison", "steel"],
+      stats: {
+        "base-attack": "75",
+        "base-defense": "79",
+        "base-stamina": "137",
+        "max-cp": "671",
+        "max-hp": "120",
       },
-    ],
-  };
-});
+    },
+  ],
+};
 
 //buscar pokemon por name
 describe("searchPokByName busca a todos los pokemones por su nombre", () => {
@@ -67,7 +65,7 @@ describe("searchPokByName busca a todos los pokemones por su nombre", () => {
   });
 
   it("returns deberia retornar el nombre del pokemon buscado cleffa para [cleffa]", () => {
-    expect(searchPokByName("cleffa")).toEqual([
+    expect(searchPokByName(data,"cleffa")).toEqual([
       {
         num: "173",
         name: "cleffa",
@@ -93,7 +91,7 @@ describe("searchByNumber busca al pokemón por su numero", () => {
   });
 
   it("debería retornar el numero del pokemon buscado 67 para [067]", () => {
-    expect(searchPokByNumber("67")).toEqual([
+    expect(searchPokByNumber(data,"67")).toEqual([
       {
         num: "067",
         name: "machoke",
@@ -119,7 +117,7 @@ describe("ordenadoAz ordena todos los pokemones por orden alfabético", () => {
   });
 
   it("returns una matriz de pokemon ordenada alfabeticamente ascendente [cleffa], [machoke], [raikou]", () => {
-    const resultadoOrdenadoAz = ordenadoAz(); //arreglo de pokemon ordenado
+    const resultadoOrdenadoAz = ordenadoAz(data); //arreglo de pokemon ordenado
     const primerPokemonDespuesdeOrdenar = resultadoOrdenadoAz[0];
     const segundoPokemonDespuesdeOrdenar = resultadoOrdenadoAz[1];
     const tercerPokemonDespuesdeOrdenar = resultadoOrdenadoAz[2];
@@ -136,7 +134,7 @@ describe("invertirZa invierte y ordena todos los pokemos de la Z a la A", () => 
   });
 
   it("returns los nombres de los pokemones de la Z-A [raikou], [machote], [cleffa]", () => {
-    const resultadoinvertirYOrdenarPorNombreZa = invertirYOrdenarPorNombreZa(); //arreglo de pokemon ordenado de Z a A
+    const resultadoinvertirYOrdenarPorNombreZa = invertirYOrdenarPorNombreZa(data); //arreglo de pokemon ordenado de Z a A
     const primerPokemonOrdenInvertido = resultadoinvertirYOrdenarPorNombreZa[0];
     const segundoPokemonOrdenInvertido =
       resultadoinvertirYOrdenarPorNombreZa[1];
@@ -154,7 +152,7 @@ describe("ordenarPorNumeroAscendente del 1 al 251", () => {
   });
 
   it("returns los numeros de los pokemones ordenados del 1 al 251 para [067], [173] [243]", () => {
-    const resultadoOrdenadoPorNumero = ordenarPorNumeroAscendente();
+    const resultadoOrdenadoPorNumero = ordenarPorNumeroAscendente(data);
     const primerNumeroDePokemonOrdenado = resultadoOrdenadoPorNumero[0];
     const segundoNumeroDePokemonOrdenado = resultadoOrdenadoPorNumero[1];
     const tercerNumeroPokemonOrdenado = resultadoOrdenadoPorNumero[2];
@@ -171,7 +169,7 @@ describe("ordenarPorNumeroDescendente del 251 al 1", () => {
   });
 
   it("returns los numeros de pokemones ordenados del 251 al 1 para [243], [173], [067]", () => {
-    const resultadoOrdenadoDescendente = ordenarPorNumeroDescendente();
+    const resultadoOrdenadoDescendente = ordenarPorNumeroDescendente(data);
     const primerPokemonOrdenDescentente = resultadoOrdenadoDescendente[0];
     const segundoPokemonOrdenDescentente = resultadoOrdenadoDescendente[1];
     const tercerPokemonOrdenDescentente = resultadoOrdenadoDescendente[2];
@@ -188,7 +186,7 @@ describe("filtradoTipo filtrar todos los pokemones por su tipo", () => {
   });
 
   it("debería retornar todos los pokemones según el tipo seleccionado fighting para [fighting]", () => {
-    expect(filtradoTipo("fighting")).toEqual([
+    expect(filtradoTipo(data,"fighting")).toEqual([
       {
         num: "067",
         name: "machoke",
@@ -202,7 +200,8 @@ describe("filtradoTipo filtrar todos los pokemones por su tipo", () => {
           "max-cp": "2031",
           "max-hp": "162",
         },
-      }]);
+      },
+    ]);
   });
 });
 
@@ -213,20 +212,22 @@ describe("filtradoDebilidad filtrar todos los pokemones filtrados por su debilid
   });
 
   it("debería retornar todos los pokemones filtrados por su debilidad ground para [ground]", () => {
-    expect(filtradoDebilidad("ground")).toEqual([ {
-      num: "243",
-      name: "raikou",
-      type: ["electric"],
-      resistant: ["electric", "flying", "steel"],
-      weaknesses: ["ground"],
-      stats: {
-        "base-attack": "241",
-        "base-defense": "195",
-        "base-stamina": "207",
-        "max-cp": "3452",
-        "max-hp": "175",
+    expect(filtradoDebilidad(data,"ground")).toEqual([
+      {
+        num: "243",
+        name: "raikou",
+        type: ["electric"],
+        resistant: ["electric", "flying", "steel"],
+        weaknesses: ["ground"],
+        stats: {
+          "base-attack": "241",
+          "base-defense": "195",
+          "base-stamina": "207",
+          "max-cp": "3452",
+          "max-hp": "175",
+        },
       },
-    }]);
+    ]);
   });
 });
 
@@ -237,7 +238,7 @@ describe("filtradoResistencia filtrar a todos los pokemones por su resistencia",
   });
 
   it("returns todos los pokemones filtrados por su resistencia [electric, flying, steel]", () => {
-    expect(filtradoResistencia("electric","flying","steel")).toEqual([
+    expect(filtradoResistencia(data,"electric", "flying", "steel")).toEqual([
       {
         num: "243",
         name: "raikou",
@@ -287,13 +288,10 @@ describe("strongest ordenar a los 10 más fuertes", () => {
   });
 
   it("returns debe ordenar al top 10 más fuertes de los pokemones", () => {
-    const pokemonTop10 = strongest();
-    const primerTop10 = pokemonTop10[0];
-    const segundoTop10 = pokemonTop10[1];
-    const tercerTop10 = pokemonTop10[2];
-    expect(primerTop10.pokemon).toBe("80570.9");
-    expect(segundoTop10.name).toBe("12580.0");
-    expect(tercerTop10.name).toBe("312.2");
+    const pokemonTop10 = strongest(data);
+    expect(pokemonTop10[0].name).toEqual("raikou");
+    expect(pokemonTop10[1].name).toEqual("machoke");
+    expect(pokemonTop10[2].name).toEqual("cleffa");
   });
 });
 

@@ -280,14 +280,12 @@ width: 100%;
     text-align: center;
 }
 
-.modal h1{
+.modal h2{
     margin: 0;
 }
 
-.modal p{
-    opacity: 0.6;
-    font-size: 15px;
-    font-family: cursive;
+.modal img{
+
 }
 
 

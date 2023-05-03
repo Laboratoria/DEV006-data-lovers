@@ -63,6 +63,14 @@ align-items: center;
   width: 205px;
 }
 
+button{
+background-color: transparent;
+border: none;
+display: block;
+width: 100%;
+cursor: pointer;
+}
+
 .pokemon-img{
   display: block;
   object-fit: 100%;

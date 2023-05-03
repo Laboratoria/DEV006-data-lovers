@@ -1,12 +1,7 @@
-/* eslint-disable no-console */
-//import pokemon from "./data/pokemon/pokemon.js";
-import data from "./data/pokemon/pokemon.js";
-
 //En el archivo data.js, exporta las funciones de búsqueda y filtrado.
 
-
 //input SEARCH buscar por nombre FINAL
-export const searchPokByName = (name) =>{
+export const searchPokByName = (data,name) =>{
   //metodo startsWidth para buscar por nombre comenzando desde la primera
   //console.log(data)
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
@@ -18,7 +13,7 @@ export const searchPokByName = (name) =>{
 //CONVERTIR EL STRING DEL INPUT EN NUMERO
 //filtrar toda la data por el numero que se convirtio
 //    durante el filtrado comparar el numero convertido con la propiedad num del pokemon convertida en numero tbn
-export function searchPokByNumber(num){
+export function searchPokByNumber(data,num){
   const searchingNumber = Number(num);
   const searching = data.pokemon.filter(p => searchingNumber === Number(p.num));
   return searching;
@@ -26,21 +21,21 @@ export function searchPokByNumber(num){
 
 
 //para ordenar AZ FINAL
-export function ordenadoAz() {
+export function ordenadoAz(data) {
   const ordenado = data.pokemon.sort((a,b)=> a.name.localeCompare(b.name));
   return ordenado;
 }
 
 
 //para invertir el orden ZA FINAL
-export function invertirYOrdenarPorNombreZa() {
+export function invertirYOrdenarPorNombreZa(data) {
   const invertirYOrdenarPorNombreZa = data.pokemon.reverse().sort((a, b) => b.name.localeCompare(a.name));
   return invertirYOrdenarPorNombreZa
 }
 
 
 //filtrado por tipo
-export function filtradoTipo(type) {
+export function filtradoTipo(data,type) {
   const filtrado = data.pokemon.filter((pokemon) =>{
     if(pokemon.type.includes(type)){
       return pokemon;
@@ -51,7 +46,7 @@ export function filtradoTipo(type) {
 
 
 //filtar por debilidad
-export function filtradoDebilidad(weaknesses) {
+export function filtradoDebilidad(data,weaknesses) {
   const filtradoWeaknesses = data.pokemon.filter((pokemon) => {
     if(pokemon.weaknesses.includes(weaknesses)){
       return pokemon;
@@ -62,7 +57,7 @@ export function filtradoDebilidad(weaknesses) {
 
 
 //filtrar por fortaleza
-export function filtradoResistencia(resistant){
+export function filtradoResistencia(data,resistant){
   const filtradoResistant = data.pokemon.filter((pokemon)=> {
     if(pokemon.resistant.includes(resistant)){
       return pokemon;
@@ -73,28 +68,15 @@ export function filtradoResistencia(resistant){
 
 
 //ordenar ascendentemente FINAL
-export function ordenarPorNumeroAscendente() {
+export function ordenarPorNumeroAscendente(data) {
   return data.pokemon.sort((a, b) => a.num - b.num);
 }
-//item order x NUMERO ascendente ANTIGUO
-/*const menorAmayor = document.getElementById('ascendente');
-menorAmayor.addEventListener('click', () => {
-  const ascending = data.pokemon.sort((a,b) => a.num - b.num);
-  console.log(ascending);
-});*/
+
 
 //ordenar descendente FINAL
-export function ordenarPorNumeroDescendente() {
+export function ordenarPorNumeroDescendente(data) {
   return data.pokemon.sort((a, b) => b.num - a.num);
 }
-
-//item order x NUMERO descendente ANTIGUO
-/*const mayorAmenor = document.getElementById('descendente');
-mayorAmenor.addEventListener('click', () => {
-  const descending = data.pokemon.sort((a,b) => b.num - a.num);
-  console.log(descending);
-});*/
-
 
 //calcular la fuerza
 export function calcularFuerza(pokemon) {

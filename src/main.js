@@ -15,7 +15,7 @@ const templateCard = datapokemon => {
     `<div class="card1" id="card1">
       <h2 class="pokemon-name">${pokemon.name}</h2>
       <div class="pokemon-img-container" id="pokemon-img-container">
-        <img class="pokemon-img" src="${pokemon.img}" alt="${pokemon.name}">
+        <button><img class="pokemon-img" src="${pokemon.img}" alt="${pokemon.name}"></button>
       </div>
       <p class="pokemon-num">${pokemon.num}</p>
     </div>`;
@@ -26,11 +26,41 @@ const templateCard = datapokemon => {
 templateCard(data.pokemon);
 
 
-const actualizarResultados = (searchQuery) => {
+const searchInput = document.getElementById('search');
+
+searchInput.addEventListener('input', () => {
+  const searchValue = searchInput.value.trim();
+  if (isNaN(searchValue)) {
+    const results = searchPokByName(data,searchValue);
+    templateCard(results);
+  } else {
+    const results = searchPokByNumber(data,searchValue);
+    templateCard(results);
+  }
+});
+
+const formulario = document.getElementById('searcher');
+const modal = document.getElementById('msjVal');
+const btnCerrar = document.getElementById('cerrar');
+
+formulario.addEventListener('input', (event) => {
+  event.preventDefault();
+  const searchTerm = searchInput.value.trim();
+  if(searchTerm==="") {
+    return;
+  }
+  modal.style.display = "block";
+});
+
+btnCerrar.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+/*const actualizarResultados = (searchQuery) => {
   const searchResult = searchPokByName(searchQuery);
   containerPokemons.innerHTML = "";
   templateCard(searchResult);
-};
+};*/
 
 
 /*ventana del modal para cerrar
@@ -42,20 +72,20 @@ cerrar.addEventListener('click', () =>  {
   console.log(msj)
 });*/
 
-//buscar por nonbre ANTIGUO sin MODAL FINAL
+/*buscar por nonbre ANTIGUO sin MODAL FINAL
 const btnBuscarByName = document.getElementById('search');
 btnBuscarByName.addEventListener('input', (e) =>{
   actualizarResultados(e.target.value)
-})
+})*/
 
 
-//buscar por numero FINAL
+/*buscar por numero FINAL
 const buscarByNumber = document.getElementById("search");
 buscarByNumber.addEventListener("input", (e)=> {
   const searchNumResult = searchPokByNumber(e.target.value);
   containerPokemons.innerHTML = "";
   templateCard(searchNumResult);
-})
+})*/
 
 
 //ventana del modal para cerrar
@@ -72,7 +102,7 @@ cerrarN.addEventListener('click', () =>  {
 const orderAz = document.getElementById('az');
 orderAz.addEventListener('click', () => {
   //ordenar la copia por nombre de la A hasta la Z
-  const ordenado = ordenadoAz();
+  const ordenado = ordenadoAz(data);
   templateCard(ordenado);
 })
 
@@ -80,7 +110,7 @@ orderAz.addEventListener('click', () => {
 //ordenar de la Z-A FINAL
 const invertirZa = document.getElementById("za");
 invertirZa.addEventListener("click", () => {
-  const datosInvertidos = invertirYOrdenarPorNombreZa();
+  const datosInvertidos = invertirYOrdenarPorNombreZa(data);
   // Manipulación del DOM para mostrar los datos invertidos y ordenados
   templateCard(datosInvertidos);
 });
@@ -98,7 +128,7 @@ toFilterLink.addEventListener("click", (event) => {
 //filtrar por tipo
 const selectType = document.getElementById("element-type-filter");
 selectType.addEventListener("change", () => {
-  const filtrado = filtradoTipo(selectType.value);
+  const filtrado = filtradoTipo(data,selectType.value);
   templateCard(filtrado);
 });
 
@@ -106,7 +136,7 @@ selectType.addEventListener("change", () => {
 //filtrar por debilidad
 const selectWeaknesses = document.getElementById("element-weaknesses-filter");
 selectWeaknesses.addEventListener("change", () => {
-  const filtradoD = filtradoDebilidad(selectWeaknesses.value);
+  const filtradoD = filtradoDebilidad(data,selectWeaknesses.value);
   templateCard(filtradoD);
 });
 
@@ -114,7 +144,7 @@ selectWeaknesses.addEventListener("change", () => {
 //filtrar por fortaleza
 const selectResistant = document.getElementById('element-resistant-filter');
 selectResistant.addEventListener("change", () => {
-  const filtradoR = filtradoResistencia(selectResistant.value);
+  const filtradoR = filtradoResistencia(data,selectResistant.value);
   templateCard(filtradoR)
 });
 
@@ -122,7 +152,7 @@ selectResistant.addEventListener("change", () => {
 //ordenar ascendentemente
 const menorAmayor = document.getElementById("ascendente");
 menorAmayor.addEventListener("click", () => {
-  const datosOrdenados = ordenarPorNumeroAscendente();
+  const datosOrdenados = ordenarPorNumeroAscendente(data);
   // Manipulación del DOM para mostrar los datos ordenados por número ascendente
   templateCard(datosOrdenados);
 });
@@ -131,7 +161,7 @@ menorAmayor.addEventListener("click", () => {
 //ordenar descendentemente
 const mayorAmenor = document.getElementById("descendente");
 mayorAmenor.addEventListener("click", () => {
-  const datosOrdenados = ordenarPorNumeroDescendente();
+  const datosOrdenados = ordenarPorNumeroDescendente(data);
   // Manipulación del DOM para mostrar los datos ordenados por número descendente
   templateCard(datosOrdenados);
 });
