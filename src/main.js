@@ -1,9 +1,40 @@
-import { example } from './data.js';
- import data from './data/lol/lol.js';
-import data from './data/pokemon/pokemon.js';
- import data from './data/rickandmorty/rickandmorty.js';
+import data from './data/harrypotter/data.js';
+const personajes= data.characters;
+console.log(personajes);
 
-console.log(example, data);
+
+// Filtrar casas con el botón Selecciona tu casa
+//document.getElementById("desplegable").addEventListener("click", filtroCasas);
+
+// Función para llamar a la data y filtrar
+const filterButton = document.getElementById('filter-button');
+const housesList = document.getElementById('houses-list');
+
+filterButton.addEventListener('click', () => {
+  // Crear una nueva array con las casas únicas de la array characters
+  const houses = [...new Set(personajes.map(personajes => personajes.house))];
+  // Filtrar las casas que te interesan
+  const filteredHouses = houses.filter(house => ['Gryffindor', 'Slytherin', 'Ravenclaw', 'Hufflepuff'].includes(house));
+
+  // Crear una lista de elementos <li> para cada casa
+  const houseItems = filteredHouses.map(house => {
+    const item = document.createElement('li');
+    item.textContent = house;
+    return item;
+  });
+
+  // Mostrar la lista de elementos desplegables en el elemento <ul>
+  housesList.innerHTML = '';
+  houseItems.forEach(item => {
+    housesList.appendChild(item);
+  });
+});
+
+
+
+
+
+
 
 // Plantilla para la página
 /*const pageTemplate = `
