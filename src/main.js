@@ -25,6 +25,7 @@ const templateCard = datapokemon => {
 
 templateCard(data.pokemon);
 
+
 const actualizarResultados = (searchQuery) => {
   const searchResult = searchPokByName(searchQuery);
   containerPokemons.innerHTML = "";

@@ -1,20 +1,9 @@
 /* eslint-disable no-console */
 //import pokemon from "./data/pokemon/pokemon.js";
 import data from "./data/pokemon/pokemon.js";
-//console.log(data.pokemon)
+
 //En el archivo data.js, exporta las funciones de búsqueda y filtrado.
 
-//input SEARCH buscar por nombre
-/*export function searchPokByName(name) {
-  const searching = data.pokemon.filter(p => p.name.startsWith(name));
-  if(searching.length === 0){
-    const modal = document.querySelector('.modal');
-    const msj= document.querySelector('#msj');
-    msj.textContent = `No se encontró ningún Pokémon con el nombre '${name}'`;
-    modal.style.display ='block';
-  }
-  return searching;
-}*/
 
 //input SEARCH buscar por nombre FINAL
 export const searchPokByName = (name) =>{
@@ -23,6 +12,7 @@ export const searchPokByName = (name) =>{
   const searching = data.pokemon.filter(p => p.name.startsWith(name));
   return searching
 };
+
 
 //input search by number FINAL
 //CONVERTIR EL STRING DEL INPUT EN NUMERO
