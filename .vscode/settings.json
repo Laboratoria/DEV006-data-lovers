@@ -20,5 +20,6 @@
                 }
             }
         ]
-    }
+    },
+    "liveCoder.settings.port": 5501
 }

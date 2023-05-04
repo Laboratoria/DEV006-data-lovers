@@ -69,10 +69,15 @@
   }
 
   .next-instrucc #boton-next-instrucc{
-    width: 30px;
-    height: 30px;
-    bottom: 27px;
-    right:38px;
+    width: 53px;
+    height: 53px;
+    bottom: 50px;
+    right:20px;
+  }
+  .next-instrucc #boton-next-instrucc:hover{
+    transform: scale(1.2);
+    border: 5px solid rgba(255, 3, 179, 0.836);
+    border-radius: 50px;
   }
 }
 
@@ -91,7 +96,7 @@
     display: flex;
   }
 
-  .instrucc4{
+  .instrucciones-tablet{
     display: none;
   }
 
@@ -102,9 +107,12 @@
     display: none;
 }
   .next-instrucc #boton-next-instrucc{
-    width: 30px;
-    height: 30px;
-    bottom: 27px;
-    right:38px;
+    width: 65px;
+    height: 65px;
+    bottom: 30px;
+    right:45px;
+  }
+  .next-instrucc #boton-next-instrucc:hover{
+    transform: scale(1.2);
   }
 }
