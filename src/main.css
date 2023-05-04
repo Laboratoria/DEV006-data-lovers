@@ -154,26 +154,26 @@ width: 100%;
 
 .portadaBox {
 display: flex;
-width: 1200%;
-animation: slide 43s ease-in-out infinite;
+width: 100vw;
+overflow-x: hidden;
 }
 
 
 .portada-slider{
 flex-basis: 100%;
+animation: slide 5s ease-in-out infinite;
 }
 
 
 .portada-slider img{
-display: flex;
-width: 100%;
+width: 100vw;
 height: 500px;
 }
 
 
 @keyframes slide {
   0% {
-    transform: translateX(-20%);
+    transform: translateX(0%);
   }   100% {
     transform: translateX(-100%);
   }
@@ -255,52 +255,56 @@ width: 100%;
 }
 
 .container{
-    display: flex;
-    background-color: rgba(255, 126, 212, 0.699);
+    display: none;
+    position: relative;
+    background-color: rgba(255, 68, 193, 0.621);
     align-items:center;
     justify-content: center;
-    position: fixed;
     pointer-events: none;
-    opacity: 0;
-    top:0;
-    left: 0;
-    height: 101vh;
-    width: 101vw;
+    height: 100%;
+    width: 100%;
+    padding: 25px 92px 25px 90px;
     transition: opacity 0.3s ease;
 }
 
 .modal{
     background-color: #fff;
-    width: 620px;
+    width: 420px;
     max-width: 100%;
     height: 80%;
     padding: 28px 48px;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 10px rgba(13, 13, 13, 0.3);
     text-align: center;
+    margin: 60px auto;
 }
 
-.modal h2{
+.modal h1{
     margin: 0;
+    font-size: 25px;
 }
 
 .modal img{
-
+width: 300px;
+height: 300px;
 }
 
 
-#cerrar{
-    font-weight: 700;
-    font-size: 18px;
+#text{
+    font-weight: 800;
+    font-size: 20px;
     font-family: cursive;
     color:rgba(255, 0, 106, 0.966);
     background: rgba(255, 179, 232, 0.979);
     border:rgba(255, 0, 106, 0.966);
     border-radius: 50px;
     cursor:pointer;
+    width: 50%;
+    padding: 15px;
+    margin: auto;
 }
 
-#cerrar:hover{
+#text:hover{
       background-color: #a20bb6d7;
       color: antiquewhite;
       transform: scale(1.1);

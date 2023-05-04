@@ -32,32 +32,25 @@ templateCard(data.pokemon);
 const searchInput = document.getElementById('search');
 searchInput.addEventListener('input', () => {
   const searchValue = searchInput.value.trim();
+  let results;
   if (isNaN(searchValue)) {
-    const results = searchPokByName(data,searchValue);
+    results = searchPokByName(data,searchValue);
     templateCard(results);
   } else {
-    const results = searchPokByNumber(data,searchValue);
+    results = searchPokByNumber(data,searchValue);
     templateCard(results);
+  }
+  if(results.length===0){
+    modal.style.display = "flex";
+    containerPokemons.style.display = "none";
+  } else{
+    modal.style.display = "none";
+    containerPokemons.style.display = "grid";
   }
 });
 
 //para el modal
-const formulario = document.getElementById('searcher');
 const modal = document.getElementById('msjVal');
-const btnCerrar = document.getElementById('cerrar');
-
-formulario.addEventListener('input', (event) => {
-  event.preventDefault();
-  const searchTerm = searchInput.value.trim();
-  if(searchTerm==="") {
-    return;
-  }
-  modal.style.display = "block";
-});
-
-btnCerrar.addEventListener("click", () => {
-  modal.style.display = "none";
-});
 
 
 //para ordenar A-Z FINAL
