@@ -18,49 +18,93 @@
     display: none;
 }
 
+.contenedor-cel-saludo{
+    display: none;
+}
+.contenedor-tablet-saludo{
+    display: none;
+}
+
 .next-instrucc #boton-next-instrucc{
   position: absolute;
   width: 70px;
   height: 70px;
   z-index: 2;
-  bottom: 15px;
-  right: 40px;
+  bottom: 27px;
+  right: 80px;
 }
 
+
 .next-instrucc #boton-next-instrucc:hover{
-    transform: scale(1.3);
-    background-color: rgba(250, 96, 204, 0.597);
-    border-radius: 50px;
+  transform: scale(1.3);
+  border: 5px solid rgba(255, 3, 179, 0.836);
+  border-radius: 50px;
 }
 
 @media screen and (max-width:767px) {
-  #pc1{
-    width: 100%;
-    height: 95%;
+
+  .contenedor-saludo{
+    display: none;
   }
 
-  /*#pc2{
-    width: ;
-    height: 90%;
-  }*/
+  .contenedor-tablet-saludo{
+    display: none;
+  }
+
+  .contenedor-cel-saludo {
+    height: 100vh;
+    z-index: 1;
+    background-image: url("images/fondopastel.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dialogo3{
+    display: flex;
+  }
+
+  .intrucciones-cel2{
+    display: none;
+  }
 
   .next-instrucc #boton-next-instrucc{
-    width: 50px;
-    height: 50px;
-    top: 45px;
-    right: 28px;
+    width: 30px;
+    height: 30px;
+    bottom: 27px;
+    right:38px;
   }
-
-  .next-instrucc #boton-next-instrucc:hover{
-    transform: scale(1.3);
-    background-color: rgba(249, 118, 210, 0.597);
-    border-radius: 50px;
-}
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
-  next-instrucc #boton-next-instrucc{
-    width: 20px;
-    height: 20px;
+
+  .contenedor-tablet-saludo {
+    height: 100vh;
+    z-index: 1;
+    background-image: url("images/fondopastel.jpg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+
+  .dialogo4{
+    display: flex;
+  }
+
+  .instrucc4{
+    display: none;
+  }
+
+  .contenedor-saludo{
+    display: none;
+  }
+  .contenedor-cel-saludo{
+    display: none;
+}
+  .next-instrucc #boton-next-instrucc{
+    width: 30px;
+    height: 30px;
+    bottom: 27px;
+    right:38px;
   }
 }
