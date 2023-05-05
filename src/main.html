@@ -1,74 +1,113 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <link rel="icon" type="images.png" href="images/barra-menu.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap" rel="stylesheet">
+    <meta charset="utf-8" />
+    <link rel="icon" type="images.png" href="images/barra-menu.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Changa+One&family=Maven+Pro:wght@500;800&display=swap"
+      rel="stylesheet"
+    />
     <title>Pokemon Go</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <header class ="barra-menu" id="barra-menu">
-      <audio id="reproductor" src="sounds/musica-main.mp3" autoplay ="true"></audio>
+    <header class="barra-menu" id="barra-menu">
+      <audio
+        id="reproductor"
+        src="sounds/musica-main.mp3"
+        autoplay="true"
+      ></audio>
       <div class="contenedor-barra">
         <div class="contenedor-logo">
-          <img class="img-menu" src="images/iconos/menu.png">
+          <img class="img-menu" src="images/iconos/menu.png" />
         </div>
         <!---->
         <nav class="elements">
-         <ul>
-          <li><a href="index.html"><img src="images/iconos/inicio.png">HOME</a></li>
-          <li><a href="login.html"><img src="images/iconos/login.png">LOG IN</a></li>
-          <li class="item-menu"><a><img src="images/iconos/order.png">ORDER</a>
+          <ul>
+            <li>
+              <a href="index.html"
+                ><img src="images/iconos/inicio.png" />HOME</a
+              >
+            </li>
+            <li>
+              <a href="login.html"
+                ><img src="images/iconos/login.png" />LOG IN</a
+              >
+            </li>
+            <li class="item-menu">
+              <a><img src="images/iconos/order.png" />ORDER</a>
               <ul class="sub-menu-order">
                 <li><a id="az"> A-Z </a></li>
                 <li><a id="za"> Z-A </a></li>
                 <li><a id="ascendente">NUMBER 🢁</a></li>
                 <li><a id="descendente">NUMBER 🢃</a></li>
               </ul>
-          </li>
-         <li><a href="filtrando-section" id="to-filter-link"><img src="images/iconos/filtrar.png">FILTER</a></li>
-          <li ><a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US"><img src="images/iconos/jugar.png">PLAY</a></li>
-          <li><a href="cerrar.html"><img src="images/iconos/salida.png">SIGN OFF</a></li>
+            </li>
+            <li>
+              <a href="filtrando-section" id="to-filter-link"
+                ><img src="images/iconos/filtrar.png" />FILTER</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US"
+                ><img src="images/iconos/jugar.png" />PLAY</a
+              >
+            </li>
+            <li>
+              <a href="cerrar.html"
+                ><img src="images/iconos/salida.png" />SIGN OFF</a
+              >
+            </li>
           </ul>
         </nav>
       </div>
     </header>
-  <main>
-    <section class="pokemon">
-     <div class="portadaBox">
-        <div class="portada-slider">
-          <img src="images/portadaBox/principal.jpeg">
-        </div>
-        <div class="portada-slider">
-          <img src="images/portadaBox/portada4.jpg">
-        </div>
-      </div>
-    </section>
-    <section class="inicio">
-       <section id="filtrando-section" class="filtrando">
-        <form class="searcher" id="searcher">
-          <div>
-            <input type="search" id="search" class="search-comun" placeholder= "search by name or number" autocomplete="off" spellcheck="false">
-            <img src="images/iconos/icon-lupa.png" alt="buscar">
-            <div class="pokebola">
-              <img src="images/barra-menu.png" alt="pokebola">
-            </div>
+    <main>
+      <section class="pokemon">
+        <div class="portadaBox">
+          <div class="portada-slider">
+            <img src="images/portadaBox/principal.jpeg" />
           </div>
-      </form>
+          <div class="portada-slider">
+            <img src="images/portadaBox/portada4.jpg" />
+          </div>
+        </div>
+      </section>
+      <section class="inicio">
+        <section id="filtrando-section" class="filtrando">
+          <form class="searcher" id="searcher">
+            <div>
+              <input
+                type="search"
+                id="search"
+                class="search-comun"
+                placeholder="search by name or number"
+                autocomplete="off"
+                spellcheck="false"
+              />
+              <img src="images/iconos/icon-lupa.png" alt="buscar" />
+              <div class="pokebola">
+                <img src="images/barra-menu.png" alt="pokebola" />
+              </div>
+            </div>
+          </form>
           <nav class="box-filter">
             <div class="selectores">
               <div>
                 <label for="type" id="type">TYPE</label>
-                <select id="element-type-filter" >
+                <select id="element-type-filter">
                   <option value="all">--all--</option>
                   <option value="bug">Bug</option>
-                  <option value="dragon"> Dragon</option>
+                  <option value="dragon">Dragon</option>
                   <option value="electric">Electric</option>
                   <option value="fighting">Fighting</option>
                   <option value="fire">Fire</option>
@@ -81,17 +120,17 @@
                   <option value="poison">Poison</option>
                   <option value="psychic">Psychic</option>
                   <option value="rock">Rock</option>
-                  <option value="water"> Water</option>
+                  <option value="water">Water</option>
                 </select>
               </div>
             </div>
             <div class="selectores">
               <div>
                 <label for="weaknesses" id="debilidades">WEAKNESSES</label>
-                  <select id="element-weaknesses-filter">
+                <select id="element-weaknesses-filter">
                   <option value="all">--all--</option>
                   <option value="bug">Bug</option>
-                  <option value="dragon"> Dragon</option>
+                  <option value="dragon">Dragon</option>
                   <option value="electric">Electric</option>
                   <option value="fighting">Fighting</option>
                   <option value="fire">Fire</option>
@@ -104,8 +143,8 @@
                   <option value="poison">Poison</option>
                   <option value="psychic">Psychic</option>
                   <option value="rock">Rock</option>
-                  <option value="water"> Water</option>
-                  </select>
+                  <option value="water">Water</option>
+                </select>
               </div>
             </div>
             <div class="selectores">
@@ -114,7 +153,7 @@
                 <select id="element-resistant-filter">
                   <option value="all">--all--</option>
                   <option value="bug">Bug</option>
-                  <option value="dragon"> Dragon</option>
+                  <option value="dragon">Dragon</option>
                   <option value="electric">Electric</option>
                   <option value="fighting">Fighting</option>
                   <option value="fire">Fire</option>
@@ -127,7 +166,7 @@
                   <option value="poison">Poison</option>
                   <option value="psychic">Psychic</option>
                   <option value="rock">Rock</option>
-                  <option value="water"> Water</option>
+                  <option value="water">Water</option>
                 </select>
               </div>
             </div>
@@ -136,54 +175,81 @@
                 <label for="strong" id="fuerza">STRONG</label>
                 <select id="element-strong-filter">
                   <option value="all">--all--</option>
-                  <option id="pokemonStrongest" value="strongest">Top 10</option>
+                  <option id="pokemonStrongest" value="strongest">
+                    Top 10
+                  </option>
                   <option id="pokemonWeaknest" value="weaknest">Last 10</option>
                 </select>
               </div>
             </div>
           </nav>
         </section>
-    <article class="contenedor-pokemones">
-      <section>
-          <div id="msjVal" class="container">
-        <div class="modal">
-            <h1>Pokemon not found</h1>
-                <img src="images/pikachu-search.gif" alt="buscando">
-            <button id="text">Try again!</button>
-        </div>
-      </div>
-      </section>
-        <div id="pokemones" id="pokemones">
-          <div class="contenedor-card1" id="contenedor-card1">
-            <div class="card1" id="card1">
+        <article class="contenedor-pokemones">
+          <section>
+            <div id="msjVal" class="container">
+              <div class="modal1">
+                <h1>Pokemon not found</h1>
+                <img src="images/pikachu-search.gif" alt="buscando" />
+                <button id="text">Try again!</button>
+              </div>
+            </div>
+          </section>
+          <div id="pokemones" id="pokemones">
+            <div class="contenedor-card1" id="contenedor-card1">
+              <div class="card1" id="card1"></div>
             </div>
           </div>
-         <div class="contenedor-card2" id="contenedor-card2">
-            <div class="card2" id="card2">
-            </div>
-         </div>
+        </article>
+      </section>
+    </main>
+    <footer class="footer-main">
+      <div class="logo">
+        <a href="main.html"><img src="images/login.png" alt="logo" /></a>
       </div>
-    </article>
-    </section>
-  </main>
-  <footer class="footer-main">
-    <div class="logo">
-      <a href="main.html"><img src="images/login.png" alt="logo"></a>
-    </div>
-    <div class="app">
-        <a href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US" class="apps"><img src="images/iconos/playstore.png"></a>
-        <a href="https://apps.apple.com/es/app/pok%C3%A9mon-go/id1094591345" class="apps"><img src="images/iconos/appstore.png"></a>
-    </div>
-    <div class="redes">
-        <a href="https://web.facebook.com/PokemonGO/?locale=es_LA&_rdc=1&_rdr" class="social-icono"><img src="images/iconos/facebook.png" alt="facebook"></a>
-        <a href="https://www.instagram.com/pokemongoapp/" class="social-icono"><img src="images/iconos/insta.png" alt="instagram"></a>
-        <a href="https://twitter.com/PokemonGoApp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" class="social-icono"><img src="images/iconos/twitter.png" alt="twitter"></a>
-    </div>
-    <div class="Copyright">
-        <h5>Copyright 2023 Laboratoria-Dev006 from Nacdul Ramirez y Raquel Fernández. All rights reserved.</h5>
-    </div>
-  </footer>
+      <div class="app">
+        <a
+          href="https://play.google.com/store/apps/details?id=com.nianticlabs.pokemongo&hl=es_PE&gl=US"
+          class="apps"
+          ><img src="images/iconos/playstore.png"
+        /></a>
+        <a
+          href="https://apps.apple.com/es/app/pok%C3%A9mon-go/id1094591345"
+          class="apps"
+        >
+          <img src="images/iconos/appstore.png" />
+        </a>
+      </div>
+      <div class="redes">
+        <a
+          href="https://web.facebook.com/PokemonGO/?locale=es_LA&_rdc=1&_rdr"
+          class="social-icono"
+          ><img src="images/iconos/facebook.png" alt="facebook"
+        /></a>
+        <a href="https://www.instagram.com/pokemongoapp/" class="social-icono">
+          <img src="images/iconos/insta.png" alt="instagram"
+        /></a>
+        <a
+          href="https://twitter.com/PokemonGoApp?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"
+          class="social-icono"
+        >
+          <img src="images/iconos/twitter.png" alt="twitter" />
+        </a>
+      </div>
+      <div class="Copyright">
+        <h5>
+          Copyright 2023 Laboratoria-Dev006 from Nacdul Ramirez y Raquel
+          Fernández. All rights reserved.
+        </h5>
+      </div>
+    </footer>
     <script src="data.js" type="module"></script>
     <script src="main.js" type="module"></script>
+    <div id="mi-modal" class="modal">
+      <div class="modal-contenido">
+        <span class="close">&times;</span>
+        <h2>Título del modal</h2>
+        <p>Contenido del modal.</p>
+      </div>
+    </div>
   </body>
 </html>
