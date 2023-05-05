@@ -167,7 +167,7 @@ animation: slide 5s ease-in-out infinite;
 
 .portada-slider img{
 width: 100vw;
-height: 500px;
+height: 450px;
 }
 
 
@@ -177,10 +177,6 @@ height: 500px;
   }   100% {
     transform: translateX(-100%);
   }
- }
-
- .pokemon-cel img{
-display: none;
  }
 
 .searcher {
@@ -497,7 +493,7 @@ select option:checked{
     padding: 5%;
 }
 
-/*- barra de menu para cel y tablet vertical -*/
+/*- barra de menu para cel vertical -*/
 @media (max-width:768px){
     header label {
       display: block !important;
@@ -521,15 +517,16 @@ select option:checked{
 
     .elements ul{
         display: block;
-        background: #34ffaa71;
-        width: 24%;
+        background: #feffffa1;
+        width: 33%;
         height: 100%;
+        margin-top: 5px;
     }
 
     .elements ul li:hover .sub-menu-order{
       display: block;
       position: absolute;
-      width: 160px;
+      width: 180px;
       height: 180px;
       text-shadow: -2px -2px 7px rgb(255, 255, 255), 2px -2px 7px rgb(255, 255, 255), -2px 2px 7px rgb(254, 255, 255), 2px 2px 7px rgb(255, 255, 255);
       background: linear-gradient(to right, rgba(28, 3, 255, 0.921), rgba(187, 255, 252, 0.761), rgba(187, 255, 252, 0.761), rgba(187, 255, 252, 0.761), rgba(28, 3, 255, 0.921));
@@ -543,14 +540,26 @@ select option:checked{
       margin:0;
   }
 
-  .pokemon{
-    display: none;
+    .portada-slider img{
+    width: 100vw;
+    height: 270px;
+    }
+
+
+    .searcher div{
+      margin-left: -51px;
+      height: 38px;
+      width: 30px;
   }
-  .pokemon-cel img{
-display: flex;
-height: 200px;
-width: 100%;
-  }
+
+  .pokebola{
+    left: 264px;
+}
+
+.pokebola img{
+    height: 47px;
+    width: 47px;
+}
 
   .box-filter {
     display: flex;
@@ -571,7 +580,7 @@ width: 100%;
 
     .footer-main {
       height: auto;
-      padding: 10px 0;
+      padding: 5px 0;
     }
 
     .footer-main > div {
@@ -600,15 +609,15 @@ width: 100%;
     cursor: pointer;
   }
   .Copyright h5 {
-    padding-top: 0.25em;
-    font-size: 12px;
+    padding-top: 0.5em;
+    font-size: 9px;
     font-family: 'Times New Roman', Times, serif;
   }
 }
 
 
 /* para tablet en posición horizontal */
-@media only screen and (min-width: 768px) and (max-width: 1024px){
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
 
 .box-filter {
   justify-content: right;
@@ -625,6 +634,10 @@ width: 100%;
   text-align: center;
 }
 
+.portada-slider img{
+  width: 100vw;
+  height: 350px;
+  }
 
   .footer-main {
     height: auto;

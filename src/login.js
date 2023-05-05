@@ -11,7 +11,7 @@ function validarFormulario(){
     event.preventDefault();
     window.location.href ="saludo.html";
   } else {
-    alert("Oh noooo!... Your username or password are incorrect, try again.")
+    alert("Oh noooo!... Your username or password are incorrect, try again. Username: Laboratoria and password: Dev006")
   }
 }
 
