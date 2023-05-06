@@ -1,7 +1,3 @@
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
-</style>
 <div id="header" .align ="center">
 <img src= "./src/images/portada-readme.png" .width="auto"/>
 </div>
@@ -11,9 +7,7 @@
 </div>
 <br>
 <br>
-
-<span style="color: #0232d1; font-weight:bold; font-size:35px; font-family: 'Darumadrop One', cursive;"> <img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
-<span>
+<span style="color: #0232d1; font-weight:800; font-size:35px; font-family: cursive;"><img src= "./src/images/barra-menu.png" width="25"/>Indice</span>
 
 * [1. Presentación](#1-presentación)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
@@ -44,12 +38,11 @@
 * [12. Checklist](#12-checklist)
 ***
 
-## 1. Presentación
+## 1. Preámbulo
 Pokemon Go Cards es una app creada para complementar el juego original con la finalidad de poder filtrar información sobre los pokemones de las dos primeras generaciones, y que el usuario pueda utilizar dicha información según sus necesidades.
 
-<div id="img-preambulo">
-<img src= "./src/images/preambulo.png" .width="100%" .align="center"/>
-</div>
+![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
+
 
 
 ## 2. Resumen del proyecto
