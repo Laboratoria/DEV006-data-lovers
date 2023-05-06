@@ -300,16 +300,6 @@ height: 300px;
     margin: auto;
 }
 
-#text:hover{
-      background-color: #a20bb6d7;
-      color: antiquewhite;
-      transform: scale(1.1);
-}
-
-.show{
-      pointer-events: auto;
-      opacity: 1;
-}
 
 /*para pc*/
 .footer-main{
@@ -531,7 +521,7 @@ select option:checked{
     padding: 5%;
 }
 
-/*- barra de menu para cel vertical -*/
+/*- para cel vertical -*/
 @media (max-width:768px){
     header label {
       display: block !important;
@@ -541,8 +531,9 @@ select option:checked{
   }
 
     .img-menu {
-    width: 11.875em;
+    width: 10.300em;
     height: 3.125em;
+    margin-left: -10px;
   }
 
     .elements{
@@ -580,7 +571,7 @@ select option:checked{
 
     .portada-slider img{
     width: 100vw;
-    height: 270px;
+    height: 240px;
     }
 
 
@@ -615,6 +606,35 @@ select option:checked{
     margin-bottom: 10px;
     text-align: center;
 }
+
+
+.container{
+  padding: 5px 60px 5px 57px;
+  transition: opacity 0.3s ease;
+}
+
+.modal1{
+  width: 250px;
+  height: 75%;
+}
+
+.modal1 h1{
+  margin: 0;
+  font-size: 23px;
+}
+
+.modal1 img{
+width: 200px;
+height: 200px;
+}
+
+#text{
+  font-size: 15px;
+  width: 70%;
+}
+
+
+
 
     .footer-main {
       height: auto;
@@ -657,10 +677,20 @@ select option:checked{
 /* para tablet en posición horizontal */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
 
+.img-menu{
+    width: 11em;
+    margin-left: -10px;
+}
+  .elements ul{
+    width: 23.5%;
+}
+
 .box-filter {
   justify-content: right;
-  margin-top: 50px;
+  margin-top: 20px;
+  margin-left: -100px;
 }
+
 
 #element-type-filter,
 #element-weaknesses-filter,
@@ -676,6 +706,32 @@ select option:checked{
   width: 100vw;
   height: 350px;
   }
+
+
+.container{
+    padding: 20px 87px 20px 85px;
+    transition: opacity 0.3s ease;
+}
+
+.modal1{
+    width: 400px;
+    height: 75%;
+}
+
+.modal1 h1{
+    margin: 0;
+    font-size: 23px;
+}
+
+.modal1 img{
+width: 200px;
+height: 200px;
+}
+
+#text{
+    font-size: 17px;
+    width: 40%;
+}
 
   .footer-main {
     height: auto;

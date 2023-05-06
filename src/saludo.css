@@ -58,6 +58,7 @@
     background-size: cover;
     display: flex;
     justify-content: center;
+    margin: 0;
   }
 
   .dialogo3{
@@ -85,7 +86,9 @@
 
   .contenedor-tablet-saludo {
     height: 100vh;
+    width: 100vw;
     z-index: 1;
+    margin: 0;
     background-image: url("images/fondopastel.jpg");
     background-size: cover;
     display: flex;
@@ -109,8 +112,8 @@
   .next-instrucc #boton-next-instrucc{
     width: 65px;
     height: 65px;
-    bottom: 30px;
-    right:45px;
+    bottom:99px;
+    right:13px;
   }
   .next-instrucc #boton-next-instrucc:hover{
     transform: scale(1.2);

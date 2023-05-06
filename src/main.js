@@ -63,23 +63,20 @@ searchInput.addEventListener("input", () => {
 //para el primer modal
 const modalNotFound = document.getElementById("msjVal");
 
-
 //creando el modal de la segunda cara
 const modalCard2 = document.getElementById("mi-modal");
 modalCard2.addEventListener("click", () => {
   let result;
-  if(result){
-    modalContent.style.display = "flex";
-  }
-});
+  console.log(result, "prueba");
 
+  modalContent.style.display = "flex";
+});
 
 const modalContent = (pokemon) => {
   return `
     <div class="card2" id="card2">
     <h2 class="pokemon-name">${pokemon.name}</h2>
     <div class="pokemon-img-container" id="pokemon-img-container">
-    <img class="pokemon-img" src="${pokemon.img}" alt="${pokemon.name}">
     </div>
     <p class="pokemon-num">${pokemon.num}</p>
     <p class="size" id="size">${pokemon.size}</p>
@@ -101,13 +98,17 @@ const modalContent = (pokemon) => {
 const pokemonImgButtons = document.querySelectorAll(".pokemon-img");
 pokemonImgButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    // Obtiene la información del Pokémon a partir de su elemento contenedor
-    const pokemonName = button.closest(".modal").querySelector(".pokemon-name").textContent;
+    console.log("desde boton");
+    modalCard2.innerHTML= modalContent;
+  });
+
+  // Obtiene la información del Pokémon a partir de su elemento contenedor
+  /*const pokemonName = button.closest(".modal").querySelector(".pokemon-name").textContent;
     const pokemonImg = button.src;
     const pokemonNum = button.closest(".modal").querySelector(".pokemon-num").textContent;
-    const pokemonDescription = "Aquí iría la descripción del Pokémon.";
+    const pokemonDescription = "Aquí iría la descripción del Pokémon.";*/
 
-// Genera el contenido del modal
+  /* Genera el contenido del modal
 const modalContent = generateModalContent({
   name: pokemonName,
   img: pokemonImg,
@@ -132,12 +133,8 @@ modalElement.style.transform = "translate(-50%, -50%)";
 modalElement.style.backgroundColor = "white";
 modalElement.style.padding = "20px";
 modalElement.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.5)";
-modalElement.style.zIndex = "999";
+modalElement.style.zIndex = "999";*/
 });
-});
-
-
-/*toDO modalCard2.style.display = "block";*/
 
 //para ordenar A-Z FINAL
 const orderAz = document.getElementById("az");
