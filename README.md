@@ -1,14 +1,4 @@
-**<div id="header" .align ="center">
-<img src= "./src/images/portada-readme.png" .width="auto" .heigth="250"/>
-</div>
-<br>
-<br>
-<div id="title">
-<h1 id= "titulo" .font-size= "40" .color="blue" .font-weigth= "800">Data Lovers *POKEMON GO CARDS*</h1>
-</div>**
-
-
-
+# Data Lovers
 
 ## Índice
 
