@@ -1,3 +1,6 @@
+<div id="header" .align ="center">
+<img src= "./src/images/portada-readme.png" .width="auto"/>
+</div>
 # Data Lovers
 
 ## Índice
