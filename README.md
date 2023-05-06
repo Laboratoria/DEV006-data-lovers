@@ -1,39 +1,56 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+</style>
 <div id="header" .align ="center">
 <img src= "./src/images/portada-readme.png" .width="auto"/>
 </div>
-# Data Lovers
+<br>
+<div id= "title">
+<img src= "./src/images/titulo pokemon.png">
+</div>
+<br>
+<br>
 
-## Índice
+<span style="color: #0232d1; font-weight:bold; font-size:35px; font-family: 'Darumadrop One', cursive;"> <img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
+<span>
 
-* [1. Preámbulo](#1-preámbulo)
+* [1. Presentación](#1-presentación)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
-* [3. Objetivos de aprendizaje](#3-objetivos-de-aprendizaje)
-* [4. Consideraciones generales](#4-consideraciones-generales)
-* [5. Criterios de aceptación mínimos del proyecto](#5-criterios-de-aceptación-mínimos-del-proyecto)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Consideraciones técnicas](#7-consideraciones-técnicas)
-* [8. Pistas, tips y lecturas complementarias](#8-pistas-tips-y-lecturas-complementarias)
-* [9. Checklist](#9-checklist)
+* [3. Planificación del proyecto](#3-planificacion-del-proyecto)
+* [4. Diseño UX](#4-diseño-ux)
+  * [4.1.Cuestionario a jugadores de Pokemon Go](4.1-Cuestionario-a-jugadores-de-Pokemon-Go)
+  * [4.2.Expectativas y necesidades del usuario en base al juego](#4.2-Expectativas-y-necesidades-del-usuario-en-base-al-juego)
+   * [4.3.Público Objetivo](#4.3-publico-objetivo)
+   * [4.4.Test de Usabilidad](#4.4-Test-de-Usabilidad)
 
+* [5. Diseño UI](#5-diseño-ui)
+   * [5.1. Proceso del diseño](#5.1-proceso-del-diseño)
+     * [5.1.1 Estilo](#5.1.1-estilo)
+     * [5.1.2 Teoria del color](#5.1.2-teoria-del-color)
+    * [5.2. Prototipo de baja fidelidad](#5.2-prototipo-de-baja-fidelidad)
+    * [5.3. Prototipo de alta fidelidad](#5.3-prototipo-de-alta-fidelidad)
+* [6. Diseño final de la app y página web](#6-diseño-final-de-la-app-y-página-web)
+* [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
+  * [7.1. UX](#7.1-ux)
+  * [7.2. UI](#7.1-ui)
+  * [7.3. HTML](#7.1-html)
+  * [7.4. JAVASCRIPT](#7.4-Js)
+  * [7.5. CSS](#7.5-css)
+* [8. Consideraciones generales](#8-consideraciones-generales)
+* [9. Criterios de aceptación mínimos del proyecto](#9-criterios-de-aceptación-mínimos-del-proyecto)
+* [10. Consideraciones técnicas](#10-consideraciones-técnicas)
+* [11.Pruebas Unitarias](#11-pruebas-unitarias)
+* [12. Checklist](#12-checklist)
 ***
 
-## 1. Preámbulo
+## 1. Presentación
+Pokemon Go Cards es una app creada para complementar el juego original con la finalidad de poder filtrar información sobre los pokemones de las dos primeras generaciones, y que el usuario pueda utilizar dicha información según sus necesidades.
 
-Según [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read),
-el 90% de la data que existe hoy ha sido creada durante los últimos dos años.
-Cada día generamos 2.5 millones de terabytes de datos, una cifra sin
-precedentes.
+<div id="img-preambulo">
+<img src= "./src/images/preambulo.png" .width="100%" .align="center"/>
+</div>
 
-No obstante, los datos por sí mismos son de poca utilidad. Para que esas
-grandes cantidades de datos se conviertan en **información** fácil de leer para
-los usuarios, necesitamos entender y procesar estos datos. Una manera simple de
-hacerlo es creando _interfaces_ y _visualizaciones_.
-
-En la siguiente imagen, podrás ver cómo con la data que que se ve en la parte
-izquierda se puede construir una interfaz amigable y entendible por las
-usuarias, al lado derecho.
-
-![pokemon-data-to-ui](https://user-images.githubusercontent.com/12631491/218505816-c6d11758-9de4-428f-affb-2a56ea4d68c4.png)
 
 ## 2. Resumen del proyecto
 
