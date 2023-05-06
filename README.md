@@ -1,5 +1,5 @@
 <div id="header" .align ="center">
-<img src= "./src/images/1366_2000.webp" .width="auto" .heigth="300"/>
+<img src= "./src/images/1366_2000.webp" .width="auto" .heigth="200"/>
 </div>
 
 
