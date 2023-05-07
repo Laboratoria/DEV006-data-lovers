@@ -33,7 +33,7 @@
    * [JAVASCRIPT](#javascript)
    * [CONTROL DE VERSIONES DE Git Y GitHub](#control-de-versiones-de-git-y-github)
 * [8. Consideraciones generales](#8-consideraciones-generales)
-* [9. Pruebas Unitarias](#9-pruebas-unitarias)
+* [9. Pruebas Unitarias 💯 ✅](#9-pruebas-unitarias-💯-✅)
 * [10.Herramientas](#10-herramientas)
 * [11. Checklist](#11-checklist)
 ***
@@ -69,29 +69,35 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ### Prototipo de baja fidelidad
 ### Prototipo de alta fidelidad
 ## 6. Diseño final
+#### PC
 
 ## 7. Objetivos de aprendizaje
 - [ ✔️] **SÍ**     [ ❌]**NO**     [ 🟡] **REGULAR**
 
 ### UX
+
 - [ ✔️] **Diseñar y desarrollar un producto o servicio poniendo al usuario en el centro**
 - [ ✔️] **Crear protoripos de alta fidelidad que incluyan interacciones para recibir feedback en cada sprint por parte de los coaches y compañeras, e iterar.**
 - [ ✔️] **Aplicar los principios de diseño visual(contraste, alineación, jerarquía, etc).**
 - [ ✔️] **Planear y ejecutar test de usabilidad**
 
 ### UI
+
 - [ ✔️] **Guiar al usuario en la navegación dentro de la aplicación (usamos alerts y modal con mensajes, y una interfaz para indicarle que es lo que encontrará en el app).**
 
 ### HTML
+
 - [ ✔️] **Uso de HTML semántico**
 - [ ✔️] **Construir la aplicación respetando el diseño de planificación(maquetación).**
 
 ### CSS
+
 - [ ✔️] **Uso de selectores de CSS**
 - [ ✔️] **Modelo de caja (box model): borde, margen, padding**
 - [ ✔️] **Uso de flexbox en CSS**
 
 ### Web APIs
+
 - [ ✔️] **Uso de selectores del DOM**
 - [ ✔️] **Manejo de eventos del DOM (listeners)**
 - [ ✔️] **Manipulación dinámica del DOM**
@@ -130,7 +136,8 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 * El tiempo de entrega del proyecto fue de 5 semanas.
 
 ## 9. Pruebas Unitarias 💯 ✅
-Para realizar las pruebas unitarias se tuvo que crear tests para comprobar si la lógica del código está funcionando correctamente, y si valida el comportamiento de la data o detecta errores. Y si en el futuro queremos factorizar el código, los test deben seguir validando dichos cambios. Utilizamos el comando npm test para correr los test realizados en el código, y el resultado fue libre de errores y sobrepasó el 70% del mínimo requerido del proyecto.
+
+Para realizar las pruebas unitarias se tuvo que crear `tests` para comprobar si la lógica del código está funcionando correctamente, y si valida el comportamiento de la data o detecta errores. Y si en el futuro queremos factorizar el código, los test deben seguir validando dichos cambios. Utilizamos el comando `npm test` para correr los test realizados en el código, y el resultado fue libre de errores y sobrepasó el 70% del mínimo requerido del proyecto.
 
 ![test1](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/test1.png?raw=true)
 ![test2](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/Captura%20de%20pantalla%202023-05-07%20000329.png?raw=true)
@@ -165,7 +172,8 @@ Para realizar las pruebas unitarias se tuvo que crear tests para comprobar si la
   `README.md`.
 * [ ✔️] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
+* [ ❌] Incluye link a Zeplin en `README.md`.
+* [ ✔️] Incluye link a Figma en `README.md`.
 * [ ✔️] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
 * [ ✔️] UI: Muestra lista y/o tabla con datos y/o indicadores.
