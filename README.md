@@ -1,9 +1,9 @@
 <div id="header" .align ="center">
-<img src= "./src/images/portada-readme.png" .width="auto"/>
+<img src= "./src/images/img.readme/portada-readme.png" .width="auto"/>
 </div>
 <br>
 <div id= "title">
-<img src= "./src/images/titulo pokemon.png">
+<img src= "./src/images/img.readme/titulo pokemon.png">
 </div>
 <br>
 <br>
@@ -13,25 +13,25 @@
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Planificación del proyecto](#3-planificacion-del-proyecto)
 * [4. Diseño UX](#4-diseño-ux)
-  * [4.1.Cuestionario a jugadores de Pokemon Go](4.1-Cuestionario-a-jugadores-de-Pokemon-Go)
-  * [4.2.Expectativas y necesidades del usuario en base al juego](#4.2-Expectativas-y-necesidades-del-usuario-en-base-al-juego)
-   * [4.3.Público Objetivo](#4.3-publico-objetivo)
-   * [4.4.Test de Usabilidad](#4.4-Test-de-Usabilidad)
+  * [Cuestionario a jugadores de Pokemon Go](Cuestionario-a-jugadores-de-Pokemon-Go)
+  * [Expectativas y necesidades del usuario en base al juego](#Expectativas-y-necesidades-del-usuario-en-base-al-juego)
+   * [Público Objetivo](#publico-objetivo)
+   * [Test de Usabilidad](#Test-de-Usabilidad)
 * [5. Diseño UI](#5-diseño-ui)
-   * [5.1. Proceso del diseño](#5.1-proceso-del-diseño)
-     * [5.1.1 Estilo](#5.1.1-estilo)
-     * [5.1.2 Teoria del color](#5.1.2-teoria-del-color)
-    * [5.2. Prototipo de baja fidelidad](#5.2-prototipo-de-baja-fidelidad)
-    * [5.3. Prototipo de alta fidelidad](#5.3-prototipo-de-alta-fidelidad)
+   * [Proceso del diseño](#proceso-del-diseño)
+      * [Estilo](#estilo)
+      * [Teoria del color](#teoria-del-color)
+   * [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
+   * [Prototipo de alta fidelidad](#prototipo-de-alta-fidelidad)
 * [6. Diseño final](#6-diseño-final)
 * [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
-  * [7.1. UX](#7.1-ux)
-  * [7.2. UI](#7.1-ui)
-  * [7.3. HTML](#7.1-html)
-  * [7.4. CSS](#7.4-css)
-  * [7.5. Web APIs](#7.5-web-apis)
-  * [7.6. JAVASCRIPT](#7.6-Js)
-  * [7.7 Control de Versiones (Git y GitHub)](7.7-control-de-versiones-(Git-y-GitHub))
+   * [UX](#ux)
+   * [UI](#ui)
+   * [HTML](#html)
+   * [CSS](#css)
+   * [Web APIs](#web-apis)
+   * [JAVASCRIPT](#javascript)
+   * [CONTROL DE VERSIONES DE Git Y GitHub](#control-de-versiones-de-git-y-github)
 * [8. Consideraciones generales](#8-consideraciones-generales)
 * [9. Criterios de aceptación mínimos del proyecto](#9-criterios-de-aceptación-mínimos-del-proyecto)
 * [10. Consideraciones técnicas](#10-consideraciones-técnicas)
@@ -59,49 +59,51 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ## 6. Diseño final
 
 ## 7. Objetivos de aprendizaje
-### 7.1. UX
+- [ ✔️] **SÍ**     - [ ❌]**NO**     - [ 🟡] **REGULAR**
+
+### UX
 - [ ✔️] **Diseñar y desarrollar un producto o servicio poniendo al usuario en el centro**
 - [ ✔️] **Crear protoripos de alta fidelidad que incluyan interacciones para recibir feedback en cada sprint por parte de los coaches y compañeras, e iterar.**
 - [ ✔️] **Aplicar los principios de diseño visual(contraste, alineación, jerarquía, etc).**
 - [ ✔️] **Planear y ejecutar test de usabilidad**
-### 7.2. UI
+
+### UI
 - [ ✔️] **Guiar al usuario en la navegación dentro de la aplicación (usamos alerts y modal con mensajes, y una interfaz para indicarle que es lo que encontrará en el app).**
 
-### 7.3. HTML
+### HTML
 - [ ✔️] **Uso de HTML semántico**
 - [ ✔️] **Construir la aplicación respetando el diseño de planificación(maquetación).**
 
-### 7.4. CSS
+### CSS
 - [ ✔️] **Uso de selectores de CSS**
 - [ ✔️] **Modelo de caja (box model): borde, margen, padding**
 - [ ✔️] **Uso de flexbox en CSS**
 
-### 7.5. Web APIs
+### Web APIs
 - [ ✔️] **Uso de selectores del DOM**
 - [ ✔️] **Manejo de eventos del DOM (listeners)**
 - [ ✔️] **Manipulación dinámica del DOM**
 
-### 7.6. JavaScript
-- [ +-] **Diferenciar entre tipos de datos primitivos y no primitivos**
+### JavaScript
+- [ 🟡] **Diferenciar entre tipos de datos primitivos y no primitivos**
 - [ ✔️] **Arrays (sort, filter, localeCompare, reverse, includes)**
-- [ +-] **Objetos (key, value)**
+- [ 🟡] **Objetos (key, value)**
 - [ ✔️] **Variables (declaración, asignación, ámbito)**
 - [ ✔️] **Uso de condicionales (if-else, lógica booleana)**
-- [  ] **Funciones (params, args, return)**
+- [ 🟡] **Funciones (params, args, return)**
 - [ ✔️] **Pruebas unitarias (unit tests)**
 - [ ✔️] **Módulos de ECMAScript (ES Modules)**
 - [ ✔️] **Uso de linter (ESLINT)**
 - [ ✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 - [ ❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
-### 7.7. Control de Versiones (Git y GitHub)
+### CONTROL DE VERSIONES DE Git Y GitHub
 - [ ✔️] **Git: Instalación y configuración**
 - [ ✔️] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 - [ ❌] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
 - [ ✔️] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
 - [ ✔️] **GitHub: Despliegue con GitHub Pages**
 - [ ❌] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
-
 
 
 ## 8. Consideraciones generales
