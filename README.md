@@ -38,7 +38,7 @@
 * [12. Checklist](#12-checklist)
 ***
 
-## 1. Preámbulo
+## 1. Presentación
 Pokemon Go Cards es una web creada para complementar el juego original con la finalidad de poder filtrar información sobre los pokemones de las dos primeras generaciones, y que el usuario pueda utilizar dicha información según sus necesidades.
 
 ![pokemon-data-to-ui](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/preambulo.png?raw=true)
@@ -46,63 +46,6 @@ Pokemon Go Cards es una web creada para complementar el juego original con la fi
 
 ## 2. Resumen del proyecto
 La WEB consta de 4 interfaces. La primera, es la imagen de presentación, al cargar la página se muestran tres imágenes, una detrás de otra con una transición infinita y que al hacer click en el ícono que se muestra al lado inferior derecho, dirige al usuario a la siguiente interfaz. La segunda, es el inicio de sesión donde el usuario deberá ingresar un username y un password determinado, ambos campos son obligatorios, en caso se equivoque saldrá un alert informándole que debe volver a intentarlo e ingresar los datos correctos(Username: Laboratoria // Password: Dev006), y al dar enter lo lleva a la siguiente interfaz. La tercera, consta de un saludo de bienvenida y luego de unos segundos cambiará la imagen y el mensaje, informándole lo que va a poder encontrar en la interfaz principal, para dirigirse a la última interfaz deberá hacer click en el ícono que se localiza en la parte inferior derecha. Y en la última, encontrará una barra de menú que le permitirá al usuario dirigirse a cualquier parte de la interfaz, ya que esta cuenta con botones que al hacer click lo redigirá a donde quieran ir. También, podrá ordenar según las opciones que se muestra en el sub-menú de order: A-Z, Z-A, NUMBER 🢁, NUMBER 🢃, o al hacer click en el botón filter, este hace un scroll hacia esta sección donde podrá filtar a los pokemones según su tipo, por su debilidad, fortaleza, incluso podrá ver al top10 y last10 en el filtro fuerza. Además, podrá buscar a todos los pokemones por su número o por su nombre, en caso no encuentre el nombre indicado al hacer click en la lupa, se motrará una ventana informando que ese pokemon no fue encontrado, y lo invitará a realizar otra búsqueda. Todo esto se podrá observar en la pantalla ya que se muestran todas las cards de los pokemones. Y en la parte final de la página, consta de icónos de las redes sociales del juego original, que redirigen a las mismas, y el copyright de las creadoras.
-
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
-
-Como entregable final tendrás una página web que permita **visualizar la data,
-filtrarla, ordenarla y hacer algún cálculo agregado**. Con cálculo agregado
-nos referimos a distintos cálculos que puedes hacer con la data para mostrar
-información aún más relevante para los usuarios (promedio, el valor máximo
-o mínimo, etc).
-
-Esta vez te proponemos una serie de datos de diferentes _temáticas_ para que
-explores y decidas con qué temática te interesa trabajar. Hemos elegido
-específicamente estos sets de datos porque creemos que se adecúan bien a esta
-etapa de tu aprendizaje.
-
-Una vez que definas tu área de interés, buscar entender quién es tu usuario
-y qué necesita saber o ver exactamente; luego podrás construir la interfaz que
-le ayude a interactuar y entender mejor esos datos.
-
-Estos son datos que te proponemos:
-
-* [Pokémon](src/data/pokemon/pokemon.json):
-  En este set encontrarás una lista con los 251 Pokémon de la región de Kanto
-  y Johto, junto con sus respectivas estadísticas usadas en el juego
-  [Pokémon GO](http://pokemongolive.com).
-  - [Investigación con jugadores de Pokémon Go](src/data/pokemon/README.md)
-
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este set de datos muestra la lista de campeones en una liga del
-  juego League of Legends (LoL).
-  - [Investigación con jugadores de LoL](src/data/lol/README.md)
-
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Este set nos proporciona la lista de los personajes de la serie Rick and
-  Morty. [API Rick and Morty](https://rickandmortyapi.com).
-  - [Investigación con seguidores de Rick and Morty](src/data/rickandmorty/README.md)
-
-* [Juegos Olímpicos de Río de Janeiro](src/data/athletes/athletes.json).
-  Este set nos proporciona la lista de los atletas que ganaron medallas en las
-  olímpiadas de Río de Janeiro.
-  - [Investigación con interesados en juegos olímpicos de Río de Janeiro](src/data/athletes/README.md)
-
-* [Studio Ghibli](src/data/ghibli/ghibli.json).
-  En este set encontrarás una lista de las animaciones y sus personajes del
-  [Studio Ghibli](https://ghiblicollection.com/).
-  - [Investigación con seguidores de las animaciones del Studio Ghibli](src/data/ghibli/README.md)
-
-* [Harry Potter](src/data/harrypotter/harry.json).
-  En este set encontrarás una lista de los personajes,libros pociones
-  y hechizos de toda la saga de
-  [Harry Potter](https://harrypotter.fandom.com).
-  - [Investigación con seguidoras de Harry Potter](src/data/harrypotter/README.md)
-
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
 
 ## 3. Objetivos de aprendizaje
 
