@@ -59,29 +59,29 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ## 6. Diseño final
 
 ## 7. Objetivos de aprendizaje
-### 7.1 UX
+### 7.1. UX
 - [ ✔️] **Diseñar y desarrollar un producto o servicio poniendo al usuario en el centro**
 - [ ✔️] **Crear protoripos de alta fidelidad que incluyan interacciones para recibir feedback en cada sprint por parte de los coaches y compañeras, e iterar.**
 - [ ✔️] **Aplicar los principios de diseño visual(contraste, alineación, jerarquía, etc).**
 - [ ✔️] **Planear y ejecutar test de usabilidad**
-### 7.2 UI
+### 7.2. UI
 - [ ✔️] **Guiar al usuario en la navegación dentro de la aplicación (usamos alerts y modal con mensajes, y una interfaz para indicarle que es lo que encontrará en el app).**
 
-### 7.3 HTML
+### 7.3. HTML
 - [ ✔️] **Uso de HTML semántico**
 - [ ✔️] **Construir la aplicación respetando el diseño de planificación(maquetación).**
 
-### 7.4 CSS
+### 7.4. CSS
 - [ ✔️] **Uso de selectores de CSS**
 - [ ✔️] **Modelo de caja (box model): borde, margen, padding**
 - [ ✔️] **Uso de flexbox en CSS**
 
-### 7.5 Web APIs
+### 7.5. Web APIs
 - [ ✔️] **Uso de selectores del DOM**
 - [ ✔️] **Manejo de eventos del DOM (listeners)**
 - [ ✔️] **Manipulación dinámica del DOM**
 
-### 7.6 JavaScript
+### 7.6. JavaScript
 - [ +-] **Diferenciar entre tipos de datos primitivos y no primitivos**
 - [ ✔️] **Arrays (sort, filter, localeCompare, reverse, includes)**
 - [ +-] **Objetos (key, value)**
@@ -94,7 +94,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 - [ ✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 - [ ❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
-### 7.7 Control de Versiones (Git y GitHub)
+### 7.7. Control de Versiones (Git y GitHub)
 - [ ✔️] **Git: Instalación y configuración**
 - [ ✔️] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
 - [ ❌] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
@@ -111,7 +111,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 * El proyecto será entregado subiendo tu código a GitHub (commit/push) y la
   interfaz será desplegada usando [GitHub Pages](https://pages.github.com/).
 
-## 5. Criterios de aceptación mínimos del proyecto
+## 9. Criterios de aceptación mínimos del proyecto
 
 Los criterios para considerar que has completado este proyecto son:
 
