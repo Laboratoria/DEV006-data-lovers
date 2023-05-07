@@ -69,10 +69,44 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ### Prototipo de baja fidelidad
 ### Prototipo de alta fidelidad
 ## 6. Diseño final
-#### PC
+### PC
+#### PRIMERA INTERFAZ
+<div id="uno" .display="flex" .align="center" .width="300px">
+<img src= "./src/images/img.readme/1.png">
+<img src= "./src/images/img.readme/1.2.png">
+<img src= "./src/images/img.readme/1.3.png">
+<br>
+<br>
+</div>
+
+#### SEGUNDA INTERFAZ
+<div id="uno" .display="flex" .align="center" .width="200px">
+<img src= "./src/images/img.readme/2.png">
+<img src= "./src/images/img.readme/alert.png">
+<img src="./src/images/img.readme/después de alert.png">
+<br>
+<br>
+</div>
+
+#### TERCERA INTERFAZ
+<div id="uno" .display="flex" .align="center" .width="200px">
+<img src= "./src/images/img.readme/1.saludo 1.png">
+<img src= "./src/images/img.readme/saludo2.png">
+<br>
+<br>
+</div>
+
+#### CUARTA INTERFAZ
+<div id="uno" .display="flex" .align="center" .width="200px">
+<img src= "./src/images/img.readme/3.png">
+<img src= "./src/images/img.readme/4.png">
+<img src= "./src/images/img.readme/5.png">
+<br>
+<br>
+</div>
 
 ## 7. Objetivos de aprendizaje
-- [ ✔️] **SÍ**     [ ❌]**NO**     [ 🟡] **REGULAR**
+ [ ✔️] **SÍ**     [ ❌]**NO**     [ 🟡] **REGULAR**
 
 ### UX
 
