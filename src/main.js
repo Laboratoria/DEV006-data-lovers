@@ -215,3 +215,13 @@ select.addEventListener("change", () => {
 //reproductor
 const reproductor = document.getElementById("reproductor");
 reproductor.volume = 0.03;
+
+
+//barra de menu desplegable
+const menu = document.getElementById("menu");
+menu.addEventListener("click", toggleMenu);
+
+function toggleMenu() {
+  const barraMenu = document.getElementById("barra");
+  barraMenu.classList.toggle("active");
+}

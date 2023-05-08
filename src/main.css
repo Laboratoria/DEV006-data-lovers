@@ -142,7 +142,6 @@ flex-wrap: wrap;
     max-height: 45px;
 }
 
-
 /*-pantalla movil y pc sin @media query-*/
 /*-seccion busqueda-*/
 .pokemon{
@@ -530,6 +529,14 @@ select option:checked{
      margin-top: 20px;
   }
 
+  #barra {
+    display: none;
+  }
+
+  #barra.active {
+    display: block;
+  }
+
     .img-menu {
     width: 10.300em;
     height: 3.125em;
@@ -691,6 +698,13 @@ height: 200px;
   margin-left: -100px;
 }
 
+#barra {
+  display: none;
+}
+
+#barra.active {
+  display: block;
+}
 
 #element-type-filter,
 #element-weaknesses-filter,
