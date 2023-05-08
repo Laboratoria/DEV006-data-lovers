@@ -16,7 +16,7 @@
   * [Investigación con jugadores de Pokemon Go](investigación-con-jugadores-de-Pokemon-Go)
   * [Expectativas y necesidades del usuario en base al juego](#Expectativas-y-necesidades-del-usuario-en-base-al-juego)
    * [Público Objetivo](#publico-objetivo)
-   * [Test de Usabilidad](#Test-de-Usabilidad)
+   * [Test de Usabilidad y feedback](#Test-de-Usabilidad-y-feedback)
 * [5. Diseño UI](#5-diseño-ui)
    * [Proceso del diseño](#proceso-del-diseño)
       * [Estilo](#estilo)
@@ -57,17 +57,24 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 
 ## 4. Diseño UX
 ### Investigación UX
-####¿Quiénes son tus usuarios?
-Este proyecto está dirigido a aficionados y fans de Pokemon Go, pero el principal objetivo es captar a nuevos usuarios y jugadores principiantes que desconocen datos generales de los pokemones. Ya que podrán utilizar nuestra web como un opción para filtrar la información que necesiten.
-
 #### ¿Cuáles son los objetivos en relación con el producto?
-Que los usuarios puedan navegar de manera fácil e interactiva dentro de la web y puedan filtrar a los pokemones por su tipo, por su debilidad, por su fortaleza, ver a los 10 pokemones más fuertes y a los 10 más débiles. Además, podrán buscarlos por su nombre o número, ordenarlos de manera alfabética y de manera scendente.
+
+En vista que los usuarios tienen la necesidad de acceder a una web amigable, interactiva y fácil de navegar que le brinde una set de datos con información general de los pokemones, y este pueda filtrarla a su conveniencia, se crea esta web responsive, y así realizar la búsqueda de sus pokemones favoritos o de los que desconocen. También, podrán filtrar a los pokemones por su tipo, debilidad, fortaleza, ver a los 10 pokemones más fuertes y a los 10 más débiles. Además, podrán buscarlos por su nombre o número, ordenarlos de manera alfabética, invertir el orden, y ordenar de manera ascendente y descendente.
 
 
 ### HISTORIA DE USUARIO
+
 ### Expectativas y necesidades del usuario en base al juego
+
 ### Público Objetivo
-### Test de Usabilidad
+
+Este proyecto está dirigido a aficionados y fans de Pokemon Go, pero el principal objetivo es captar a nuevos usuarios y jugadores principiantes que desconocen datos generales de los pokemones, ya que podrán utilizar nuestra web como un opción para filtrar la información que necesiten.
+
+### Test de Usabilidad y feedback
+
+Creamos un formulario para poder recibir feddback
+
+* [formulario](https://docs.google.com/forms/d/1bRc4ESmXYJtKOSIivmpAbHZcvYHzENEbVpUKvZkh5vo/edit?usp=forms_home&ths=true)
 ## 5. Diseño UI
 ### Proceso del diseño [🎨]
 #### Estilo
