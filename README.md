@@ -56,15 +56,26 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ![pokemon-data-to-ui](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/trello.png?raw=true)
 
 ## 4. Diseño UX
-### Investigación con jugadores de Pokemon Go
+### Investigación UX
+####¿Quiénes son tus usuarios?
+Este proyecto está dirigido a aficionados y fans de Pokemon Go, pero el principal objetivo es captar a nuevos usuarios y jugadores principiantes que desconocen datos generales de los pokemones. Ya que podrán utilizar nuestra web como un opción para filtrar la información que necesiten.
+
+#### ¿Cuáles son los objetivos en relación con el producto?
+Que los usuarios puedan navegar de manera fácil e interactiva dentro de la web y puedan filtrar a los pokemones por su tipo, por su debilidad, por su fortaleza, ver a los 10 pokemones más fuertes y a los 10 más débiles. Además, podrán buscarlos por su nombre o número, ordenarlos de manera alfabética y de manera scendente.
+
+
 ### HISTORIA DE USUARIO
 ### Expectativas y necesidades del usuario en base al juego
 ### Público Objetivo
 ### Test de Usabilidad
 ## 5. Diseño UI
-### Proceso del diseño
+### Proceso del diseño [🎨]
 #### Estilo
+Interactivo, intuitivo, fácil de navegar y atractivo visualmente para el usuario.
 #### Teoria del color
+Utilizamos una herramienta para generar una paleta de colores que sea similar a la que vamos a utilizar en CSS utilizando un generador on line en coolors.
+
+![color](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/Paleta%20de%20colores%20para%20el%20proyecto%20.png?raw=true)
 
 ### Prototipo de baja fidelidad
 #### PC
