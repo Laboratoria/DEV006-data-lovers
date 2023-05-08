@@ -70,10 +70,10 @@
   }
 
   .next-instrucc #boton-next-instrucc{
-    width: 53px;
-    height: 53px;
-    bottom: 50px;
-    right:20px;
+    width: 50px;
+    height: 50px;
+    bottom: 54px;
+    right:15px;
   }
   .next-instrucc #boton-next-instrucc:hover{
     transform: scale(1.2);
@@ -112,8 +112,8 @@
   .next-instrucc #boton-next-instrucc{
     width: 65px;
     height: 65px;
-    bottom:99px;
-    right:13px;
+    bottom: 65px;
+    right:22px;
   }
   .next-instrucc #boton-next-instrucc:hover{
     transform: scale(1.2);

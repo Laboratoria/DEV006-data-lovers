@@ -64,13 +64,48 @@ En vista que los usuarios tienen la necesidad de acceder a una web amigable, int
 
 ### HISTORIA DE USUARIO
 
+
 ### Expectativas y necesidades del usuario en base al juego
+
+##### Historia de Usuario 1
+Niño de 10 años, fan de pokemon anime, no juega pokemon go.
+Expectativas
+Ver todos los pokemons con sus nombres.
+Que tenga colores llamativos.
+Que tenga música de juego.
+Feedback:
+·        Página con instrucciones de uso o con resumen del contenido
+
+
+##### Historia de Usuario 2
+Adulto de 36 años, fan de pokemon anime y juega de manera esporádica pokemon go.
+Expectativas
+Filtrar los tipos de pokemons.
+Buscar pokemons por nombre o número.
+Que tenga alguna funcionalidad para saber cuál pokemon es más fuerte.
+Feedback:
+·        El poder verse en todos los tamaños de pantalla.
+
+
+##### Historia de Usuario 3
+Joven de 29 años, fan de pokemon anime y juega de recurrente pokemon go.
+Expectativas
+Filtrar los pokemons por resitencia.
+Filtrar los pokemons por debilidad.
+Que tengas links de la página del juego y sus redes sociales.
+Feedback:
+·        Que siga una misma temática y que tenga una paleta y estética similar en todo el sitio.
+Otros feedback:
+Botón next más vistoso, más grande con fondo o de diferente color.
+Iconos del menú centrar verticalmente.
+Elaborar las figuras en Photoshop, Canvas o CorelDraw en caso se requieran para un tamaño de screen o por colorimetría del sitio.
+Cambiar el fondo del contenedor de las cards para que coordine con la paleta de colores.
 
 ### Público Objetivo
 
 Este proyecto está dirigido a aficionados y fans de Pokemon Go, pero el principal objetivo es captar a nuevos usuarios y jugadores principiantes que desconocen datos generales de los pokemones, ya que podrán utilizar nuestra web como un opción para filtrar la información que necesiten.
 
-### Test de Usabilidad y feedback
+### Test de Usabilidad y feedback [✏️]
 
 Creamos un formulario para poder recibir feddback
 
@@ -174,7 +209,7 @@ Para ver el prototipo, haz click aquí
 
 <div id="cel3" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel7.png">
-<img src= "">
+<img src= "./src/images/img.readme/cel7.1.png">
 <br>
 <br>
 </div>
