@@ -80,7 +80,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 </div>
 
 #### SEGUNDA INTERFAZ
-<div id="uno" .display="flex" .align="center" .width="200px">
+<div id="dos" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/2.1.png">
 <img src= "./src/images/img.readme/2.2alert.png">
 <img src="./src/images/img.readme/2.3después de alert.png">
@@ -89,7 +89,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 </div>
 
 #### TERCERA INTERFAZ
-<div id="uno" .display="flex" .align="center" .width="200px">
+<div id="tres" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/3.1saludo.png">
 <img src= "./src/images/img.readme/3.2saludo.png">
 <br>
@@ -97,11 +97,50 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 </div>
 
 #### CUARTA INTERFAZ
-<div id="uno" .display="flex" .align="center" .width="200px">
+<div id="cuatro" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/4.1.png">
 <img src= "./src/images/img.readme/4.2.png">
 <img src= "./src/images/img.readme/4.3 not found.jpg">
 <img src= "./src/images/img.readme/general_Página_3.jpg">
+<br>
+<br>
+<br>
+</div>
+
+### CELULAR
+#### PRIMERA INTERFAZ (horizontal)
+<div id="cel1" .display="flex" .align="center" .width="300px">
+<img src= "./src/images/img.readme/cel1.png">
+<img src= "./src/images/img.readme/cel2.png">
+<img src= "./src/images/img.readme/cel3.png">
+<br>
+<br>
+</div>
+
+#### SEGUNDA INTERFAZ (vertical)
+<div id="cel2" .display="flex" .align="center" .width="200px">
+<img src= "./src/images/img.readme/cel4.png">
+<img src= "./src/images/img.readme/cel5.png">
+<img src="./src/images/img.readme/cel6.png">
+<br>
+<br>
+</div>
+
+#### TERCERA INTERFAZ(vertical)
+<div id="cel3" .display="flex" .align="center" .width="200px">
+<img src= "./src/images/img.readme/cel7.png">
+<img src= "">
+<br>
+<br>
+</div>
+
+#### CUARTA INTERFAZ(vertical)
+<div id="cuatro" .display="flex" .align="center" .width="200px">
+<img src= "./src/images/img.readme/cel8.png">
+<img src= "">
+<img src= "">
+<img src= "">
+<br>
 <br>
 <br>
 </div>
