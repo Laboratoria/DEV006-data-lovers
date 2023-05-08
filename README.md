@@ -67,10 +67,26 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 #### Teoria del color
 
 ### Prototipo de baja fidelidad
+#### PC
+<div id="baja1" .display="flex" .align="center" .width="300px">
+<img src= "./src/images/img.readme/baja fidelidad PC.png">
+<br>
+<br>
+</div>
+
+#### Celular
+<div id="baja2" .display="flex" .align="center" .width="300px">
+<img src= "./src/images/img.readme/BAJA FIDELIDAD CELU.png">
+<br>
+<br>
+</div>
+
 ### Prototipo de alta fidelidad
+Para ver el prototipo, haz click aquí
+![prototipo-de-alta](https://www.figma.com/proto/Xv0Gt7REai4lkaYZXxfFuk/Untitled?type=design&node-id=246-102&scaling=min-zoom&page-id=246%3A66&starting-point-node-id=246%3A102)
 ## 6. Diseño final
 ### PC
-#### PRIMERA INTERFAZ
+##### PRIMERA INTERFAZ
 <div id="uno" .display="flex" .align="center" .width="300px">
 <img src= "./src/images/img.readme/1.1.png">
 <img src= "./src/images/img.readme/1.2.png">
@@ -79,7 +95,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <br>
 </div>
 
-#### SEGUNDA INTERFAZ
+##### SEGUNDA INTERFAZ
 <div id="dos" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/2.1.png">
 <img src= "./src/images/img.readme/2.2alert.png">
@@ -88,7 +104,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <br>
 </div>
 
-#### TERCERA INTERFAZ
+##### TERCERA INTERFAZ
 <div id="tres" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/3.1saludo.png">
 <img src= "./src/images/img.readme/3.2saludo.png">
@@ -96,7 +112,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <br>
 </div>
 
-#### CUARTA INTERFAZ
+##### CUARTA INTERFAZ
 <div id="cuatro" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/4.1.png">
 <img src= "./src/images/img.readme/4.2.png">
@@ -112,7 +128,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 </div>
 
 ### CELULAR
-#### PRIMERA INTERFAZ (horizontal)
+##### PRIMERA INTERFAZ (horizontal)
 <div id="cel1" .display="flex" .align="center" .width="300px">
 <img src= "./src/images/img.readme/cel1.png">
 <img src= "./src/images/img.readme/cel2.png">
@@ -121,7 +137,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <br>
 </div>
 
-#### SEGUNDA INTERFAZ (vertical)
+##### SEGUNDA INTERFAZ (vertical)
 <div id="cel2" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel4.png">
 <img src= "./src/images/img.readme/cel5.png">
@@ -130,7 +146,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <br>
 </div>
 
-#### TERCERA INTERFAZ(vertical)
+##### TERCERA INTERFAZ(vertical)
 <div id="cel3" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel7.png">
 <img src= "">
@@ -138,7 +154,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <br>
 </div>
 
-#### CUARTA INTERFAZ(vertical)
+##### CUARTA INTERFAZ(vertical)
 <div id="cuatro" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel8.png">
 <img src="./src/images/img.readme/cel9.png">
