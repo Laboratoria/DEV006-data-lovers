@@ -7,15 +7,6 @@
 </div>
 <br>
 <br>
-<div>
-<h><img src= "./src/images/barra-menu.png" width="25"/>Indice</h>
-</div>
-<br>
-<div id= "title">
-<img src= "./src/images/img.readme/titulo pokemon.png">
-</div>
-<br>
-<br>
 <span><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
 
 * [1. Presentación](#1-presentación)
