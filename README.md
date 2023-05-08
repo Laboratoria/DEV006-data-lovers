@@ -101,7 +101,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <img src= "./src/images/img.readme/4.1.png">
 <img src= "./src/images/img.readme/4.2.png">
 <img src= "./src/images/img.readme/4.3 not found.png">
-<img src="https://s3-alpha.figma.com/proto/Xv0Gt7REai4lkaYZXxfFuk/Untitled?scaling=scale-down-width&amp;node-id=316%3A36&amp;page-id=316%3A7&amp;viewport=368%2C48%2C0.05&amp;zoom=1" alt="Descripción de la imagen"/>
+<img src="https://www.figma.com/proto/Xv0Gt7REai4lkaYZXxfFuk/Untitled?type=design&node-id=316-36&scaling=scale-down-width&page-id=316%3A7"/>
 <br>
 <br>
 </div>
