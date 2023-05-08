@@ -45,7 +45,7 @@ Pokemon Go Cards es una web creada para los fans y aficionados del juego origina
 
 
 ## 2. Resumen del proyecto
-La WEB consta de 4 interfaces. La primera, es la imagen de presentación, al cargar la página se muestran tres imágenes, una detrás de otra con una transición infinita y que al hacer click en el ícono que se muestra al lado inferior derecho, dirige al usuario a la siguiente interfaz. La segunda, es el inicio de sesión donde el usuario deberá ingresar un username y un password determinado, ambos campos son obligatorios, en caso se equivoque saldrá un alert informándole que debe volver a intentarlo e ingresar los datos correctos(Username: Laboratoria // Password: Dev006), y al dar enter lo lleva a la siguiente interfaz. La tercera, consta de un saludo de bienvenida y luego de unos segundos cambiará la imagen y el mensaje, informándole lo que va a poder encontrar en la interfaz principal, para dirigirse a la última interfaz deberá hacer click en el ícono que se localiza en la parte inferior derecha. Y en la última, encontrará una barra de menú que le permitirá al usuario dirigirse a cualquier parte de la interfaz, ya que esta cuenta con botones que al hacer click lo redigirá a donde quiera ir. También, podrá ordenar según las opciones que se muestra en el sub-menú de order de manera alfabética y numérica de manera ascendente y descendente: A-Z, Z-A, NUMBER 🢁, NUMBER 🢃, o al hacer click en el botón filter, este hace un scroll hacia esta sección donde podrá filtar a los pokemones según su tipo, por su debilidad, fortaleza, incluso podrá ver al top10 y last10 en el filtro fuerza. Además, podrá buscar a todos los pokemones por su número o por su nombre, en caso no encuentre el nombre indicado al hacer click en la lupa, se motrará una ventana informando que ese pokemon no fue encontrado, y lo invitará a realizar otra búsqueda. Todo esto se podrá observar en la pantalla ya que se muestran todas las cards de los pokemones. Y en la parte final de esta misma página, encontrará el footer que cuenta con íconos de las redes sociales del juego original, que redirigen a las mismas, y el copyright de las creadoras. Esperamos que los nuevos y antiguos usuarios puedan mejorar sus estrategias de ataque con la información brindada en esta nueva propuesta de app y web.
+La WEB consta de 4 interfaces. La primera, es la imagen de presentación, al cargar la página se muestran tres imágenes, una detrás de otra con un efecto de transición, y que al hacer click en el ícono que se muestra al lado inferior derecho, dirige al usuario a la siguiente interfaz. La segunda, es el inicio de sesión donde el usuario deberá ingresar un username y un password determinado, ambos campos son obligatorios, en caso se equivoque saldrá un alert informándole que debe volver a intentarlo e ingresar los datos correctos(Username: Laboratoria // Password: Dev006), y al dar enter lo lleva a la siguiente interfaz. La tercera, consta de un saludo de bienvenida y luego de unos segundos cambiará la imagen y el mensaje, informándole lo que va a poder encontrar en la interfaz principal, para dirigirse a la última interfaz deberá hacer click en el ícono que se localiza en la parte inferior derecha. Y en la última, encontrará una barra de menú que le permitirá al usuario dirigirse a cualquier parte de la interfaz, ya que esta cuenta con botones que al hacer click lo redigirá a donde quiera ir. También, podrá ordenar según las opciones que se muestra en el sub-menú de order de manera alfabética y numérica de manera ascendente y descendente: A-Z, Z-A, NUMBER 🢁, NUMBER 🢃, o al hacer click en el botón filter, este hace un scroll hacia esta sección donde podrá filtar a los pokemones según su tipo, por su debilidad, fortaleza, incluso podrá ver al top10 y last10 en el filtro fuerza. Además, podrá buscar a todos los pokemones por su número o por su nombre, en caso no encuentre el nombre indicado al hacer click en la lupa, se motrará una ventana informando que ese pokemon no fue encontrado, y lo invitará a realizar otra búsqueda. Todo esto se podrá observar en la pantalla ya que se muestran todas las cards de los pokemones. Y en la parte final de esta misma página, encontrará el footer que cuenta con íconos de las redes sociales del juego original, que redirigen a las mismas, y el copyright de las creadoras. Esperamos que los nuevos y antiguos usuarios puedan mejorar sus estrategias de ataque con la información brindada en esta nueva propuesta de app y web.
 
 ## 3. Planificación del proyecto
 
@@ -72,7 +72,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ### PC
 #### PRIMERA INTERFAZ
 <div id="uno" .display="flex" .align="center" .width="300px">
-<img src= "./src/images/img.readme/1.png">
+<img src= "./src/images/img.readme/1.1.png">
 <img src= "./src/images/img.readme/1.2.png">
 <img src= "./src/images/img.readme/1.3.png">
 <br>
@@ -81,25 +81,26 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 
 #### SEGUNDA INTERFAZ
 <div id="uno" .display="flex" .align="center" .width="200px">
-<img src= "./src/images/img.readme/2.png">
-<img src= "./src/images/img.readme/alert.png">
-<img src="./src/images/img.readme/después de alert.png">
+<img src= "./src/images/img.readme/2.1.png">
+<img src= "./src/images/img.readme/2.2alert.png">
+<img src="./src/images/img.readme/2.3después de alert.png">
 <br>
 <br>
 </div>
 
 #### TERCERA INTERFAZ
 <div id="uno" .display="flex" .align="center" .width="200px">
-<img src= "./src/images/img.readme/1.saludo 1.png">
-<img src= "./src/images/img.readme/saludo2.png">
+<img src= "./src/images/img.readme/3.1saludo.png">
+<img src= "./src/images/img.readme/3.2saludo.png">
 <br>
 <br>
 </div>
 
 #### CUARTA INTERFAZ
 <div id="uno" .display="flex" .align="center" .width="200px">
-<img src= "./src/images/img.readme/3.png">
-<img src= "./src/images/img.readme/4.png">
+<img src= "./src/images/img.readme/4.1.png">
+<img src= "./src/images/img.readme/4.2.png">
+<img src= "./src/images/img.readme/4.3 not found.png">
 <img src= "./src/images/img.readme/5.png">
 <br>
 <br>
