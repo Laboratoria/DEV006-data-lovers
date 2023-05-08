@@ -101,7 +101,11 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <img src= "./src/images/img.readme/4.1.png">
 <img src= "./src/images/img.readme/4.2.png">
 <img src= "./src/images/img.readme/4.3 not found.jpg">
-<img src= "./src/images/img.readme/general_Página_3.jpg">
+<img src= "./src/images/img.readme/5.png">
+<img src= "./src/images/img.readme/6.png">
+<img src= "./src/images/img.readme/7.png">
+<img src= "./src/images/img.readme/8.png">
+<img src= "./src/images/img.readme/9.png">
 <br>
 <br>
 <br>
@@ -139,7 +143,10 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 <img src= "./src/images/img.readme/cel8.png">
 <img src="./src/images/img.readme/cel9.png">
 <img src="./src/images/img.readme/cel10.png">
-<img src= "">
+<img src="./src/images/img.readme/cel11.png">
+<img src= "./src/images/img.readme/cel12.png">
+<img src= "./src/images/img.readme/cel13.png">
+<img src= "./src/images/img.readme/celfinal.png">
 <br>
 <br>
 <br>

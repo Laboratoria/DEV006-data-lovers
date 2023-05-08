@@ -217,7 +217,7 @@ const reproductor = document.getElementById("reproductor");
 reproductor.volume = 0.03;
 
 
-//barra de menu desplegable
+//barra de menu desplegable cel y tablet
 const menu = document.getElementById("menu");
 menu.addEventListener("click", toggleMenu);
 
@@ -225,3 +225,12 @@ function toggleMenu() {
   const barraMenu = document.getElementById("barra");
   barraMenu.classList.toggle("active");
 }
+
+
+//barra filtrar desplegable
+const filterToggle = document.getElementById('filter-toggle');
+const filterNav = document.getElementById('box-filter-hidden');
+
+filterToggle.addEventListener('click', () => {
+  filterNav.classList.toggle('hidden');
+});

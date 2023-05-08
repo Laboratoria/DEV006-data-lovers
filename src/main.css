@@ -249,6 +249,14 @@ width: 100%;
     right: 145px;
 }
 
+#box-filter {
+  display: none;
+}
+
+#box-filter:not(.hidden) {
+  display: flex;
+}
+
 .container{
     display: none;
     position: relative;
@@ -534,7 +542,7 @@ select option:checked{
   }
 
   #barra.active {
-    display: block;
+    display: flex;
   }
 
     .img-menu {

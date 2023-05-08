@@ -15,7 +15,7 @@
 #pokemones{
   display: flex;
   flex-wrap: wrap;
-  padding: 60px -1px 60px 0;
+  padding: 7% 2% 7% 2%
 }
 }
 
@@ -24,6 +24,14 @@
   display: flex;
   flex-wrap: wrap;
 }
+.contenedor-card1{
+  display:flex;
+  justify-content: center;
+}
+#card1{
+  justify-content: center;
+  align-items: center;
+  }
 }
 
 .contenedor-card1{
