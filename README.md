@@ -83,10 +83,11 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 
 ### Prototipo de alta fidelidad
 Para ver el prototipo, haz click aquí
-![prototipo-de-alta](https://www.figma.com/proto/Xv0Gt7REai4lkaYZXxfFuk/Untitled?type=design&node-id=246-102&scaling=min-zoom&page-id=246%3A66&starting-point-node-id=246%3A102)
+* [Figma](https://www.figma.com/proto/Xv0Gt7REai4lkaYZXxfFuk/Untitled?type=design&node-id=246-102&scaling=min-zoom&page-id=246%3A66&starting-point-node-id=246%3A102)
 ## 6. Diseño final
 ### PC
 ##### PRIMERA INTERFAZ
+
 <div id="uno" .display="flex" .align="center" .width="300px">
 <img src= "./src/images/img.readme/1.1.png">
 <img src= "./src/images/img.readme/1.2.png">
@@ -96,6 +97,7 @@ Para ver el prototipo, haz click aquí
 </div>
 
 ##### SEGUNDA INTERFAZ
+
 <div id="dos" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/2.1.png">
 <img src= "./src/images/img.readme/2.2alert.png">
@@ -105,6 +107,7 @@ Para ver el prototipo, haz click aquí
 </div>
 
 ##### TERCERA INTERFAZ
+
 <div id="tres" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/3.1saludo.png">
 <img src= "./src/images/img.readme/3.2saludo.png">
@@ -113,6 +116,7 @@ Para ver el prototipo, haz click aquí
 </div>
 
 ##### CUARTA INTERFAZ
+
 <div id="cuatro" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/4.1.png">
 <img src= "./src/images/img.readme/4.2.png">
@@ -129,6 +133,7 @@ Para ver el prototipo, haz click aquí
 
 ### CELULAR
 ##### PRIMERA INTERFAZ (horizontal)
+
 <div id="cel1" .display="flex" .align="center" .width="300px">
 <img src= "./src/images/img.readme/cel1.png">
 <img src= "./src/images/img.readme/cel2.png">
@@ -138,6 +143,7 @@ Para ver el prototipo, haz click aquí
 </div>
 
 ##### SEGUNDA INTERFAZ (vertical)
+
 <div id="cel2" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel4.png">
 <img src= "./src/images/img.readme/cel5.png">
@@ -147,6 +153,7 @@ Para ver el prototipo, haz click aquí
 </div>
 
 ##### TERCERA INTERFAZ(vertical)
+
 <div id="cel3" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel7.png">
 <img src= "">
@@ -155,6 +162,7 @@ Para ver el prototipo, haz click aquí
 </div>
 
 ##### CUARTA INTERFAZ(vertical)
+
 <div id="cuatro" .display="flex" .align="center" .width="200px">
 <img src= "./src/images/img.readme/cel8.png">
 <img src="./src/images/img.readme/cel9.png">
