@@ -51,6 +51,7 @@ La WEB consta de 4 interfaces. La primera, es la imagen de presentación, al car
 <img src= "./src/images/img.readme/Frame 7.png">
 <img src= "./src/images/img.readme/Frame 5.png">
 </div>
+
 ### Expectativas y necesidades del usuario en base al juego
 ##### Historia de Usuario 1
 Niño de 10 años, fan de pokemon anime, no juega pokemon go.
@@ -95,6 +96,7 @@ Este proyecto está dirigido a aficionados y fans de Pokemon Go, pero el princip
 Creamos un formulario para poder recibir feddback
 
 * [formulario](https://docs.google.com/forms/d/1bRc4ESmXYJtKOSIivmpAbHZcvYHzENEbVpUKvZkh5vo/edit?usp=forms_home&ths=true)
+
 ## 5. Diseño UI
 ### Proceso del diseño [🎨]
 #### Estilo
