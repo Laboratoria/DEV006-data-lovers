@@ -7,7 +7,13 @@
 </div>
 <br>
 <br>
-<span><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+</style>
+<span style=" font-family: 'Darumadrop One', cursive; font-size: 40px; color: #002bec;"><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
+<br>
+
+<span style=" font-family: 'Darumadrop One', cursive; font-size: 17px; color: #002bec;">
 
 * [1. Presentación](#1-presentación)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
@@ -37,6 +43,7 @@
 * [10.Herramientas](#10-herramientas)
 * [11. Checklist](#11-checklist)
 ***
+</span>
 
 ## 1. Presentación
 Pokemon Go Cards es una web creada para los fans y aficionados del juego original con el objetivo que puedan complementar y filtrar información sobre los pokemones de las dos primeras generaciones, y que el usuario pueda utilizar dichos datos según sus necesidades. La navegación dentro del sitio web es amigable, dinámica e intuitiva, y lograr que el usuario sienta comodidad al trasladarse de una interfaz a otra.
