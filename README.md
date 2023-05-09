@@ -7,10 +7,7 @@
 </div>
 <br>
 <div id="estilo">
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
-</style>
-<span style=" font-family: 'Darumadrop One', cursive; font-size: 65px; color: #002bec;"><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
+<span style=" font-family: cursive; font-size: 35px; color: #002bec;"><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
 </div>
 <br>
 
