@@ -64,8 +64,8 @@ En vista que los usuarios tienen la necesidad de acceder a una web amigable, int
 
 ### HISTORIA DE USUARIO
 <div id= "title">
-<img src= "./src/images/img.readme/jean paul1.jpeg">
-<img src= "./src/images/img.readme/jean paul2.jpeg">
+<img src= "./src/images/img.readme/Frame 7.png">
+<img src= "./src/images/img.readme/Frame 5.png">
 </div>
 ### Expectativas y necesidades del usuario en base al juego
 ##### Historia de Usuario 1
