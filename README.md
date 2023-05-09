@@ -41,10 +41,28 @@
 ## 1. Presentación
 Pokemon Go Cards es una web creada para los fans y aficionados del juego original con el objetivo que puedan complementar y filtrar información sobre los pokemones de las dos primeras generaciones, y que el usuario pueda utilizar dichos datos según sus necesidades. La navegación dentro del sitio web es amigable, dinámica e intuitiva, y lograr que el usuario sienta comodidad al trasladarse de una interfaz a otra.
 
+* [CLICK AQUÍ](https://dul31.github.io/DEV006-data-lovers-POKEM-N/src/index.html)
+
+
+![presentación](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/preambulo.png?raw=true)
+
+
 ## 2. Resumen del proyecto
 La WEB consta de 4 interfaces. La primera, es la imagen de presentación, al cargar la página se muestran tres imágenes, una detrás de otra con un efecto de transición, y que al hacer click en el ícono que se muestra al lado inferior derecho, dirige al usuario a la siguiente interfaz. La segunda, es el inicio de sesión donde el usuario deberá ingresar un username y un password determinado, ambos campos son obligatorios, en caso se equivoque saldrá un alert informándole que debe volver a intentarlo e ingresar los datos correctos(Username: Laboratoria // Password: Dev006), y al dar enter lo lleva a la siguiente interfaz. La tercera, consta de un saludo de bienvenida y luego de unos segundos cambiará la imagen y el mensaje, informándole lo que va a poder encontrar en la interfaz principal, para dirigirse a la última interfaz deberá hacer click en el ícono que se localiza en la parte inferior derecha. Y en la última, encontrará una barra de menú que le permitirá al usuario dirigirse a cualquier parte de la interfaz, ya que esta cuenta con botones que al hacer click lo redigirá a donde quiera ir. También, podrá ordenar según las opciones que se muestra en el sub-menú de order de manera alfabética y numérica de manera ascendente y descendente: A-Z, Z-A, NUMBER 🢁, NUMBER 🢃, o al hacer click en el botón filter, este hace un scroll hacia esta sección donde podrá filtar a los pokemones según su tipo, por su debilidad, fortaleza, incluso podrá ver al top10 y last10 en el filtro fuerza. Además, podrá buscar a todos los pokemones por su número o por su nombre, en caso no encuentre el nombre indicado al hacer click en la lupa, se motrará una ventana informando que ese pokemon no fue encontrado, y lo invitará a realizar otra búsqueda. Todo esto se podrá observar en la pantalla ya que se muestran todas las cards de los pokemones. Y en la parte final de esta misma página, encontrará el footer que cuenta con íconos de las redes sociales del juego original, que redirigen a las mismas, y el copyright de las creadoras. Esperamos que los nuevos y antiguos usuarios puedan mejorar sus estrategias de ataque con la información brindada en esta nueva propuesta de app y web.
 
 ## 3. Planificación del proyecto
+
+Para la planificación de este proyecto usamos como herramienta de objetivos y tareas Trello.
+https://trello.com/b/rbeLiEEG/pokemon-dl23
+Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Office Hours y actividades diarias dentro del bootcamp usando el daily, google calendary, slack y talleres de test-camp.
+
+![pokemon-data-to-ui](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/trello.png?raw=true)
+
+## 4. Diseño UX
+### Investigación UX
+#### ¿Cuáles son los objetivos en relación con el producto?
+
+En vista que los usuarios tienen la necesidad de acceder a una web amigable, interactiva y fácil de navegar que le brinde una set de datos con información general de los pokemones, y este pueda filtrarla a su conveniencia, se crea esta web responsive, y así realizar la búsqueda de sus pokemones favoritos o de los que desconocen. También, podrán filtrar a los pokemones por su tipo, debilidad, fortaleza, ver a los 10 pokemones más fuertes y a los 10 más débiles. Además, podrán buscarlos por su nombre o número, ordenarlos de manera alfabética, invertir el orden, y ordenar de manera ascendente y descendente.
 
 ### HISTORIA DE USUARIO
 <div id= "title">
@@ -124,8 +142,8 @@ Utilizamos una herramienta para generar una paleta de colores que sea similar a 
 ### Prototipo de alta fidelidad
 Para ver el prototipo, haz click aquí
 * [Figma](https://www.figma.com/proto/Xv0Gt7REai4lkaYZXxfFuk/Untitled?type=design&node-id=246-102&scaling=min-zoom&page-id=246%3A66&starting-point-node-id=246%3A102)
+
 ## 6. Diseño final
-### PC
 ##### PRIMERA INTERFAZ
 
 <div id="uno" .display="flex" .align="center" .width="300px">
@@ -216,6 +234,7 @@ Para ver el prototipo, haz click aquí
 <br>
 </div>
 
+
 ## 7. Objetivos de aprendizaje
  [ ✔️] **SÍ**     [ ❌]**NO**     [ 🟡] **REGULAR**
 
@@ -260,6 +279,23 @@ Para ver el prototipo, haz click aquí
 - [ ✔️] **Uso de linter (ESLINT)**
 - [ ✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 - [ ❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
+
+## 8. Consideraciones generales
+
+* Este proyecto se realizó en duplas.
+
+ [Nacdul V. Ramirez Zavala](https://github.com/Dul31)  &
+ [Raquel M. Fernandez Reategui](https://github.com/raquel-mali)
+* La interfaz del proyecto está desplegada en GitHub Pages
+* El tiempo de entrega del proyecto fue de 5 semanas.
+
+## 9. Pruebas Unitarias 💯 ✅
+
+Para realizar las pruebas unitarias se tuvo que crear `tests` para comprobar si la lógica del código está funcionando correctamente, y si valida el comportamiento de la data o detecta errores. Y si en el futuro queremos factorizar el código, los test deben seguir validando dichos cambios. Utilizamos el comando `npm test` para correr los test realizados en el código, y el resultado fue libre de errores y sobrepasó el 70% del mínimo requerido del proyecto.
+
+![test1](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/test1.png?raw=true)
+![test2](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/Captura%20de%20pantalla%202023-05-07%20000329.png?raw=true)
+
 ## 10. Herramientas
 
 * [Git](https://git-scm.com/)
