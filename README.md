@@ -10,21 +10,21 @@
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
 </style>
-<span style=" font-family: 'Darumadrop One', cursive; font-size: 40px; color: #002bec;"><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
+<span style=" font-family: 'Darumadrop One', cursive; font-size: 65px; color: #002bec;"><img src= "./src/images/barra-menu.png" width="25"/> Indice</span>
 <br>
 
-<span style=" font-family: 'Darumadrop One', cursive; font-size: 17px; color: #002bec;">
+<span style=" font-family: 'Darumadrop One', cursive; font-size: 25px; color: #002bec;">
 
 * [1. Presentación](#1-presentación)
 * [2. Resumen del proyecto](#2-resumen-del-proyecto)
 * [3. Planificación del proyecto](#3-planificación-del-proyecto)
 * [4. Diseño UX](#4-diseño-ux)
-  * [Investigación con jugadores de Pokemon Go](investigación-con-jugadores-de-Pokemon-Go)
-  * [Expectativas y necesidades del usuario en base al juego](#Expectativas-y-necesidades-del-usuario-en-base-al-juego)
-   * [Público Objetivo](#publico-objetivo)
-   * [Test de Usabilidad y feedback](#Test-de-Usabilidad-y-feedback)
+  * [Investigación UX](#investigación-ux)
+  * [Expectativas y necesidades del usuario en base al juego](#expectativas-y-necesidades-del-usuario-en-base-al-juego)
+   * [Público Objetivo](#público-objetivo)
+   * [Test de Usabilidad y feedback ✏️](#test-de-usabilidad-y-feedback-✏️)
 * [5. Diseño UI](#5-diseño-ui)
-   * [Proceso del diseño](#proceso-del-diseño)
+   * [Proceso del diseño 🎨](#proceso-del-diseño-🎨)
       * [Estilo](#estilo)
       * [Teoria del color](#teoria-del-color)
    * [Prototipo de baja fidelidad](#prototipo-de-baja-fidelidad)
@@ -66,7 +66,7 @@ Además, de acompañamiento por parte de nuestros coaches de Laboratoria en Offi
 ![pokemon-data-to-ui](https://github.com/Dul31/DEV006-data-lovers-POKEM-N/blob/dul/src/images/img.readme/trello.png?raw=true)
 
 ## 4. Diseño UX
-### Investigación UX
+#### Investigación UX
 #### ¿Cuáles son los objetivos en relación con el producto?
 
 En vista que los usuarios tienen la necesidad de acceder a una web amigable, interactiva y fácil de navegar que le brinde una set de datos con información general de los pokemones, y este pueda filtrarla a su conveniencia, se crea esta web responsive, y así realizar la búsqueda de sus pokemones favoritos o de los que desconocen. También, podrán filtrar a los pokemones por su tipo, debilidad, fortaleza, ver a los 10 pokemones más fuertes y a los 10 más débiles. Además, podrán buscarlos por su nombre o número, ordenarlos de manera alfabética, invertir el orden, y ordenar de manera ascendente y descendente.
@@ -101,8 +101,8 @@ Feedback:
 ##### Historia de Usuario 3
 Joven de 29 años, fan de pokemon anime y juega de recurrente pokemon go.
 Expectativas
-Filtrar los pokemons por resitencia.
-Filtrar los pokemons por debilidad.
+Filtrar los pokemones por resitencia.
+Filtrar los pokemones por debilidad.
 Que tengas links de la página del juego y sus redes sociales.
 Feedback:
 ·        Que siga una misma temática y que tenga una paleta y estética similar en todo el sitio.
@@ -123,7 +123,7 @@ Creamos un formulario para poder recibir feddback
 * [formulario](https://docs.google.com/forms/d/1bRc4ESmXYJtKOSIivmpAbHZcvYHzENEbVpUKvZkh5vo/edit?usp=forms_home&ths=true)
 
 ## 5. Diseño UI
-### Proceso del diseño [🎨]
+## Proceso del diseño [🎨]
 #### Estilo
 Interactivo, intuitivo, fácil de navegar y atractivo visualmente para el usuario.
 #### Teoria del color
@@ -287,6 +287,15 @@ Para ver el prototipo, haz click aquí
 - [ ✔️] **Uso de identificadores descriptivos (Nomenclatura y Semántica)**
 - [ ❌] **Diferenciar entre expresiones (expressions) y sentencias (statements)**
 
+### CONTROL DE VERSIONES DE Git Y GitHub
+
+- [ ✔️] **Git: Instalación y configuración**
+- [ ✔️] **Git: Control de versiones con git (init, clone, add, commit, status, push, pull, remote)**
+- [ ❌] **Git: Integración de cambios entre ramas (branch, checkout, fetch, merge, reset, rebase, tag)**
+- [ ✔️] **GitHub: Creación de cuenta y repos, configuración de llaves SSH**
+- [ ✔️] **GitHub: Despliegue con GitHub Pages**
+- [ ❌] **GitHub: Colaboración en Github (branches | forks | pull requests | code review | tags)**
+
 ## 8. Consideraciones generales
 
 * Este proyecto se realizó en duplas.
@@ -316,6 +325,7 @@ Para realizar las pruebas unitarias se tuvo que crear `tests` para comprobar si 
 * [Trello](https://trello.com/)
 * [Photoshop](https://adobe-photoshop.softonic.com/)
 * [Canva](https://www.canva.com/)
+* [Generador de paleta de colores personalizada](https://coolors.co/)
 
 ## 11. Checklist
 [ ✔️] **SÍ**
@@ -341,3 +351,5 @@ Para realizar las pruebas unitarias se tuvo que crear `tests` para comprobar si 
 * [ ✔️] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [ ✔️] UI: Permite filtrar data en base a una condición.
 * [ ✔️] UI: Es _responsive_.
+
+
