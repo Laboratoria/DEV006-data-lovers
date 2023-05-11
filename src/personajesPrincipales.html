@@ -3,7 +3,7 @@
   <head>
     <meta charset=“utf-8”>
     <title>Data Lovers</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style_PersonajesPrincipales.css" />
     </head>
   <body>
     <header>
@@ -13,7 +13,7 @@
     <nav>
         <div id="menuContainer">
           <ul class="nav">
-            <li><a href="">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li class="has-submenu"><a href=“”>Casas</a>
               <ul>
                 <li><a href=“”>Gryffindor</a></li>
@@ -30,23 +30,20 @@
           </ul>
         </div>
     </nav>
-    <div class="content">
-      <h1>Bienvenido a mi página</h1>
-      <p>Este es el contenido de mi página</p>
+    <h1>Personajes principales</h1>
+    <div class="filter">
+      <button data-house="all">All</button>
+      <button data-house="Gryffindor">Gryffindor</button>
+      <button data-house="Hufflepuff">Hufflepuff</button>
+      <button data-house="Ravenclaw">Ravenclaw</button>
+      <button data-house="Slytherin">Slytherin</button>
+      <button id="sortButton">Ordenar</button>
     </div>
-    </div>
-    <button id="filter-button">Filtrar casas</button>
-    <ul id="houses-list"></ul>
-    <div class = "desplegable">
-         <button class="button">Selecciona tu casa</button>
-            <div class="Links">
-                <a href=“#”>Gryffindor</a>
-                <a href=“#”>Ravenclaw</a>
-                <a href=“#”>Huffelpuff</a>
-                <a href=“#”>Slytherin</a>
-            </div>
+    <div class="gallery">
+      <!-- Images will be added here with JS -->
     </div>
     <div id="root"></div>
-    <script src="main.js" type="module"></script>
+    <script src="main.js" type="module"></script>∂
+    <script src="mainPersonajes.js" type="module"></script>
   </body>
 </html>

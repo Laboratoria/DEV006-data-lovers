@@ -29,11 +29,20 @@ filterButton.addEventListener('click', () => {
     housesList.appendChild(item);
   });
 });
+// menu desplegable botón SORT
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
 
+dropdownToggle.addEventListener('click', () => {
+  dropdownMenu.classList.toggle('show');
+});
 
-
-
-
+dropdownMenu.addEventListener('click', (event) => {
+  const button = event.target;
+  const order = button.getAttribute('data-order');
+  sortByName(order);
+  dropdownMenu.classList.remove('show');
+});
 
 
 // Plantilla para la página

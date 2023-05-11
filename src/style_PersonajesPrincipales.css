@@ -6,6 +6,8 @@
   font-family: sofia pro;
   background: #000000;
   text-align: center;
+  box-sizing: border-box;
+  padding: 20px;
 }
 
 ul.nav {
@@ -17,6 +19,7 @@ ul.nav {
 }
 
 .nav > li {
+  flex: 1;
   position: relative;
 }
 
@@ -27,6 +30,8 @@ ul.nav {
   padding: 10px 15px;
   text-decoration: none;
   text-transform: uppercase;
+  padding: 10px;
+  font-size: 16px;
 }
 
 .nav > li:hover > a {
@@ -57,6 +62,7 @@ ul.nav {
   padding: 10px 15px;
   text-decoration: none;
   transform: translate(-50%, 0); /* Traslada el submenu hacia la izquierda en la mitad de su ancho */
+  font-size: 16px;
 }
 
 .nav li ul li:hover > a {
@@ -74,6 +80,30 @@ ul.nav {
   transform: translate(-50%, 0); /* Traslada el submenu hacia la izquierda en la mitad de su ancho */
   top: 100%;
 }
+/* Ajustar tamaño de fuente y padding en pantallas pequeñas */
+@media screen and (max-width: 600px) {
+  #menuContainer {
+    padding: 40px 40px;
+  }
+  
+  .nav > li > a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+  
+  .nav li ul li a {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* Ajustar ancho del menú en pantallas grandes */
+@media screen and (min-width: 1200px) {
+  #menuContainer {
+    width: 1200px;
+    margin: auto;
+  }
+}
 /* //////FIN MENU NAVEGACION PRINCIPAL //// */
 /* CSS Luisa */
 *{
@@ -81,70 +111,56 @@ ul.nav {
   padding: 0;
 }
 .page {
+  padding:20px;
   background-color: #F2F2F2;
   height: 100%;
 }
 .Links a{
+  padding: 10px;
   text-decoration: none;
   color: black;
   display: block;
   padding: 13px;
 }
-.Links {
-  background-color: #F9F9F9;
-  width: 185px;
-  display: none;
-}
-.desplegable:hover .Links{
-  display: block;
-  position: absolute;
-  left: 1000px;
-  position: absolute;
-  top: 500px;
-}
 
-.Links a:hover{
-  background-color: #F1F1F1;
-}
-
-.button {
-  background-color:  #603711;
-  border-radius: 20px;
-  top: 75%;
-  bottom: 15%;
-  position: absolute;
-  left: 38.96%;
-  right: 35.83%;
-}
 
 body {
   background-color: #E4C0A4;
 }
 
-.content {
-  background-image: url(https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/media/image/2022/04/ciencia-detras-sombrero-seleccionador-harry-potter-distintas-personalidades-cada-casa-2684193.jpg);
-  background-position: right center;
-  padding: 100px;
-}
+
 
 .logo {
   background-color: blue;
 }
 
 header {
+  height: auto;
+  padding: 20px;
   width: 100%;
   background:#011328;
   height: 70px;
 }
-
+@media (max-width: 480px) {
+  h1 {
+  font-size: 18px;
+  }
+  p {
+  font-size: 12px;
+  }
+  }
+  @media (max-width: 768px) {
 p {
-  color: #F9F9F9;
+  font-size: 14px;
+  margin-bottom: 10px;  
+  color: #302f2f;
 }
 
 h1 {
-  color: #F9F9F9;
-  font-style: oblique;
+  font-size: 20px;
+  color: #000000;
   text-transform: inherit;
+}
 }
 .menuLogo{
   width: 12%;
@@ -153,5 +169,96 @@ h1 {
   background-image: url(https://bl6pap004files.storage.live.com/y4mF0jIlqLybJF2te7CfOV-aI8e-brmMbBYVfHQUOt2CurYmubqkK3bzGY3KSQo4RfngCWJxMbpM09a5dW0jilBAqK37YiZ_QjUcy25689PfqGmg-9Q-gr3ZUspN-RDjK3MeqSy7REO-X-idpWRZU4DvzpwyUbzboijfJdQY1Lo9lDLHcNN6Nui5GsqlhNIIT22?width=243&height=72&cropmode=none);
   background-size:cover;
   background-position: center;
+  width: 100px;
+  height: auto;
+
+}
+/*ESTILO GALERIA */
+body {
+  font-family: sofia pro, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
 }
 
+h1 {
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.filter button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.filter button:hover {
+  background-color: #666;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.image {
+  width: 48%;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.image h3 {
+  font-size: 16px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin: 10px 0 5px 0;
+  font-size: 18px;
+}
+
+.image p {
+  margin: 5px 0;
+}
+/* Estilo botones sort */
+.sort {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.sort button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.sort button:hover {
+  background-color: #666;
+}
