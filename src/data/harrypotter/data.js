@@ -14,7 +14,8 @@ export default {
       "patronus": null,
       "house": "Gryffindor",
       "associated_groups": ["Hogwarts School of Witchcraft and Wizardry", "Gryffindor"],
-      "books_featured_in": [5]
+      "books_featured_in": [5],
+     
     },
     {
       "id": 2,
@@ -2055,7 +2056,8 @@ export default {
         "Hogwarts School of Witchcraft and Wizardry",
         "S.P.E.W."
       ],
-      "books_featured_in": [2, 3, 4, 5, 6, 7]
+      "books_featured_in": [2, 3, 4, 5, 6, 7],
+      "foto":'../../images/123.webp'
     },
     {
       "id": 124,
@@ -4232,7 +4234,8 @@ export default {
         "S.P.E.W.",
         "Abbott family"
       ],
-      "books_featured_in": [1, 2, 3, 4, 5, 6, 7]
+      "books_featured_in": [1, 2, 3, 4, 5, 6, 7],
+      "foto":'../../images/254.png'
     },
     {
       "id": 255,
@@ -13410,7 +13413,8 @@ export default {
       "description": "Duplicates the target. When used to duplicate objects indefinitely on purpose, is known as the Gemino Curse.",
       "mention": "Used by Hermione Granger on Salazar Slytherin's Locket to disguise her presence from Dolores Umbridge.",
       "etymology": "The Latin word gemini means \"twins\".",
-      "note": null
+      "note": null,
+      
     },
     {
       "id": 124,
@@ -14851,7 +14855,8 @@ export default {
       "description": "Used to shoot objects",
       "mention": "This spell was used by Harry Potter and Ronald Weasley in 1997 on their Horcrux hunt in an attempt to catch a rabbit for food.",
       "etymology": null,
-      "note": null
+      "note": null,
+ 
     },
     {
       "id": 255,

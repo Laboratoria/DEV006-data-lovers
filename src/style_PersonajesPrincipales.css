@@ -163,14 +163,14 @@ h1 {
 }
 }
 .menuLogo{
-  width: 12%;
-  height: 60px;
+  width: 243px;
+  height: 72px;
   margin: auto;
   background-image: url(https://bl6pap004files.storage.live.com/y4mF0jIlqLybJF2te7CfOV-aI8e-brmMbBYVfHQUOt2CurYmubqkK3bzGY3KSQo4RfngCWJxMbpM09a5dW0jilBAqK37YiZ_QjUcy25689PfqGmg-9Q-gr3ZUspN-RDjK3MeqSy7REO-X-idpWRZU4DvzpwyUbzboijfJdQY1Lo9lDLHcNN6Nui5GsqlhNIIT22?width=243&height=72&cropmode=none);
-  background-size:cover;
+  background-size:contain;
   background-position: center;
-  width: 100px;
-  height: auto;
+  background-repeat: no-repeat;
+  
 
 }
 /*ESTILO GALERIA */
@@ -261,4 +261,19 @@ h1 {
 
 .sort button:hover {
   background-color: #666;
+}
+p.triviaContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+p {
+  font-size: 24px;
+}
+
+#resultados {
+  margin-top: 20px;
+  font-size: 18px;
 }
