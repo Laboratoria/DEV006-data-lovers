@@ -33,4 +33,6 @@ https://www.figma.com/file/c1q6DbPGrSl4gX2XrgG0vS/ALTA-FIDELIDAD%2F-MOBILE-POKEM
 TEST UNITARIOS
 
 
+C:\Users\InforSys\Documents\DEV006-data-lovers\imagenes\TESTEO.png
+
 

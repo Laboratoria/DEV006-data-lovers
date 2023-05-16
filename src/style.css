@@ -24,7 +24,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url("https://wallpaperaccess.com/full/3551100.png");
+  background-image: url("/imagenes/frontpage.png");
   opacity: 0.9;
   background-repeat: repeat;
 }
