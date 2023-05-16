@@ -2,56 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/jpg" href="img/pokeball2.png" />
+    <link rel="icon" type="image/jpg" href="img/pokeball.png" />
   </head>
   <body>
     <!-- HEADER -->
     <header>
-      <img class="img-title" src="img/pokemon.png" alt="Título_ Pokémon" />
+      <img class="img-title" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1280px-International_Pok%C3%A9mon_logo.svg.png" alt="Título-Pokémon" />
     </header>
+    <main>
     <div class="inputs">
+
       <!--INPUT SEARCH-->
       <div id="search">
         <h1>Busqueda de Pokémon:</h1>
         <form id="formSearch">
           <input class="searchInput" id="searchInput" type="text" name="searchInput" value="" />
            <button type="submit">
-            <img src="https://th.bing.com/th/id/R.34f3f3420bb165594ebd7a83dc769905?rik=IblMZKG7qdPC2g&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_588.png&ehk=AtPYPfnEvR%2fGMFfZ2RTWlKqLtTjS7CNEJmA3y8QMjyU%3d&risl=&pid=ImgRaw&r=0" alt="img-lupa" class="img-lupa" />
+            <img src="https://www.pngplay.com/wp-content/uploads/2/Pokeball-PNG-Pic-Background.png" alt="img-pokeball" class="img-pokeball" />
           </button>
         </form> 
       </div>
+
       <!-- INPUT SORT -->
       <div id="sort">
         <h2>Ordernar por:</h2>
         <form class="formSort">
           <select name="sortData" id="sortPokemon">
-            <option value="A-z">A-z</option>
-            <option value="Z-a">Z-a</option>
+            <option value="A-z" id="A-z">A-Z</option>
+              <option value="Z-a" id="Z-a">Z-A</option>
           </select>
-          <!-- <input class="sortInput" type="text" name="sortInput" value="" /> -->
-          
-          <button type="submit">
-            <img
-              src="https://cdn4.iconfinder.com/data/icons/smashicons-movies-flat/54/56_-_Pokemon_Flat-512.png"
-              alt="img-pokeball"
-              class="img-pokeball"
-              
-            />
-          </button>
         </form>
       </div>
+      
     </div>
 
     <!-- CARDS -->
-    <main>
       <section id="cards"></section>
     </main>
     <!-- FOOTER -->
     <footer>
       <p>Pokemón Project</p>
-      <p>Laboratoria-Data Lover©️2023</p>
+      <p>Laboratoria-Data Lover©2023</p>
     </footer>
 
     <script src="main.js" type="module"></script>

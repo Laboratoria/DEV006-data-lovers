@@ -1,37 +1,36 @@
-# Pokémon
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
+  
+DEFINICION DEL PRODUCTO
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
+El presente producto tiene una interfaz diseñada e intuitiva donde le permitimos al usuario una búsqueda de fácil acceso mediante un buscador que filtra por nombre y un botón que ejecuta la búsqueda requerida.
+La interfaz posee además, una lista despegable alfabética que nos permite ordenar de manera ascendente y descendente.
+La pantalla muestra cards donde el usuario podrá visualizar: el número de orden de cada pokemón, nombre, tipo, peso y altura de cada pokemón.
+La interfaz está diseñada para ser visualizada y manipulada en varios dispositivos, desde desktop hasta diferentes medidas de pantallas mobiles.
 
-## Hallazgos
 
-Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
+ORGANIZACION
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
+https://trello.com/invite/b/HxtOxIpA/ATTIa03ae414962624bca2eabd37f69e25d17F5E9409/data-lovers-planning
+
+
+
+HISTORIA DE USUARIOS 
+1.-Como usuario, quiero ver un encabezado con el logo de la Pokédex para identificar rápidamente el sitio web y su propósito.
+
+2.- Como usuario, quiero ver una lista de todos los pokemones disponibles en la Pokédex para poder explorarlos y elegir uno para obtener más información.
+
+3.-Como usuario, quiero poder hacer clic en un pokemon de la lista para ver información detallada sobre él, como su tipo, habilidades, debilidades, movimientos y estadísticas.
+
+4.-Como usuario, quiero buscar pokemones por su nombre para encontrar información sobre ellos.
+
+
+PROTOTIPOS
+
+
+https://www.figma.com/file/c1q6DbPGrSl4gX2XrgG0vS/ALTA-FIDELIDAD%2F-MOBILE-POKEMON?type=design&node-id=0%3A1&t=ZiasQqo9RTavRC9P-1
+
+ 
+TEST UNITARIOS
+
+
+
