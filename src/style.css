@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: bold;
+}
+
+header {
+  width: 100%;
+  background: #12233b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-title {
+  width: 540px;
+  height: 198px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/imagenes/frontpage.png");
+  opacity: 0.9;
+  background-repeat: repeat;
+}
+
+/* FORM-INPUT-SEARCH */
+
+.inputs {
+  display: flex;
+  flex-direction: row;
+}
+
+#search {
+  width: 400px;
+  margin-right: 60px;
+}
+
+h1 {
+  margin: 8px 32px 3px;
+  color: #faecec;
+  font-size: 18px;
+}
+
+#formSearch {
+  display: flex;
+  justify-content: center;
+  background-image: url("https://lh3.googleusercontent.com/SpuJ-1diI0IrTCEHWdXH1Bc6TaWzehts63TtUszKDaBU3F6qoQ91qGlZZlwssJEAKTSBVmiiXbgb-VYNMIof3LHb2VvMJNgSvQBmMF4V") ;
+}
+
+.searchInput {
+  background: #ffcb05;
+  color: #12233b;
+  width: 300px;
+  padding: 5px 20px;
+  border-radius: 12px 0 0 12px;
+  font-size: 16px;
+  border: none;
+}
+
+
+
+
+ .img-pokeball {
+  /* border-radius: 0 0 25px 25px; */
+  width: 50px;
+  height: 45px;
+   cursor: pointer;
+}  
+
+/* FORM-INPUT-SORT */
+
+#sort {
+  width: 400px;
+}
+
+h2 {
+  margin: 8px 5px 3px;
+  color: #faecec;
+  font-size: 18px;
+  padding-inline: 40px;
+}
+
+.formSort {
+  display: flex;
+  justify-content: center;
+}
+
+select {
+  background: #ffcb05;
+  color: #12233b;
+  width: 320px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* DATA-CARDS-POKEMON */
+
+#cards {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 40px;
+    /* opacity: 0.5; */
+    background: rgba(76, 175, 80, 0.3) /* Green background with 30% opacity*/
+    
+  }
+  
+/* #cards:hover {
+    opacity: 1.0;
+  } */
+
+
+.card {
+  background-color: #e4e4dc;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 1.23) 0px 3px 6px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+}
+
+.pokemon-img {
+  height: 160px;
+  padding-inline: 10px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.pokemon-info {
+  padding: 15px;
+}
+
+.pokemon-name {
+  color: #333;
+  font-size: 20px;
+}
+
+.pokemon-number {
+  color: #888;
+}
+
+.pokemon-type {
+  gap: 10px;
+  margin-top: 10px;
+  
+}
+
+.fire {
+  display: flex;
+  font-size: 13px;
+  font-weight: bold;
+  width: 115px;
+  height: 25px;
+  border-radius: 25px;
+  padding-top: 2%;
+  background-color: #45CC5B;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  opacity: 0.8;
+  color: #faecec;
+  justify-content: center;
+  
+
+}
+
+
+.pokemon-size{
+  display: flex;
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 5%;
+  justify-content: space-evenly;
+  gap: 5px;
+  
+  
+
+}
+.height {
+  font-size: 12px;
+  padding: 5px 20px;
+  border-radius: 25px;
+  background-color: #12203A; /*cambio personal*/
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  opacity: 0.7 ;  /*cambio personal*/
+  color: #faecec;
+  font-weight: bold;
+  width: 100px;
+  height: 25px;
+  display: flex;
+  
+}
+.weight {
+  font-size: 12px; 
+  padding: 5px 20px;
+  border-radius: 25px;
+  background-color: #6C6C6C;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  opacity: 0.7 ;
+  color: #faecec;
+  font-weight: bold;
+  width: 112px;
+  height: 25px;
+  display: flex;
+  
+
+}
+/*FOOTER*/
+
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: #12233b;
+  color: #a5a5a5;
+  position: fixed;
+}
+
+/* MOBILE */
+
+@media only screen and (max-width: 600px) {
+  header {
+    width: 100%;
+  }
+
+  .img-title {
+    width: 80%;
+    height: 70%;
+  }
+
+  .inputs {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #search {
+    margin-right: 0;
+  }
+
+  #cards {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}

@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Data Lovers</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/jpg" href="/imagenes/pokeball2.png" />
   </head>
   <body>
-    <div id="root"></div>
+    <!-- HEADER -->
+    <header>
+      <img class="img-title" src="/imagenes/pokemon.png"/>
+    </header>
+    <main>
+    <div class="inputs">
+
+      <!--INPUT SEARCH-->
+      <div id="search">
+        <h1>Search a Pokemón by Name:</h1>
+        <form id="formSearch">
+          <input class="searchInput" id="searchInput" type="text" name="searchInput" value="" />
+           <button type="submit">
+            <img src="/imagenes/pokeball2.png" alt="img-pokeball" class="img-pokeball" />
+          </button>
+        </form> 
+      </div>
+
+      <!-- INPUT SORT -->
+      <div id="sort">
+        <h2>Sort by:</h2>
+        <form class="formSort">
+          <select name="sortData" id="sortPokemon">
+            <option value="A-z" id="A-z">A-Z</option>
+              <option value="Z-a" id="Z-a">Z-A</option>
+          </select>
+        </form>
+      </div>
+      
+    </div>
+
+    <!-- CARDS -->
+      <section id="cards"></section>
+    </main>
+    <!-- FOOTER -->
+    <footer>
+      <p>Pokemón Project</p>
+      <p>Laboratoria-Data Lover©2023</p>
+    </footer>
+
     <script src="main.js" type="module"></script>
   </body>
 </html>

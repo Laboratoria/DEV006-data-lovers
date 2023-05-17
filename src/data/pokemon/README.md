@@ -1,37 +1,55 @@
-# Pokémon
 
-Pokémon GO es una experiencia de juego internacional que cuenta con más de mil
-millones de descargas y ha sido nombrada "el mejor juego para móviles" por
-Game Developers Choice Awards y "la mejor aplicación del año" por TechCrunch
-(tomado de Google Play). Los usuarios del juego se convierten en "Maestros/
-entrenadores de Pokémon" y pueden:
+  
+## PRODUCT DEFINITION✨
 
-- **Descubrir el mundo Pokémon:** explorar y descubrir nuevos Pokémon allá
-  donde vayan.
-- **Atrapar** distintos Pokémon para completar su Pokédex.
-- **Pelear** contra Pokémon de otros entrenadores y conquistar un gimnasio.
-- **Competir** en épicos combates contra otros entrenadores.
-- **Hacer equipo** con otros entrenadores para atrapar poderosos Pokémon
-  durante las incursiones.
+This product has a designed and intuitive interface where it allows the user an easily accessible search through a search engine that filters by name and a button that executes the required search.
+The interface also has a drop-down alphabetical list that allows us to order in ascending and descending order.
+The screen shows cards where the user can view: the order number of each pokemon, name, type, weight and height of each pokemon.
+The interface is designed to be viewed and manipulated on various devices, from desktop to different sizes of mobile screens.
 
-## Hallazgos
 
-Para entender mejor qué necesidades complementarias a la app tienen los
-usuarios, hicimos una rápida investigación (research) y estos son algunos
-de los hallazgos.
+##  ORGANIZATION👩‍💻
 
-- Los Pokémon tienen características únicas que determinan las decisiones que
-  toma el usuario (tipo, debilidad, peso, multiplicador, etc.)
-- Un maestro Pokémon antes de salir a casar los Pokémon tienen que:
-  saber el top 10 de frecuencia de aparición de los Pokémon.
-- Los Pokémon tienen distintos tipos y debilidades de combate. Estas
-  características son importantes cuando un maestro Pokémon elige al Pokémon
-  más adecuado para su batalla. Hay veces que tiene que elegir a los que
-  tienen menos cantidad de debilidades y saber de que tipo son. Por ello, es
-  importante para un maestro Pokémon poder ordenarlos por estas 2
-  características.
-- Los Pokémon evolucionan y es importante para un
-  maestro Pokémon saber cuántas y cuáles son las evoluciones que tienen antes y
-  después.
-- Los Pokémon se alimentan de caramelos y un maestro Pokémon necesita saber
-  cuántos caramelos necesita un Pokémon para evolucionar.
+We organize ourselves using the Trello tool.
+
+Attached link:
+
+https://trello.com/invite/b/HxtOxIpA/ATTIa03ae414962624bca2eabd37f69e25d17F5E9409/data-lovers-planning
+
+
+
+## USER STORY🕵️‍♀️
+
+1.-As a user, I want to see a header with the Pokédex logo to quickly identify the website and its purpose.
+
+2.- As a user, I want to see a list of all the pokemon available in the Pokédex so I can explore them and choose one to get more information.
+
+3.-As a user, I want to see a card with information about them, such as their number, name, type, height and weight.
+
+4.-As a user, I want to have easy access to the search and ordering of pokemon.
+
+
+## PROTOTYPES✍️
+
+Low and High Fidelity prototypes created in Figma.
+
+<img src= "img/Prototipo de baja.jpg">
+
+<img src= "img/Prototipo de alta fidelidad.jpg">
+
+<img src = "img/Prototipo mobile">
+
+Attached link of Figma:
+
+https://www.figma.com/file/c1q6DbPGrSl4gX2XrgG0vS/ALTA-FIDELIDAD%2F-MOBILE-POKEMON?type=design&node-id=0%3A1&t=ZiasQqo9RTavRC9P-1
+
+ 
+## UNIT TESTS🧾
+
+Unit tests are a fundamental part of our project to guarantee the quality and stability of the code, allowing me to detect and correct errors efficiently.
+<img src= "img/TESTEO.png">
+
+
+
+
+
