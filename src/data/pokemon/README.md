@@ -1,37 +1,37 @@
 
   
-## DEFINICION DEL PRODUCTO✨
+## PRODUCT DEFINITION✨
 
-El presente producto tiene una interfaz diseñada e intuitiva donde le permitimos al usuario una búsqueda de fácil acceso mediante un buscador que filtra por nombre y un botón que ejecuta la búsqueda requerida.
-La interfaz posee además, una lista despegable alfabética que nos permite ordenar de manera ascendente y descendente.
-La pantalla muestra cards donde el usuario podrá visualizar: el número de orden de cada pokemón, nombre, tipo, peso y altura de cada pokemón.
-La interfaz está diseñada para ser visualizada y manipulada en varios dispositivos, desde desktop hasta diferentes medidas de pantallas mobiles.
+This product has a designed and intuitive interface where it allows the user an easily accessible search through a search engine that filters by name and a button that executes the required search.
+The interface also has a drop-down alphabetical list that allows us to order in ascending and descending order.
+The screen shows cards where the user can view: the order number of each pokemon, name, type, weight and height of each pokemon.
+The interface is designed to be viewed and manipulated on various devices, from desktop to different sizes of mobile screens.
 
 
-## ORGANIZACION👩‍💻
+##  ORGANIZATION👩‍💻
 
-Nos organizamos mediante la herramienta Trello.
+We organize ourselves using the Trello tool.
 
-Link adjunto:
+Attached link:
 
 https://trello.com/invite/b/HxtOxIpA/ATTIa03ae414962624bca2eabd37f69e25d17F5E9409/data-lovers-planning
 
 
 
-## HISTORIA DE USUARIOS🕵️‍♀️
+## USER STORY🕵️‍♀️
 
-1.-Como usuario, quiero ver un encabezado con el logo de la Pokédex para identificar rápidamente el sitio web y su propósito.
+1.-As a user, I want to see a header with the Pokédex logo to quickly identify the website and its purpose.
 
-2.- Como usuario, quiero ver una lista de todos los pokemón disponibles en la Pokédex para poder explorarlos y elegir uno para obtener más información.
+2.- As a user, I want to see a list of all the pokemon available in the Pokédex so I can explore them and choose one to get more information.
 
-3.-Como usuario, quiero ver una card con información sobre él, como su número, nombre, tipo, altura y peso.
+3.-As a user, I want to see a card with information about them, such as their number, name, type, height and weight.
 
-4.-Como usuario, quiero tener fácil acceso a la búsqueda y al ordenamiento de pokemón.
+4.-As a user, I want to have easy access to the search and ordering of pokemon.
 
 
-## PROTOTIPOS✍️
+## PROTOTYPES✍️
 
-Prototipos de Baja y Alta Fidelidad creados en Figma.
+Low and High Fidelity prototypes created in Figma.
 
 <img src= "img/Prototipo de baja.jpg">
 
@@ -39,15 +39,14 @@ Prototipos de Baja y Alta Fidelidad creados en Figma.
 
 <img src = "img/Prototipo mobile">
 
-Link adjunto de Figma:
+Attached link of Figma:
 
 https://www.figma.com/file/c1q6DbPGrSl4gX2XrgG0vS/ALTA-FIDELIDAD%2F-MOBILE-POKEMON?type=design&node-id=0%3A1&t=ZiasQqo9RTavRC9P-1
 
  
-## TEST UNITARIOS🧾
+## UNIT TESTS🧾
 
-Los test unitarios son un parte fundamental en nuestro proyecto para garantizar la calidad y estabilidad del código, permitiendome detectar y corregir errores de manera eficiente.
-
+Unit tests are a fundamental part of our project to guarantee the quality and stability of the code, allowing me to detect and correct errors efficiently.
 <img src= "img/TESTEO.png">
 
 
