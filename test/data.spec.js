@@ -42,7 +42,7 @@ describe('get genderPorcentage', () => {
     expect(typeof genderPorcentage).toBe("function");
 
   });
-  it('Debería entregar el resultado de mujeres de la función', () => {
+  it('Debería entregar el resultado de hombre de la función', () => {
     expect(genderPorcentage('Male',mockData)).toBe("100.0");
   });
   // test('Debería renderizar todas las imagenes cuando el parámetro house es "all"', () => {
