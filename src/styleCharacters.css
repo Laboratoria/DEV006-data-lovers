@@ -104,7 +104,12 @@ aside{
     font-size: 20px;
     margin-top: auto;
     text-align: center;
-
+}
+.textP{
+    font-weight: lighter;
+    font-size: 18px;
+    text-align: center;
+    margin: 40px 0px 0px 30px;
 }
 .search{
     width: 350px;

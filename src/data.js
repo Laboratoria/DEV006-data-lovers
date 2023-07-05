@@ -1,11 +1,15 @@
 import dataRickAndMorty from "./data/rickandmorty/rickandmorty.js"
 //console.log(dataRickAndMorty);
 
+export function suma(a,b){
+  return a+b;
+}
+
 export function getCharacters () {
   return dataRickAndMorty.results;
 }
-export function getCharactersByQuery(query){
-  return dataRickAndMorty.results.filter(character =>
+export function getCharactersByQuery(dataCharacters,query){
+  return dataCharacters.filter(character =>
     character.name.toLowerCase().includes(query));
 }
 export function ordinationAz (dataCharacters){
@@ -29,6 +33,10 @@ export function ordinationZa (dataCharacters){
     } 
     return 0;
   });
+}
+export function calculatePercentage(total,part){
+  const percentage = Math.round((part * 100)/total);
+  return percentage ;
 }
 export function filterBySpecies (dataCharacters,species){
   const speciesFilter= dataCharacters.filter((character)=> character.species === species);

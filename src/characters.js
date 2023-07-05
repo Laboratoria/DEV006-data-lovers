@@ -1,5 +1,5 @@
 import {getCharacters, getCharactersByQuery, filterBySpecies, filterByGender, 
-  filterByStatus, ordinationAz, ordinationZa} from "./data.js";
+  filterByStatus, ordinationAz, ordinationZa, calculatePercentage} from "./data.js";
 
 const container = document.querySelector(".container");
 
@@ -18,10 +18,12 @@ function renderCharacters(characters) {
 
 const searchInput = document.getElementById("search-input");
 searchInput.addEventListener("input", () => {
+  const dataCharacters = getCharacters();
   const query = searchInput.value.toLowerCase();
-  const filteredCharacters = getCharactersByQuery(query);
+  const filteredCharacters = getCharactersByQuery(dataCharacters,query);
   renderCharacters(filteredCharacters);
 });
+
 // Ordenar A-Z 
 const orderAz = document.getElementById("A-Z");
 orderAz.addEventListener("click", () => {
@@ -41,6 +43,9 @@ const characterHuman= document.getElementById("Human");
 characterHuman.addEventListener("click", () => {
   const allCharacters = getCharacters();
   const filterHumanCharacters= filterBySpecies(allCharacters, "Human");
+  const percentage= Math.round(calculatePercentage(allCharacters.length, filterHumanCharacters.length));
+  const textP = document.getElementById("textPercentage");
+  textP.textContent= percentage + "% of the characters are Human";
   renderCharacters(filterHumanCharacters);
 });
 //Filter Male
@@ -48,6 +53,9 @@ const characterMale= document.getElementById("Male");
 characterMale.addEventListener("click", () => {
   const allCharacters = getCharacters();
   const filterMaleCharacters= filterByGender(allCharacters,"Male");
+  const percentage= calculatePercentage(allCharacters.length, filterMaleCharacters.length);
+  const textP = document.getElementById("textPercentage");
+  textP.textContent= percentage + "% of the characters are Male";
   renderCharacters(filterMaleCharacters);
 });
 //Filter Female
@@ -55,20 +63,31 @@ const characterFemale= document.getElementById("Female");
 characterFemale.addEventListener("click", () => {
   const allCharacters = getCharacters();
   const filterFemaleCharacters=filterByGender(allCharacters,"Female");
+  const percentage= Math.round(calculatePercentage(allCharacters.length, filterFemaleCharacters.length));
+  const textP = document.getElementById("textPercentage");
+  textP.textContent= percentage + "% of the characters are Female";
   renderCharacters(filterFemaleCharacters);
 });
 //Filter Alive
 const characterAlive= document.getElementById("Alive");
 characterAlive.addEventListener("click", () => {
   const allCharacters = getCharacters();
-  const filterAliveCharacters= filterByStatus(allCharacters,"Alive")
+  const filterAliveCharacters= filterByStatus(allCharacters,"Alive");
+  const percentage= Math.round(calculatePercentage(allCharacters.length, filterAliveCharacters.length));
+  const textP = document.getElementById("textPercentage");
+  textP.textContent= percentage + "% of the characters are Alive";
   renderCharacters(filterAliveCharacters);
 });
 //Filter Dead
 const characterDead= document.getElementById("Dead");
 characterDead.addEventListener("click", () => {
   const allCharacters = getCharacters();
-  const filterDeadCharacters= filterByStatus(allCharacters, "Dead")
+  const filterDeadCharacters= filterByStatus(allCharacters, "Dead");
+  const percentage= Math.round(calculatePercentage(allCharacters.length, filterDeadCharacters.length));
+  const textP = document.getElementById("textPercentage");
+  textP.textContent= percentage + "% of the characters are Dead";
   renderCharacters(filterDeadCharacters);
 }); 
+
+ 
  
